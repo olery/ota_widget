@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <meta charset="utf-8" />
+    <title>Olery OTA Widget demo</title>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/fetch/2.0.1/fetch.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/riot@3.6/riot+compiler.js"></script>
+    <script src="js/ota_widget.js" type="text/javascript"></script>
+    <overall class="block">
+  <div class="gei">
+    {opts.gei} 
+  </div>
+  <script>
+  </script>
+</overall><ratings class="block">
+  <h2>
+    Ratings
+  </h2>
+  <script>
+  </script>
+</ratings><mentions class="block">
+  <h2>
+    What People Mention
+  </h2>
+  <script>
+  </script>
+</mentions><guests class="block">
+  <h2>
+    Who stays here
+  </h2>
+  <script>
+  </script>
+</guests><summaries class="block">
+  <h2>
+    Summary
+  </h2>
+  <script>
+  </script>
+</summaries>
+<script>
+  // your token goes here
+  ota_widget.init('')
+  ota_widget.load()
+</script>
+<div></div>
+  </body>
+</html>
