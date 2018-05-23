@@ -20,7 +20,35 @@ window.ota_widget = {
   }
 };
 
+window.ota_widget.ratings = {
+
+  mod4: function mod4(value) {
+    return Math.floor((value - 1) / 4) * 4;
+  },
+
+  format: function format(value) {
+    if (!value && value != '0') return '-';
+    value = parseFloat(value).toFixed(1);
+    return value == 10 ? '10' : value;
+  },
+
+  toCss: function toCss(value10) {
+    return ota_widget.ratings.toCss100(parseFloat(value10) * 10);
+  },
+
+  toCss100: function toCss100(value) {
+    if (!value && value != '0') return 'rating-unknown';
+
+    value = parseFloat(value);
+    if (value <= 4) return 'rating0-4';
+    if (value >= 97) return 'rating97-100';
+
+    return 'rating' + (ota_widget.ratings.mod4(value) + 1) + '-' + (ota_widget.ratings.mod4(value) + 4);
+  }
+};
+
 window.ota_widget.url = {
+
   params: _.chain(window.location.search.slice(1).split('&')).map(function (item) {
     if (item) return item.split('=');
   }).compact().fromPairs().value(),
@@ -33,6 +61,7 @@ window.ota_widget.url = {
 };
 
 window.ota_widget.api = {
+
   baseUrl: 'https://agora.olery.com',
   version: 'v3',
   company_id: ota_widget.url.params.company_id,

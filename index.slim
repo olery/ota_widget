@@ -1,35 +1,51 @@
 ---
-layout: ota_widget
 ---
+doctype html
+html
+  head
+    meta content='text/html; charset=UTF-8' http-equiv='Content-Type'
+    meta charset='utf-8'
 
-overall.block
-  .gei
-    '{opts.gei}
+    title Olery OTA Widget demo
 
-  javascript:
+    link href='css/ota_widget.css' rel='stylesheet'
+    script src='https://cdn.jsdelivr.net/fetch/2.0.1/fetch.min.js'
+    script src='https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js'
+    script src='https://cdn.jsdelivr.net/npm/riot@3.6/riot+compiler.js'
+    script type='text/javascript' src='js/ota_widget.js'
 
-ratings.block
-  h2 Ratings
+  body
 
-  javascript:
 
-mentions.block
-  h2 What People Mention
+    overall.block
+      .rating class='{ota_widget.ratings.toCss100(opts.gei)}'
+        '{ota_widget.ratings.format(opts.gei / 10)}
+      '{opts.review_count}
 
-  javascript:
+      javascript:
 
-guests.block
-  h2 Who stays here
+    ratings.block
+      h2 Ratings
 
-  javascript:
+      javascript:
 
-summaries.block
-  h2 Summary
+    mentions.block
+      h2 What People Mention
 
-  javascript:
+      javascript:
 
-javascript:
-  // your token goes here
-  ota_widget.init('')
-  ota_widget.load()
-.
+    guests.block
+      h2 Who stays here
+
+      javascript:
+
+    summaries.block
+      h2 Summary
+
+      javascript:
+
+    javascript:
+      // your token goes here
+      ota_widget.init('')
+      ota_widget.load()
+    .
