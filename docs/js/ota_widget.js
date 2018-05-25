@@ -14,10 +14,21 @@ window.ota_widget = {
 
   load: function load() {
     ota_widget.api.review_widget({}).then(function (json) {
-      ota_widget.tag.d = json.data;
+      ota_widget.tag.d = ota_widget.transformData(json.data);
+
       ota_widget.tag.update();
       ota_widget.tag.root.style.display = 'block';
     });
+  },
+
+  transformData: function transformData(data) {
+    data.mentions = _.map(data.mentions, function (v, m) {
+      v.topic = m;
+      v.percentage = Math.round(100 * v.positive_opinions / v.opinions_count);
+      return v;
+    });
+
+    return data;
   },
 
   loadTag: function loadTag(name, opts) {

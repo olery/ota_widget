@@ -1,7 +1,7 @@
 ota-widget {
   color: #7f7a7a;
   font-family: Helvetica; }
-  ota-widget .ratings.block table td {
+  ota-widget table td {
     padding: 8px;
     vertical-align: center; }
   ota-widget .ratings.block .rating-bar {
@@ -15,6 +15,9 @@ ota-widget {
   ota-widget .ratings.block .rating-value-bar {
     height: 20px;
     position: absolute; }
+  ota-widget .mentions.block .mention-percentage {
+    color: white;
+    font-weight: bold; }
   ota-widget .rating0-4 {
     background-color: #d54939 !important; }
   ota-widget .rating5-8 {

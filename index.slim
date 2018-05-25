@@ -43,7 +43,15 @@ html
       .mentions.block
         h2 What People Mention
 
-        javascript:
+        table
+          tr.mention each='{m,i in d.mentions}' if='{i < 8}'
+            td
+              strong
+                '{m.topic}
+            td
+              '{m.opinions_count} times mentioned
+            td.mention-percentage class='{w.ratings.toCss100(m.percentage)}'
+              '{m.percentage}% positive
 
       .guests.block
         h2 Who stays here

@@ -41,8 +41,19 @@
         <h2>
           What People Mention
         </h2>
-        <script>
-        </script>
+        <table>
+          <tr class="mention" each="{m,i in d.mentions}" if="{i &lt; 8}">
+            <td>
+              <strong>{m.topic} </strong>
+            </td>
+            <td>
+              {m.opinions_count} times mentioned 
+            </td>
+            <td class="mention-percentage {w.ratings.toCss100(m.percentage)}">
+              {m.percentage}% positive 
+            </td>
+          </tr>
+        </table>
       </div>
       <div class="guests block">
         <h2>
