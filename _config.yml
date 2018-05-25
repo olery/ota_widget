@@ -5,6 +5,9 @@ layouts_dir: ./_layouts
 plugins:
   - jekyll-babel
 
+sass:
+  sass_dir: ./_scss
+
 slim:
   pretty: true
 

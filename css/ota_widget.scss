@@ -1,6 +1,8 @@
 ---
 ---
 
+@import 'flags';
+
 $padding: 8px;
 
 ota-widget {
@@ -15,9 +17,13 @@ ota-widget {
     }
   }
 
+  .row {
+    overflow: hidden;
+  }
   .block {
+    width: 350px;
     border: 1px #aaaaaa solid;
-    display: inline-block;
+    float: left;
     padding: 2*$padding;
     margin-right:  $padding;
     margin-bottom: $padding;

@@ -30,6 +30,10 @@ window.ota_widget = {
     data.summaries = _.map(data.summaries, function (s) {
       return s[Object.keys(s)[0]];
     });
+    data.guests.countries = _.map(data.guests.countries, function (c, id) {
+      c.code = id.toLowerCase();
+      return c;
+    });
 
     return data;
   },

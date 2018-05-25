@@ -15,8 +15,8 @@
   <body>
     <ota-widget>
       <div class="row">
-        <img src="images/seal.png" width="96px" />
         <div class="overall block">
+          <img src="images/seal.png" width="96px" />
           <div class="rating {w.ratings.toCss100(d.rating)}">
             {w.ratings.format(d.rating / 10)} 
           </div>
@@ -67,6 +67,11 @@
           <h2>
             Who stays here
           </h2>
+          <div class="countries">
+            <div class="country" each="{c,i in d.guests.countries}" if="{i &lt; 3}">
+              <img class="flag flag-{c.code}" src="images/blank.gif" />{c.code} 
+            </div>
+          </div>
         </div>
         <div class="summaries block">
           <h2>

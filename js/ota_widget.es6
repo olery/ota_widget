@@ -29,6 +29,10 @@ window.ota_widget = {
       return v
     })
     data.summaries = _.map(data.summaries, (s) => { return s[Object.keys(s)[0]] })
+    data.guests.countries = _.map(data.guests.countries, (c,id) => {
+      c.code       = id.toLowerCase()
+      return c
+    })
 
     return data
   },
