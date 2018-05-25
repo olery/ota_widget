@@ -8,7 +8,10 @@ html
 
     title Olery OTA Widget demo
 
+    link href='https://unpkg.com/material-components-web@0.17.0/dist/material-components-web.min.css' rel='stylesheet'
+    link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'
     link href='css/ota_widget.css' rel='stylesheet'
+
     script src='https://cdn.jsdelivr.net/fetch/2.0.1/fetch.min.js'
     script src='https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js'
     script src='https://cdn.jsdelivr.net/npm/riot@3.6/riot+compiler.js'
@@ -58,6 +61,14 @@ html
 
       .summaries.block
         h2 Summary
+
+        table
+          tr.summary each='{s,i in d.summaries}' if='{s.sentiment && i < 8}'
+            td.icon class='material-icons'
+              '{s.sentiment == 'positive' ? 'add_circle_outline' : 'remove_circle_outline'}
+            td
+              strong
+                '{s.text}
 
       javascript:
         this.w = window.ota_widget

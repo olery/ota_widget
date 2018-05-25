@@ -28,6 +28,7 @@ window.ota_widget = {
       v.percentage = Math.round(100*v.positive_opinions/v.opinions_count)
       return v
     })
+    data.summaries = _.map(data.summaries, (s) => { return s[Object.keys(s)[0]] })
 
     return data
   },

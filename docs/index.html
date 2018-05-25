@@ -4,6 +4,8 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
     <meta charset="utf-8" />
     <title>Olery OTA Widget demo</title>
+    <link href="https://unpkg.com/material-components-web@0.17.0/dist/material-components-web.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="css/ota_widget.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/fetch/2.0.1/fetch.min.js"></script>
     <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
@@ -64,6 +66,16 @@
         <h2>
           Summary
         </h2>
+        <table>
+          <tr class="summary" each="{s,i in d.summaries}" if="{s.sentiment &amp;&amp; i &lt; 8}">
+            <td class="icon material-icons">
+              {s.sentiment == 'positive' ? 'add_circle_outline' : 'remove_circle_outline'} 
+            </td>
+            <td>
+              <strong>{s.text} </strong>
+            </td>
+          </tr>
+        </table>
       </div>
       <script>
         this.w = window.ota_widget

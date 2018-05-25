@@ -12,13 +12,17 @@ ota-widget {
     vertical-align: center;
   }
 
+  .overall.block {
+
+  }
+
   .ratings.block {
 
     .rating-bar {
       width: 200px;
       height: 20px;
       padding: 0;
-      margin-top: $padding/2;
+      margin-top: $padding - 1;
       position: relative;
       display: inline-block;
       background-color: #d6d6d6;
@@ -36,6 +40,22 @@ ota-widget {
       font-weight: bold;
     }
 
+  }
+
+  .guests.block {
+
+  }
+
+  .summaries.block {
+    .summary {
+      td {
+        padding: $padding/2;
+      }
+
+      .icon {
+        color: #74bc55;
+      }
+    }
   }
 
   .rating0-4
