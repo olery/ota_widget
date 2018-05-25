@@ -1,11 +1,11 @@
 ---
 ---
 
-@import 'flags';
-
 $padding: 8px;
 
 ota-widget {
+  @import 'flags';
+
   color: #7f7a7a;
   font-family: Helvetica;
 
