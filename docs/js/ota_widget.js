@@ -2,21 +2,27 @@
 
 window.ota_widget = {
 
+  tag: null,
   tags: {},
 
   init: function init(token) {
     if (token) ota_widget.api.token = token;
+
+    ota_widget.tag = ota_widget.loadTag('ota-widget');
+    ota_widget.tag.root.style.display = 'none';
   },
 
   load: function load() {
-    ota_widget.api.review_content({}).then(function (json) {
-      ota_widget.loadTag('overall', json.data);
+    ota_widget.api.review_widget({}).then(function (json) {
+      ota_widget.tag.d = json.data;
+      ota_widget.tag.update();
+      ota_widget.tag.root.style.display = 'block';
     });
   },
 
   loadTag: function loadTag(name, opts) {
     riot.tag(name);
-    ota_widget.tags[name] = riot.mount(name, opts)[0];
+    return riot.mount(name, opts)[0];
   }
 };
 
@@ -67,12 +73,12 @@ window.ota_widget.api = {
   company_id: ota_widget.url.params.company_id,
   token: ota_widget.url.params.token,
 
-  review_content: function review_content(_ref) {
+  review_widget: function review_widget(_ref) {
     var _ref$params = _ref.params;
     var params = _ref$params === undefined ? {} : _ref$params;
 
     return ota_widget.api.req({
-      path: 'companies/' + ota_widget.api.company_id + '/review_content'
+      path: 'companies/' + ota_widget.api.company_id + '/review_widget'
     });
   },
 

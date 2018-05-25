@@ -16,36 +16,44 @@ html
 
   body
 
+    ota-widget
 
-    overall.block
-      .rating class='{ota_widget.ratings.toCss100(opts.gei)}'
-        '{ota_widget.ratings.format(opts.gei / 10)}
-      '{opts.review_count}
+      .overall.block
+        .rating class='{w.ratings.toCss100(d.rating)}'
+          '{w.ratings.format(d.rating / 10)}
+        '{d.review_count}
+
+      .recent-reviews.block
+
+      .ratings.block
+        h2 Ratings
+
+        table
+          tr.rating each='{r in d.ratings}' if='{r.title}'
+            td
+              strong
+                '{r.title}
+            td.rating-bar
+              .rating-value-bar class='{w.ratings.toCss100(r.value)}' style='width: {r.value}%'
+            td.rating-value
+              '{w.ratings.format(r.value / 10)}
+
+      .mentions.block
+        h2 What People Mention
+
+        javascript:
+
+      .guests.block
+        h2 Who stays here
+
+      .summaries.block
+        h2 Summary
 
       javascript:
+        this.w = window.ota_widget
+        this.d = {}
 
-    ratings.block
-      h2 Ratings
-
-      javascript:
-
-    mentions.block
-      h2 What People Mention
-
-      javascript:
-
-    guests.block
-      h2 Who stays here
-
-      javascript:
-
-    summaries.block
-      h2 Summary
-
-      javascript:
-
-    javascript:
-      // your token goes here
-      ota_widget.init('')
-      ota_widget.load()
+        // your token goes here
+        w.init('')
+        w.load()
     .

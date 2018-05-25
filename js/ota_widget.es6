@@ -3,21 +3,27 @@
 
 window.ota_widget = {
 
+  tag:  null,
   tags: {},
   
   init: (token) => {
     if (token) ota_widget.api.token = token
+
+    ota_widget.tag = ota_widget.loadTag('ota-widget')
+    ota_widget.tag.root.style.display = 'none'
   },
 
   load: () => {
-    ota_widget.api.review_content({}).then((json) => {
-      ota_widget.loadTag('overall', json.data)
+    ota_widget.api.review_widget({}).then((json) => {
+      ota_widget.tag.d = json.data
+      ota_widget.tag.update()
+      ota_widget.tag.root.style.display = 'block'
     })
   },
 
   loadTag: (name, opts) => {
     riot.tag(name)
-    ota_widget.tags[name] = riot.mount(name, opts)[0]
+    return riot.mount(name, opts)[0]
   },
 }
 
@@ -68,9 +74,9 @@ window.ota_widget.api = {
   company_id: ota_widget.url.params.company_id,
   token:      ota_widget.url.params.token,
 
-  review_content: ({params = {}}) => {
+  review_widget: ({params = {}}) => {
     return ota_widget.api.req({
-      path: `companies/${ota_widget.api.company_id}/review_content`,
+      path: `companies/${ota_widget.api.company_id}/review_widget`,
     })
   },
 

@@ -1,127 +1,155 @@
 ---
 ---
 
-.rating0-4
-{
+$padding: 8px;
+
+ota-widget {
+  color: #7f7a7a;
+  font-family: Helvetica;
+
+  .ratings.block {
+    table td {
+      padding: $padding;
+      vertical-align: center;
+    }
+
+    .rating-bar {
+      width: 200px;
+      height: 20px;
+      padding: 0;
+      margin-top: $padding/2;
+      position: relative;
+      display: inline-block;
+      background-color: #d6d6d6;
+    }
+    .rating-value-bar {
+      height: 20px;
+      position: absolute;
+    }
+  }
+
+  .rating0-4
+  {
     background-color:#d54939!important;
-}
+  }
 
-.rating5-8
-{
+  .rating5-8
+  {
     background-color:#e64d3c!important;
-}
+  }
 
-.rating9-12
-{
+  .rating9-12
+  {
     background-color:#ea5c39!important;
-}
+  }
 
-.rating13-16
-{
+  .rating13-16
+  {
     background-color:#ee6a36!important;
-}
+  }
 
-.rating17-20
-{
+  .rating17-20
+  {
     background-color:#f37c33!important;
-}
+  }
 
-.rating21-24
-{
+  .rating21-24
+  {
     background-color:#f48e2f!important;
-}
+  }
 
-.rating25-28
-{
+  .rating25-28
+  {
     background-color:#f4992d!important;
-}
+  }
 
-.rating29-32
-{
+  .rating29-32
+  {
     background-color:#f4a42c!important;
-}
+  }
 
-.rating33-36
-{
+  .rating33-36
+  {
     background-color:#f4ae2c!important;
-}
+  }
 
-.rating37-40
-{
+  .rating37-40
+  {
     background-color:#f4b82c!important;
-}
+  }
 
-.rating41-44
-{
+  .rating41-44
+  {
     background-color:#f4c02c!important;
-}
+  }
 
-.rating45-48
-{
+  .rating45-48
+  {
     background-color:#f4c72c!important;
-}
+  }
 
-.rating49-52
-{
+  .rating49-52
+  {
     background-color:#f4cd2c!important;
-}
+  }
 
-.rating53-56
-{
+  .rating53-56
+  {
     background-color:#f0ce2e!important;
-}
+  }
 
-.rating57-60
-{
+  .rating57-60
+  {
     background-color:#e8ce31!important;
-}
+  }
 
-.rating61-64
-{
+  .rating61-64
+  {
     background-color:#ddce36!important;
-}
+  }
 
-.rating65-68
-{
+  .rating65-68
+  {
     background-color:#d2ce3b!important;
-}
+  }
 
-.rating69-72
-{
+  .rating69-72
+  {
     background-color:#c5ce40!important;
-}
+  }
 
-.rating73-76
-{
+  .rating73-76
+  {
     background-color:#b8ce46!important;
-}
+  }
 
-.rating77-80
-{
+  .rating77-80
+  {
     background-color:#a7ce4e!important;
-}
+  }
 
-.rating81-84
-{
+  .rating81-84
+  {
     background-color:#96ce56!important;
-}
+  }
 
-.rating85-88
-{
+  .rating85-88
+  {
     background-color:#83ce5f!important;
-}
+  }
 
-.rating89-92
-{
+  .rating89-92
+  {
     background-color:#75ce65!important;
-}
+  }
 
-.rating93-96
-{
+  .rating93-96
+  {
     background-color:#63cc6d!important;
-}
+  }
 
-.rating97-100
-{
+  .rating97-100
+  {
     background-color:#54ca74!important;
+  }
 }
