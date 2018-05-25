@@ -21,54 +21,57 @@ html
 
     ota-widget
 
-      img src='images/seal.png' width='96px'
+      .row
+        img src='images/seal.png' width='96px'
 
-      .overall.block
-        .rating class='{w.ratings.toCss100(d.rating)}'
-          '{w.ratings.format(d.rating / 10)}
-        '{d.review_count}
+        .overall.block
+          .rating class='{w.ratings.toCss100(d.rating)}'
+            '{w.ratings.format(d.rating / 10)}
+          '{d.review_count}
 
-      .recent-reviews.block
+        .recent-reviews.block
 
-      .ratings.block
-        h2 Ratings
+      .row
+        .ratings.block
+          h2 Ratings
 
-        table
-          tr.rating each='{r in d.ratings}' if='{r.title}'
-            td
-              strong
-                '{r.title}
-            td.rating-bar
-              .rating-value-bar class='{w.ratings.toCss100(r.value)}' style='width: {r.value}%'
-            td.rating-value
-              '{w.ratings.format(r.value / 10)}
+          table
+            tr.rating each='{r in d.ratings}' if='{r.title}'
+              td
+                strong
+                  '{r.title}
+              td.rating-bar
+                .rating-value-bar class='{w.ratings.toCss100(r.value)}' style='width: {r.value}%'
+              td.rating-value
+                '{w.ratings.format(r.value / 10)}
 
-      .mentions.block
-        h2 What People Mention
+        .mentions.block
+          h2 What People Mention
 
-        table
-          tr.mention each='{m,i in d.mentions}' if='{i < 8}'
-            td
-              strong
-                '{m.topic}
-            td
-              '{m.opinions_count} times mentioned
-            td.mention-percentage class='{w.ratings.toCss100(m.percentage)}'
-              '{m.percentage}% positive
+          table
+            tr.mention each='{m,i in d.mentions}' if='{i < 8}'
+              td
+                strong
+                  '{m.topic}
+              td
+                '{m.opinions_count} times mentioned
+              td.mention-percentage class='{w.ratings.toCss100(m.percentage)}'
+                '{m.percentage}% positive
 
-      .guests.block
-        h2 Who stays here
+      .row
+        .guests.block
+          h2 Who stays here
 
-      .summaries.block
-        h2 Summary
+        .summaries.block
+          h2 Summary
 
-        table
-          tr.summary each='{s,i in d.summaries}' if='{s.sentiment && i < 8}'
-            td.icon class='material-icons'
-              '{s.sentiment == 'positive' ? 'add_circle_outline' : 'remove_circle_outline'}
-            td
-              strong
-                '{s.text}
+          table
+            tr.summary each='{s,i in d.summaries}' if='{s.sentiment && i < 8}'
+              td.icon class='material-icons'
+                '{s.sentiment == 'positive' ? 'add_circle_outline' : 'remove_circle_outline'}
+              td
+                strong
+                  '{s.text}
 
       javascript:
         this.w = window.ota_widget

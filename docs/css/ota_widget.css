@@ -4,6 +4,14 @@ ota-widget {
   ota-widget table td {
     padding: 8px;
     vertical-align: center; }
+    ota-widget table td:first-child {
+      padding-left: 0; }
+  ota-widget .block {
+    border: 1px #aaaaaa solid;
+    display: inline-block;
+    padding: 16px;
+    margin-right: 8px;
+    margin-bottom: 8px; }
   ota-widget .ratings.block .rating-bar {
     width: 200px;
     height: 20px;
@@ -20,6 +28,8 @@ ota-widget {
     font-weight: bold; }
   ota-widget .summaries.block .summary td {
     padding: 4px; }
+    ota-widget .summaries.block .summary td:first-child {
+      padding-left: 0; }
   ota-widget .summaries.block .summary .icon {
     color: #74bc55; }
   ota-widget .rating0-4 {

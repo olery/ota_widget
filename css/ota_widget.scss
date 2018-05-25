@@ -10,6 +10,17 @@ ota-widget {
   table td {
     padding: $padding;
     vertical-align: center;
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+
+  .block {
+    border: 1px #aaaaaa solid;
+    display: inline-block;
+    padding: 2*$padding;
+    margin-right:  $padding;
+    margin-bottom: $padding;
   }
 
   .overall.block {
@@ -50,6 +61,9 @@ ota-widget {
     .summary {
       td {
         padding: $padding/2;
+        &:first-child {
+          padding-left: 0;
+        }
       }
 
       .icon {
