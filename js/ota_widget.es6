@@ -23,16 +23,29 @@ window.ota_widget = {
   },
 
   transformData: (data) => {
+    data.ratings   = _.map(data.ratings, (r,t) => r)
+    data.ratings   = _.orderBy(data.ratings, 'value', 'desc')
+
     data.mentions  = _.map(data.mentions, (v,m) => {
       v.topic      = m
       v.percentage = Math.round(100*v.positive_opinions/v.opinions_count)
       return v
     })
+    data.mentions  = _.orderBy(data.mentions, 'opinions_count', 'desc')
+
     data.summaries = _.map(data.summaries, (s) => { return s[Object.keys(s)[0]] })
+
     data.guests.countries = _.map(data.guests.countries, (c,id) => {
-      c.code       = id.toLowerCase()
-      return c
+      c.overall.code = id.toLowerCase()
+      return c.overall
     })
+    data.guests.countries = _.orderBy(data.guests.countries, 'review_count', 'desc')
+
+    data.guests.compositions = _.map(data.guests.compositions, (c,id) => {
+      c.overall.code = id.toLowerCase()
+      return c.overall
+    })
+    data.guests.compositions = _.orderBy(data.guests.compositions, 'review_count', 'desc')
 
     return data
   },
