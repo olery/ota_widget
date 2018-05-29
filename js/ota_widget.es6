@@ -3,8 +3,7 @@
 
 window.ota_widget = {
 
-  tag:  null,
-  tags: {},
+  tag: null,
 
   init: (token) => {
     if (token) ota_widget.api.token = token
