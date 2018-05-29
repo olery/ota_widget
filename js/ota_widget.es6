@@ -8,10 +8,7 @@ window.ota_widget = {
   init: (token) => {
     if (token) ota_widget.api.token = token
 
-    ota_widget.tag = ota_widget.loadTag('ota-widget', function (opts) {
-      this.w = window.ota_widget
-      this.d = {}
-    })
+    ota_widget.tag = ota_widget.loadTag('ota-widget', ota_widget.ui.tagClass)
     ota_widget.tag.root.style.display = 'none'
   },
 
@@ -41,6 +38,11 @@ window.ota_widget.ui = {
     other:        'live_help',
     seniors:      'live_help',
     young_adults: 'live_help',
+  },
+
+  tagClass: function (opts) {
+    this.w = window.ota_widget
+    this.d = {}
   },
   
   transformData: (data) => {
