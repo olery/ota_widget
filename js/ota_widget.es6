@@ -9,20 +9,20 @@ window.ota_widget = {
     if (token) ota_widget.api.token = token
 
     ota_widget.tag = ota_widget.loadTag('ota-widget', ota_widget.ui.tagClass)
-    ota_widget.tag.root.style.display = 'none'
   },
 
   load: () => {
     ota_widget.api.review_widget({}).then((json) => {
       ota_widget.tag.d = ota_widget.ui.transformData(json.data)
       ota_widget.tag.update()
-      ota_widget.tag.root.style.display = 'block'
     })
   },
 
   loadTag: (name, scriptFunc, opts) => {
     riot.tag2(name, null, '', '', scriptFunc)
-    return riot.mount(name, opts)[0]
+    var tag = riot.mount(name, opts)[0]
+    tag.root.style.display = 'block'
+    return tag
   },
 }
 
