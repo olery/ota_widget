@@ -15,7 +15,7 @@ html
     script src='https://cdn.jsdelivr.net/fetch/2.0.1/fetch.min.js'
     script src='https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js'
     script src='https://cdn.jsdelivr.net/npm/riot@3.6/riot+compiler.js'
-    script type='text/javascript' src='js/ota_widget.js'
+    script src='js/ota_widget.js' type='text/javascript'
 
   body
 
@@ -95,11 +95,8 @@ html
                 strong
                   '{s.text}
 
-      javascript:
-        this.w = window.ota_widget
-        this.d = {}
-
-        // your token goes here
-        w.init('')
-        w.load()
+    javascript:
+      // your token goes here
+      ota_widget.init('')
+      ota_widget.load()
     .

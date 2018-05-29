@@ -7,21 +7,23 @@ window.ota_widget = {
   init: function init(token) {
     if (token) ota_widget.api.token = token;
 
-    ota_widget.tag = ota_widget.loadTag('ota-widget');
+    ota_widget.tag = ota_widget.loadTag('ota-widget', function (opts) {
+      this.w = window.ota_widget;
+      this.d = {};
+    });
     ota_widget.tag.root.style.display = 'none';
   },
 
   load: function load() {
     ota_widget.api.review_widget({}).then(function (json) {
       ota_widget.tag.d = ota_widget.ui.transformData(json.data);
-
       ota_widget.tag.update();
       ota_widget.tag.root.style.display = 'block';
     });
   },
 
-  loadTag: function loadTag(name, opts) {
-    riot.tag(name);
+  loadTag: function loadTag(name, scriptFunc, opts) {
+    riot.tag2(name, null, '', '', scriptFunc);
     return riot.mount(name, opts)[0];
   }
 };
