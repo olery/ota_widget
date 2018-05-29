@@ -125,9 +125,9 @@ window.ota_widget.api = {
 
     return window
       .fetch(`${baseUrl}/${version}/${path}?${params}`)
-    .then((response) => {
-      return response.json()
-    })
+      .then((response) => {
+        return response.json()
+      })
   },
 }
 
