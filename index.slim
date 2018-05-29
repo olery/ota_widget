@@ -63,18 +63,22 @@ html
         .guests.block
           h2 Who stays here
 
-          table
+          table if='{d.guests}'
             tr.country each='{c,i in d.guests.countries}' if='{i < 3}'
               td
                 img src='images/blank.gif' class='flag flag-{c.country.toLowerCase()}'
               td
                 '{c.label}
+              td.percentage
+                '{c.percentage}%
 
             tr.composition each='{c,i in d.guests.compositions}' if='{i < 3}'
               td.icon class='material-icons'
                 '{w.compositionIcons[c.travel_composition]}
               td
                 '{c.label}
+              td.percentage
+                '{c.percentage}%
 
         .summaries.block
           h2 Summary

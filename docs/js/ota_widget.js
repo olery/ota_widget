@@ -44,11 +44,22 @@ window.ota_widget = {
       return s[Object.keys(s)[0]];
     });
 
-    _.each(data.guests.countries, function (c) {});
-
-    _.each(data.guests.compositions, function (c) {});
+    ota_widget.calcRatingsPercentages(data.guests.countries);
+    ota_widget.calcRatingsPercentages(data.guests.compositions);
 
     return data;
+  },
+
+  calcRatingsPercentages: function calcRatingsPercentages(groupedRatings) {
+    var total = _.sumBy(groupedRatings, function (c) {
+      c.review_count = _.find(c.ratings, function (r) {
+        return r.topic == 'overall';
+      }).review_count;
+      return c.review_count;
+    });
+    _.each(groupedRatings, function (c) {
+      return c.percentage = Math.round(100 * c.review_count / total);
+    });
   },
 
   loadTag: function loadTag(name, opts) {

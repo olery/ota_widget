@@ -516,6 +516,9 @@ ota-widget {
     font-weight: bold; }
   ota-widget .guests.block table td {
     padding: 4px 8px; }
+  ota-widget .guests.block .percentage {
+    font-size: 20px;
+    font-weight: bold; }
   ota-widget .guests.block .composition .icon {
     font-size: 48px; }
   ota-widget .summaries.block .summary td {

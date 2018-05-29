@@ -43,13 +43,18 @@ window.ota_widget = {
 
     data.summaries = _.map(data.summaries, (s) => { return s[Object.keys(s)[0]] })
 
-    _.each(data.guests.countries, (c) => {
-    })
-
-    _.each(data.guests.compositions, (c) => {
-    })
+    ota_widget.calcRatingsPercentages(data.guests.countries)
+    ota_widget.calcRatingsPercentages(data.guests.compositions)
 
     return data
+  },
+
+  calcRatingsPercentages: (groupedRatings) => {
+    var total   = _.sumBy(groupedRatings, (c) => {
+      c.review_count = _.find(c.ratings, (r) => r.topic == 'overall').review_count
+      return c.review_count
+    })
+    _.each(groupedRatings, (c) => c.percentage = Math.round(100*c.review_count/total) )
   },
 
   loadTag: (name, opts) => {

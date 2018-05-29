@@ -65,18 +65,19 @@ ota-widget {
       padding: $padding/2 $padding;
     }
 
-    .country {
+    .percentage {
+      font-size: 20px;
+      font-weight: bold;
+    }
 
+    .country {
     }
 
     .composition {
       .icon {
         font-size: 48px;
-
       }
-
     }
-
   }
 
   .summaries.block {
