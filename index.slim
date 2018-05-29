@@ -28,7 +28,11 @@ html
 
           .rating class='{w.ratings.toCss100(d.rating)}'
             '{w.ratings.format(d.rating / 10)}
-          '{d.review_count}
+          .count
+            strong.count-value
+              '{d.review_count} reviews
+            .count-period
+              in the past 12 month
 
         .recent-reviews.block
 

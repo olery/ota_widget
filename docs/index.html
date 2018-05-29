@@ -20,7 +20,12 @@
           <div class="rating {w.ratings.toCss100(d.rating)}">
             {w.ratings.format(d.rating / 10)} 
           </div>
-          {d.review_count} 
+          <div class="count">
+            <strong class="count-value">{d.review_count} reviews </strong>
+            <div class="count-period">
+              <in>the past 12 month</in>
+            </div>
+          </div>
         </div>
         <div class="recent-reviews block"></div>
       </div>
