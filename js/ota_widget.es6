@@ -118,10 +118,13 @@ window.ota_widget.api = {
     })
   },
 
-  req: ({path, params = {}}) => {
+  req: ({path, baseUrl = ota_widget.api.baseUrl,
+        version = ota_widget.api.version, params = {}}) => {
     params.auth_token = ota_widget.api.token
+    params = ota_widget.url.objectToQuery(params)
+
     return window
-      .fetch(`${ota_widget.api.baseUrl}/${ota_widget.api.version}/${path}?${ota_widget.url.objectToQuery(params)}`)
+      .fetch(`${baseUrl}/${version}/${path}?${params}`)
     .then((response) => {
       return response.json()
     })

@@ -128,11 +128,17 @@ window.ota_widget.api = {
 
   req: function req(_ref2) {
     var path = _ref2.path;
+    var _ref2$baseUrl = _ref2.baseUrl;
+    var baseUrl = _ref2$baseUrl === undefined ? ota_widget.api.baseUrl : _ref2$baseUrl;
+    var _ref2$version = _ref2.version;
+    var version = _ref2$version === undefined ? ota_widget.api.version : _ref2$version;
     var _ref2$params = _ref2.params;
     var params = _ref2$params === undefined ? {} : _ref2$params;
 
     params.auth_token = ota_widget.api.token;
-    return window.fetch(ota_widget.api.baseUrl + '/' + ota_widget.api.version + '/' + path + '?' + ota_widget.url.objectToQuery(params)).then(function (response) {
+    params = ota_widget.url.objectToQuery(params);
+
+    return window.fetch(baseUrl + '/' + version + '/' + path + '?' + params).then(function (response) {
       return response.json();
     });
   }
