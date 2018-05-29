@@ -1,4 +1,7 @@
 
 
-*.swp
+.jekyll-metadata
 .sass-cache
+
+#editors
+*.swp
