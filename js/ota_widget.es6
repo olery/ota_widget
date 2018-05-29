@@ -6,6 +6,30 @@ window.ota_widget = {
   tag:  null,
   tags: {},
 
+  init: (token) => {
+    if (token) ota_widget.api.token = token
+
+    ota_widget.tag = ota_widget.loadTag('ota-widget')
+    ota_widget.tag.root.style.display = 'none'
+  },
+
+  load: () => {
+    ota_widget.api.review_widget({}).then((json) => {
+      ota_widget.tag.d = ota_widget.ui.transformData(json.data)
+
+      ota_widget.tag.update()
+      ota_widget.tag.root.style.display = 'block'
+    })
+  },
+
+  loadTag: (name, opts) => {
+    riot.tag(name)
+    return riot.mount(name, opts)[0]
+  },
+}
+
+window.ota_widget.ui = {
+
   compositionIcons: {
     families:     'child_friendly',
     couples:      'people',
@@ -18,22 +42,6 @@ window.ota_widget = {
     young_adults: 'live_help',
   },
   
-  init: (token) => {
-    if (token) ota_widget.api.token = token
-
-    ota_widget.tag = ota_widget.loadTag('ota-widget')
-    ota_widget.tag.root.style.display = 'none'
-  },
-
-  load: () => {
-    ota_widget.api.review_widget({}).then((json) => {
-      ota_widget.tag.d = ota_widget.transformData(json.data)
-
-      ota_widget.tag.update()
-      ota_widget.tag.root.style.display = 'block'
-    })
-  },
-
   transformData: (data) => {
     data.ratings   = _.orderBy(data.ratings, 'value', 'desc')
 
@@ -43,8 +51,8 @@ window.ota_widget = {
 
     data.summaries = _.map(data.summaries, (s) => { return s[Object.keys(s)[0]] })
 
-    ota_widget.calcRatingsPercentages(data.guests.countries)
-    ota_widget.calcRatingsPercentages(data.guests.compositions)
+    ota_widget.ui.calcRatingsPercentages(data.guests.countries)
+    ota_widget.ui.calcRatingsPercentages(data.guests.compositions)
 
     return data
   },
@@ -55,11 +63,6 @@ window.ota_widget = {
       return c.review_count
     })
     _.each(groupedRatings, (c) => c.percentage = Math.round(100*c.review_count/total) )
-  },
-
-  loadTag: (name, opts) => {
-    riot.tag(name)
-    return riot.mount(name, opts)[0]
   },
 }
 

@@ -5,6 +5,30 @@ window.ota_widget = {
   tag: null,
   tags: {},
 
+  init: function init(token) {
+    if (token) ota_widget.api.token = token;
+
+    ota_widget.tag = ota_widget.loadTag('ota-widget');
+    ota_widget.tag.root.style.display = 'none';
+  },
+
+  load: function load() {
+    ota_widget.api.review_widget({}).then(function (json) {
+      ota_widget.tag.d = ota_widget.ui.transformData(json.data);
+
+      ota_widget.tag.update();
+      ota_widget.tag.root.style.display = 'block';
+    });
+  },
+
+  loadTag: function loadTag(name, opts) {
+    riot.tag(name);
+    return riot.mount(name, opts)[0];
+  }
+};
+
+window.ota_widget.ui = {
+
   compositionIcons: {
     families: 'child_friendly',
     couples: 'people',
@@ -15,22 +39,6 @@ window.ota_widget = {
     other: 'live_help',
     seniors: 'live_help',
     young_adults: 'live_help'
-  },
-
-  init: function init(token) {
-    if (token) ota_widget.api.token = token;
-
-    ota_widget.tag = ota_widget.loadTag('ota-widget');
-    ota_widget.tag.root.style.display = 'none';
-  },
-
-  load: function load() {
-    ota_widget.api.review_widget({}).then(function (json) {
-      ota_widget.tag.d = ota_widget.transformData(json.data);
-
-      ota_widget.tag.update();
-      ota_widget.tag.root.style.display = 'block';
-    });
   },
 
   transformData: function transformData(data) {
@@ -44,8 +52,8 @@ window.ota_widget = {
       return s[Object.keys(s)[0]];
     });
 
-    ota_widget.calcRatingsPercentages(data.guests.countries);
-    ota_widget.calcRatingsPercentages(data.guests.compositions);
+    ota_widget.ui.calcRatingsPercentages(data.guests.countries);
+    ota_widget.ui.calcRatingsPercentages(data.guests.compositions);
 
     return data;
   },
@@ -60,11 +68,6 @@ window.ota_widget = {
     _.each(groupedRatings, function (c) {
       return c.percentage = Math.round(100 * c.review_count / total);
     });
-  },
-
-  loadTag: function loadTag(name, opts) {
-    riot.tag(name);
-    return riot.mount(name, opts)[0];
   }
 };
 
