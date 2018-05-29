@@ -67,11 +67,24 @@
           <h2>
             Who stays here
           </h2>
-          <div class="countries">
-            <div class="country" each="{c,i in d.guests.countries}" if="{i &lt; 3}">
-              <img class="flag flag-{c.code}" src="images/blank.gif" />{c.code} 
-            </div>
-          </div>
+          <table>
+            <tr class="country" each="{c,i in d.guests.countries}" if="{i &lt; 3}">
+              <td>
+                <img class="flag flag-{c.country.toLowerCase()}" src="images/blank.gif" />
+              </td>
+              <td>
+                {c.label} 
+              </td>
+            </tr>
+            <tr class="composition" each="{c,i in d.guests.compositions}" if="{i &lt; 3}">
+              <td class="icon material-icons">
+                {w.compositionIcons[c.travel_composition]} 
+              </td>
+              <td>
+                {c.label} 
+              </td>
+            </tr>
+          </table>
         </div>
         <div class="summaries block">
           <h2>

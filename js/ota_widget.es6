@@ -5,6 +5,18 @@ window.ota_widget = {
 
   tag:  null,
   tags: {},
+
+  compositionIcons: {
+    families:     'child_friendly',
+    couples:      'people',
+    friends:      'favorite',
+    solo:         'live_help',
+    business:     'business',
+    group:        'live_help',
+    other:        'live_help',
+    seniors:      'live_help',
+    young_adults: 'live_help',
+  },
   
   init: (token) => {
     if (token) ota_widget.api.token = token
@@ -23,29 +35,19 @@ window.ota_widget = {
   },
 
   transformData: (data) => {
-    data.ratings   = _.map(data.ratings, (r,t) => r)
     data.ratings   = _.orderBy(data.ratings, 'value', 'desc')
 
-    data.mentions  = _.map(data.mentions, (v,m) => {
-      v.topic      = m
-      v.percentage = Math.round(100*v.positive_opinions/v.opinions_count)
-      return v
+    _.each(data.mentions, (m) => {
+      m.percentage = Math.round(100*m.positive_opinions/m.opinions_count)
     })
-    data.mentions  = _.orderBy(data.mentions, 'opinions_count', 'desc')
 
     data.summaries = _.map(data.summaries, (s) => { return s[Object.keys(s)[0]] })
 
-    data.guests.countries = _.map(data.guests.countries, (c,id) => {
-      c.overall.code = id.toLowerCase()
-      return c.overall
+    _.each(data.guests.countries, (c) => {
     })
-    data.guests.countries = _.orderBy(data.guests.countries, 'review_count', 'desc')
 
-    data.guests.compositions = _.map(data.guests.compositions, (c,id) => {
-      c.overall.code = id.toLowerCase()
-      return c.overall
+    _.each(data.guests.compositions, (c) => {
     })
-    data.guests.compositions = _.orderBy(data.guests.compositions, 'review_count', 'desc')
 
     return data
   },

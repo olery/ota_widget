@@ -61,6 +61,22 @@ ota-widget {
 
   .guests.block {
 
+    table td {
+      padding: $padding/2 $padding;
+    }
+
+    .country {
+
+    }
+
+    .composition {
+      .icon {
+        font-size: 48px;
+
+      }
+
+    }
+
   }
 
   .summaries.block {

@@ -63,10 +63,18 @@ html
         .guests.block
           h2 Who stays here
 
-          .countries
-            .country each='{c,i in d.guests.countries}' if='{i < 3}'
-              img src='images/blank.gif' class='flag flag-{c.code}'
-              '{c.code}
+          table
+            tr.country each='{c,i in d.guests.countries}' if='{i < 3}'
+              td
+                img src='images/blank.gif' class='flag flag-{c.country.toLowerCase()}'
+              td
+                '{c.label}
+
+            tr.composition each='{c,i in d.guests.compositions}' if='{i < 3}'
+              td.icon class='material-icons'
+                '{w.compositionIcons[c.travel_composition]}
+              td
+                '{c.label}
 
         .summaries.block
           h2 Summary
