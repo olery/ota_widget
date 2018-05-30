@@ -43,6 +43,11 @@ window.ota_widget.ui = {
   tagClass: function (opts) {
     this.w = window.ota_widget
     this.d = {}
+
+    this.clear = function () {
+      this.d = {}
+      this.update()
+    }
   },
   
   transformData: (data) => {
