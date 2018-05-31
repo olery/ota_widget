@@ -53,11 +53,9 @@ window.ota_widget.ui = {
   transformData: (data) => {
     data.ratings   = _.orderBy(data.ratings, 'value', 'desc')
 
-    _.each(data.mentions, (m) => {
-      m.percentage = Math.round(100*m.positive_opinions/m.opinions_count)
-    })
+    _.each(data.mentions, (m) => m.percentage = 100*m.positive_opinions/m.opinions_count)
 
-    data.summaries = _.map(data.summaries, (s) => { return s[Object.keys(s)[0]] })
+    data.summaries = _.map(data.summaries, (s) => s[Object.keys(s)[0]] )
 
     ota_widget.ui.calcRatingsPercentages(data.guests.countries)
     ota_widget.ui.calcRatingsPercentages(data.guests.compositions)
@@ -66,11 +64,11 @@ window.ota_widget.ui = {
   },
 
   calcRatingsPercentages: (groupedRatings) => {
-    var total   = _.sumBy(groupedRatings, (c) => {
+    var total = _.sumBy(groupedRatings, (c) => {
       c.review_count = _.find(c.ratings, (r) => r.topic == 'overall').review_count
       return c.review_count
     })
-    _.each(groupedRatings, (c) => c.percentage = Math.round(100*c.review_count/total) )
+    _.each(groupedRatings, (c) => c.percentage = 100*c.review_count/total )
   },
 }
 

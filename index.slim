@@ -61,7 +61,7 @@ html
               td
                 '{m.opinions_count} times mentioned
               td.mention-percentage class='{w.ratings.toCss100(m.percentage)}'
-                '{m.percentage}% positive
+                '{Math.round(m.percentage)}% positive
 
       .row
         .guests.block
@@ -74,7 +74,7 @@ html
               td
                 '{c.label}
               td.percentage
-                '{c.percentage}%
+                '{Math.round(c.percentage)}%
 
             tr.composition each='{c,i in d.guests.compositions}' if='{i < 3}'
               td.icon class='material-icons'
@@ -82,7 +82,7 @@ html
               td
                 '{c.label}
               td.percentage
-                '{c.percentage}%
+                '{Math.round(c.percentage)}%
 
         .summaries.block
           h2 Summary

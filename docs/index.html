@@ -61,7 +61,7 @@
                 {m.opinions_count} times mentioned 
               </td>
               <td class="mention-percentage {w.ratings.toCss100(m.percentage)}">
-                {m.percentage}% positive 
+                {Math.round(m.percentage)}% positive 
               </td>
             </tr>
           </table>
@@ -81,7 +81,7 @@
                 {c.label} 
               </td>
               <td class="percentage">
-                {c.percentage}% 
+                {Math.round(c.percentage)}% 
               </td>
             </tr>
             <tr class="composition" each="{c,i in d.guests.compositions}" if="{i &lt; 3}">
@@ -92,7 +92,7 @@
                 {c.label} 
               </td>
               <td class="percentage">
-                {c.percentage}% 
+                {Math.round(c.percentage)}% 
               </td>
             </tr>
           </table>

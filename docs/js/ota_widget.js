@@ -53,7 +53,7 @@ window.ota_widget.ui = {
     data.ratings = _.orderBy(data.ratings, 'value', 'desc');
 
     _.each(data.mentions, function (m) {
-      m.percentage = Math.round(100 * m.positive_opinions / m.opinions_count);
+      return m.percentage = 100 * m.positive_opinions / m.opinions_count;
     });
 
     data.summaries = _.map(data.summaries, function (s) {
@@ -74,7 +74,7 @@ window.ota_widget.ui = {
       return c.review_count;
     });
     _.each(groupedRatings, function (c) {
-      return c.percentage = Math.round(100 * c.review_count / total);
+      return c.percentage = 100 * c.review_count / total;
     });
   }
 };
