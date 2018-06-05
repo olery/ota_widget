@@ -2,58 +2,97 @@
 ---
 
 $padding: 8px;
+$glutter: 15px;
 
+body,html {
+  background-color: #fcfcfc;
+  margin: 0;
+  width: 100%;
+}
 ota-widget {
+  max-width: 1200px;
   @import 'flags';
 
   color: #7f7a7a;
   font-family: Helvetica;
 
-  table td {
-    padding: $padding;
-    vertical-align: center;
-    &:first-child {
-      padding-left: 0;
+  table {
+    width: 100%;
+    td {
+      padding: $padding;
+      vertical-align: middle;
+      &:first-child {
+        padding-left: 0;
+      }
+    }
+    .mention {
+      td {
+        font-size: 14px;
+      }
     }
   }
 
   .row {
     overflow: hidden;
   }
-  .block {
-    width: 350px;
-    border: 1px #aaaaaa solid;
-    float: left;
-    padding: 2*$padding;
-    margin-right:  $padding;
-    margin-bottom: $padding;
+  .masonry-image-list {
+    -webkit-column-count: 1;
+    column-count: 1;
+    -webkit-column-gap: 16px;
+    column-gap: 16px;
+    column-fill: auto;
   }
 
+  .block {
+    background-color: white;
+    padding: 2*$padding;
+    min-height: 50px;
+    margin: 10px auto;
+    page-break-inside: avoid;
+  }
   .overall.block {
     overflow: hidden;
 
     > * {
       float: left;
     }
+    img.seal {
+      margin-right: 20px;
+    }
+    .count {
+      margin-top: 10px;
+    }
 
     .rating {
-      width: 150px;
+      width: 130px;
       height: 75px;
       line-height: 75px;
       font-size: 48px;
       font-weight: bold;
       text-align: center;
+      margin-right: 10px;
     }
 
   }
 
   .ratings.block {
 
+    .subrating {
+      margin-top: 2*$padding;
+    }
+    .title,.rating-bar,.rating-value {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .title {
+      min-width: 110px;
+      line-height: 20px;
+    }
+
     .rating-bar {
-      width: 200px;
+      width: calc(100% - 150px);
       height: 20px;
       padding: 0;
-      margin-top: $padding - 1;
       position: relative;
       display: inline-block;
       background-color: #d6d6d6;
@@ -62,15 +101,38 @@ ota-widget {
       height: 20px;
       position: absolute;
     }
+    .rating-value {
+      max-width: 30px;
+    }
   }
 
   .mentions.block {
+    .mention {
+      margin-top: 2*$padding;
 
-    .mention-percentage {
-      color: white;
-      font-weight: bold;
+      .mention-percentage {
+        font-size: 14px;
+        color: white;
+        font-weight: bold;
+        padding: $padding;
+        vertical-align: top;
+      }
+
+      .mention-meta, .topic, .times, .mention-percentage {
+        display: inline-block;
+      }
+      .mention-meta {
+        width: calc(100% - 110px);
+      }
+      .topic {
+        font-size: 15px;
+        min-width: 130px;
+      }
+      .times {
+        font-size: 14px;
+      }
+
     }
-
   }
 
   .guests.block {
@@ -233,5 +295,32 @@ ota-widget {
   .rating97-100
   {
     background-color:#54ca74!important;
+  }
+
+  // Mobile first
+  @media (min-width: 768px) {
+    .mentions {
+      .topic {
+        font-size: 15px;
+      }
+    }
+    .masonry-image-list {
+      -webkit-column-count: 2;
+      column-count: 2;
+      -webkit-column-gap: 16px;
+      column-gap: 16px;
+      -webkit-column-width: 280px;
+      -moz-column-width: 280px;
+      column-width: 280px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .masonry-image-list {
+      -webkit-column-count: 3;
+      column-count: 3;
+      -webkit-column-gap: 16px;
+      column-gap: 16px;
+    }
   }
 }

@@ -1,4 +1,10 @@
+body, html {
+  background-color: #fcfcfc;
+  margin: 0;
+  width: 100%; }
+
 ota-widget {
+  max-width: 1200px;
   /*!
    * Generated with CSS Flag Sprite generator (https://www.flag-sprites.com/)
    */
@@ -486,45 +492,82 @@ ota-widget {
     background-position: -48px -48px; }
   ota-widget .flag.flag-ve {
     background-position: -96px -672px; }
-  ota-widget table td {
-    padding: 8px;
-    vertical-align: center; }
-    ota-widget table td:first-child {
-      padding-left: 0; }
+  ota-widget table {
+    width: 100%; }
+    ota-widget table td {
+      padding: 8px;
+      vertical-align: middle; }
+      ota-widget table td:first-child {
+        padding-left: 0; }
+    ota-widget table .mention td {
+      font-size: 14px; }
   ota-widget .row {
     overflow: hidden; }
+  ota-widget .masonry-image-list {
+    -webkit-column-count: 1;
+    column-count: 1;
+    -webkit-column-gap: 16px;
+    column-gap: 16px;
+    column-fill: auto; }
   ota-widget .block {
-    width: 350px;
-    border: 1px #aaaaaa solid;
-    float: left;
+    background-color: white;
     padding: 16px;
-    margin-right: 8px;
-    margin-bottom: 8px; }
+    min-height: 50px;
+    margin: 10px auto;
+    page-break-inside: avoid; }
   ota-widget .overall.block {
     overflow: hidden; }
     ota-widget .overall.block > * {
       float: left; }
+    ota-widget .overall.block img.seal {
+      margin-right: 20px; }
+    ota-widget .overall.block .count {
+      margin-top: 10px; }
     ota-widget .overall.block .rating {
-      width: 150px;
+      width: 130px;
       height: 75px;
       line-height: 75px;
       font-size: 48px;
       font-weight: bold;
-      text-align: center; }
+      text-align: center;
+      margin-right: 10px; }
+  ota-widget .ratings.block .subrating {
+    margin-top: 16px; }
+  ota-widget .ratings.block .title, ota-widget .ratings.block .rating-bar, ota-widget .ratings.block .rating-value {
+    display: inline-block;
+    vertical-align: middle; }
+  ota-widget .ratings.block .title {
+    min-width: 110px;
+    line-height: 20px; }
   ota-widget .ratings.block .rating-bar {
-    width: 200px;
+    width: calc(100% - 150px);
     height: 20px;
     padding: 0;
-    margin-top: 7px;
     position: relative;
     display: inline-block;
     background-color: #d6d6d6; }
   ota-widget .ratings.block .rating-value-bar {
     height: 20px;
     position: absolute; }
-  ota-widget .mentions.block .mention-percentage {
-    color: white;
-    font-weight: bold; }
+  ota-widget .ratings.block .rating-value {
+    max-width: 30px; }
+  ota-widget .mentions.block .mention {
+    margin-top: 16px; }
+    ota-widget .mentions.block .mention .mention-percentage {
+      font-size: 14px;
+      color: white;
+      font-weight: bold;
+      padding: 8px;
+      vertical-align: top; }
+    ota-widget .mentions.block .mention .mention-meta, ota-widget .mentions.block .mention .topic, ota-widget .mentions.block .mention .times, ota-widget .mentions.block .mention .mention-percentage {
+      display: inline-block; }
+    ota-widget .mentions.block .mention .mention-meta {
+      width: calc(100% - 110px); }
+    ota-widget .mentions.block .mention .topic {
+      font-size: 15px;
+      min-width: 130px; }
+    ota-widget .mentions.block .mention .times {
+      font-size: 14px; }
   ota-widget .guests.block table td {
     padding: 4px 8px; }
   ota-widget .guests.block .percentage {
@@ -589,3 +632,20 @@ ota-widget {
     background-color: #63cc6d !important; }
   ota-widget .rating97-100 {
     background-color: #54ca74 !important; }
+  @media (min-width: 768px) {
+    ota-widget .mentions .topic {
+      font-size: 15px; }
+    ota-widget .masonry-image-list {
+      -webkit-column-count: 2;
+      column-count: 2;
+      -webkit-column-gap: 16px;
+      column-gap: 16px;
+      -webkit-column-width: 280px;
+      -moz-column-width: 280px;
+      column-width: 280px; } }
+  @media (min-width: 1200px) {
+    ota-widget .masonry-image-list {
+      -webkit-column-count: 3;
+      column-count: 3;
+      -webkit-column-gap: 16px;
+      column-gap: 16px; } }

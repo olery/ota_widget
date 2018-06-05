@@ -3,11 +3,13 @@
 doctype html
 html
   head
+    meta name="viewport" content="width=device-width"
     meta content='text/html; charset=UTF-8' http-equiv='Content-Type'
     meta charset='utf-8'
 
     title Olery OTA Widget demo
 
+    link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css' rel='stylesheet'
     link href='https://unpkg.com/material-components-web@0.17.0/dist/material-components-web.min.css' rel='stylesheet'
     link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'
     link href='css/ota_widget.css' rel='stylesheet'
@@ -19,12 +21,12 @@ html
 
   body
 
-    ota-widget style='display: none'
+    ota-widget class="mdc-layout-grid" style='display: none'
 
-      .row
+      .mdc-image-list.mdc-image-list--masonry.masonry-image-list
 
-        .overall.block
-          img src='images/seal.png' width='96px'
+        .overall.block.mdc-elevation--z1.mdc-image-list__item
+          img src='images/seal.png' width='96px' class='seal'
 
           .rating class='{w.ratings.toCss100(d.rating)}'
             '{w.ratings.format(d.rating / 10)}
@@ -32,39 +34,38 @@ html
             strong.count-value
               '{d.review_count} reviews
             .count-period
-              'in the past 12 month
+              'in the past 12 months
 
-        .recent-reviews.block
+        .recent-reviews.block.mdc-elevation--z1.mdc-image-list__item
 
-      .row
-        .ratings.block
+        .ratings.block.mdc-elevation--z1.mdc-image-list__item
           h2 Ratings
 
-          table
-            tr.rating each='{r in d.ratings}' if='{r.title}'
-              td
+          .subratings
+            .subrating each='{r in d.ratings}' if='{r.title}'
+              .title
                 strong
                   '{r.title}
-              td.rating-bar
+              .rating-bar
                 .rating-value-bar class='{w.ratings.toCss100(r.value)}' style='width: {r.value}%'
-              td.rating-value
+              .rating-value
                 '{w.ratings.format(r.value / 10)}
 
-        .mentions.block
+        .mentions.block.mdc-elevation--z1.mdc-image-list__item
           h2 What People Mention
 
-          table
-            tr.mention each='{m,i in d.mentions}' if='{i < 8}'
-              td
-                strong
-                  '{m.topic}
-              td
-                '{m.opinions_count} times mentioned
-              td.mention-percentage class='{w.ratings.toCss100(m.percentage)}'
+          .mentions-row
+            .mention each='{m,i in d.mentions}' if='{i < 8}'
+              .mention-meta
+                .topic
+                  strong
+                    '{m.topic}
+                .times
+                  '{m.opinions_count} times mentioned
+              .mention-percentage class='{w.ratings.toCss100(m.percentage)}'
                 '{Math.round(m.percentage)}% positive
 
-      .row
-        .guests.block
+        .guests.block.mdc-elevation--z1.mdc-image-list__item
           h2 Who stays here
 
           table if='{d.guests}'
@@ -84,7 +85,7 @@ html
               td.percentage
                 '{Math.round(c.percentage)}%
 
-        .summaries.block
+        .summaries.block.mdc-elevation--z1.mdc-image-list__item
           h2 Summary
 
           table
