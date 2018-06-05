@@ -4,7 +4,6 @@ body, html {
   width: 100%; }
 
 ota-widget {
-  max-width: 1200px;
   /*!
    * Generated with CSS Flag Sprite generator (https://www.flag-sprites.com/)
    */
@@ -637,15 +636,16 @@ ota-widget {
       font-size: 15px; }
     ota-widget .masonry-image-list {
       -webkit-column-count: 2;
-      column-count: 2;
-      -webkit-column-gap: 16px;
-      column-gap: 16px;
-      -webkit-column-width: 280px;
-      -moz-column-width: 280px;
-      column-width: 280px; } }
+      column-count: 2; } }
   @media (min-width: 1200px) {
     ota-widget .masonry-image-list {
       -webkit-column-count: 3;
-      column-count: 3;
-      -webkit-column-gap: 16px;
-      column-gap: 16px; } }
+      column-count: 3; } }
+  @media (min-width: 1500px) {
+    ota-widget .masonry-image-list {
+      -webkit-column-count: 4;
+      column-count: 4; } }
+  @media (min-width: 1800px) {
+    ota-widget .masonry-image-list {
+      -webkit-column-count: 5;
+      column-count: 5; } }
