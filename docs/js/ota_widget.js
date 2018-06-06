@@ -29,14 +29,14 @@ window.ota_widget.ui = {
 
   compositionIcons: {
     families: 'child_friendly',
-    couples: 'people',
-    friends: 'favorite',
-    solo: 'live_help',
-    business: 'business',
-    group: 'live_help',
-    other: 'live_help',
-    seniors: 'live_help',
-    young_adults: 'live_help'
+    couples: 'favorite',
+    friends: 'group',
+    solo: 'person',
+    business: 'business_center',
+    group: 'directions_bus',
+    other: 'person',
+    seniors: 'person',
+    young_adults: 'person'
   },
 
   tagClass: function tagClass(opts) {

@@ -7,6 +7,7 @@ ota-widget {
   /*!
    * Generated with CSS Flag Sprite generator (https://www.flag-sprites.com/)
    */
+  font-size: 14px;
   color: #7f7a7a;
   font-family: Helvetica; }
   ota-widget .flag {
@@ -493,8 +494,14 @@ ota-widget {
     background-position: -96px -672px; }
   ota-widget h1 {
     font-size: 2em; }
+    ota-widget h1 span {
+      max-width: calc(100vw - 120px);
+      display: inline-block; }
     ota-widget h1 img {
-      vertical-align: middle; }
+      vertical-align: middle;
+      height: 90px;
+      width: auto;
+      margin-left: 10px; }
   ota-widget .row {
     overflow: hidden; }
   ota-widget .masonry-image-list {
@@ -503,8 +510,10 @@ ota-widget {
     -webkit-column-gap: 16px;
     column-gap: 16px;
     column-fill: auto; }
-    ota-widget .masonry-image-list .mdc-image-list__item {
-      padding-bottom: 1px; }
+    ota-widget .masonry-image-list .mdc-image-list__item .block {
+      display: inline-block;
+      width: 100%;
+      box-sizing: border-box; }
   ota-widget .block {
     background-color: white;
     padding: 16px;
@@ -590,7 +599,8 @@ ota-widget {
       padding-left: 0; }
   ota-widget .summaries.block .summary .name {
     vertical-align: top;
-    line-height: 1.4; }
+    line-height: 1.4;
+    width: calc(100% - 50px); }
   ota-widget .summaries.block .summary .icon {
     color: #74bc55; }
     ota-widget .summaries.block .summary .icon.negative {
@@ -646,15 +656,19 @@ ota-widget {
   ota-widget .rating97-100 {
     background-color: #54ca74 !important; }
   @media (min-width: 768px) {
-    ota-widget .mentions .topic {
-      font-size: 15px; }
-    ota-widget .masonry-image-list {
-      -webkit-column-count: 2;
-      column-count: 2; } }
+    ota-widget {
+      font-size: 16px; }
+      ota-widget .mentions .topic {
+        font-size: 15px; }
+      ota-widget .masonry-image-list {
+        -webkit-column-count: 2;
+        column-count: 2; } }
   @media (min-width: 1200px) {
-    ota-widget .masonry-image-list {
-      -webkit-column-count: 3;
-      column-count: 3; } }
+    ota-widget {
+      font-size: 18px; }
+      ota-widget .masonry-image-list {
+        -webkit-column-count: 3;
+        column-count: 3; } }
   @media (min-width: 1500px) {
     ota-widget .masonry-image-list {
       -webkit-column-count: 4;
