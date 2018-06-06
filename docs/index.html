@@ -15,101 +15,113 @@
   </head>
   <body>
     <ota-widget class="mdc-layout-grid" style="display: none">
+      <h1>
+        {d.name} <img class="seal" src="images/seal.png" width="96px" />
+      </h1>
       <div class="mdc-image-list mdc-image-list--masonry masonry-image-list">
-        <div class="overall block mdc-elevation--z1 mdc-image-list__item">
-          <img class="seal" src="images/seal.png" width="96px" />
-          <div class="rating {w.ratings.toCss100(d.rating)}">
-            {w.ratings.format(d.rating / 10)} 
-          </div>
-          <div class="count">
-            <strong class="count-value">{d.review_count} reviews </strong>
-            <div class="count-period">
-              in the past 12 months 
+        <div class="mdc-image-list__item">
+          <div class="overall block mdc-elevation--z1">
+            <div class="rating {w.ratings.toCss100(d.rating)}">
+              {w.ratings.format(d.rating / 10)} 
             </div>
-          </div>
-        </div>
-        <div class="recent-reviews block mdc-elevation--z1 mdc-image-list__item"></div>
-        <div class="ratings block mdc-elevation--z1 mdc-image-list__item">
-          <h2>
-            Ratings
-          </h2>
-          <div class="subratings">
-            <div class="subrating" each="{r in d.ratings}" if="{r.title}">
-              <div class="title">
-                <strong>{r.title} </strong>
-              </div>
-              <div class="rating-bar">
-                <div class="rating-value-bar {w.ratings.toCss100(r.value)}" style="width: {r.value}%"></div>
-              </div>
-              <div class="rating-value">
-                {w.ratings.format(r.value / 10)} 
+            <div class="count">
+              <strong class="count-value">{d.review_count} reviews </strong>
+              <div class="count-period">
+                in the past 12 months 
               </div>
             </div>
           </div>
         </div>
-        <div class="mentions block mdc-elevation--z1 mdc-image-list__item">
-          <h2>
-            What People Mention
-          </h2>
-          <div class="mentions-row">
-            <div class="mention" each="{m,i in d.mentions}" if="{i &lt; 8}">
-              <div class="mention-meta">
-                <div class="topic">
-                  <strong>{m.topic} </strong>
+        <div class="mdc-image-list__item">
+          <div class="recent-reviews block mdc-elevation--z1"></div>
+        </div>
+        <div class="mdc-image-list__item">
+          <div class="ratings block mdc-elevation--z1">
+            <h2>
+              Ratings
+            </h2>
+            <div class="subratings">
+              <div class="subrating" each="{r in d.ratings}" if="{r.title}">
+                <div class="title">
+                  <strong>{r.title} </strong>
                 </div>
-                <div class="times">
-                  {m.opinions_count} times mentioned 
+                <div class="rating-bar">
+                  <div class="rating-value-bar {w.ratings.toCss100(r.value)}" style="width: {r.value}%"></div>
+                </div>
+                <div class="rating-value">
+                  {w.ratings.format(r.value / 10)} 
                 </div>
               </div>
-              <div class="mention-percentage {w.ratings.toCss100(m.percentage)}">
-                {Math.round(m.percentage)}% positive 
+            </div>
+          </div>
+        </div>
+        <div class="mdc-image-list__item">
+          <div class="mentions block mdc-elevation--z1">
+            <h2>
+              What People Mention
+            </h2>
+            <div class="mentions-row">
+              <div class="mention" each="{m,i in d.mentions}" if="{i &lt; 8}">
+                <div class="mention-meta">
+                  <div class="topic">
+                    <strong>{m.topic} </strong>
+                  </div>
+                  <div class="times">
+                    {m.opinions_count} times mentioned 
+                  </div>
+                </div>
+                <div class="mention-percentage {w.ratings.toCss100(m.percentage)}">
+                  {Math.round(m.percentage)}% positive 
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="guests block mdc-elevation--z1 mdc-image-list__item">
-          <h2>
-            Who stays here
-          </h2>
-          <table if="{d.guests}">
-            <tr class="country" each="{c,i in d.guests.countries}" if="{i &lt; 3}">
-              <td>
-                <img class="flag flag-{c.country.toLowerCase()}" src="images/blank.gif" />
-              </td>
-              <td>
-                {c.label} 
-              </td>
-              <td class="percentage">
-                {Math.round(c.percentage)}% 
-              </td>
-            </tr>
-            <tr class="composition" each="{c,i in d.guests.compositions}" if="{i &lt; 3}">
-              <td class="icon material-icons">
-                {w.ui.compositionIcons[c.travel_composition]} 
-              </td>
-              <td>
-                {c.label} 
-              </td>
-              <td class="percentage">
-                {Math.round(c.percentage)}% 
-              </td>
-            </tr>
-          </table>
+        <div class="mdc-image-list__item">
+          <div class="guests block mdc-elevation--z1">
+            <h2>
+              Who stays here
+            </h2>
+            <div class="guests-block" if="{d.guests}">
+              <div class="country" each="{c,i in d.guests.countries}" if="{i &lt; 3}">
+                <div class="icon">
+                  <img class="flag flag-{c.country.toLowerCase()}" src="images/blank.gif" />
+                </div>
+                <div class="label">
+                  {c.label} 
+                </div>
+                <div class="percentage">
+                  {Math.round(c.percentage)}% 
+                </div>
+              </div>
+              <div class="composition" each="{c,i in d.guests.compositions}" if="{i &lt; 3}">
+                <div class="icon material-icons">
+                  {w.ui.compositionIcons[c.travel_composition]} 
+                </div>
+                <div class="label">
+                  {c.label} 
+                </div>
+                <div class="percentage">
+                  {Math.round(c.percentage)}% 
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="summaries block mdc-elevation--z1 mdc-image-list__item">
-          <h2>
-            Summary
-          </h2>
-          <table>
-            <tr class="summary" each="{s,i in d.summaries}" if="{s.sentiment &amp;&amp; i &lt; 8}">
-              <td class="icon material-icons">
-                {s.sentiment == 'positive' ? 'add_circle_outline' : 'remove_circle_outline'} 
-              </td>
-              <td>
-                <strong>{s.text} </strong>
-              </td>
-            </tr>
-          </table>
+        <div class="mdc-image-list__item">
+          <div class="summaries block mdc-elevation--z1">
+            <h2>
+              Summary
+            </h2>
+            <div class="summary-block">
+              <div class="summary" each="{s,i in d.summaries}" if="{s.sentiment &amp;&amp; i &lt; 8}">
+                <div class="icon material-icons {s.sentiment == &#39;positive&#39; ? &#39;&#39; : &#39;negative&#39;}">
+                  {s.sentiment == 'positive' ? 'add_circle_outline' : 'remove_circle_outline'} 
+                </div>
+                <strong class="name">{s.text} </strong>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </ota-widget>

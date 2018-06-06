@@ -491,15 +491,10 @@ ota-widget {
     background-position: -48px -48px; }
   ota-widget .flag.flag-ve {
     background-position: -96px -672px; }
-  ota-widget table {
-    width: 100%; }
-    ota-widget table td {
-      padding: 8px;
+  ota-widget h1 {
+    font-size: 2em; }
+    ota-widget h1 img {
       vertical-align: middle; }
-      ota-widget table td:first-child {
-        padding-left: 0; }
-    ota-widget table .mention td {
-      font-size: 14px; }
   ota-widget .row {
     overflow: hidden; }
   ota-widget .masonry-image-list {
@@ -508,11 +503,13 @@ ota-widget {
     -webkit-column-gap: 16px;
     column-gap: 16px;
     column-fill: auto; }
+    ota-widget .masonry-image-list .mdc-image-list__item {
+      padding-bottom: 1px; }
   ota-widget .block {
     background-color: white;
     padding: 16px;
     min-height: 50px;
-    margin: 10px auto;
+    margin-bottom: 20px;
     page-break-inside: avoid; }
   ota-widget .overall.block {
     overflow: hidden; }
@@ -529,6 +526,7 @@ ota-widget {
       font-size: 48px;
       font-weight: bold;
       text-align: center;
+      color: white;
       margin-right: 10px; }
   ota-widget .ratings.block .subrating {
     margin-top: 16px; }
@@ -557,30 +555,46 @@ ota-widget {
       color: white;
       font-weight: bold;
       padding: 8px;
-      vertical-align: top; }
+      vertical-align: top;
+      min-width: 95px; }
     ota-widget .mentions.block .mention .mention-meta, ota-widget .mentions.block .mention .topic, ota-widget .mentions.block .mention .times, ota-widget .mentions.block .mention .mention-percentage {
       display: inline-block; }
     ota-widget .mentions.block .mention .mention-meta {
-      width: calc(100% - 110px); }
+      width: calc(100% - 120px); }
     ota-widget .mentions.block .mention .topic {
       font-size: 15px;
       min-width: 130px; }
     ota-widget .mentions.block .mention .times {
       font-size: 14px; }
-  ota-widget .guests.block table td {
-    padding: 4px 8px; }
-  ota-widget .guests.block .percentage {
+  ota-widget .guests.block .guests-block .country > div, ota-widget .guests.block .guests-block .composition > div {
+    padding: 4px 8px;
+    display: inline-block; }
+  ota-widget .guests.block .guests-block .country .icon, ota-widget .guests.block .guests-block .composition .icon {
+    width: 40px; }
+  ota-widget .guests.block .guests-block .country .label, ota-widget .guests.block .guests-block .composition .label {
+    min-width: 160px;
+    line-height: 3.2; }
+  ota-widget .guests.block .guests-block .country .label, ota-widget .guests.block .guests-block .country .percentage, ota-widget .guests.block .guests-block .composition .label, ota-widget .guests.block .guests-block .composition .percentage {
+    vertical-align: top; }
+  ota-widget .guests.block .guests-block .percentage {
     font-size: 20px;
-    font-weight: bold; }
-  ota-widget .guests.block .composition .icon {
+    font-weight: bold;
+    line-height: 2.6; }
+  ota-widget .guests.block .guests-block .composition .icon {
     font-size: 48px;
     color: #2882bb; }
-  ota-widget .summaries.block .summary td {
+  ota-widget .summaries.block .summary .icon, ota-widget .summaries.block .summary .name {
+    display: inline-block;
     padding: 4px; }
-    ota-widget .summaries.block .summary td:first-child {
+    ota-widget .summaries.block .summary .icon:first-child, ota-widget .summaries.block .summary .name:first-child {
       padding-left: 0; }
+  ota-widget .summaries.block .summary .name {
+    vertical-align: top;
+    line-height: 1.4; }
   ota-widget .summaries.block .summary .icon {
     color: #74bc55; }
+    ota-widget .summaries.block .summary .icon.negative {
+      color: grey; }
   ota-widget .rating0-4 {
     background-color: #d54939 !important; }
   ota-widget .rating5-8 {

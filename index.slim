@@ -22,77 +22,85 @@ html
 
     ota-widget class="mdc-layout-grid" style='display: none'
 
+      h1
+        '{d.name}
+        img src='images/seal.png' width='96px' class='seal'
+
+
       .mdc-image-list.mdc-image-list--masonry.masonry-image-list
 
-        .overall.block.mdc-elevation--z1.mdc-image-list__item
-          img src='images/seal.png' width='96px' class='seal'
+        .mdc-image-list__item
+          .overall.block.mdc-elevation--z1
+            .rating class='{w.ratings.toCss100(d.rating)}'
+              '{w.ratings.format(d.rating / 10)}
+            .count
+              strong.count-value
+                '{d.review_count} reviews
+              .count-period
+                'in the past 12 months
 
-          .rating class='{w.ratings.toCss100(d.rating)}'
-            '{w.ratings.format(d.rating / 10)}
-          .count
-            strong.count-value
-              '{d.review_count} reviews
-            .count-period
-              'in the past 12 months
+        .mdc-image-list__item
+          .recent-reviews.block.mdc-elevation--z1
 
-        .recent-reviews.block.mdc-elevation--z1.mdc-image-list__item
+        .mdc-image-list__item
+          .ratings.block.mdc-elevation--z1
+            h2 Ratings
 
-        .ratings.block.mdc-elevation--z1.mdc-image-list__item
-          h2 Ratings
-
-          .subratings
-            .subrating each='{r in d.ratings}' if='{r.title}'
-              .title
-                strong
-                  '{r.title}
-              .rating-bar
-                .rating-value-bar class='{w.ratings.toCss100(r.value)}' style='width: {r.value}%'
-              .rating-value
-                '{w.ratings.format(r.value / 10)}
-
-        .mentions.block.mdc-elevation--z1.mdc-image-list__item
-          h2 What People Mention
-
-          .mentions-row
-            .mention each='{m,i in d.mentions}' if='{i < 8}'
-              .mention-meta
-                .topic
+            .subratings
+              .subrating each='{r in d.ratings}' if='{r.title}'
+                .title
                   strong
-                    '{m.topic}
-                .times
-                  '{m.opinions_count} times mentioned
-              .mention-percentage class='{w.ratings.toCss100(m.percentage)}'
-                '{Math.round(m.percentage)}% positive
+                    '{r.title}
+                .rating-bar
+                  .rating-value-bar class='{w.ratings.toCss100(r.value)}' style='width: {r.value}%'
+                .rating-value
+                  '{w.ratings.format(r.value / 10)}
 
-        .guests.block.mdc-elevation--z1.mdc-image-list__item
-          h2 Who stays here
+        .mdc-image-list__item
+          .mentions.block.mdc-elevation--z1
+            h2 What People Mention
 
-          table if='{d.guests}'
-            tr.country each='{c,i in d.guests.countries}' if='{i < 3}'
-              td
-                img src='images/blank.gif' class='flag flag-{c.country.toLowerCase()}'
-              td
-                '{c.label}
-              td.percentage
-                '{Math.round(c.percentage)}%
+            .mentions-row
+              .mention each='{m,i in d.mentions}' if='{i < 8}'
+                .mention-meta
+                  .topic
+                    strong
+                      '{m.topic}
+                  .times
+                    '{m.opinions_count} times mentioned
+                .mention-percentage class='{w.ratings.toCss100(m.percentage)}'
+                  '{Math.round(m.percentage)}% positive
 
-            tr.composition each='{c,i in d.guests.compositions}' if='{i < 3}'
-              td.icon class='material-icons'
-                '{w.ui.compositionIcons[c.travel_composition]}
-              td
-                '{c.label}
-              td.percentage
-                '{Math.round(c.percentage)}%
+        .mdc-image-list__item
+          .guests.block.mdc-elevation--z1
+            h2 Who stays here
 
-        .summaries.block.mdc-elevation--z1.mdc-image-list__item
-          h2 Summary
+            .guests-block if='{d.guests}'
+              .country each='{c,i in d.guests.countries}' if='{i < 3}'
+                .icon
+                  img src='images/blank.gif' class='flag flag-{c.country.toLowerCase()}'
+                .label
+                  '{c.label}
+                .percentage
+                  '{Math.round(c.percentage)}%
 
-          table
-            tr.summary each='{s,i in d.summaries}' if='{s.sentiment && i < 8}'
-              td.icon class='material-icons'
-                '{s.sentiment == 'positive' ? 'add_circle_outline' : 'remove_circle_outline'}
-              td
-                strong
+              .composition each='{c,i in d.guests.compositions}' if='{i < 3}'
+                .icon class='material-icons'
+                  '{w.ui.compositionIcons[c.travel_composition]}
+                .label
+                  '{c.label}
+                .percentage
+                  '{Math.round(c.percentage)}%
+
+        .mdc-image-list__item
+          .summaries.block.mdc-elevation--z1
+            h2 Summary
+
+            .summary-block
+              .summary each='{s,i in d.summaries}' if='{s.sentiment && i < 8}'
+                .icon class="material-icons {s.sentiment == 'positive' ? '' : 'negative'}"
+                  '{s.sentiment == 'positive' ? 'add_circle_outline' : 'remove_circle_outline'}
+                strong.name
                   '{s.text}
 
     javascript:

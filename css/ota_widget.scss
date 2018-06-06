@@ -15,19 +15,10 @@ ota-widget {
   color: #7f7a7a;
   font-family: Helvetica;
 
-  table {
-    width: 100%;
-    td {
-      padding: $padding;
+  h1 {
+    font-size: 2em;
+    img {
       vertical-align: middle;
-      &:first-child {
-        padding-left: 0;
-      }
-    }
-    .mention {
-      td {
-        font-size: 14px;
-      }
     }
   }
 
@@ -40,13 +31,18 @@ ota-widget {
     -webkit-column-gap: 16px;
     column-gap: 16px;
     column-fill: auto;
+
+    // avoid webkit cutting border
+    .mdc-image-list__item {
+      padding-bottom: 1px;
+    }
   }
 
   .block {
     background-color: white;
     padding: 2*$padding;
     min-height: 50px;
-    margin: 10px auto;
+    margin-bottom: 20px;
     page-break-inside: avoid;
   }
   .overall.block {
@@ -69,6 +65,7 @@ ota-widget {
       font-size: 48px;
       font-weight: bold;
       text-align: center;
+      color: white;
       margin-right: 10px;
     }
 
@@ -115,13 +112,14 @@ ota-widget {
         font-weight: bold;
         padding: $padding;
         vertical-align: top;
+        min-width: 95px;
       }
 
       .mention-meta, .topic, .times, .mention-percentage {
         display: inline-block;
       }
       .mention-meta {
-        width: calc(100% - 110px);
+        width: calc(100% - 120px);
       }
       .topic {
         font-size: 15px;
@@ -136,37 +134,58 @@ ota-widget {
 
   .guests.block {
 
-    table td {
-      padding: $padding/2 $padding;
-    }
+    .guests-block {
+      .country, .composition {
+        & > div {
+          padding: $padding/2 $padding;
+          display: inline-block;
+        }
+        .icon {
+          width: 40px;
+        }
+        .label {
+          min-width: 160px;
+          line-height: 3.2;
+        }
+        .label,.percentage {
+          vertical-align: top;
+        }
+      }
 
-    .percentage {
-      font-size: 20px;
-      font-weight: bold;
-    }
+      .percentage {
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 2.6;
+      }
 
-    .country {
-    }
-
-    .composition {
-      .icon {
-        font-size: 48px;
-        color: #2882bb;
+      .composition {
+        .icon {
+          font-size: 48px;
+          color: #2882bb;
+        }
       }
     }
   }
 
   .summaries.block {
     .summary {
-      td {
+      .icon,.name {
+        display: inline-block;
         padding: $padding/2;
         &:first-child {
           padding-left: 0;
         }
       }
 
+      .name {
+        vertical-align: top;
+        line-height: 1.4;
+      }
       .icon {
         color: #74bc55;
+        &.negative {
+          color: grey;
+        }
       }
     }
   }
