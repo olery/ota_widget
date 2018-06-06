@@ -4,11 +4,6 @@
 $padding: 8px;
 $glutter: 15px;
 
-body,html {
-  background-color: #fcfcfc;
-  margin: 0;
-  width: 100%;
-}
 ota-widget {
   @import 'flags';
   font-size: 14px;
