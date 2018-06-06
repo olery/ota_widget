@@ -582,7 +582,8 @@ ota-widget {
     width: 40px; }
   ota-widget .guests.block .guests-block .country .label, ota-widget .guests.block .guests-block .composition .label {
     min-width: 160px;
-    line-height: 3.2; }
+    line-height: 3.2;
+    font-weight: bold; }
   ota-widget .guests.block .guests-block .country .label, ota-widget .guests.block .guests-block .country .percentage, ota-widget .guests.block .guests-block .composition .label, ota-widget .guests.block .guests-block .composition .percentage {
     vertical-align: top; }
   ota-widget .guests.block .guests-block .percentage {
@@ -657,7 +658,7 @@ ota-widget {
     background-color: #54ca74 !important; }
   @media (min-width: 768px) {
     ota-widget {
-      font-size: 16px; }
+      font-size: 14px; }
       ota-widget .mentions .topic {
         font-size: 15px; }
       ota-widget .masonry-image-list {
@@ -665,7 +666,7 @@ ota-widget {
         column-count: 2; } }
   @media (min-width: 1200px) {
     ota-widget {
-      font-size: 18px; }
+      font-size: 15px; }
       ota-widget .masonry-image-list {
         -webkit-column-count: 3;
         column-count: 3; } }
