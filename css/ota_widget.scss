@@ -14,7 +14,7 @@ ota-widget {
   h1 {
     font-size: 2em;
     span {
-      max-width: calc(100vw - 120px); 
+      max-width: calc(100vw - 120px);
       display: inline-block;
     }
     img {
@@ -25,9 +25,6 @@ ota-widget {
     }
   }
 
-  .row {
-    overflow: hidden;
-  }
   .masonry-image-list {
     -webkit-column-count: 1;
     column-count: 1;

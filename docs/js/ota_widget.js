@@ -39,6 +39,8 @@ window.ota_widget.ui = {
     young_adults: 'person'
   },
 
+  topicIgnoreList: ['room'],
+
   tagClass: function tagClass(opts) {
     this.w = window.ota_widget;
     this.d = {};
@@ -52,8 +54,11 @@ window.ota_widget.ui = {
   transformData: function transformData(data) {
     data.ratings = _.orderBy(data.ratings, 'value', 'desc');
 
-    _.each(data.mentions, function (m) {
-      return m.percentage = 100 * m.positive_opinions / m.opinions_count;
+    _.remove(data.mentions, function (m) {
+      m.percentage = 100 * m.positive_opinions / m.opinions_count;
+      return _.find(ota_widget.ui.topicIgnoreList, function (t) {
+        return t == m.topic;
+      });
     });
 
     data.summaries = _.map(data.summaries, function (s) {

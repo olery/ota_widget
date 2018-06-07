@@ -40,6 +40,10 @@ window.ota_widget.ui = {
     young_adults: 'person',
   },
 
+  topicIgnoreList: [
+    'room'
+  ],
+
   tagClass: function (opts) {
     this.w = window.ota_widget
     this.d = {}
@@ -53,7 +57,10 @@ window.ota_widget.ui = {
   transformData: (data) => {
     data.ratings   = _.orderBy(data.ratings, 'value', 'desc')
 
-    _.each(data.mentions, (m) => m.percentage = 100*m.positive_opinions/m.opinions_count)
+    _.remove(data.mentions, (m) => {
+      m.percentage = 100*m.positive_opinions/m.opinions_count
+      return _.find(ota_widget.ui.topicIgnoreList, (t) => t == m.topic)
+    })
 
     data.summaries = _.map(data.summaries, (s) => s[Object.keys(s)[0]] )
 

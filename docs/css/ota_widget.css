@@ -497,8 +497,6 @@ ota-widget {
       height: 90px;
       width: auto;
       margin-left: 10px; }
-  ota-widget .row {
-    overflow: hidden; }
   ota-widget .masonry-image-list {
     -webkit-column-count: 1;
     column-count: 1;

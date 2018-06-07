@@ -64,7 +64,7 @@
               <div class="mention" each="{m,i in d.mentions}" if="{i &lt; 8}">
                 <div class="mention-meta">
                   <div class="topic">
-                    <strong>{m.topic} </strong>
+                    <strong>{m.label} </strong>
                   </div>
                   <div class="times">
                     {m.opinions_count} times mentioned 
@@ -115,7 +115,7 @@
             </h2>
             <div class="summary-block">
               <div class="summary" each="{s,i in d.summaries}" if="{s.sentiment &amp;&amp; i &lt; 8}">
-                <div class="icon material-icons {s.sentiment == &#39;positive&#39; ? &#39;&#39; : &#39;negative&#39;}">
+                <div class="icon material-icons {s.sentiment}">
                   {s.sentiment == 'positive' ? 'add_circle_outline' : 'remove_circle_outline'} 
                 </div>
                 <strong class="name">{s.text} </strong>

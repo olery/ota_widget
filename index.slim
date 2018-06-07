@@ -3,7 +3,7 @@
 doctype html
 html
   head
-    meta name="viewport" content="width=device-width"
+    meta name='viewport' content='width=device-width'
     meta content='text/html; charset=UTF-8' http-equiv='Content-Type'
     meta charset='utf-8'
 
@@ -20,7 +20,7 @@ html
 
   body
 
-    ota-widget class="mdc-layout-grid" style='display: none'
+    ota-widget class='mdc-layout-grid' style='display: none'
 
       h1
         span
@@ -66,7 +66,7 @@ html
                 .mention-meta
                   .topic
                     strong
-                      '{m.topic}
+                      '{m.label}
                   .times
                     '{m.opinions_count} times mentioned
                 .mention-percentage class='{w.ratings.toCss100(m.percentage)}'
@@ -99,7 +99,7 @@ html
 
             .summary-block
               .summary each='{s,i in d.summaries}' if='{s.sentiment && i < 8}'
-                .icon class="material-icons {s.sentiment == 'positive' ? '' : 'negative'}"
+                .icon class='material-icons {s.sentiment}'
                   '{s.sentiment == 'positive' ? 'add_circle_outline' : 'remove_circle_outline'}
                 strong.name
                   '{s.text}
