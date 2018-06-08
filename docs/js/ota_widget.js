@@ -39,7 +39,7 @@ window.ota_widget.ui = {
     young_adults: 'person'
   },
 
-  topicIgnoreList: ['room'],
+  topicIgnoreList: ['room', 'cleanliness', 'facilities', 'food', 'location', 'problem', 'value_for_money'],
 
   tagClass: function tagClass(opts) {
     this.w = window.ota_widget;
