@@ -41,7 +41,13 @@ window.ota_widget.ui = {
   },
 
   topicIgnoreList: [
-    'room'
+    'room',
+    'cleanliness',
+    'facilities',
+    'food',
+    'location',
+    'problem',
+    'value_for_money'
   ],
 
   tagClass: function (opts) {
