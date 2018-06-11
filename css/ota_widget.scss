@@ -31,6 +31,9 @@ ota-widget {
     -webkit-column-gap: 16px;
     column-gap: 16px;
 
+    .mdc-image-list__item {
+      padding-top: 1px;
+    }
     // avoid webkit cutting border
     .mdc-image-list__item .block {
       display: inline-block;
