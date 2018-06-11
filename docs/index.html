@@ -25,9 +25,9 @@
               {w.ratings.format(d.rating / 10)} 
             </div>
             <div class="count">
-              <strong class="count-value">{d.review_count} reviews </strong>
+              <strong class="count-value">{d.review_count} {l.overall.reviews} </strong>
               <div class="count-period">
-                in the past 12 months 
+                {l.overall.period} 
               </div>
             </div>
           </div>
@@ -38,7 +38,7 @@
         <div class="mdc-image-list__item">
           <div class="ratings block mdc-elevation--z1">
             <h2>
-              Ratings
+              {l.ratings.title} 
             </h2>
             <div class="subratings">
               <div class="subrating" each="{r in d.ratings}" if="{r.title}">
@@ -58,7 +58,7 @@
         <div class="mdc-image-list__item">
           <div class="mentions block mdc-elevation--z1">
             <h2>
-              What People Mention
+              {l.mentions.title} 
             </h2>
             <div class="mentions-row">
               <div class="mention" each="{m,i in d.mentions}" if="{i &lt; 8}">
@@ -67,11 +67,11 @@
                     <strong>{m.label} </strong>
                   </div>
                   <div class="times">
-                    {m.opinions_count} times mentioned 
+                    {m.opinions_count} {l.mentions.times} 
                   </div>
                 </div>
                 <div class="mention-percentage {w.ratings.toCss100(m.percentage)}">
-                  {Math.round(m.percentage)}% positive 
+                  {Math.round(m.percentage)}% {l.mentions.positive} 
                 </div>
               </div>
             </div>
@@ -80,7 +80,7 @@
         <div class="mdc-image-list__item">
           <div class="guests block mdc-elevation--z1">
             <h2>
-              Who stays here
+              {l.mentions.title} 
             </h2>
             <div class="guests-block" if="{d.guests}">
               <div class="country" each="{c,i in d.guests.countries}" if="{i &lt; 3}">
@@ -111,7 +111,7 @@
         <div class="mdc-image-list__item">
           <div class="summaries block mdc-elevation--z1">
             <h2>
-              Summary
+              {l.summaries.title} 
             </h2>
             <div class="summary-block">
               <div class="summary" each="{s,i in d.summaries}" if="{s.sentiment &amp;&amp; i &lt; 8}">

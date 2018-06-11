@@ -3,6 +3,8 @@
 
 window.ota_widget = {
 
+  locale: 'en',
+
   tag: null,
 
   init: (token) => {
@@ -27,6 +29,29 @@ window.ota_widget = {
 }
 
 window.ota_widget.ui = {
+
+  locales: {
+    en: {
+      overall: {
+        reviews: 'Reviews',
+        period:  'in the past 12 months',
+      },
+      ratings: {
+        title: 'Ratings',
+      },
+      mentions: {
+        title: 'What People Mention',
+        times: 'times mentioned',
+        positive: 'positive',
+      },
+      guests: {
+        title: 'Who stays here',
+      },
+      summaries: {
+        title: 'Summary',
+      },
+    },
+  },
 
   compositionIcons: {
     families:     'child_friendly',
@@ -53,6 +78,7 @@ window.ota_widget.ui = {
   tagClass: function (opts) {
     this.w = window.ota_widget
     this.d = {}
+    this.l = this.w.ui.locales[this.w.locale]
 
     this.clear = function () {
       this.d = {}
