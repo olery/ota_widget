@@ -501,8 +501,7 @@ ota-widget {
     -webkit-column-count: 1;
     column-count: 1;
     -webkit-column-gap: 16px;
-    column-gap: 16px;
-    column-fill: auto; }
+    column-gap: 16px; }
     ota-widget .masonry-image-list .mdc-image-list__item .block {
       display: inline-block;
       width: 100%;
