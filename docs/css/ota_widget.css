@@ -556,10 +556,11 @@ ota-widget {
       font-size: 14px;
       color: white;
       font-weight: bold;
-      padding: 8px;
-      vertical-align: top;
+      padding: 9px 8px;
       min-width: 95px; }
-    ota-widget .mentions.block .mention .mention-meta, ota-widget .mentions.block .mention .topic, ota-widget .mentions.block .mention .times, ota-widget .mentions.block .mention .mention-percentage {
+    ota-widget .mentions.block .mention .mention-meta, ota-widget .mentions.block .mention .mention-percentage {
+      vertical-align: middle; }
+    ota-widget .mentions.block .mention .mention-meta, ota-widget .mentions.block .mention .times, ota-widget .mentions.block .mention .mention-percentage {
       display: inline-block; }
     ota-widget .mentions.block .mention .mention-meta {
       width: calc(100% - 120px); }
@@ -568,21 +569,24 @@ ota-widget {
       min-width: 130px; }
     ota-widget .mentions.block .mention .times {
       font-size: 14px; }
-  ota-widget .guests.block .guests-block .country > div, ota-widget .guests.block .guests-block .composition > div {
-    padding: 4px 8px;
-    display: inline-block; }
-  ota-widget .guests.block .guests-block .country .icon, ota-widget .guests.block .guests-block .composition .icon {
-    width: 40px; }
-  ota-widget .guests.block .guests-block .country .label, ota-widget .guests.block .guests-block .composition .label {
-    min-width: 160px;
-    line-height: 3.2;
-    font-weight: bold; }
-  ota-widget .guests.block .guests-block .country .label, ota-widget .guests.block .guests-block .country .percentage, ota-widget .guests.block .guests-block .composition .label, ota-widget .guests.block .guests-block .composition .percentage {
-    vertical-align: top; }
+  ota-widget .guests.block .guests-block .country, ota-widget .guests.block .guests-block .composition {
+    display: table; }
+    ota-widget .guests.block .guests-block .country > div, ota-widget .guests.block .guests-block .composition > div {
+      padding: 4px 8px;
+      display: inline-block; }
+    ota-widget .guests.block .guests-block .country .icon, ota-widget .guests.block .guests-block .composition .icon {
+      width: 40px; }
+    ota-widget .guests.block .guests-block .country .label, ota-widget .guests.block .guests-block .composition .label {
+      width: 100%;
+      line-height: 1.2;
+      font-weight: bold; }
+    ota-widget .guests.block .guests-block .country .label, ota-widget .guests.block .guests-block .country .percentage, ota-widget .guests.block .guests-block .country .icon, ota-widget .guests.block .guests-block .composition .label, ota-widget .guests.block .guests-block .composition .percentage, ota-widget .guests.block .guests-block .composition .icon {
+      vertical-align: middle;
+      display: table-cell; }
   ota-widget .guests.block .guests-block .percentage {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
-    line-height: 2.6; }
+    line-height: 1.2; }
   ota-widget .guests.block .guests-block .composition .icon {
     font-size: 48px;
     color: #2882bb; }

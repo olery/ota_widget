@@ -112,12 +112,14 @@ ota-widget {
         font-size: 14px;
         color: white;
         font-weight: bold;
-        padding: $padding;
-        vertical-align: top;
+        padding: 9px $padding;
         min-width: 95px;
       }
 
-      .mention-meta, .topic, .times, .mention-percentage {
+      .mention-meta, .mention-percentage {
+        vertical-align: middle;
+      }
+      .mention-meta, .times, .mention-percentage {
         display: inline-block;
       }
       .mention-meta {
@@ -138,6 +140,7 @@ ota-widget {
 
     .guests-block {
       .country, .composition {
+        display: table;
         & > div {
           padding: $padding/2 $padding;
           display: inline-block;
@@ -146,19 +149,20 @@ ota-widget {
           width: 40px;
         }
         .label {
-          min-width: 160px;
-          line-height: 3.2;
+          width: 100%;
+          line-height: 1.2;
           font-weight: bold;
         }
-        .label,.percentage {
-          vertical-align: top;
+        .label,.percentage, .icon {
+          vertical-align: middle;
+          display: table-cell;
         }
       }
 
       .percentage {
-        font-size: 20px;
+        font-size: 18px;
         font-weight: bold;
-        line-height: 2.6;
+        line-height: 1.2;
       }
 
       .composition {
