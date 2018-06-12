@@ -595,14 +595,14 @@ ota-widget {
     line-height: 25px; }
     ota-widget .summaries.block .summary .icon, ota-widget .summaries.block .summary .name {
       display: inline-block;
-      vertical-align: middle;
       padding: 4px; }
       ota-widget .summaries.block .summary .icon:first-child, ota-widget .summaries.block .summary .name:first-child {
         padding-left: 0; }
     ota-widget .summaries.block .summary .name {
       width: calc(100% - 50px); }
     ota-widget .summaries.block .summary .icon {
-      color: #74bc55; }
+      color: #74bc55;
+      vertical-align: middle; }
       ota-widget .summaries.block .summary .icon.negative {
         color: grey; }
   ota-widget .rating0-4 {

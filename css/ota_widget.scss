@@ -181,7 +181,6 @@ ota-widget {
       line-height: 25px;
       .icon,.name {
         display: inline-block;
-        vertical-align: middle;
         padding: $padding/2;
         &:first-child {
           padding-left: 0;
@@ -193,6 +192,7 @@ ota-widget {
       }
       .icon {
         color: #74bc55;
+        vertical-align: middle;
         &.negative {
           color: grey;
         }
