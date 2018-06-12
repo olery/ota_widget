@@ -36,16 +36,17 @@ html
               '{w.ratings.format(d.rating / 10)}
             .count
               strong.count-value
-                '{d.review_count} reviews
+                '{d.review_count} {l.overall.reviews}
               .count-period
-                'in the past 12 months
+                '{l.overall.period}
 
         .mdc-image-list__item
           .recent-reviews.block.mdc-elevation--z1
 
         .mdc-image-list__item
           .ratings.block.mdc-elevation--z1
-            h2 Ratings
+            h2
+              '{l.ratings.title}
 
             .subratings
               .subrating each='{r in d.ratings}' if='{r.title}'
@@ -59,7 +60,8 @@ html
 
         .mdc-image-list__item
           .mentions.block.mdc-elevation--z1
-            h2 What People Mention
+            h2
+              '{l.mentions.title}
 
             .mentions-row
               .mention each='{m,i in d.mentions}' if='{i < 8}'
@@ -68,13 +70,14 @@ html
                     strong
                       '{m.label}
                   .times
-                    '{m.opinions_count} times mentioned
+                    '{m.opinions_count} {l.mentions.times}
                 .mention-percentage class='{w.ratings.toCss100(m.percentage)}'
-                  '{Math.round(m.percentage)}% positive
+                  '{Math.round(m.percentage)}% {l.mentions.positive}
 
         .mdc-image-list__item
           .guests.block.mdc-elevation--z1
-            h2 Who stays here
+            h2
+              '{l.guests.title}
 
             .guests-block if='{d.guests}'
               .country each='{c,i in d.guests.countries}' if='{i < 3}'
@@ -95,7 +98,8 @@ html
 
         .mdc-image-list__item
           .summaries.block.mdc-elevation--z1
-            h2 Summary
+            h2
+              '{l.summaries.title}
 
             .summary-block
               .summary each='{s,i in d.summaries}' if='{s.sentiment && i < 8}'
