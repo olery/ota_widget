@@ -592,17 +592,17 @@ ota-widget {
     font-size: 48px;
     color: #2882bb; }
   ota-widget .summaries.block .summary {
-    line-height: 25px; }
+    display: table; }
     ota-widget .summaries.block .summary .icon, ota-widget .summaries.block .summary .name {
-      display: inline-block;
+      display: table-cell;
+      vertical-align: middle;
       padding: 4px; }
       ota-widget .summaries.block .summary .icon:first-child, ota-widget .summaries.block .summary .name:first-child {
         padding-left: 0; }
     ota-widget .summaries.block .summary .name {
-      width: calc(100% - 50px); }
+      width: 100%; }
     ota-widget .summaries.block .summary .icon {
-      color: #74bc55;
-      vertical-align: middle; }
+      color: #74bc55; }
       ota-widget .summaries.block .summary .icon.negative {
         color: grey; }
   ota-widget .rating0-4 {

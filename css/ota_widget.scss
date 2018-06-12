@@ -178,21 +178,23 @@ ota-widget {
 
   .summaries.block {
     .summary {
-      line-height: 25px;
+      display: table;
+
       .icon,.name {
-        display: inline-block;
+        display: table-cell;
+        vertical-align: middle;
         padding: $padding/2;
+
         &:first-child {
           padding-left: 0;
         }
       }
 
       .name {
-        width: calc(100% - 50px);
+        width: 100%;
       }
       .icon {
         color: #74bc55;
-        vertical-align: middle;
         &.negative {
           color: grey;
         }
