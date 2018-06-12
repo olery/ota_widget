@@ -591,19 +591,20 @@ ota-widget {
   ota-widget .guests.block .guests-block .composition .icon {
     font-size: 48px;
     color: #2882bb; }
-  ota-widget .summaries.block .summary .icon, ota-widget .summaries.block .summary .name {
-    display: inline-block;
-    padding: 4px; }
-    ota-widget .summaries.block .summary .icon:first-child, ota-widget .summaries.block .summary .name:first-child {
-      padding-left: 0; }
-  ota-widget .summaries.block .summary .name {
-    vertical-align: top;
-    line-height: 1.4;
-    width: calc(100% - 50px); }
-  ota-widget .summaries.block .summary .icon {
-    color: #74bc55; }
-    ota-widget .summaries.block .summary .icon.negative {
-      color: grey; }
+  ota-widget .summaries.block .summary {
+    line-height: 25px; }
+    ota-widget .summaries.block .summary .icon, ota-widget .summaries.block .summary .name {
+      display: inline-block;
+      vertical-align: middle;
+      padding: 4px; }
+      ota-widget .summaries.block .summary .icon:first-child, ota-widget .summaries.block .summary .name:first-child {
+        padding-left: 0; }
+    ota-widget .summaries.block .summary .name {
+      width: calc(100% - 50px); }
+    ota-widget .summaries.block .summary .icon {
+      color: #74bc55; }
+      ota-widget .summaries.block .summary .icon.negative {
+        color: grey; }
   ota-widget .rating0-4 {
     background-color: #d54939 !important; }
   ota-widget .rating5-8 {

@@ -178,8 +178,10 @@ ota-widget {
 
   .summaries.block {
     .summary {
+      line-height: 25px;
       .icon,.name {
         display: inline-block;
+        vertical-align: middle;
         padding: $padding/2;
         &:first-child {
           padding-left: 0;
@@ -187,8 +189,6 @@ ota-widget {
       }
 
       .name {
-        vertical-align: top;
-        line-height: 1.4;
         width: calc(100% - 50px);
       }
       .icon {
