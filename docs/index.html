@@ -25,9 +25,9 @@
               {w.ratings.format(d.rating / 10)} 
             </div>
             <div class="count">
-              <strong class="count-value">{d.review_count} {l.overall.reviews} </strong>
+              <strong class="count-value">{d.review_count} {t('overall.reviews')} </strong>
               <div class="count-period">
-                {l.overall.period} 
+                {t('overall.period')} 
               </div>
             </div>
           </div>
@@ -38,12 +38,12 @@
         <div class="mdc-image-list__item">
           <div class="ratings block mdc-elevation--z1">
             <h2>
-              {l.ratings.title} 
+              {t('ratings.title')} 
             </h2>
             <div class="subratings">
               <div class="subrating" each="{r in d.ratings}" if="{r.title}">
                 <div class="title">
-                  <strong>{r.title} </strong>
+                  <strong>{t('ratings.topics.'+r.topic, {default: r.title})} </strong>
                 </div>
                 <div class="rating-bar">
                   <div class="rating-value-bar {w.ratings.toCss100(r.value)}" style="width: {r.value}%"></div>
@@ -58,20 +58,20 @@
         <div class="mdc-image-list__item">
           <div class="mentions block mdc-elevation--z1">
             <h2>
-              {l.mentions.title} 
+              {t('mentions.title')} 
             </h2>
             <div class="mentions-row">
               <div class="mention" each="{m,i in d.mentions}" if="{i &lt; 8}">
                 <div class="mention-meta">
                   <div class="topic">
-                    <strong>{m.label} </strong>
+                    <strong>{t('mentions.topics.'+m.topic, {default: m.label})} </strong>
                   </div>
                   <div class="times">
-                    {m.opinions_count} {l.mentions.times} 
+                    {m.opinions_count} {t('mentions.times')} 
                   </div>
                 </div>
                 <div class="mention-percentage {w.ratings.toCss100(m.percentage)}">
-                  {Math.round(m.percentage)}% {l.mentions.positive} 
+                  {Math.round(m.percentage)}% {t('mentions.positive')} 
                 </div>
               </div>
             </div>
@@ -80,7 +80,7 @@
         <div class="mdc-image-list__item">
           <div class="guests block mdc-elevation--z1">
             <h2>
-              {l.guests.title} 
+              {t('guests.title')} 
             </h2>
             <div class="guests-block" if="{d.guests}">
               <div class="country" each="{c,i in d.guests.countries}" if="{i &lt; 3}">
@@ -88,7 +88,7 @@
                   <img class="flag flag-{c.country.toLowerCase()}" src="images/blank.gif" />
                 </div>
                 <div class="label">
-                  {c.label} 
+                  {t('guests.countries.'+c.country, {default: c.label})} 
                 </div>
                 <div class="percentage">
                   {Math.round(c.percentage)}% 
@@ -99,7 +99,7 @@
                   {w.ui.compositionIcons[c.travel_composition]} 
                 </div>
                 <div class="label">
-                  {c.label} 
+                  {t('guests.compositions.'+c.travel_composition, {default: c.label})} 
                 </div>
                 <div class="percentage">
                   {Math.round(c.percentage)}% 
@@ -111,7 +111,7 @@
         <div class="mdc-image-list__item">
           <div class="summaries block mdc-elevation--z1">
             <h2>
-              {l.summaries.title} 
+              {t('summaries.title')} 
             </h2>
             <div class="summary-block">
               <div class="summary" each="{s,i in d.summaries}" if="{s.sentiment &amp;&amp; i &lt; 8}">

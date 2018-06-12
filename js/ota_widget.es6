@@ -10,6 +10,8 @@ window.ota_widget = {
   init: (token) => {
     if (token) ota_widget.api.token = token
 
+    ota_widget.i18n.compiled = _.mapValues(ota_widget.i18n.locales, (t) => ota_widget.i18n.flatten(t))
+
     ota_widget.tag = ota_widget.loadTag('ota-widget', ota_widget.ui.tagClass)
   },
 
@@ -28,30 +30,61 @@ window.ota_widget = {
   },
 }
 
-window.ota_widget.ui = {
+window.ota_widget.i18n = {
+  translate: (key, opts) => {
+    var v = ota_widget.i18n.compiled[ota_widget.locale][key]
+    return v ? v : opts.default
+  },
 
-  locales: {
-    en: {
-      overall: {
-        reviews: 'Reviews',
-        period:  'in the past 12 months',
-      },
-      ratings: {
-        title: 'Ratings',
-      },
-      mentions: {
-        title: 'What People Mention',
-        times: 'times mentioned',
-        positive: 'positive',
-      },
-      guests: {
-        title: 'Who stays here',
-      },
-      summaries: {
-        title: 'Summary',
+  flatten: (obj) => {
+    var flattenOne = (plainObject, namespace, result) => {
+      if (namespace == null) namespace = ''
+      if (result == null) result = {}
+
+      return _.reduce(plainObject, (result, value, key) => {
+        var newKey = `${namespace}${namespace ? '.' : ''}${key}`
+        if (_.isPlainObject(value)) {
+          if (_.size(value)) flattenOne(value, newKey, result)
+        } else result[newKey] = value
+        return result
+      }, result)
+    }
+    return flattenOne(obj)
+  },
+}
+
+window.ota_widget.i18n.locales = {
+  en: {
+    overall: {
+      reviews: 'reviews',
+      period:  'in the past 12 months',
+    },
+    ratings: {
+      title: 'Ratings',
+      topics: {
       },
     },
+    mentions: {
+      title: 'What People Mention',
+      times: 'times mentioned',
+      positive: 'positive',
+      topics: {
+      },
+    },
+    guests: {
+      title: 'Who stays here',
+      countries: {
+      },
+      compositions: {
+      },
+    },
+    summaries: {
+      title: 'Summary',
+    },
   },
+}
+
+window.ota_widget.ui = {
 
   compositionIcons: {
     families:     'child_friendly',
@@ -78,7 +111,7 @@ window.ota_widget.ui = {
   tagClass: function (opts) {
     this.w = window.ota_widget
     this.d = {}
-    this.l = this.w.ui.locales[this.w.locale]
+    this.t = this.w.i18n.translate
 
     this.clear = function () {
       this.d = {}

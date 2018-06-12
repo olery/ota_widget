@@ -36,9 +36,9 @@ html
               '{w.ratings.format(d.rating / 10)}
             .count
               strong.count-value
-                '{d.review_count} {l.overall.reviews}
+                '{d.review_count} {t('overall.reviews')}
               .count-period
-                '{l.overall.period}
+                '{t('overall.period')}
 
         .mdc-image-list__item
           .recent-reviews.block.mdc-elevation--z1
@@ -46,13 +46,13 @@ html
         .mdc-image-list__item
           .ratings.block.mdc-elevation--z1
             h2
-              '{l.ratings.title}
+              '{t('ratings.title')}
 
             .subratings
               .subrating each='{r in d.ratings}' if='{r.title}'
                 .title
                   strong
-                    '{r.title}
+                    '{t('ratings.topics.'+r.topic, {default: r.title})}
                 .rating-bar
                   .rating-value-bar class='{w.ratings.toCss100(r.value)}' style='width: {r.value}%'
                 .rating-value
@@ -61,30 +61,30 @@ html
         .mdc-image-list__item
           .mentions.block.mdc-elevation--z1
             h2
-              '{l.mentions.title}
+              '{t('mentions.title')}
 
             .mentions-row
               .mention each='{m,i in d.mentions}' if='{i < 8}'
                 .mention-meta
                   .topic
                     strong
-                      '{m.label}
+                      '{t('mentions.topics.'+m.topic, {default: m.label})}
                   .times
-                    '{m.opinions_count} {l.mentions.times}
+                    '{m.opinions_count} {t('mentions.times')}
                 .mention-percentage class='{w.ratings.toCss100(m.percentage)}'
-                  '{Math.round(m.percentage)}% {l.mentions.positive}
+                  '{Math.round(m.percentage)}% {t('mentions.positive')}
 
         .mdc-image-list__item
           .guests.block.mdc-elevation--z1
             h2
-              '{l.guests.title}
+              '{t('guests.title')}
 
             .guests-block if='{d.guests}'
               .country each='{c,i in d.guests.countries}' if='{i < 3}'
                 .icon
                   img src='images/blank.gif' class='flag flag-{c.country.toLowerCase()}'
                 .label
-                  '{c.label}
+                  '{t('guests.countries.'+c.country, {default: c.label})}
                 .percentage
                   '{Math.round(c.percentage)}%
 
@@ -92,14 +92,14 @@ html
                 .icon class='material-icons'
                   '{w.ui.compositionIcons[c.travel_composition]}
                 .label
-                  '{c.label}
+                  '{t('guests.compositions.'+c.travel_composition, {default: c.label})}
                 .percentage
                   '{Math.round(c.percentage)}%
 
         .mdc-image-list__item
           .summaries.block.mdc-elevation--z1
             h2
-              '{l.summaries.title}
+              '{t('summaries.title')}
 
             .summary-block
               .summary each='{s,i in d.summaries}' if='{s.sentiment && i < 8}'
