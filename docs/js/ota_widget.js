@@ -62,7 +62,9 @@ window.ota_widget.i18n.locales = {
     },
     ratings: {
       title: 'Ratings',
-      topics: {}
+      topics: {
+        overall: 'General'
+      }
     },
     mentions: {
       title: 'What People Mention',
