@@ -32,8 +32,13 @@ window.ota_widget = {
 
 window.ota_widget.i18n = {
   translate: (key, opts) => {
-    var v = ota_widget.i18n.compiled[ota_widget.locale][key]
-    return v ? v : opts.default
+    var value = ota_widget.i18n.compiled[ota_widget.locale][key]
+    
+    value && _.each(opts, (v, k) => {
+      value = value.replace("%{" + k + "}", v)
+    })
+    
+    return value ? value : opts.default
   },
 
   flatten: (obj) => {
@@ -55,6 +60,7 @@ window.ota_widget.i18n = {
 
 window.ota_widget.i18n.locales = {
   en: {
+    review_date: 'data from %{date}',
     overall: {
       reviews: 'reviews',
       period:  'in the past 12 months',
@@ -132,6 +138,7 @@ window.ota_widget.ui = {
 
     ota_widget.ui.calcRatingsPercentages(data.guests.countries)
     ota_widget.ui.calcRatingsPercentages(data.guests.compositions)
+    data.cached_at = new Date(data.updated_at).toLocaleDateString()
 
     return data
   },
