@@ -206,6 +206,45 @@ ota-widget {
       }
     }
   }
+  .recent-reviews {
+    h2 {
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      font-size: 14px;
+      color: #aaa;
+      margin-bottom: 15px;
+    }
+    .recent-reviews-block {
+      .recent-review {
+        margin-top: 20px;
+        .star {
+          color: #2882bb;
+          font-size: 19px;
+          display: inline-block;
+        }
+        .star, .date {
+          display: inline-block;
+          vertical-align: middle;
+        }
+        .stars {
+          width: 80px;
+          margin-bottom: 15px;
+          display: inline-block;
+        }
+        .comment {
+          margin-bottom: 10px;
+        }
+        hr {
+          width: 100%;
+          border-top: 1px solid #d6d6d6;
+        }
+      }
+    }
+  }
+  .spacer {
+    margin: 15px;
+  }
 
   .rating0-4
   {

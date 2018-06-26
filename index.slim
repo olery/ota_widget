@@ -44,8 +44,6 @@ html
               .count-period
                 '{t('overall.period')}
 
-        .mdc-image-list__item
-          .recent-reviews.block.mdc-elevation--z1
 
         .mdc-image-list__item
           .ratings.block.mdc-elevation--z1
@@ -92,6 +90,7 @@ html
                 .percentage
                   '{Math.round(c.percentage)}%
 
+              .spacer
               .composition each='{c,i in d.guests.compositions}' if='{i < 3}'
                 .icon class='material-icons'
                   '{w.ui.compositionIcons[c.travel_composition]}
@@ -112,6 +111,33 @@ html
                 strong.name
                   '{s.text}
 
+        .mdc-image-list__item
+          .recent-reviews.block.mdc-elevation--z1
+            h2
+              '{t('recent_reviews.title')}
+            .subtitle
+              '{t('recent_reviews.subtitle')}
+
+            .recent-reviews-block
+              .recent-review each='{r,i in d.recent_reviews}' if='{r.ratings && i < 4}'
+                .stars
+                  .material-icons.star each='{class in ota_widget.rating_stars(r.ratings.overall)}'
+                    '{class}
+                .date
+                  'Reviewed {r.review_date}
+                .comment
+                  'Guest liked the food & beverages and the value for money.
+                hr
+
+        .mdc-image-list__item
+          .nearby_attractions.block.mdc-elevation--z1
+            h2
+              '{t('nearby_attractions.title')}
+
+            .nearby_attractions-block
+              .nearby_attraction each='{a,i in d.nearby_attractions}' if='{a.name && i < 8}'
+                strong.name
+                  '{a.name}
 
     javascript:
       // your token goes here

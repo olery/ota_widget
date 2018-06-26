@@ -88,6 +88,13 @@ window.ota_widget.i18n.locales = {
     summaries: {
       title: 'Summary',
     },
+    recent_reviews: {
+      title: 'Recent Reviews',
+      subtitle: 'from sites across the web',
+    },
+    nearby_attractions: {
+      title: 'Nearby Points of Interest',
+    }
   },
 }
 
@@ -149,7 +156,17 @@ window.ota_widget.ui = {
       return c.review_count
     })
     _.each(groupedRatings, (c) => c.percentage = 100*c.review_count/total )
-  },
+  }
+}
+
+window.ota_widget.rating_stars = (value) => {
+  let classes = [];
+  for (let i = 0; i < parseInt(value / 20); i++ )
+    classes.push('star')
+  for (let i = 0; i < parseInt((value % 20)/10); i++ )
+    classes.push('star_half')
+
+  return classes;
 }
 
 window.ota_widget.ratings = {
@@ -194,6 +211,7 @@ window.ota_widget.url = {
 
 window.ota_widget.api = {
 
+  //baseUrl:    'http://localhost:9292',
   baseUrl:    'https://agora.olery.com',
   version:    'v3',
   company_id: ota_widget.url.params.company_id,
