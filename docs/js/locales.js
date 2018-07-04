@@ -24,5 +24,9 @@ window.ota_widget.i18n.locales.de = {
   },
   summaries: {
     title: 'Summary'
+  },
+  recent_reviews: {
+    title: 'Recent Reviews',
+    subtitle: 'from sites across the web'
   }
 };

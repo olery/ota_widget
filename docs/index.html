@@ -17,7 +17,7 @@
   <body>
     <ota-widget class="mdc-layout-grid" style="display: none">
       <h1>
-        <span>{d.name} </span><a href="http://www.olery.com/trust-seal" target="_blank" title="Olery Trust Seal"><img class="seal" src="images/seal.png" width="96px" /></a>
+        <span>{d.name} </span><a href="http://www.olery.com/trust-seal" target="_blank" title="Olery Trust Seal"><img class="seal" src="images/seal.svg" width="96px" /></a>
       </h1>
       <div class="cached_at" show="{d.cached_at}">
         {t('review_date', {date: d.cached_at})} 
@@ -35,9 +35,6 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="mdc-image-list__item">
-          <div class="recent-reviews block mdc-elevation--z1"></div>
         </div>
         <div class="mdc-image-list__item">
           <div class="ratings block mdc-elevation--z1">
@@ -98,6 +95,7 @@
                   {Math.round(c.percentage)}% 
                 </div>
               </div>
+              <div class="spacer"></div>
               <div class="composition" each="{c,i in d.guests.compositions}" if="{i &lt; 3}">
                 <div class="icon material-icons">
                   {w.ui.compositionIcons[c.travel_composition]} 
@@ -123,6 +121,70 @@
                   {s.sentiment == 'positive' ? 'add_circle_outline' : 'remove_circle_outline'} 
                 </div>
                 <strong class="name">{s.text} </strong>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mdc-image-list__item">
+          <div class="recent-reviews block mdc-elevation--z1">
+            <h2>
+              {t('recent_reviews.title')} 
+            </h2>
+            <div class="subtitle">
+              {t('recent_reviews.subtitle')} 
+            </div>
+            <div class="recent-reviews-block">
+              <div class="recent-review" each="{r,i in d.recent_reviews}" if="{r.ratings &amp;&amp; i &lt; 4}">
+                <div class="stars">
+                  <div class="material-icons star" each="{class in w.rating_stars(r.ratings.overall)}">
+                    {class} 
+                  </div>
+                </div>
+                <div class="date" if="{w.days_from(r.review_date) &lt;= 90}">
+                  {t('recent_reviews.reviewed_at', {days: w.days_from(r.review_date)})} 
+                </div>
+                <div class="date" if="{w.days_from(r.review_date) &gt; 90}">
+                  {t('recent_reviews.reviewed_a_while_ago')} 
+                </div>
+                <div class="date" if="{w.days_from(r.review_date) &gt; 90}"></div>
+                <div class="comment">
+                  <span if="{r.opinions.positive &amp;&amp; r.opinions.positive.length &gt; 0}">Guest liked the {w.join_topics(r.opinions.positive, ' and the ')}. </span><span if="{r.opinions.negative &amp;&amp; r.opinions.negative.length &gt; 0}">Negative comments about the {w.join_topics(r.opinions.negative, ' and the ')} </span>
+                </div>
+                <div class="reviewer_info">
+                  <span class="country" if="{r.country_code}">
+                    <div class="icon flag-16-11">
+                      <img class="flag flag-{r.country_code.toLowerCase()}" src="images/blank.gif" />
+                    </div>
+                    <div class="label">
+                      {t('guests.countries.'+r.country_code, {default: r.country_name})} 
+                    </div>
+                  </span><span class="composition" if="{r.travel_composition}">
+                    <div class="icon material-icons">
+                      {w.ui.compositionIcons[r.travel_composition]} 
+                    </div>
+                    <div class="label">
+                      {t('guests.compositions.'+r.travel_composition, {default: r.travel_composition})} 
+                    </div>
+                  </span>
+                </div>
+                <hr if="{ i &lt; 3 }" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mdc-image-list__item">
+          <div class="nearby_attractions block mdc-elevation--z1">
+            <h2>
+              {t('nearby_attractions.title')} 
+            </h2>
+            <div class="nearby_attractions-block">
+              <div class="nearby_attraction" each="{a,i in d.nearby_attractions}" if="{a.name &amp;&amp; i &lt; 8}">
+                <div class="name">
+                  <strong>{a.name} </strong>
+                </div>
+                <div class="distance">
+                  {w.ml2km(a.distance)} km 
+                </div>
               </div>
             </div>
           </div>

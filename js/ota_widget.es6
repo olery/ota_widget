@@ -76,6 +76,60 @@ window.ota_widget.i18n.locales = {
       times: 'times mentioned',
       positive: 'positive',
       topics: {
+        room: 'room',
+        location: 'location',
+        value_for_money: 'value for money',
+        facilities: 'Facilities',
+        problem: 'Problem',
+        cleanliness: 'Cleanliness',
+        fnb: 'food & beverages',
+        staff: 'staff',
+        bed: 'bed',
+        restaurant: 'restaurant',
+        beverages: 'beverages',
+        bathroom: 'bathroom',
+        bar: 'bar',
+        breakfast_area: 'breakfast',
+        noise: 'noise',
+        surroundings: 'hotel surroundings',
+        sleeping_comfort: 'sleeping comfort',
+        hotel_building: 'hotel building',
+        shower: 'shower',
+        breakfast: 'breakfast',
+        tranquility: 'tranquility',
+        outdoor_sports: 'outdoor sport grounds',
+        lobby: 'lobby',
+        room_equipment: 'room equipment',
+        parking: 'parking',
+        towels: 'towels',
+        windows: 'windows',
+        internet: 'internet',
+        decor: 'decor',
+        corridor: 'corridor',
+        furniture: 'furniture',
+        bedlinen: 'bedlinen',
+        floor: 'floor',
+        ptec: 'air conditioning & heating',
+        walls: 'walls',
+        stains: 'stains',
+        dirt: 'dirt',
+        elevator: 'elevator',
+        smell: 'smell',
+        entertainment: 'entertainment facilities',
+        tableware: 'tableware',
+        toilet: 'toilet',
+        health_hazards: 'health hazards',
+        toiletries: 'toiletries',
+        fitness: 'fitness center',
+        bath_accessories: 'bath accessories',
+        smoke: 'smoke',
+        bathtub: 'bathtub',
+        pests: 'pests',
+        spa: 'spa',
+        odor: 'odor',
+        humidity: 'humidity',
+        dust: 'dust',
+        defects: 'defects in the room'
       },
     },
     guests: {
@@ -91,6 +145,8 @@ window.ota_widget.i18n.locales = {
     recent_reviews: {
       title: 'Recent Reviews',
       subtitle: 'from sites across the web',
+      reviewed_at: 'Reviewed %{days} days ago',
+      reviewed_a_while_ago: 'Reviewed a while ago'
     },
     nearby_attractions: {
       title: 'Nearby Points of Interest',
@@ -211,7 +267,6 @@ window.ota_widget.url = {
 
 window.ota_widget.api = {
 
-  //baseUrl:    'http://localhost:9292',
   baseUrl:    'https://agora.olery.com',
   version:    'v3',
   company_id: ota_widget.url.params.company_id,
@@ -234,5 +289,21 @@ window.ota_widget.api = {
         return response.json()
       })
   },
+}
+
+window.ota_widget.ml2km = (distance) => {
+  return Math.round(distance * 1.60934, 2);
+}
+
+window.ota_widget.days_from = (date) => {
+  return parseInt( (Date.now() - Date.parse(date)) / (1000*3600*24) )
+}
+window.ota_widget.join_topics = (topics, sep) => {
+  let topic = topics.shift()
+  let topics_str = ota_widget.i18n.translate('mentions.topics.'+topic, {default: topic})
+  while (topic = topics.shift()) {
+    topics_str += sep + ota_widget.i18n.translate('mentions.topics.'+topic, {default: topic})
+  }
+  return topics_str
 }
 
