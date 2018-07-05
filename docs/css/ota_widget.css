@@ -1164,6 +1164,7 @@ ota-widget {
       ota-widget .recent-reviews .recent-reviews-block .recent-review .reviewer_info .country {
         padding-right: 6px; }
       ota-widget .recent-reviews .recent-reviews-block .recent-review .reviewer_info .composition .icon {
+        color: #2882bb;
         font-size: 14px; }
     ota-widget .recent-reviews .recent-reviews-block .recent-review hr {
       width: 100%;
