@@ -1169,12 +1169,22 @@ ota-widget {
       width: 100%;
       border-top: 1px solid #d6d6d6; }
   ota-widget .nearby_attractions .nearby_attraction {
-    display: flex; }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px; }
     ota-widget .nearby_attractions .nearby_attraction .name {
-      margin-bottom: 20px;
-      width: 70%; }
+      width: calc(100% - 140px); }
     ota-widget .nearby_attractions .nearby_attraction .distance, ota-widget .nearby_attractions .nearby_attraction .name {
       font-size: 14px; }
+    ota-widget .nearby_attractions .nearby_attraction .distance {
+      width: 65px; }
+    ota-widget .nearby_attractions .nearby_attraction .details {
+      width: 70px; }
+      ota-widget .nearby_attractions .nearby_attraction .details .very_popular, ota-widget .nearby_attractions .nearby_attraction .details .highly_rated {
+        font-size: 10px;
+        color: #72bb53;
+        font-weight: bold; }
   ota-widget .spacer {
     margin: 15px; }
   ota-widget .rating0-4 {

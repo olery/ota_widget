@@ -148,7 +148,7 @@
                 </div>
                 <div class="date" if="{w.days_from(r.review_date) &gt; 90}"></div>
                 <div class="comment">
-                  <span if="{r.opinions.positive &amp;&amp; r.opinions.positive.length &gt; 0}">Guest liked the {w.join_topics(r.opinions.positive, ' and the ')}. </span><span if="{r.opinions.negative &amp;&amp; r.opinions.negative.length &gt; 0}">Negative comments about the {w.join_topics(r.opinions.negative, ' and the ')} </span>
+                  <span if="{r.opinions.positive &amp;&amp; r.opinions.positive.length &gt; 0}">{t('recent_reviews.guest_liked')}{w.join_topics(r.opinions.positive, t('recent_reviews.separator'))}. </span><span if="{r.opinions.negative &amp;&amp; r.opinions.negative.length &gt; 0}">{t('recent_reviews.negative_comms')}{w.join_topics(r.opinions.negative, t('recent_reviews.separator'))}. </span>
                 </div>
                 <div class="reviewer_info">
                   <span class="country" if="{r.country_code}">
@@ -184,6 +184,9 @@
                 </div>
                 <div class="distance">
                   {w.ml2km(a.distance)} km 
+                </div>
+                <div class="details">
+                  <span class="very_popular" if="{a.review_count &gt; 100}">{t('nearby_attractions.very_popular')} </span><span class="highly_rated" if="{a.rating &gt; 90}">{t('nearby_attractions.highly_rated')} </span>
                 </div>
               </div>
             </div>

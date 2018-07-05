@@ -271,12 +271,27 @@ ota-widget {
   .nearby_attractions {
     .nearby_attraction {
       display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+
       .name {
-        margin-bottom: 20px;
-        width: 70%;
+        width: calc(100% - 140px);
       }
       .distance, .name {
         font-size: 14px;
+      }
+      .distance {
+        width: 65px;
+      }
+      .details {
+        width: 70px;
+
+        .very_popular, .highly_rated {
+          font-size: 10px;
+          color: #72bb53;
+          font-weight: bold;
+        }
       }
     }
   }

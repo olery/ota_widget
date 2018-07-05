@@ -130,9 +130,9 @@ html
                 .date if='{w.days_from(r.review_date) > 90}'
                 .comment
                   span if='{r.opinions.positive && r.opinions.positive.length > 0}'
-                    'Guest liked the {w.join_topics(r.opinions.positive, ' and the ')}.
+                    '{t('recent_reviews.guest_liked')}{w.join_topics(r.opinions.positive, t('recent_reviews.separator'))}.
                   span if='{r.opinions.negative && r.opinions.negative.length > 0}'
-                    'Negative comments about the {w.join_topics(r.opinions.negative, ' and the ')}
+                    '{t('recent_reviews.negative_comms')}{w.join_topics(r.opinions.negative, t('recent_reviews.separator'))}.
                 .reviewer_info
                   span.country if='{r.country_code}'
                     .icon.flag-16-11
@@ -159,6 +159,13 @@ html
 
                 .distance
                   '{w.ml2km(a.distance)} km
+                .details
+                  // Very popular is when it has more than 100 reviews in one year.
+                  span.very_popular if='{a.review_count > 100}'
+                    '{t('nearby_attractions.very_popular')}
+                  // Highly rated is when rating is above 90
+                  span.highly_rated if='{a.rating > 90}'
+                    '{t('nearby_attractions.highly_rated')}
 
     javascript:
       // your token goes here

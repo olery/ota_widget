@@ -144,11 +144,16 @@ window.ota_widget.i18n.locales = {
     recent_reviews: {
       title: 'Recent Reviews',
       subtitle: 'from sites across the web',
+      guest_liked: 'Guest like the ',
+      separator: ' and the ',
+      negative_comms: 'Negative comments about the ',
       reviewed_at: 'Reviewed %{days} days ago',
       reviewed_a_while_ago: 'Reviewed a while ago'
     },
     nearby_attractions: {
-      title: 'Nearby Points of Interest'
+      title: 'Nearby Points of Interest',
+      very_popular: 'very popular',
+      highly_rated: 'Highly rated'
     }
   }
 };
@@ -298,7 +303,7 @@ window.ota_widget.api = {
 };
 
 window.ota_widget.ml2km = function (distance) {
-  return Math.round(distance * 1.60934, 2);
+  return Math.round(distance * 160.934) / 100;
 };
 
 window.ota_widget.days_from = function (date) {
