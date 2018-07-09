@@ -59,105 +59,6 @@ window.ota_widget.i18n = {
   }
 };
 
-window.ota_widget.i18n.locales = {
-  en: {
-    review_date: 'data from %{date}',
-    overall: {
-      reviews: 'reviews',
-      period: 'in the past 12 months'
-    },
-    ratings: {
-      title: 'Ratings',
-      topics: {
-        overall: 'General'
-      }
-    },
-    mentions: {
-      title: 'What People Mention',
-      times: 'times mentioned',
-      positive: 'positive',
-      topics: {
-        room: 'room',
-        location: 'location',
-        value_for_money: 'value for money',
-        facilities: 'facilities',
-        problem: 'problem',
-        cleanliness: 'cleanliness',
-        fnb: 'food & beverages',
-        staff: 'staff',
-        bed: 'bed',
-        restaurant: 'restaurant',
-        beverages: 'beverages',
-        bathroom: 'bathroom',
-        bar: 'bar',
-        breakfast_area: 'breakfast',
-        noise: 'noise',
-        surroundings: 'hotel surroundings',
-        sleeping_comfort: 'sleeping comfort',
-        hotel_building: 'hotel building',
-        shower: 'shower',
-        breakfast: 'breakfast',
-        tranquility: 'tranquility',
-        outdoor_sports: 'outdoor sport grounds',
-        lobby: 'lobby',
-        room_equipment: 'room equipment',
-        parking: 'parking',
-        towels: 'towels',
-        windows: 'windows',
-        internet: 'internet',
-        decor: 'decor',
-        corridor: 'corridor',
-        furniture: 'furniture',
-        bedlinen: 'bedlinen',
-        floor: 'floor',
-        ptec: 'air conditioning & heating',
-        walls: 'walls',
-        stains: 'stains',
-        dirt: 'dirt',
-        elevator: 'elevator',
-        smell: 'smell',
-        entertainment: 'entertainment facilities',
-        tableware: 'tableware',
-        toilet: 'toilet',
-        health_hazards: 'health hazards',
-        toiletries: 'toiletries',
-        fitness: 'fitness center',
-        bath_accessories: 'bath accessories',
-        smoke: 'smoke',
-        bathtub: 'bathtub',
-        pests: 'pests',
-        spa: 'spa',
-        odor: 'odor',
-        humidity: 'humidity',
-        dust: 'dust',
-        defects: 'defects in the room'
-      }
-    },
-    guests: {
-      title: 'Who stays here',
-      countries: {},
-      compositions: {}
-    },
-    summaries: {
-      title: 'Summary'
-    },
-    recent_reviews: {
-      title: 'Recent Reviews',
-      subtitle: 'from sites across the web',
-      guest_liked: 'Guest like the ',
-      separator: ' and the ',
-      negative_comms: 'Negative comments about the ',
-      reviewed_at: 'Reviewed %{days} days ago',
-      reviewed_a_while_ago: 'Reviewed a while ago'
-    },
-    nearby_attractions: {
-      title: 'Nearby Points of Interest',
-      very_popular: 'very popular',
-      highly_rated: 'Highly rated'
-    }
-  }
-};
-
 window.ota_widget.ui = {
 
   compositionIcons: {
@@ -203,6 +104,10 @@ window.ota_widget.ui = {
     ota_widget.ui.calcRatingsPercentages(data.guests.compositions);
     data.cached_at = new Date(data.updated_at).toLocaleDateString();
 
+    _.each(data.recent_reviews, function (review) {
+      ota_widget.ui.join_topics(review, ota_widget.i18n.translate('recent_reviews.separator').toLowerCase());
+    });
+
     return data;
   },
 
@@ -216,10 +121,26 @@ window.ota_widget.ui = {
     _.each(groupedRatings, function (c) {
       return c.percentage = 100 * c.review_count / total;
     });
+  },
+
+  join_topics: function join_topics(review, sep) {
+    _.each(review.opinions, function (opinion) {
+      var polarity = opinion.polarity;
+      var key = opinion.polarity + '_topics';
+      review[key] = review[key] ? review[key] : '';
+
+      _.each(opinion.topics, function (topic) {
+        if (review[key] != "") review[key] += sep;
+        review[key] += ota_widget.topic_label_for(topic);
+      });
+    });
   }
 };
 
-window.ota_widget.rating_stars = function (value) {
+window.ota_widget.rating_stars = function (ratings, category) {
+  var value = _.compact(_.map(ratings, function (rating) {
+    if (rating.category == category) return rating.rating;
+  }))[0];
   var classes = [];
   for (var i = 0; i < parseInt(value / 20); i++) {
     classes.push('star');
@@ -309,11 +230,11 @@ window.ota_widget.ml2km = function (distance) {
 window.ota_widget.days_from = function (date) {
   return parseInt((Date.now() - Date.parse(date)) / (1000 * 3600 * 24));
 };
-window.ota_widget.join_topics = function (topics, sep) {
-  var topic = topics.shift();
-  var topics_str = ota_widget.i18n.translate('mentions.topics.' + topic, { 'default': topic });
-  while (topic = topics.shift()) {
-    topics_str += sep + ota_widget.i18n.translate('mentions.topics.' + topic, { 'default': topic });
+
+window.ota_widget.topic_label_for = function (topic) {
+  var label = ota_widget.i18n.translate('opinions.topics.' + topic, { 'default': undefined });
+  if (label == undefined) {
+    label = _.startCase(topic);
   }
-  return topics_str;
+  return label.toLowerCase();
 };

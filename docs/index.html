@@ -13,6 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/riot@3.10/riot+compiler.js"></script>
     <script src="js/ota_widget.js" type="text/javascript"></script>
+    <script src="js/locales.js" type="text/javascript"></script>
   </head>
   <body>
     <ota-widget class="mdc-layout-grid" style="display: none">
@@ -65,7 +66,7 @@
               <div class="mention" each="{m,i in d.mentions}" if="{i &lt; 8}">
                 <div class="mention-meta">
                   <div class="topic">
-                    <strong>{t('mentions.topics.'+m.topic, {default: m.label})} </strong>
+                    <strong>{t('opinions.topics.'+m.topic, {default: m.label})} </strong>
                   </div>
                   <div class="times">
                     {m.opinions_count} {t('mentions.times')} 
@@ -136,7 +137,7 @@
             <div class="recent-reviews-block">
               <div class="recent-review" each="{r,i in d.recent_reviews}" if="{r.ratings &amp;&amp; i &lt; 4}">
                 <div class="stars">
-                  <div class="material-icons star" each="{class in w.rating_stars(r.ratings.overall)}">
+                  <div class="material-icons star" each="{class in w.rating_stars(r.ratings, &quot;overall&quot;)}">
                     {class} 
                   </div>
                 </div>
@@ -148,7 +149,7 @@
                 </div>
                 <div class="date" if="{w.days_from(r.review_date) &gt; 90}"></div>
                 <div class="comment">
-                  <span if="{r.opinions.positive &amp;&amp; r.opinions.positive.length &gt; 0}">{t('recent_reviews.guest_liked')}{w.join_topics(r.opinions.positive, t('recent_reviews.separator'))}. </span><span if="{r.opinions.negative &amp;&amp; r.opinions.negative.length &gt; 0}">{t('recent_reviews.negative_comms')}{w.join_topics(r.opinions.negative, t('recent_reviews.separator'))}. </span>
+                  <span if="{r.positive_topics}">{t('recent_reviews.guest_liked')}{r.positive_topics}. </span><span if="{r.negative_topics}">{t('recent_reviews.negative_comms')}{r.negative_topics}. </span>
                 </div>
                 <div class="reviewer_info">
                   <span class="country" if="{r.country_code}">
