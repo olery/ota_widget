@@ -123,15 +123,14 @@ window.ota_widget.ui = {
   },
 
   join_topics: (review, sep) => {
-    _.each(review.opinions, (opinion) => {
-      var polarity = opinion.polarity
-      var key = opinion.polarity + '_topics'
-      review[key] = review[key] ?  review[key] : ''
+    _.each(['positive', 'negative'], (polarity) => {
 
-      _.each(opinion.topics, (topic) => {
-        if (review[key] != "") review[key] += sep
-        review[key] += ota_widget.topic_label_for(topic)
-      })
+      var topics = _.compact(_.uniq(_.flatten(_.map(review.opinions, (op) => {
+        if (op.polarity == polarity) return op.topics
+      }))))
+
+      var key = polarity + '_topics'
+      review[key] = _.join(_.map(topics, (topic) => { return ota_widget.topic_label_for(topic) }), sep)
     })
   }
 }
