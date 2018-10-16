@@ -134,7 +134,7 @@ window.ota_widget.i18n.locales = {
       title: 'Summary',
     },
     recent_reviews: {
-      title: 'Recent Reviews',
+      title: 'Recent Reviews (Beta)',
       subtitle: 'from sites across the web',
     },
     opinions: {
