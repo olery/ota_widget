@@ -12,6 +12,10 @@ window.ota_widget = {
 
     ota_widget.i18n.compiled = _.mapValues(ota_widget.i18n.locales, (t) => ota_widget.i18n.flatten(t))
 
+    if (ota_widget.url.params.lang && ota_widget.i18n.compiled[ota_widget.url.params.lang]) {
+      ota_widget.locale = ota_widget.url.params.lang
+    }
+
     ota_widget.tag = ota_widget.loadTag('ota-widget', ota_widget.ui.tagClass)
   },
 
