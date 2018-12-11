@@ -2,10 +2,10 @@
 
 ## What's this?
 OTA Widget is an example of the implementation of a widget showing the main review content for a specific hotel.
-It's free for our customers to checkout and use directly or selecting specific blocks of content. You can also use it as an inspiration on how to build your own.
+It's free for our customers to check out and to use directly or by selecting specific blocks of content. You can also use it as an inspiration on how to build your own.
 
 ## The data
-This widget relies on the data provided by the `review_widget` endpoint. An example of the structure of the data is provided [here](/data_example.md)
+This widget relies on the data provided by the `review_widget` endpoint. An example of the structure of the data is provided [here](/data_example.md).
 A minimal change in its structure is made in the js code just before the rendering (`function transformData`).
 
 ## The code
@@ -13,9 +13,9 @@ This repository uses the github pages structure to build the pages into the `doc
 
 This widget is written using components (HTML tags) rendered by [RiotJS](https://riot.js.org/).
 
-The css styles were kept very minimalist to make it easy for customizations. We use [Material Design](https://material.io/collections/developer-tutorials/#web) (Google Material Components for the Web) for organizing the boxes. You can identify the its classes by the `mdc-` preffix.
+The css styles were kept very minimalistic to make it easy for customizations. We use [Material Design](https://material.io/collections/developer-tutorials/#web) (Google Material Components for the Web) for organizing the boxes. You can identify the its classes by the `mdc-` preffix.
 
-For the country flags, we are using a library called [Flag Sprites](https://www.flag-sprites.com/). It's free for use. 
+For the country flags, we are using a library called [Flag Sprites](https://www.flag-sprites.com/). It's free for commercial use. 
 
 ## Getting Started
 
@@ -51,6 +51,6 @@ You can start making changes in the js, css or index.slim files and see the resu
 ## Translations
 This widget is prepared to receive translations. In the `js` folder, you will find a file called `locales.es6`, or you can use directly the compiled version in `docs/js/locales.js`.
 You can copy-and-paste the entire `en` translation into another key and translate the content. For testing, you should append the `lang=` parameter in the url.
-For instance, if you want to translate this widget into the japanese language, you should have a new hash key `ja` and point your browser to http://localhost:4000?token=XXX&company_id=123&lang=ja
+For instance, if you want to translate this widget into the Japanese language, you should have a new hash key `ja` and point your browser to http://localhost:4000?token=XXX&company_id=123&lang=ja
 
-You can also change the default language in the `ota_widget.js` file (`locale` variable)
+You can also change the default language in the `ota_widget.js` file (`locale` variable).
