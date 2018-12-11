@@ -9,10 +9,13 @@ This widget relies on the data provided by the `review_widget` endpoint. An exam
 A minimal change in its structure is made in the js code just before the rendering (`function transformData`).
 
 ## The code
-This repository uses the github pages structure to build the pages into the `docs` directory. You can get the code already compiled in the docs directory instead of using the source and having to learn how to code in `slim` by example.
+### Built with Jekyll and published by Github pages
+This repository uses the github pages structure to build the pages. The resulting code stays into the `docs` directory. You can get the code already compiled in the docs directory instead of using the source and having to learn how to code in `slim` by example.
 
-This widget is written using components (HTML tags) rendered by [RiotJS](https://riot.js.org/).
+### Javascript
+This widget is written using components (HTML tags) rendered by [RiotJS](https://riot.js.org/) 3.10. It also gets some help of the [Lowdash](https://lodash.com/) library 4.17
 
+### CSS
 The css styles were kept very minimalistic to make it easy for customizations. We use [Material Design](https://material.io/collections/developer-tutorials/#web) (Google Material Components for the Web) for organizing the boxes. You can identify the its classes by the `mdc-` preffix.
 
 For the country flags, we are using a library called [Flag Sprites](https://www.flag-sprites.com/). It's free for commercial use. 
