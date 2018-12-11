@@ -52,3 +52,5 @@ You can start making changes in the js, css or index.slim files and see the resu
 This widget is prepared to receive translations. In the `js` folder, you will find a file called `locales.es6`, or you can use directly the compiled version in `docs/js/locales.js`.
 You can copy-and-paste the entire `en` translation into another key and translate the content. For testing, you should append the `lang=` parameter in the url.
 For instance, if you want to translate this widget into the japanese language, you should have a new hash key `ja` and point your browser to http://localhost:4000?token=XXX&company_id=123&lang=ja
+
+You can also change the default language in the `ota_widget.js` file (`locale` variable)
