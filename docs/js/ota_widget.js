@@ -1,11 +1,14 @@
+// ota_widget object: all variables and behavior of the OTA Widget is stored here
 'use strict';
 
 window.ota_widget = {
 
   locale: 'en',
 
+  // this key will hold the RiotJS mounted tag. We usually need this tag to access its data and behaviour.
   tag: null,
 
+  // initialization function: loads locale and loads Riot component
   init: function init(token) {
     if (token) ota_widget.api.token = token;
 
@@ -20,6 +23,7 @@ window.ota_widget = {
     ota_widget.tag = ota_widget.loadTag('ota-widget', ota_widget.ui.tagClass);
   },
 
+  // load widget data from api and transform it to be shown in each block
   load: function load() {
     ota_widget.api.review_widget({}).then(function (json) {
       ota_widget.tag.d = ota_widget.ui.transformData(json.data);
@@ -27,6 +31,7 @@ window.ota_widget = {
     });
   },
 
+  // loadTag function. Mounts template tag
   loadTag: function loadTag(name, scriptFunc, opts) {
     riot.tag2(name, null, '', '', scriptFunc);
     var tag = riot.mount(name, opts)[0];
@@ -35,6 +40,10 @@ window.ota_widget = {
   }
 };
 
+// translation functions. Can receive a opts Object with values for a translation.
+// Example translation: %{number} dishes in the table
+// While translating this sentence above, a number value should be given.
+// Depending on the language, the %{number} piece can be in a different position
 window.ota_widget.i18n = {
   translate: function translate(key, opts) {
     var value = ota_widget.i18n.compiled[ota_widget.locale][key];
@@ -79,6 +88,7 @@ window.ota_widget.ui = {
 
   topicIgnoreList: ['room', 'cleanliness', 'facilities', 'food', 'location', 'problem', 'value_for_money'],
 
+  // function used by RiotJS when it's mounting the ota-widget tag
   tagClass: function tagClass(opts) {
     this.w = window.ota_widget;
     this.d = {};
@@ -90,6 +100,7 @@ window.ota_widget.ui = {
     };
   },
 
+  // Make little changes in the received data to present it in the blocks.
   transformData: function transformData(data) {
     data.ratings = _.orderBy(data.ratings, 'value', 'desc');
 
@@ -115,6 +126,7 @@ window.ota_widget.ui = {
     return data;
   },
 
+  // calculates the overall ratings percentages
   calcRatingsPercentages: function calcRatingsPercentages(groupedRatings) {
     var total = _.sumBy(groupedRatings, function (c) {
       c.review_count = _.find(c.ratings, function (r) {
@@ -127,6 +139,7 @@ window.ota_widget.ui = {
     });
   },
 
+  // transforms data needed by recent reviews block
   join_topics: function join_topics(review, sep) {
     _.each(['positive', 'negative'], function (polarity) {
 
@@ -142,6 +155,7 @@ window.ota_widget.ui = {
   }
 };
 
+// Generates classes to render in the recent reviews block with ratings through stars.
 window.ota_widget.rating_stars = function (ratings, category) {
   var value = _.compact(_.map(ratings, function (rating) {
     if (rating.category == category) return rating.rating;
@@ -154,6 +168,7 @@ window.ota_widget.rating_stars = function (ratings, category) {
   }return classes;
 };
 
+// Generates classes for colouring the ratings from red (0) to green (100).
 window.ota_widget.ratings = {
 
   mod4: function mod4(value) {
@@ -181,6 +196,7 @@ window.ota_widget.ratings = {
   }
 };
 
+// Build the url params into a hash to be processed and back to string for building the new url
 window.ota_widget.url = {
 
   params: _.chain(window.location.search.slice(1).split('&')).map(function (item) {
@@ -194,6 +210,7 @@ window.ota_widget.url = {
   }
 };
 
+// Build the api endpoint url. You should change at least baseURL and probably adjust the req function for your server url pattern.
 window.ota_widget.api = {
 
   baseUrl: 'https://agora.olery.com',
@@ -228,14 +245,18 @@ window.ota_widget.api = {
   }
 };
 
+// Transforms distance from mile to kilometer
 window.ota_widget.ml2km = function (distance) {
   return Math.round(distance * 160.934) / 100;
 };
 
+// Calculates the number of days from received date until now
 window.ota_widget.days_from = function (date) {
   return parseInt((Date.now() - Date.parse(date)) / (1000 * 3600 * 24));
 };
 
+// Try to load a translation for a topic. If none found, returns the capitalized version of the topic.
+// It's a fallback function for missing topic translations
 window.ota_widget.topic_label_for = function (topic) {
   var label = ota_widget.i18n.translate('opinions.topics.' + topic, { 'default': undefined });
   if (label == undefined) {

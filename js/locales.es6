@@ -1,6 +1,10 @@
 ---
 ---
 
+// Locale.js
+// For more translations, copy the entire english version and translate all the sentences on it.
+//
+// You can also change the default locale in the ota_widget.js file (ota_widget.locale)
 window.ota_widget.i18n.locales = {
   en: {
     review_date: 'data from %{date}',
