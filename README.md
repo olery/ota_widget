@@ -46,4 +46,9 @@ $ jekyll s --watch
 
 You can start making changes in the js, css or index.slim files and see the results in the browser by hitting F5 or you can get the resulting code in the `docs` directory and adjust to embed in your actual website.
 
-## 
+7. Before publishing the widget, replace the API endpoint url to your server. This way, you won't publish your Olery user token.
+
+## Translations
+This widget is prepared to receive translations. In the `js` folder, you will find a file called `locales.es6`, or you can use directly the compiled version in `docs/js/locales.js`.
+You can copy-and-paste the entire `en` translation into another key and translate the content. For testing, you should append the `lang=` parameter in the url.
+For instance, if you want to translate this widget into the japanese language, you should have a new hash key `ja` and point your browser to http://localhost:4000?token=XXX&company_id=123&lang=ja
