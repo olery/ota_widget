@@ -47,10 +47,11 @@ window.ota_widget = {
 window.ota_widget.i18n = {
   translate: function translate(key, opts) {
     var value = ota_widget.i18n.compiled[ota_widget.locale][key];
-
     value && _.each(opts, function (v, k) {
       value = value.replace("%{" + k + "}", v);
     });
+
+    opts = opts || { 'default': '' };
 
     return value ? value : opts['default'];
   },
