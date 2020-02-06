@@ -174,12 +174,12 @@
           </div>
         </div>
         <div class="mdc-image-list__item">
-          <div class="nearby_attractions block mdc-elevation--z1">
+          <div class="nearby block mdc-elevation--z1">
             <h2>
-              {t('nearby_attractions.title')} 
+              {t('nearby.attractions')} 
             </h2>
-            <div class="nearby_attractions-block">
-              <div class="nearby_attraction" each="{a,i in d.nearby_attractions}" if="{a.name &amp;&amp; i &lt; 8}">
+            <div class="nearby-block">
+              <div class="place" each="{a,i in d.nearby_attractions}" if="{a.name &amp;&amp; i &lt; 8}">
                 <div class="name">
                   <strong>{a.name} </strong>
                 </div>
@@ -187,7 +187,27 @@
                   {w.ml2km(a.distance)} km 
                 </div>
                 <div class="details">
-                  <span class="very_popular" if="{a.review_count &gt; 100}">{t('nearby_attractions.very_popular')} </span><span class="highly_rated" if="{a.rating &gt; 90}">{t('nearby_attractions.highly_rated')} </span>
+                  <span class="very_popular" if="{a.review_count &gt; 100}">{t('nearby.very_popular')} </span><span class="highly_rated" if="{a.rating &gt; 90}">{t('nearby.highly_rated')} </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mdc-image-list__item" if="{d.nearby_restaurants}">
+          <div class="nearby block mdc-elevation--z1">
+            <h2>
+              {t('nearby.restaurants')} 
+            </h2>
+            <div class="nearby-block">
+              <div class="place" each="{r,i in d.nearby_restaurants}" if="{r.name &amp;&amp; i &lt; 8}">
+                <div class="name">
+                  <strong>{r.name} </strong>
+                </div>
+                <div class="distance">
+                  {w.ml2km(r.distance)} km 
+                </div>
+                <div class="details">
+                  <span class="very_popular" if="{r.review_count &gt; 100}">{t('nearby.very_popular')} </span><span class="highly_rated" if="{r.rating &gt; 90}">{t('nearby.highly_rated')} </span>
                 </div>
               </div>
             </div>

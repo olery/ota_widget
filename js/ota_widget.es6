@@ -9,6 +9,8 @@ window.ota_widget = {
   // this key will hold the RiotJS mounted tag. We usually need this tag to access its data and behaviour.
   tag: null,
 
+  data: null,
+
   // initialization function: loads locale and loads Riot component
   init: (token) => {
     if (token) ota_widget.api.token = token
@@ -25,7 +27,7 @@ window.ota_widget = {
   // load widget data from api and transform it to be shown in each block
   load: () => {
     ota_widget.api.review_widget({}).then((json) => {
-      ota_widget.tag.d = ota_widget.ui.transformData(json.data)
+      ota_widget.tag.d = ota_widget.data = ota_widget.ui.transformData(json.data)
       ota_widget.tag.update()
     })
   },

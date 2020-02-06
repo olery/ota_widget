@@ -1037,23 +1037,23 @@ ota-widget {
     min-height: 50px;
     margin-bottom: 20px;
     page-break-inside: avoid; }
-  ota-widget .overall.block {
-    overflow: hidden; }
-    ota-widget .overall.block > * {
-      float: left; }
-    ota-widget .overall.block img.seal {
-      margin-right: 20px; }
-    ota-widget .overall.block .count {
-      margin-top: 10px; }
-    ota-widget .overall.block .rating {
-      width: 130px;
-      height: 75px;
-      line-height: 75px;
-      font-size: 48px;
-      font-weight: bold;
-      text-align: center;
-      color: white;
-      margin-right: 10px; }
+    ota-widget .block.overall {
+      overflow: hidden; }
+      ota-widget .block.overall > * {
+        float: left; }
+      ota-widget .block.overall img.seal {
+        margin-right: 20px; }
+      ota-widget .block.overall .count {
+        margin-top: 10px; }
+      ota-widget .block.overall .rating {
+        width: 130px;
+        height: 75px;
+        line-height: 75px;
+        font-size: 48px;
+        font-weight: bold;
+        text-align: center;
+        color: white;
+        margin-right: 10px; }
   ota-widget .ratings.block .subrating {
     margin-top: 16px; }
   ota-widget .ratings.block .title, ota-widget .ratings.block .rating-bar, ota-widget .ratings.block .rating-value {
@@ -1169,20 +1169,20 @@ ota-widget {
     ota-widget .recent-reviews .recent-reviews-block .recent-review hr {
       width: 100%;
       border-top: 1px solid #d6d6d6; }
-  ota-widget .nearby_attractions .nearby_attraction {
+  ota-widget .nearby .place {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 20px; }
-    ota-widget .nearby_attractions .nearby_attraction .name {
+    ota-widget .nearby .place .name {
       width: calc(100% - 140px); }
-    ota-widget .nearby_attractions .nearby_attraction .distance, ota-widget .nearby_attractions .nearby_attraction .name {
+    ota-widget .nearby .place .distance, ota-widget .nearby .place .name {
       font-size: 14px; }
-    ota-widget .nearby_attractions .nearby_attraction .distance {
+    ota-widget .nearby .place .distance {
       width: 65px; }
-    ota-widget .nearby_attractions .nearby_attraction .details {
+    ota-widget .nearby .place .details {
       width: 70px; }
-      ota-widget .nearby_attractions .nearby_attraction .details .very_popular, ota-widget .nearby_attractions .nearby_attraction .details .highly_rated {
+      ota-widget .nearby .place .details .very_popular, ota-widget .nearby .place .details .highly_rated {
         font-size: 10px;
         color: #72bb53;
         font-weight: bold; }

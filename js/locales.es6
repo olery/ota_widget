@@ -13,17 +13,20 @@ window.ota_widget.i18n.locales = {
       reviews: 'reviews',
       period:  'in the past 12 months',
     },
+
     ratings: {
       title: 'Ratings',
       topics: {
         overall: 'General',
       },
     },
+
     mentions: {
       title: 'What People Mention',
       times: 'times mentioned',
       positive: 'positive',
     },
+
     guests: {
       title: 'Who stays here',
       countries: {
@@ -31,9 +34,11 @@ window.ota_widget.i18n.locales = {
       compositions: {
       },
     },
+
     summaries: {
       title: 'Summary',
     },
+
     recent_reviews: {
       title: 'Recent Reviews (Beta)',
       subtitle: 'from sites across the web',
@@ -43,11 +48,14 @@ window.ota_widget.i18n.locales = {
       reviewed_at: 'Reviewed %{days} days ago',
       reviewed_a_while_ago: 'Reviewed a while ago'
     },
-    nearby_attractions: {
-      title: 'Nearby Points of Interest',
+
+    nearby: {
+      attractions: 'Nearby Points of Interest',
+      restaurants: 'Nearby Places to Eat',
       very_popular: 'very popular',
       highly_rated: 'Highly rated'
     },
+
     opinions: {
       topics: {
         breakfast_area: 'breakfast',
