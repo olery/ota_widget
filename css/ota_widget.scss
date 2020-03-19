@@ -14,7 +14,11 @@ ota-widget {
   color: #7f7a7a;
   font-family: Helvetica;
 
+  .float-right {
+    float: right;
+  }
   h1 {
+    display: inline;
     font-size: 2em;
     span {
       max-width: calc(100vw - 120px);
@@ -427,6 +431,14 @@ ota-widget {
   {
     background-color:#54ca74!important;
   }
+
+
+  //
+  /** MDC customizations **/
+  .mdc-button {
+    --mdc-theme-primary: #7f7a7a;
+  }
+
 
   // Mobile first
   @media (min-width: 768px) {

@@ -24,10 +24,16 @@ html
 
     ota-widget class='mdc-layout-grid' style='display: none'
 
+      demo-selector style='display: block'
+        button class="mdc-button mdc-button--outlined float-right" onclick='print()'
+          i aria-hidden="true" class="material-icons mdc-button__icon"
+            'print
+          span class="mdc-button__label"
+            '{t('print')}
+
       h1
         span
           '{d.name}
-
 
       .cached_at show='{d.cached_at}'
         '{t('review_date', {date: d.cached_at})}
@@ -192,4 +198,4 @@ html
       // your token goes here
       ota_widget.init('')
       ota_widget.load()
-    .
+
