@@ -8,7 +8,6 @@
 window.ota_widget.i18n.locales = {
 
   en: {
-    print: 'Print',
     review_date: 'data from %{date}',
     overall: {
       reviews: 'reviews',

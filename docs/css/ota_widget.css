@@ -4,8 +4,7 @@ ota-widget {
    */
   font-size: 14px;
   color: #7f7a7a;
-  font-family: Helvetica;
-  /** MDC customizations **/ }
+  font-family: Helvetica; }
   ota-widget .flag {
     display: inline-block;
     width: 48px;
@@ -1007,10 +1006,7 @@ ota-widget {
       background-position: -96px -77px; }
     ota-widget .flag-16-11 .flag.flag-za {
       background-position: -176px -165px; }
-  ota-widget .float-right {
-    float: right; }
   ota-widget h1 {
-    display: inline;
     font-size: 2em; }
     ota-widget h1 span {
       max-width: calc(100vw - 120px);
@@ -1242,8 +1238,6 @@ ota-widget {
     background-color: #63cc6d !important; }
   ota-widget .rating97-100 {
     background-color: #54ca74 !important; }
-  ota-widget .mdc-button {
-    --mdc-theme-primary: #7f7a7a; }
   @media (min-width: 768px) {
     ota-widget {
       font-size: 14px; }
