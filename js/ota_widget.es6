@@ -213,9 +213,11 @@ window.ota_widget.url = {
 window.ota_widget.api = {
 
   baseUrl:    'https://agora.olery.com',
+  //baseUrl:    'http://localhost:9292',
   version:    'v3',
-  company_id: ota_widget.url.params.company_id,
+  company_id: ota_widget.url.params.company_id || '',
   token:      ota_widget.url.params.token,
+  ep:         ota_widget.url.params.ep,
 
   review_widget: ({params = {}}) => {
     return ota_widget.api.req({
@@ -225,7 +227,8 @@ window.ota_widget.api = {
 
   req: ({path, baseUrl = ota_widget.api.baseUrl,
         version = ota_widget.api.version, params = {}}) => {
-    params.auth_token = ota_widget.api.token
+    if (ota_widget.api.token) params.auth_token = ota_widget.api.token
+    if (ota_widget.api.ep)    params.ep         = ota_widget.api.ep
     params = ota_widget.url.objectToQuery(params)
 
     return window

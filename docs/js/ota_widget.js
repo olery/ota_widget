@@ -217,9 +217,11 @@ window.ota_widget.url = {
 window.ota_widget.api = {
 
   baseUrl: 'https://agora.olery.com',
+  //baseUrl:    'http://localhost:9292',
   version: 'v3',
-  company_id: ota_widget.url.params.company_id,
+  company_id: ota_widget.url.params.company_id || '',
   token: ota_widget.url.params.token,
+  ep: ota_widget.url.params.ep,
 
   review_widget: function review_widget(_ref) {
     var _ref$params = _ref.params;
@@ -239,7 +241,8 @@ window.ota_widget.api = {
     var _ref2$params = _ref2.params;
     var params = _ref2$params === undefined ? {} : _ref2$params;
 
-    params.auth_token = ota_widget.api.token;
+    if (ota_widget.api.token) params.auth_token = ota_widget.api.token;
+    if (ota_widget.api.ep) params.ep = ota_widget.api.ep;
     params = ota_widget.url.objectToQuery(params);
 
     return window.fetch(baseUrl + '/' + version + '/' + path + '?' + params).then(function (response) {
