@@ -40,7 +40,7 @@ window.ota_widget.i18n.locales = {
     },
 
     recent_reviews: {
-      title: 'Recent Reviews (Beta)',
+      title: 'Recent Reviews',
       subtitle: 'from sites across the web',
       guest_liked: 'Guest liked the ',
       separator: ' and the ',
@@ -147,7 +147,7 @@ window.ota_widget.i18n.locales = {
       title: 'Zusammenfassung',
     },
     recent_reviews: {
-      title: 'Neueste Bewertungen (Beta)',
+      title: 'Neueste Bewertungen',
       subtitle: 'von überall aus dem Internet',
       guest_liked: 'Gäste mochten ',
       separator: ' und ',
