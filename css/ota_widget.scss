@@ -159,12 +159,12 @@ ota-widget {
         .icon {
           width: 40px;
         }
-        .label {
+        .label-text {
           width: 100%;
           line-height: 1.2;
           font-weight: bold;
         }
-        .label,.percentage, .icon {
+        .label-text, .percentage, .icon {
           vertical-align: middle;
           display: table-cell;
         }
@@ -249,7 +249,7 @@ ota-widget {
           font-size: 10px;
           display: table;
 
-          .icon,.label {
+          .icon, .label-text {
             vertical-align: middle;
             display: table-cell;
           }

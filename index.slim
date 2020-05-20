@@ -84,7 +84,7 @@ html
               .country each='{c,i in d.guests.countries}' if='{i < 3}'
                 .icon
                   .flag class='flag-{c.country.toLowerCase()}'
-                .label
+                .label-text
                   '{t('guests.countries.'+c.country, {default: c.label})}
                 .percentage
                   '{Math.round(c.percentage)}%
@@ -93,7 +93,7 @@ html
               .composition each='{c,i in d.guests.compositions}' if='{i < 3}'
                 .icon class='material-icons'
                   '{w.ui.compositionIcons[c.travel_composition]}
-                .label
+                .label-text
                   '{t('guests.compositions.'+c.travel_composition, {default: c.label})}
                 .percentage
                   '{Math.round(c.percentage)}%
@@ -136,12 +136,12 @@ html
                   span.country if='{r.country_code}'
                     .icon.flag-16-11
                       .flag class='flag-{r.country_code.toLowerCase()}'
-                    .label
+                    .label-text
                       '{t('guests.countries.'+r.country_code, {default: r.country_name})}
                   span.composition if='{r.travel_composition}'
                     .icon class='material-icons'
                       '{w.ui.compositionIcons[r.travel_composition]}
-                    .label
+                    .label-text
                       '{t('guests.compositions.'+r.travel_composition, {default: r.travel_composition})}
                 hr if='{ i < 3 }'
 

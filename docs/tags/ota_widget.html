@@ -65,7 +65,7 @@
             <div class="icon">
               <div class="flag flag-{c.country.toLowerCase()}"></div>
             </div>
-            <div class="label">
+            <div class="label-text">
               {t('guests.countries.'+c.country, {default: c.label})} 
             </div>
             <div class="percentage">
@@ -77,7 +77,7 @@
             <div class="icon material-icons">
               {w.ui.compositionIcons[c.travel_composition]} 
             </div>
-            <div class="label">
+            <div class="label-text">
               {t('guests.compositions.'+c.travel_composition, {default: c.label})} 
             </div>
             <div class="percentage">
@@ -132,14 +132,14 @@
                 <div class="icon flag-16-11">
                   <div class="flag flag-{r.country_code.toLowerCase()}"></div>
                 </div>
-                <div class="label">
+                <div class="label-text">
                   {t('guests.countries.'+r.country_code, {default: r.country_name})} 
                 </div>
               </span><span class="composition" if="{r.travel_composition}">
                 <div class="icon material-icons">
                   {w.ui.compositionIcons[r.travel_composition]} 
                 </div>
-                <div class="label">
+                <div class="label-text">
                   {t('guests.compositions.'+r.travel_composition, {default: r.travel_composition})} 
                 </div>
               </span>

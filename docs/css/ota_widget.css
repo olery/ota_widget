@@ -1100,11 +1100,11 @@ ota-widget {
       display: inline-block; }
     ota-widget .guests.block .guests-block .country .icon, ota-widget .guests.block .guests-block .composition .icon {
       width: 40px; }
-    ota-widget .guests.block .guests-block .country .label, ota-widget .guests.block .guests-block .composition .label {
+    ota-widget .guests.block .guests-block .country .label-text, ota-widget .guests.block .guests-block .composition .label-text {
       width: 100%;
       line-height: 1.2;
       font-weight: bold; }
-    ota-widget .guests.block .guests-block .country .label, ota-widget .guests.block .guests-block .country .percentage, ota-widget .guests.block .guests-block .country .icon, ota-widget .guests.block .guests-block .composition .label, ota-widget .guests.block .guests-block .composition .percentage, ota-widget .guests.block .guests-block .composition .icon {
+    ota-widget .guests.block .guests-block .country .label-text, ota-widget .guests.block .guests-block .country .percentage, ota-widget .guests.block .guests-block .country .icon, ota-widget .guests.block .guests-block .composition .label-text, ota-widget .guests.block .guests-block .composition .percentage, ota-widget .guests.block .guests-block .composition .icon {
       vertical-align: middle;
       display: table-cell; }
   ota-widget .guests.block .guests-block .percentage {
@@ -1156,7 +1156,7 @@ ota-widget {
       color: #b3b3b3;
       font-size: 10px;
       display: table; }
-      ota-widget .recent-reviews .recent-reviews-block .recent-review .reviewer_info .icon, ota-widget .recent-reviews .recent-reviews-block .recent-review .reviewer_info .label {
+      ota-widget .recent-reviews .recent-reviews-block .recent-review .reviewer_info .icon, ota-widget .recent-reviews .recent-reviews-block .recent-review .reviewer_info .label-text {
         vertical-align: middle;
         display: table-cell; }
       ota-widget .recent-reviews .recent-reviews-block .recent-review .reviewer_info .icon {
