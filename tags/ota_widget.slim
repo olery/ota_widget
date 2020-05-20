@@ -14,7 +14,6 @@ ota-widget class='mdc-layout-grid' style='display: none'
           .count-period
             '{t('overall.period')}
 
-
     .mdc-image-list__item
       .ratings.block.mdc-elevation--z1
         h2
@@ -54,7 +53,7 @@ ota-widget class='mdc-layout-grid' style='display: none'
         .guests-block if='{d.guests}'
           .country each='{c,i in d.guests.countries}' if='{i < 3}'
             .icon
-              img src='images/blank.gif' class='flag flag-{c.country.toLowerCase()}'
+              .flag class='flag-{c.country.toLowerCase()}'
             .label
               '{t('guests.countries.'+c.country, {default: c.label})}
             .percentage
@@ -106,7 +105,7 @@ ota-widget class='mdc-layout-grid' style='display: none'
             .reviewer_info
               span.country if='{r.country_code}'
                 .icon.flag-16-11
-                  img src='images/blank.gif' class='flag flag-{r.country_code.toLowerCase()}'
+                  .flag class='flag-{r.country_code.toLowerCase()}'
                 .label
                   '{t('guests.countries.'+r.country_code, {default: r.country_name})}
               span.composition if='{r.travel_composition}'
