@@ -159,4 +159,12 @@ ota-widget class='mdc-layout-grid' style='display: none'
                 '{t('nearby.highly_rated')}
 
   javascript:
+    this.w = window.ota_widget
+    this.d = {}
+    this.t = this.w.i18n.translate
+
+    this.clear = function () {
+      this.d = {}
+      this.update()
+    }
 

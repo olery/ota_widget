@@ -191,5 +191,13 @@
     </div>
   </div>
   <script>
+    this.w = window.ota_widget
+    this.d = {}
+    this.t = this.w.i18n.translate
+    
+    this.clear = function () {
+      this.d = {}
+      this.update()
+    }
   </script>
 </ota-widget>
