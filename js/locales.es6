@@ -56,6 +56,14 @@ window.ota_widget.i18n.locales = {
       highly_rated: 'Highly rated'
     },
 
+    over_time: {
+      reviews: 'Over Time',
+      haxis: 'Date',
+      date: 'Date',
+      current: 'This Year',
+      previous: 'Last Year'
+    },
+
     opinions: {
       topics: {
         breakfast_area: 'breakfast',

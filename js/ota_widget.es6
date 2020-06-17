@@ -29,6 +29,7 @@ window.ota_widget = {
     ota_widget.api.review_widget({}).then((json) => {
       ota_widget.tag.d = ota_widget.data = ota_widget.ui.transformData(json.data)
       ota_widget.tag.update()
+      window.ota_widget.reviews_over_time.load()
     })
   },
 
@@ -212,8 +213,8 @@ window.ota_widget.url = {
 // Build the api endpoint url. You should change at least baseURL and probably adjust the req function for your server url pattern.
 window.ota_widget.api = {
 
-  baseUrl:    'https://agora.olery.com',
-  //baseUrl:    'http://localhost:9292',
+  //baseUrl:    'https://agora.olery.com',
+  baseUrl:    'http://localhost:9292',
   version:    'v3',
   company_id: ota_widget.url.params.company_id || '',
   token:      ota_widget.url.params.token,
@@ -257,4 +258,35 @@ window.ota_widget.topic_label_for = (topic) => {
     label = _.startCase(topic)
   }
   return label.toLowerCase()
+}
+
+window.ota_widget.reviews_over_time = {
+  period: 'quarter'
+}
+
+window.ota_widget.reviews_over_time.load = () => {
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var data      = ota_widget.tag.d.reviews_over_time[window.ota_widget.reviews_over_time.period]
+    var dataTable = [_.map(['date', 'current', 'previous'], (n) => { return ota_widget.i18n.translate(`over_time.${n}`) })]
+    var row;
+
+    _.each(['current', 'previous'], function(moment) {
+      _.each(data[moment], function(d, i) {
+        if (dataTable[i + 1] == undefined)
+          dataTable.push([d['date']])
+        dataTable[i+1].push(d['count'])
+      })
+    })
+    var data    = google.visualization.arrayToDataTable(dataTable)
+    var options = {
+      hAxis: {title: ota_widget.i18n.translate('over_time.haxis'),slantedText: true, titleTextStyle: {color: '#333', fontSize: '10px'}},
+      vAxis: {minValue: 0},
+    };
+
+    var chart = new google.visualization.AreaChart(document.getElementById('over-time-chart'));
+    chart.draw(data, options);
+  }
 }

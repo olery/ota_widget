@@ -189,6 +189,14 @@
         </div>
       </div>
     </div>
+    <div class="mdc-image-list__item" if="{d.reviews_over_time}">
+      <div class="over_time block mdc-elevation--z1">
+        <h2>
+          {t('over_time.reviews')} 
+        </h2>
+        <div id="over-time-chart" style="width: 100%; height: 500px;"></div>
+      </div>
+    </div>
   </div>
   <script>
     this.w = window.ota_widget

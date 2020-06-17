@@ -157,6 +157,14 @@ ota-widget class='mdc-layout-grid' style='display: none'
               span.highly_rated if='{r.rating > 90}'
                 '{t('nearby.highly_rated')}
 
+    .mdc-image-list__item if='{d.reviews_over_time}'
+      .over_time.block.mdc-elevation--z1
+        h2
+          '{t('over_time.reviews')}
+
+        #over-time-chart style="width: 100%; height: 500px;"
+
+
   javascript:
     this.w = window.ota_widget
     this.d = {}
