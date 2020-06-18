@@ -299,6 +299,23 @@ ota-widget {
       }
     }
   }
+
+  .over_time {
+    button {
+      background: transparent;
+      border: none;
+      color: #339;
+      cursor: pointer;
+      margin: 20px;
+      line-height: 30px;
+      outline: none;
+
+      &.selected {
+        border-bottom: 1px solid blue;
+        color: blue;
+      }
+    }
+  }
   .spacer {
     margin: 15px;
   }

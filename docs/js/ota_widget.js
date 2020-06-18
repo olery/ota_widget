@@ -277,29 +277,57 @@ window.ota_widget.reviews_over_time = {
 };
 
 window.ota_widget.reviews_over_time.load = function () {
-  google.charts.load('current', { 'packages': ['corechart'] });
-  google.charts.setOnLoadCallback(drawChart);
+  google.charts.load('current', { 'packages': ['corechart', 'controls'] });
+  google.charts.setOnLoadCallback(ota_widget.reviews_over_time.drawChart);
+};
+window.ota_widget.reviews_over_time.drawChart = function () {
+  var data = ota_widget.tag.d.reviews_over_time[window.ota_widget.reviews_over_time.period];
+  var dataTable = [_.map(['date', 'current', 'previous'], function (n) {
+    return ota_widget.i18n.translate('over_time.' + n);
+  })];
+  var row;
+  var dateFmt = ota_widget.reviews_over_time.period == 'quarter' ? 'week' : 'month';
 
-  function drawChart() {
-    var data = ota_widget.tag.d.reviews_over_time[window.ota_widget.reviews_over_time.period];
-    var dataTable = [_.map(['date', 'current', 'previous'], function (n) {
-      return ota_widget.i18n.translate('over_time.' + n);
-    })];
-    var row;
-
-    _.each(['current', 'previous'], function (moment) {
-      _.each(data[moment], function (d, i) {
-        if (dataTable[i + 1] == undefined) dataTable.push([d['date']]);
-        dataTable[i + 1].push(d['count']);
-      });
+  _.each(['current', 'previous'], function (moment) {
+    _.each(data[moment], function (d, i) {
+      if (dataTable[i + 1] == undefined) dataTable.push([window.ota_widget.format_date(d['date'], dateFmt)]);
+      dataTable[i + 1].push(d['count']);
     });
-    var data = google.visualization.arrayToDataTable(dataTable);
-    var options = {
-      hAxis: { title: ota_widget.i18n.translate('over_time.haxis'), slantedText: true, titleTextStyle: { color: '#333', fontSize: '10px' } },
-      vAxis: { minValue: 0 }
-    };
+  });
+  var data = google.visualization.arrayToDataTable(dataTable);
+  var options = {
+    hAxis: {
+      title: ota_widget.i18n.translate('over_time.haxis'),
+      slantedText: true,
+      titleTextStyle: { color: '#333', fontSize: '10px' }
+    },
+    vAxis: { minValue: 0 }
+  };
 
-    var chart = new google.visualization.AreaChart(document.getElementById('over-time-chart'));
-    chart.draw(data, options);
-  }
+  if (!ota_widget.reviews_over_time.chart) ota_widget.reviews_over_time.chart = new google.visualization.AreaChart(document.getElementById('over-time-chart'));
+  ota_widget.reviews_over_time.chart.draw(data, options);
+};
+
+window.ota_widget.reviews_over_time.showQuarter = function () {
+  if (window.ota_widget.reviews_over_time.period == 'quarter') return;
+  window.ota_widget.reviews_over_time.period = 'quarter';
+  window.ota_widget.reviews_over_time.drawChart();
+  ota_widget.tag.update();
+};
+
+window.ota_widget.reviews_over_time.showYear = function () {
+  if (window.ota_widget.reviews_over_time.period == 'year') return;
+  window.ota_widget.reviews_over_time.period = 'year';
+  window.ota_widget.reviews_over_time.drawChart();
+  ota_widget.tag.update();
+};
+
+window.ota_widget.format_date = function (dateStr, fmt) {
+  var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  var date = new Date(dateStr.split('-'));
+  var month = monthNames[date.getMonth()];
+
+  if (fmt == 'week') {
+    return date.getDate() + ' of ' + month;
+  } else if (fmt == 'month') return '' + month;
 };

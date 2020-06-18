@@ -194,6 +194,10 @@ html
             h2
               '{t('over_time.reviews')}
 
+              button onclick="ota_widget.reviews_over_time.showQuarter();" class='{selected: ota_widget.reviews_over_time.period == "quarter"}'
+                '{t('over_time.quarter')}
+              button onclick="ota_widget.reviews_over_time.showYear();" class='{selected: ota_widget.reviews_over_time.period == "year"}'
+                '{t('over_time.year')}
             #over-time-chart style="width: 100%; height: 500px;"
 
     javascript:

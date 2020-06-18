@@ -58,7 +58,9 @@ window.ota_widget.i18n.locales = {
       haxis: 'Date',
       date: 'Date',
       current: 'This Year',
-      previous: 'Last Year'
+      previous: 'Last Year',
+      quarter: 'Quarter',
+      year: 'Year'
     },
 
     opinions: {
