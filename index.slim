@@ -38,10 +38,10 @@ html
 
       h1
         span
-          '{d.name}
+          '{w.data.name}
 
-      .cached_at show='{d.cached_at}'
-        '{t('review_date', {date: d.cached_at})}
+      .cached_at show='{w.data.cached_at}'
+        '{t('review_date', {date: w.data.cached_at})}
 
       .mdc-image-list.mdc-image-list--masonry.masonry-image-list
         overall-rating

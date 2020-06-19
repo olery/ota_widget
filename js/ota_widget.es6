@@ -100,11 +100,10 @@ window.ota_widget.ui = {
   // function used by RiotJS when it's mounting the ota-widget tag
   tagClass: function (opts) {
     this.w = window.ota_widget
-    this.d = this.w.data
     this.t = this.w.i18n.translate
 
     this.clear = function () {
-      this.d = {}
+      this.w.data = {}
       this.update()
     }
   },
@@ -267,7 +266,7 @@ window.ota_widget.reviews_over_time.load = () => {
   google.charts.setOnLoadCallback(ota_widget.reviews_over_time.drawChart);
 }
 window.ota_widget.reviews_over_time.drawChart = function () {
-  var data      = ota_widget.tag.d.reviews_over_time[window.ota_widget.reviews_over_time.period]
+  var data      = ota_widget.data.reviews_over_time[window.ota_widget.reviews_over_time.period]
   var dataTable = [_.map(['date', 'current', 'previous'], (n) => { return ota_widget.i18n.translate(`over_time.${n}`) })]
   var row;
   var dateFmt   = ota_widget.reviews_over_time.period == 'quarter' ? 'week' : 'month'

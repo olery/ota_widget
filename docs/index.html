@@ -28,10 +28,10 @@
   <body>
     <ota-widget class="mdc-layout-grid" style="display: none">
       <h1>
-        <span>{d.name} </span>
+        <span>{w.data.name} </span>
       </h1>
-      <div class="cached_at" show="{d.cached_at}">
-        {t('review_date', {date: d.cached_at})} 
+      <div class="cached_at" show="{w.data.cached_at}">
+        {t('review_date', {date: w.data.cached_at})} 
       </div>
       <div class="mdc-image-list mdc-image-list--masonry masonry-image-list">
         <overall-rating></overall-rating><ratings></ratings><mentions></mentions><guests></guests><summaries></summaries><recent-reviews></recent-reviews><nearby-attractions></nearby-attractions><nearby-restaurants></nearby-restaurants>
