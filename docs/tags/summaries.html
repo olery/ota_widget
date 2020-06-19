@@ -1,0 +1,20 @@
+<summaries class="mdc-image-list__item">
+  <div class="summaries block mdc-elevation--z1">
+    <h2>
+      {t('summaries.title')} 
+    </h2>
+    <div class="summary-block">
+      <div class="summary" each="{s,i in d.summaries}" if="{s.sentiment &amp;&amp; i &lt; 8}">
+        <div class="icon material-icons {s.sentiment}">
+          {s.sentiment == 'positive' ? 'add_circle_outline' : 'remove_circle_outline'} 
+        </div>
+        <strong class="name">{s.text} </strong>
+      </div>
+    </div>
+  </div>
+  <script>
+    this.w = window.ota_widget
+    this.t = this.w.i18n.translate
+    this.d = this.w.data
+  </script>
+</summaries>

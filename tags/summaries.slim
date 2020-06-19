@@ -1,0 +1,19 @@
+---
+---
+summaries.mdc-image-list__item
+  .summaries.block.mdc-elevation--z1
+    h2
+      '{t('summaries.title')}
+
+    .summary-block
+      .summary each='{s,i in d.summaries}' if='{s.sentiment && i < 8}'
+        .icon class='material-icons {s.sentiment}'
+          '{s.sentiment == 'positive' ? 'add_circle_outline' : 'remove_circle_outline'}
+        strong.name
+          '{s.text}
+
+
+  javascript:
+    this.w = window.ota_widget
+    this.t = this.w.i18n.translate
+    this.d = this.w.data

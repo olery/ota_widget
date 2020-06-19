@@ -1,0 +1,37 @@
+<guests class="mdc-image-list__item">
+  <div class="guests block mdc-elevation--z1">
+    <h2>
+      {t('guests.title')} 
+    </h2>
+    <div class="guests-block" if="{d.guests}">
+      <div class="country" each="{c,i in d.guests.countries}" if="{i &lt; 3}">
+        <div class="icon">
+          <div class="flag flag-{c.country.toLowerCase()}"></div>
+        </div>
+        <div class="label-text">
+          {t('guests.countries.'+c.country, {default: c.label})} 
+        </div>
+        <div class="percentage">
+          {Math.round(c.percentage)}% 
+        </div>
+      </div>
+      <div class="spacer"></div>
+      <div class="composition" each="{c,i in d.guests.compositions}" if="{i &lt; 3}">
+        <div class="icon material-icons">
+          {w.ui.compositionIcons[c.travel_composition]} 
+        </div>
+        <div class="label-text">
+          {t('guests.compositions.'+c.travel_composition, {default: c.label})} 
+        </div>
+        <div class="percentage">
+          {Math.round(c.percentage)}% 
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    this.w = window.ota_widget
+    this.t = this.w.i18n.translate
+    this.d = this.w.data
+  </script>
+</guests>

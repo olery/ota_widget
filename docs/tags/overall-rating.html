@@ -1,0 +1,18 @@
+<overall-rating class="mdc-image-list__item">
+  <div class="overall block mdc-elevation--z1">
+    <div class="rating {w.ratings.toCss100(d.rating)}">
+      {w.ratings.format(d.rating / 10)} 
+    </div>
+    <div class="count">
+      <strong class="count-value">{d.review_count} {t('overall.reviews')} </strong>
+      <div class="count-period">
+        {t('overall.period')} 
+      </div>
+    </div>
+  </div>
+  <script>
+    this.w = window.ota_widget
+    this.t = this.w.i18n.translate
+    this.d = this.w.data
+  </script>
+</overall-rating>

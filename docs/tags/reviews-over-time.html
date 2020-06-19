@@ -1,0 +1,13 @@
+<reviews-over-time class="mdc-image-list__item" if="{d.reviews_over_time}">
+  <div class="over_time block mdc-elevation--z1">
+    <h2>
+      {t('over_time.reviews')} <button class="{selected: ota_widget.reviews_over_time.period == &quot;quarter&quot;}" onclick="ota_widget.reviews_over_time.showQuarter();">{t('over_time.quarter')} </button><button class="{selected: ota_widget.reviews_over_time.period == &quot;year&quot;}" onclick="ota_widget.reviews_over_time.showYear();">{t('over_time.year')} </button>
+    </h2>
+    <div id="over-time-chart" style="width: 100%; height: 500px;"></div>
+  </div>
+  <script>
+    this.w = window.ota_widget
+    this.t = this.w.i18n.translate
+    this.d = this.w.data
+  </script>
+</reviews-over-time>

@@ -1,0 +1,17 @@
+---
+---
+overall-rating.mdc-image-list__item
+  .overall.block.mdc-elevation--z1
+    .rating class='{w.ratings.toCss100(d.rating)}'
+      '{w.ratings.format(d.rating / 10)}
+    .count
+      strong.count-value
+        '{d.review_count} {t('overall.reviews')}
+      .count-period
+        '{t('overall.period')}
+
+
+  javascript:
+    this.w = window.ota_widget
+    this.t = this.w.i18n.translate
+    this.d = this.w.data

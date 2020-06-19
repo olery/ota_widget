@@ -1,0 +1,29 @@
+---
+---
+guests.mdc-image-list__item
+  .guests.block.mdc-elevation--z1
+    h2
+      '{t('guests.title')}
+
+    .guests-block if='{d.guests}'
+      .country each='{c,i in d.guests.countries}' if='{i < 3}'
+        .icon
+          .flag class='flag-{c.country.toLowerCase()}'
+        .label-text
+          '{t('guests.countries.'+c.country, {default: c.label})}
+        .percentage
+          '{Math.round(c.percentage)}%
+
+      .spacer
+      .composition each='{c,i in d.guests.compositions}' if='{i < 3}'
+        .icon class='material-icons'
+          '{w.ui.compositionIcons[c.travel_composition]}
+        .label-text
+          '{t('guests.compositions.'+c.travel_composition, {default: c.label})}
+        .percentage
+          '{Math.round(c.percentage)}%
+
+  javascript:
+    this.w = window.ota_widget
+    this.t = this.w.i18n.translate
+    this.d = this.w.data

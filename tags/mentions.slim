@@ -1,0 +1,23 @@
+---
+---
+mentions.mdc-image-list__item
+  .mentions.block.mdc-elevation--z1
+    h2
+      '{t('mentions.title')}
+
+    .mentions-row
+      .mention each='{m,i in d.mentions}' if='{i < 8}'
+        .mention-meta
+          .topic
+            strong
+              '{t('opinions.topics.'+m.topic, {default: m.label})}
+          .times
+            '{m.opinions_count} {t('mentions.times')}
+        .mention-percentage class='{w.ratings.toCss100(m.percentage)}'
+          '{Math.round(m.percentage)}% {t('mentions.positive')}
+
+
+  javascript:
+    this.w = window.ota_widget
+    this.t = this.w.i18n.translate
+    this.d = this.w.data

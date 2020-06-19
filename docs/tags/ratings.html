@@ -1,0 +1,25 @@
+<ratings class="mdc-image-list__item">
+  <div class="ratings block mdc-elevation--z1">
+    <h2>
+      {t('ratings.title')} 
+    </h2>
+    <div class="subratings">
+      <div class="subrating" each="{r in d.ratings}" if="{r.title}">
+        <div class="title">
+          <strong>{t('ratings.topics.'+r.topic, {default: r.title})} </strong>
+        </div>
+        <div class="rating-bar">
+          <div class="rating-value-bar {w.ratings.toCss100(r.value)}" style="width: {r.value}%"></div>
+        </div>
+        <div class="rating-value">
+          {w.ratings.format(r.value / 10)} 
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    this.w = window.ota_widget
+    this.t = this.w.i18n.translate
+    this.d = this.w.data
+  </script>
+</ratings>

@@ -1,0 +1,22 @@
+---
+---
+ratings.mdc-image-list__item
+  .ratings.block.mdc-elevation--z1
+    h2
+      '{t('ratings.title')}
+
+    .subratings
+      .subrating each='{r in d.ratings}' if='{r.title}'
+        .title
+          strong
+            '{t('ratings.topics.'+r.topic, {default: r.title})}
+        .rating-bar
+          .rating-value-bar class='{w.ratings.toCss100(r.value)}' style='width: {r.value}%'
+        .rating-value
+          '{w.ratings.format(r.value / 10)}
+
+
+  javascript:
+    this.w = window.ota_widget
+    this.t = this.w.i18n.translate
+    this.d = this.w.data

@@ -9,10 +9,10 @@ window.ota_widget = {
   // this key will hold the RiotJS mounted tag. We usually need this tag to access its data and behaviour.
   tag: null,
 
-  data: null,
+  data: {},
 
   // initialization function: loads locale and loads Riot component
-  init: (token) => {
+  load: (token) => {
     if (token) ota_widget.api.token = token
 
     ota_widget.i18n.compiled = _.mapValues(ota_widget.i18n.locales, (t) => ota_widget.i18n.flatten(t))
@@ -21,15 +21,13 @@ window.ota_widget = {
       ota_widget.locale = ota_widget.url.params.lang
     }
 
-    ota_widget.tag = ota_widget.loadTag('ota-widget', ota_widget.ui.tagClass)
-  },
-
-  // load widget data from api and transform it to be shown in each block
-  load: () => {
-    ota_widget.api.review_widget({}).then((json) => {
-      ota_widget.tag.d = ota_widget.data = ota_widget.ui.transformData(json.data)
-      ota_widget.tag.update()
-      window.ota_widget.reviews_over_time.load()
+    riot.compile(function() {
+      ota_widget.tag = ota_widget.loadTag('ota-widget', ota_widget.ui.tagClass)
+      ota_widget.api.review_widget({}).then((json) => {
+        _.assign(ota_widget.data, ota_widget.ui.transformData(json.data))
+        ota_widget.tag.update()
+        window.ota_widget.reviews_over_time.load()
+      })
     })
   },
 
@@ -102,7 +100,7 @@ window.ota_widget.ui = {
   // function used by RiotJS when it's mounting the ota-widget tag
   tagClass: function (opts) {
     this.w = window.ota_widget
-    this.d = {}
+    this.d = this.w.data
     this.t = this.w.i18n.translate
 
     this.clear = function () {

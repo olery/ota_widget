@@ -1,0 +1,27 @@
+---
+---
+nearby-restaurants.mdc-image-list__item if='{d.nearby_restaurants}'
+  .nearby.block.mdc-elevation--z1
+    h2
+      '{t('nearby.restaurants')}
+
+    .nearby-block
+      .place each='{r,i in d.nearby_restaurants}' if='{r.name && i < 8}'
+        .name
+          strong
+            '{r.name}
+
+        .distance
+          '{w.ml2km(r.distance)} km
+        .details
+          // Very popular is when it has more than 100 reviews in one year.
+          span.very_popular if='{r.review_count > 100}'
+            '{t('nearby.very_popular')}
+          // Highly rated is when rating is above 90
+          span.highly_rated if='{r.rating > 90}'
+            '{t('nearby.highly_rated')}
+
+  javascript:
+    this.w = window.ota_widget
+    this.t = this.w.i18n.translate
+    this.d = this.w.data

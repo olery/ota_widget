@@ -1,0 +1,41 @@
+---
+---
+recent-reviews.mdc-image-list__item
+  .recent-reviews.block.mdc-elevation--z1
+    h2
+      '{t('recent_reviews.title')}
+    .subtitle
+      '{t('recent_reviews.subtitle')}
+
+    .recent-reviews-block
+      .recent-review each='{r,i in d.recent_reviews}' if='{r.ratings && i < 4}'
+        .stars
+          .material-icons.star each='{class in w.rating_stars(r.ratings, "overall")}'
+            '{class}
+        .date if='{w.days_from(r.review_date) <= 90}'
+          '{t('recent_reviews.reviewed_at', {days: w.days_from(r.review_date)})}
+        .date if='{w.days_from(r.review_date) > 90}'
+          '{t('recent_reviews.reviewed_a_while_ago')}
+        .date if='{w.days_from(r.review_date) > 90}'
+        .comment
+          span if='{r.positive_topics}'
+            '{t('recent_reviews.guest_liked')}{r.positive_topics}.
+          span if='{r.negative_topics}'
+            '{t('recent_reviews.negative_comms')}{r.negative_topics}.
+        .reviewer_info
+          span.country if='{r.country_code}'
+            .icon.flag-16-11
+              .flag class='flag-{r.country_code.toLowerCase()}'
+            .label-text
+              '{t('guests.countries.'+r.country_code, {default: r.country_name})}
+          span.composition if='{r.travel_composition}'
+            .icon class='material-icons'
+              '{w.ui.compositionIcons[r.travel_composition]}
+            .label-text
+              '{t('guests.compositions.'+r.travel_composition, {default: r.travel_composition})}
+        hr if='{ i < 3 }'
+
+  javascript:
+    this.w = window.ota_widget
+    this.t = this.w.i18n.translate
+    this.d = this.w.data

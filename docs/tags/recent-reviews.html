@@ -1,0 +1,52 @@
+<recent-reviews class="mdc-image-list__item">
+  <div class="recent-reviews block mdc-elevation--z1">
+    <h2>
+      {t('recent_reviews.title')} 
+    </h2>
+    <div class="subtitle">
+      {t('recent_reviews.subtitle')} 
+    </div>
+    <div class="recent-reviews-block">
+      <div class="recent-review" each="{r,i in d.recent_reviews}" if="{r.ratings &amp;&amp; i &lt; 4}">
+        <div class="stars">
+          <div class="material-icons star" each="{class in w.rating_stars(r.ratings, &quot;overall&quot;)}">
+            {class} 
+          </div>
+        </div>
+        <div class="date" if="{w.days_from(r.review_date) &lt;= 90}">
+          {t('recent_reviews.reviewed_at', {days: w.days_from(r.review_date)})} 
+        </div>
+        <div class="date" if="{w.days_from(r.review_date) &gt; 90}">
+          {t('recent_reviews.reviewed_a_while_ago')} 
+        </div>
+        <div class="date" if="{w.days_from(r.review_date) &gt; 90}"></div>
+        <div class="comment">
+          <span if="{r.positive_topics}">{t('recent_reviews.guest_liked')}{r.positive_topics}. </span><span if="{r.negative_topics}">{t('recent_reviews.negative_comms')}{r.negative_topics}. </span>
+        </div>
+        <div class="reviewer_info">
+          <span class="country" if="{r.country_code}">
+            <div class="icon flag-16-11">
+              <div class="flag flag-{r.country_code.toLowerCase()}"></div>
+            </div>
+            <div class="label-text">
+              {t('guests.countries.'+r.country_code, {default: r.country_name})} 
+            </div>
+          </span><span class="composition" if="{r.travel_composition}">
+            <div class="icon material-icons">
+              {w.ui.compositionIcons[r.travel_composition]} 
+            </div>
+            <div class="label-text">
+              {t('guests.compositions.'+r.travel_composition, {default: r.travel_composition})} 
+            </div>
+          </span>
+        </div>
+        <hr if="{ i &lt; 3 }" />
+      </div>
+    </div>
+  </div>
+  <script>
+    this.w = window.ota_widget
+    this.t = this.w.i18n.translate
+    this.d = this.w.data
+  </script>
+</recent-reviews>

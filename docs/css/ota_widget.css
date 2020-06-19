@@ -1028,7 +1028,6 @@ ota-widget {
     ota-widget .masonry-image-list .mdc-image-list__item {
       padding-top: 1px; }
     ota-widget .masonry-image-list .mdc-image-list__item .block {
-      display: inline-block;
       width: 100%;
       box-sizing: border-box; }
   ota-widget .block {
@@ -1197,6 +1196,8 @@ ota-widget {
     ota-widget .over_time button.selected {
       border-bottom: 1px solid blue;
       color: blue; }
+    ota-widget .over_time button:first-child {
+      margin-left: 50px; }
   ota-widget .spacer {
     margin: 15px; }
   ota-widget .rating0-4 {
