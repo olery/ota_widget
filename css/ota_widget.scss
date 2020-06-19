@@ -44,7 +44,6 @@ ota-widget {
     }
     // avoid webkit cutting border
     .mdc-image-list__item .block {
-      display: inline-block;
       width: 100%;
       box-sizing: border-box;
     }
@@ -313,6 +312,10 @@ ota-widget {
       &.selected {
         border-bottom: 1px solid blue;
         color: blue;
+      }
+
+      &:first-child {
+        margin-left: 50px;
       }
     }
   }
