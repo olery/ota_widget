@@ -260,8 +260,8 @@ window.ota_widget.topic_label_for = (topic) => {
 
 window.ota_widget.charts = {
   load: () => {
-    //window.ota_widget.charts.draw('reviews_over_time')
-    //window.ota_widget.charts.draw('reviews_trends')
+    window.ota_widget.charts.draw('reviews_over_time')
+    window.ota_widget.charts.draw('reviews_trends')
   },
 
   t: (arr) => {
@@ -296,6 +296,13 @@ window.ota_widget.charts = {
     if (!ota_widget[component].chart)
       ota_widget[component].chart = new google.visualization.AreaChart(document.getElementById(data.id));
     ota_widget[component].chart.draw(dataArray, options);
+  },
+
+  changePeriod: function(component, period) {
+    if (window.ota_widget[component].period == period) return;
+    window.ota_widget[component].period = period
+    window.ota_widget.charts.draw([component])
+    ota_widget.tag.update()
   }
 }
 
@@ -310,20 +317,6 @@ window.ota_widget.reviews_over_time = {
       data: ota_widget.data.reviews_over_time.company
     }
   },
-
-  showQuarter: function(component) {
-    if (window.ota_widget.reviews_over_time.period == 'quarter') return;
-    window.ota_widget.reviews_over_time.period = 'quarter'
-    window.ota_widget.charts.draw('reviews_over_time')
-    ota_widget.tag.update()
-  },
-
-  showYear: function(component) {
-    if (window.ota_widget.reviews_over_time.period == 'year') return;
-    window.ota_widget.reviews_over_time.period = 'year'
-    window.ota_widget.charts.draw('reviews_over_time')
-    ota_widget.tag.update()
-  }
 }
 
 window.ota_widget.reviews_trends = {
@@ -332,7 +325,7 @@ window.ota_widget.reviews_trends = {
   loadData: function() {
     var series = ['property', 'covid_cases']
     var data   = {
-      property: ota_widget.data.reviews_over_time.company,
+      property: ota_widget.data.reviews_over_time.company.current,
       //country: ota_widget.data.reviews_over_time.country,
       //continent: ota_widget.data.reviews_over_time.continent,
       covid_cases: ota_widget.data.events.country,
@@ -348,7 +341,6 @@ window.ota_widget.reviews_trends = {
 
 window.ota_widget.format_date = function(dateStr, fmt) {
   var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ]
-  console.log(dateStr);
   var date       = new Date(dateStr.split('-'))
   var month      = monthNames[date.getMonth()]
 

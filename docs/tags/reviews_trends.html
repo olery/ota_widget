@@ -1,7 +1,7 @@
 <reviews_trends class="mdc-image-list__item" if="{d.reviews_over_time}">
   <div class="trends chart block mdc-elevation--z1">
     <h2>
-      {t('trends.title')} <button class="{selected: ota_widget.reviews_over_time.period == &quot;quarter&quot;}" onclick="ota_widget.reviews_over_time.showQuarter();">{t('charts.quarter')} </button><button class="{selected: ota_widget.reviews_over_time.period == &quot;year&quot;}" onclick="ota_widget.reviews_over_time.showYear();">{t('charts.year')} </button>
+      {t('trends.title')} <button class="{selected: ota_widget.reviews_over_time.period == &quot;quarter&quot;}" onclick="ota_widget.charts.changePeriod(&#39;reviews_trends&#39;, &#39;quarter&#39;);">{t('charts.quarter')} </button><button class="{selected: ota_widget.reviews_over_time.period == &quot;year&quot;}" onclick="ota_widget.charts.changePeriod(&#39;reviews_trends&#39;, &#39;year&#39;)">{t('charts.year')} </button>
     </h2>
     <div id="trends-chart" style="width: 100%; height: 500px;"></div>
   </div>
