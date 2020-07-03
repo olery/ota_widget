@@ -4,10 +4,31 @@
       {t('covid_events.title')} 
     </h2>
     <div id="covid_events-chart" style="width: 100%; height: 500px;"></div>
+    <div class="mentions-row">
+      <div class="mention" each="{m,i in mentions}" if="{i &lt; 8}">
+        <div class="mention-meta">
+          <div class="topic">
+            <strong>{t('opinions.topics.'+m.topic, {default: m.label})} </strong>
+          </div>
+          <div class="times">
+            {m.opinions_count} {t('mentions.times')} 
+          </div>
+        </div>
+        <div class="mention-percentage {w.ratings.toCss100(m.percentage)}">
+          {Math.round(m.percentage)}% {t('mentions.positive')} 
+        </div>
+      </div>
+    </div>
   </div>
   <script>
     this.w = window.ota_widget
     this.t = this.w.i18n.translate
     this.d = this.w.data
+    
+    this.topics = ['covid', 'sanitary_safety', 'health_precautions']
+    
+    this.on('update', function() {
+      this.mentions = _.filter(this.d.mentions, function(m) {return _.includes(this.topics, m.topic)}.bind(this))
+    })
   </script>
 </covid_events>
