@@ -262,6 +262,7 @@ window.ota_widget.charts = {
   load: () => {
     window.ota_widget.charts.draw('reviews_over_time')
     window.ota_widget.charts.draw('reviews_trends')
+    window.ota_widget.charts.draw('covid_events')
   },
 
   t: (arr) => {
@@ -279,7 +280,7 @@ window.ota_widget.charts = {
       _.each(obj, function(d, i) {
         if (dataTable[i + 1] == undefined)
           dataTable.push([window.ota_widget.format_date(d['date'], dateFmt)])
-        dataTable[i+1].push(d['count'])
+        dataTable[i+1].push(parseInt(d['count']))
       })
     })
 
@@ -335,6 +336,20 @@ window.ota_widget.reviews_trends = {
       header: ota_widget.charts.t(['date'].concat(series)),
       series: series,
       data:   data,
+    }
+  }
+}
+
+window.ota_widget.covid_events = {
+  period: 'quarter',
+
+  loadData: function() {
+    var series = _.keys(ota_widget.data.events.continents)
+    return {
+      id:     'covid_events-chart',
+      header: ota_widget.charts.t(['date'].concat(series)),
+      series: series,
+      data:   ota_widget.data.events.continents,
     }
   }
 }

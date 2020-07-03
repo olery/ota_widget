@@ -68,7 +68,14 @@ window.ota_widget.i18n.locales = {
       country: 'Country',
       continent: 'Continent',
       covid_cases: 'Covid-19 cases',
-      seasons: 'Seasons'
+      seasons: 'Seasons',
+      asia:      'Asia',
+      africa:    'Africa',
+      antarctica: 'Antartica',
+      europe:    'Europe',
+      oceania:   'Oceania',
+      'north-america': 'North America',
+      'south-america': 'South America',
     },
     
     over_time: {
