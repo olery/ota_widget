@@ -53,14 +53,35 @@ window.ota_widget.i18n.locales = {
       highly_rated: 'Highly rated'
     },
 
-    over_time: {
-      reviews: 'Over Time',
+    charts: {
       haxis: 'Date',
       date: 'Date',
       current: 'This Year',
       previous: 'Last Year',
       quarter: 'Quarter',
-      year: 'Year'
+      year: 'Year',
+      property: 'Property',
+      city: 'City',
+      country: 'Country',
+      continent: 'Continent',
+      covid_cases: 'Covid-19 cases',
+      seasons: 'Seasons'
+    },
+
+    over_time: {
+      title: 'Over Time'
+    },
+
+    trends: {
+      title: 'Trends'
+    },
+
+    shifts: {
+      title: 'Shifts'
+    },
+
+    covid_events: {
+      title: 'COVID-19'
     },
 
     opinions: {

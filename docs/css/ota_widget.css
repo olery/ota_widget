@@ -1185,7 +1185,7 @@ ota-widget {
         font-size: 10px;
         color: #72bb53;
         font-weight: bold; }
-  ota-widget .over_time button {
+  ota-widget .chart button {
     background: transparent;
     border: none;
     color: #339;
@@ -1193,10 +1193,10 @@ ota-widget {
     margin: 20px;
     line-height: 30px;
     outline: none; }
-    ota-widget .over_time button.selected {
+    ota-widget .chart button.selected {
       border-bottom: 1px solid blue;
       color: blue; }
-    ota-widget .over_time button:first-child {
+    ota-widget .chart button:first-child {
       margin-left: 50px; }
   ota-widget .spacer {
     margin: 15px; }

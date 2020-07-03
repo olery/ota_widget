@@ -26,7 +26,8 @@ window.ota_widget = {
       ota_widget.api.review_widget({}).then((json) => {
         _.assign(ota_widget.data, ota_widget.ui.transformData(json.data))
         ota_widget.tag.update()
-        window.ota_widget.reviews_over_time.load()
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(ota_widget.charts.load);
       })
     })
   },
@@ -257,58 +258,97 @@ window.ota_widget.topic_label_for = (topic) => {
   return label.toLowerCase()
 }
 
-window.ota_widget.reviews_over_time = {
-  period: 'quarter'
-}
+window.ota_widget.charts = {
+  load: () => {
+    //window.ota_widget.charts.draw('reviews_over_time')
+    //window.ota_widget.charts.draw('reviews_trends')
+  },
 
-window.ota_widget.reviews_over_time.load = () => {
-  google.charts.load('current', {'packages':['corechart', 'controls']});
-  google.charts.setOnLoadCallback(ota_widget.reviews_over_time.drawChart);
-}
-window.ota_widget.reviews_over_time.drawChart = function () {
-  var data      = ota_widget.data.reviews_over_time[window.ota_widget.reviews_over_time.period]
-  var dataTable = [_.map(['date', 'current', 'previous'], (n) => { return ota_widget.i18n.translate(`over_time.${n}`) })]
-  var row;
-  var dateFmt   = ota_widget.reviews_over_time.period == 'quarter' ? 'week' : 'month'
+  t: (arr) => {
+    return _.map(arr, (n) => ota_widget.i18n.translate(`charts.${n}`))
+  },
 
-  _.each(['current', 'previous'], function(moment) {
-    _.each(data[moment], function(d, i) {
-      if (dataTable[i + 1] == undefined)
-        dataTable.push([window.ota_widget.format_date(d['date'], dateFmt)])
-      dataTable[i+1].push(d['count'])
+  draw: (component) => {
+    var data      = ota_widget[component].loadData()
+    var dataTable = [data.header]
+    var dateFmt   = ota_widget[component].period == 'quarter' ? 'week' : 'month'
+    var chart     = ota_widget.charts[component]
+
+    _.each(data.series, function(serie) {
+      var obj = data.data[serie][window.ota_widget[component].period]
+      _.each(obj, function(d, i) {
+        if (dataTable[i + 1] == undefined)
+          dataTable.push([window.ota_widget.format_date(d['date'], dateFmt)])
+        dataTable[i+1].push(d['count'])
+      })
     })
-  })
-  var data    = google.visualization.arrayToDataTable(dataTable)
-  var options = {
-    hAxis: {
-      title: ota_widget.i18n.translate('over_time.haxis'),
-      slantedText: true,
-      titleTextStyle: {color: '#333', fontSize: '10px'}
-    },
-    vAxis: {minValue: 0},
-  };
 
-  if (!ota_widget.reviews_over_time.chart)
-    ota_widget.reviews_over_time.chart = new google.visualization.AreaChart(document.getElementById('over-time-chart'));
-  ota_widget.reviews_over_time.chart.draw(data, options);
+    var dataArray = google.visualization.arrayToDataTable(dataTable)
+    var options   = {
+      hAxis: {
+        title: ota_widget.i18n.translate('charts.haxis'),
+        slantedText: true,
+        titleTextStyle: {color: '#333', fontSize: '10px'}
+      },
+      vAxis: {minValue: 0},
+    };
+
+    if (!ota_widget[component].chart)
+      ota_widget[component].chart = new google.visualization.AreaChart(document.getElementById(data.id));
+    ota_widget[component].chart.draw(dataArray, options);
+  }
 }
 
-window.ota_widget.reviews_over_time.showQuarter = function() {
-  if (window.ota_widget.reviews_over_time.period == 'quarter') return;
-  window.ota_widget.reviews_over_time.period = 'quarter'
-  window.ota_widget.reviews_over_time.drawChart()
-  ota_widget.tag.update()
+window.ota_widget.reviews_over_time = {
+  period: 'quarter',
+  loadData: function() {
+    var series = ['current', 'previous']
+    return {
+      header: ota_widget.charts.t(['date'].concat(series)),
+      id: 'over-time-chart',
+      series: series,
+      data: ota_widget.data.reviews_over_time.company
+    }
+  },
+
+  showQuarter: function(component) {
+    if (window.ota_widget.reviews_over_time.period == 'quarter') return;
+    window.ota_widget.reviews_over_time.period = 'quarter'
+    window.ota_widget.charts.draw('reviews_over_time')
+    ota_widget.tag.update()
+  },
+
+  showYear: function(component) {
+    if (window.ota_widget.reviews_over_time.period == 'year') return;
+    window.ota_widget.reviews_over_time.period = 'year'
+    window.ota_widget.charts.draw('reviews_over_time')
+    ota_widget.tag.update()
+  }
 }
 
-window.ota_widget.reviews_over_time.showYear = function() {
-  if (window.ota_widget.reviews_over_time.period == 'year') return;
-  window.ota_widget.reviews_over_time.period = 'year'
-  window.ota_widget.reviews_over_time.drawChart()
-  ota_widget.tag.update()
+window.ota_widget.reviews_trends = {
+  period: 'quarter',
+
+  loadData: function() {
+    var series = ['property', 'covid_cases']
+    var data   = {
+      property: ota_widget.data.reviews_over_time.company,
+      //country: ota_widget.data.reviews_over_time.country,
+      //continent: ota_widget.data.reviews_over_time.continent,
+      covid_cases: ota_widget.data.events.country,
+    }
+    return {
+      id:     'trends-chart',
+      header: ota_widget.charts.t(['date'].concat(series)),
+      series: series,
+      data:   data,
+    }
+  }
 }
 
 window.ota_widget.format_date = function(dateStr, fmt) {
   var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ]
+  console.log(dateStr);
   var date       = new Date(dateStr.split('-'))
   var month      = monthNames[date.getMonth()]
 
