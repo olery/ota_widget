@@ -1,0 +1,13 @@
+---
+---
+shifts.mdc-image-list__item if='{d.shifts}'
+  .chart.block.mdc-elevation--z1
+    h2
+      '{t('shifts.title')}
+
+    #shifts-chart style="width: 100%; height: 500px;"
+
+  javascript:
+    this.w = window.ota_widget
+    this.t = this.w.i18n.translate
+    this.d = this.w.data

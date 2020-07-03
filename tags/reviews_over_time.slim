@@ -1,0 +1,17 @@
+---
+---
+reviews_over_time.mdc-image-list__item if='{d.reviews_over_time}'
+  .over_time.chart.block.mdc-elevation--z1
+    h2
+      '{t('over_time.title')}
+
+      button onclick="ota_widget.reviews_over_time.showQuarter();" class='{selected: ota_widget.reviews_over_time.period == "quarter"}'
+        '{t('charts.quarter')}
+      button onclick="ota_widget.reviews_over_time.showYear();" class='{selected: ota_widget.reviews_over_time.period == "year"}'
+        '{t('charts.year')}
+    #over-time-chart style="width: 100%; height: 500px;"
+
+  javascript:
+    this.w = window.ota_widget
+    this.t = this.w.i18n.translate
+    this.d = this.w.data
