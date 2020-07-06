@@ -5,9 +5,9 @@ reviews_trends.mdc-image-list__item if='{d.reviews_over_time}'
     h2
       '{t('trends.title')}
 
-      button onclick="ota_widget.charts.changePeriod('reviews_trends', 'quarter');" class='{selected: ota_widget.reviews_over_time.period == "quarter"}'
+      button onclick="ota_widget.charts.changePeriod('reviews_trends', 'quarter');" class='{selected: ota_widget.reviews_trends.period == "quarter"}'
         '{t('charts.quarter')}
-      button onclick="ota_widget.charts.changePeriod('reviews_trends', 'year')" class='{selected: ota_widget.reviews_over_time.period == "year"}'
+      button onclick="ota_widget.charts.changePeriod('reviews_trends', 'year')" class='{selected: ota_widget.reviews_trends.period == "year"}'
         '{t('charts.year')}
     #trends-chart style="width: 100%; height: 500px;"
 
