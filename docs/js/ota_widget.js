@@ -27,6 +27,7 @@ window.ota_widget = {
       ota_widget.api.review_widget({}).then(function (json) {
         _.assign(ota_widget.data, ota_widget.ui.transformData(json.data));
         ota_widget.tag.update();
+
         google.charts.load('current', { 'packages': ['corechart'] });
         google.charts.setOnLoadCallback(ota_widget.charts.load);
       });
@@ -102,12 +103,24 @@ window.ota_widget.ui = {
     };
   },
 
+  mentions: {
+
+    score: function score(m) {
+      var _ref = arguments.length <= 1 || arguments[1] === undefined ? opts : arguments[1];
+
+      var _ref$scale = _ref.scale;
+      var scale = _ref$scale === undefined ? 5 : _ref$scale;
+
+      return scale * m.positive_opinions / m.opinions_count;
+    }
+
+  },
+
   // Make little changes in the received data to present it in the blocks.
   transformData: function transformData(data) {
     data.ratings = _.orderBy(data.ratings, 'value', 'desc');
 
     _.remove(data.mentions, function (m) {
-      m.percentage = 100 * m.positive_opinions / m.opinions_count;
       return _.find(ota_widget.ui.topicIgnoreList, function (t) {
         return t == m.topic;
       });
@@ -222,23 +235,23 @@ window.ota_widget.api = {
   token: ota_widget.url.params.token,
   ep: ota_widget.url.params.ep,
 
-  review_widget: function review_widget(_ref) {
-    var _ref$params = _ref.params;
-    var params = _ref$params === undefined ? {} : _ref$params;
+  review_widget: function review_widget(_ref2) {
+    var _ref2$params = _ref2.params;
+    var params = _ref2$params === undefined ? {} : _ref2$params;
 
     return ota_widget.api.req({
       path: 'companies/' + ota_widget.api.company_id + '/review_widget'
     });
   },
 
-  req: function req(_ref2) {
-    var path = _ref2.path;
-    var _ref2$baseUrl = _ref2.baseUrl;
-    var baseUrl = _ref2$baseUrl === undefined ? ota_widget.api.baseUrl : _ref2$baseUrl;
-    var _ref2$version = _ref2.version;
-    var version = _ref2$version === undefined ? ota_widget.api.version : _ref2$version;
-    var _ref2$params = _ref2.params;
-    var params = _ref2$params === undefined ? {} : _ref2$params;
+  req: function req(_ref3) {
+    var path = _ref3.path;
+    var _ref3$baseUrl = _ref3.baseUrl;
+    var baseUrl = _ref3$baseUrl === undefined ? ota_widget.api.baseUrl : _ref3$baseUrl;
+    var _ref3$version = _ref3.version;
+    var version = _ref3$version === undefined ? ota_widget.api.version : _ref3$version;
+    var _ref3$params = _ref3.params;
+    var params = _ref3$params === undefined ? {} : _ref3$params;
 
     if (ota_widget.api.token) params.auth_token = ota_widget.api.token;
     if (ota_widget.api.ep) params.ep = ota_widget.api.ep;
@@ -253,11 +266,6 @@ window.ota_widget.api = {
 // Transforms distance from mile to kilometer
 window.ota_widget.ml2km = function (distance) {
   return Math.round(distance * 160.934) / 100;
-};
-
-// Calculates the number of days from received date until now
-window.ota_widget.days_from = function (date) {
-  return parseInt((Date.now() - Date.parse(date)) / (1000 * 3600 * 24));
 };
 
 // Try to load a translation for a topic. If none found, returns the capitalized version of the topic.
@@ -292,7 +300,8 @@ window.ota_widget.charts = {
     _.each(data.series, function (serie) {
       var obj = data.data[serie][window.ota_widget[component].period];
       _.each(obj, function (d, i) {
-        if (dataTable[i + 1] == undefined) dataTable.push([window.ota_widget.format_date(d['date'], dateFmt)]);
+        if (dataTable[i + 1] == undefined) dataTable.push([window.ota_widget.date.format(d['date'], dateFmt)]);
+
         dataTable[i + 1].push(parseInt(d['count']));
       });
     });
@@ -320,7 +329,9 @@ window.ota_widget.charts = {
 };
 
 window.ota_widget.reviews_over_time = {
+
   period: 'quarter',
+
   loadData: function loadData() {
     var series = ['current', 'previous'];
     return {
@@ -333,6 +344,7 @@ window.ota_widget.reviews_over_time = {
 };
 
 window.ota_widget.reviews_trends = {
+
   period: 'quarter',
 
   loadData: function loadData() {
@@ -353,6 +365,7 @@ window.ota_widget.reviews_trends = {
 };
 
 window.ota_widget.covid_events = {
+
   period: 'quarter',
 
   loadData: function loadData() {
@@ -366,12 +379,18 @@ window.ota_widget.covid_events = {
   }
 };
 
-window.ota_widget.format_date = function (dateStr, fmt) {
-  var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-  var date = new Date(dateStr.split('-'));
-  var month = monthNames[date.getMonth()];
+// Calculates the number of days from received date until now
+window.ota_widget.date = {
 
-  if (fmt == 'week') {
-    return date.getDate() + ' of ' + month;
-  } else if (fmt == 'month') return '' + month;
+  days_from: function days_from(date) {
+    return parseInt((Date.now() - Date.parse(date)) / (1000 * 3600 * 24));
+  },
+
+  format: function format(dateStr, fmt) {
+    var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    var date = new Date(dateStr.split('-'));
+    var month = monthNames[date.getMonth()];
+
+    if (fmt == 'week') return date.getDate() + ' of ' + month;else if (fmt == 'month') return '' + month;
+  }
 };

@@ -13,13 +13,13 @@
             {class} 
           </div>
         </div>
-        <div class="date" if="{w.days_from(r.review_date) &lt;= 90}">
-          {t('recent_reviews.reviewed_at', {days: w.days_from(r.review_date)})} 
+        <div class="date" if="{w.date.days_from(r.review_date) &lt;= 90}">
+          {t('recent_reviews.reviewed_at', {days: w.date.days_from(r.review_date)})} 
         </div>
-        <div class="date" if="{w.days_from(r.review_date) &gt; 90}">
+        <div class="date" if="{w.date.days_from(r.review_date) &gt; 90}">
           {t('recent_reviews.reviewed_a_while_ago')} 
         </div>
-        <div class="date" if="{w.days_from(r.review_date) &gt; 90}"></div>
+        <div class="date" if="{w.date.days_from(r.review_date) &gt; 90}"></div>
         <div class="comment">
           <span if="{r.positive_topics}">{t('recent_reviews.guest_liked')}{r.positive_topics}. </span><span if="{r.negative_topics}">{t('recent_reviews.negative_comms')}{r.negative_topics}. </span>
         </div>

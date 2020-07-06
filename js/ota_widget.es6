@@ -21,13 +21,14 @@ window.ota_widget = {
       ota_widget.locale = ota_widget.url.params.lang
     }
 
-    riot.compile(function() {
+    riot.compile(() => {
       ota_widget.tag = ota_widget.loadTag('ota-widget', ota_widget.ui.tagClass)
       ota_widget.api.review_widget({}).then((json) => {
         _.assign(ota_widget.data, ota_widget.ui.transformData(json.data))
         ota_widget.tag.update()
-        google.charts.load('current', {'packages':['corechart']});
-        google.charts.setOnLoadCallback(ota_widget.charts.load);
+
+        google.charts.load('current', {'packages': ['corechart']})
+        google.charts.setOnLoadCallback(ota_widget.charts.load)
       })
     })
   },
@@ -108,13 +109,20 @@ window.ota_widget.ui = {
       this.update()
     }
   },
+
+  mentions: {
+
+    score(m, {scale = 5} = opts) {
+      return scale * m.positive_opinions/m.opinions_count
+    },
+
+  },
   
   // Make little changes in the received data to present it in the blocks.
   transformData: (data) => {
     data.ratings   = _.orderBy(data.ratings, 'value', 'desc')
 
     _.remove(data.mentions, (m) => {
-      m.percentage = 100*m.positive_opinions/m.opinions_count
       return _.find(ota_widget.ui.topicIgnoreList, (t) => t == m.topic)
     })
 
@@ -243,11 +251,6 @@ window.ota_widget.ml2km = (distance) => {
   return Math.round(distance * 160.934) / 100;
 }
 
-// Calculates the number of days from received date until now
-window.ota_widget.days_from = (date) => {
-  return parseInt( (Date.now() - Date.parse(date)) / (1000*3600*24) )
-}
-
 // Try to load a translation for a topic. If none found, returns the capitalized version of the topic.
 // It's a fallback function for missing topic translations
 window.ota_widget.topic_label_for = (topic) => {
@@ -279,7 +282,8 @@ window.ota_widget.charts = {
       var obj = data.data[serie][window.ota_widget[component].period]
       _.each(obj, function(d, i) {
         if (dataTable[i + 1] == undefined)
-          dataTable.push([window.ota_widget.format_date(d['date'], dateFmt)])
+          dataTable.push([window.ota_widget.date.format(d['date'], dateFmt)])
+
         dataTable[i+1].push(parseInt(d['count']))
       })
     })
@@ -299,7 +303,7 @@ window.ota_widget.charts = {
     ota_widget[component].chart.draw(dataArray, options);
   },
 
-  changePeriod: function(component, period) {
+  changePeriod(component, period) {
     if (window.ota_widget[component].period == period) return;
     window.ota_widget[component].period = period
     window.ota_widget.charts.draw([component])
@@ -308,8 +312,10 @@ window.ota_widget.charts = {
 }
 
 window.ota_widget.reviews_over_time = {
+
   period: 'quarter',
-  loadData: function() {
+
+  loadData() {
     var series = ['current', 'previous']
     return {
       header: ota_widget.charts.t(['date'].concat(series)),
@@ -321,9 +327,10 @@ window.ota_widget.reviews_over_time = {
 }
 
 window.ota_widget.reviews_trends = {
+
   period: 'quarter',
 
-  loadData: function() {
+  loadData() {
     var series = ['property', 'covid_cases']
     var data   = {
       property: ota_widget.data.reviews_over_time.company.current,
@@ -341,9 +348,10 @@ window.ota_widget.reviews_trends = {
 }
 
 window.ota_widget.covid_events = {
+
   period: 'quarter',
 
-  loadData: function() {
+  loadData() {
     var series = _.keys(ota_widget.data.events.continents)
     return {
       id:     'covid_events-chart',
@@ -354,14 +362,19 @@ window.ota_widget.covid_events = {
   }
 }
 
-window.ota_widget.format_date = function(dateStr, fmt) {
-  var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ]
-  var date       = new Date(dateStr.split('-'))
-  var month      = monthNames[date.getMonth()]
+// Calculates the number of days from received date until now
+window.ota_widget.date = {
 
-  if (fmt == 'week') {
-    return `${date.getDate()} of ${month}`
-  }
-  else if (fmt == 'month')
-    return `${month}`
+  days_from(date) { return parseInt((Date.now() - Date.parse(date)) / (1000*3600*24)) },
+
+  format(dateStr, fmt) {
+    var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ]
+    var date       = new Date(dateStr.split('-'))
+    var month      = monthNames[date.getMonth()]
+
+    if (fmt == 'week')
+      return `${date.getDate()} of ${month}`
+    else if (fmt == 'month')
+      return `${month}`
+  },
 }
