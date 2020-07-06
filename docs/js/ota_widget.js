@@ -14,9 +14,7 @@ window.ota_widget = {
   load: function load(token) {
     if (token) ota_widget.api.token = token;
 
-    ota_widget.i18n.compiled = _.mapValues(ota_widget.i18n.locales, function (t) {
-      return ota_widget.i18n.flatten(t);
-    });
+    ota_widget.i18n.load();
 
     if (ota_widget.url.params.lang && ota_widget.i18n.compiled[ota_widget.url.params.lang]) {
       ota_widget.locale = ota_widget.url.params.lang;
@@ -48,6 +46,15 @@ window.ota_widget = {
 // While translating this sentence above, a number value should be given.
 // Depending on the language, the %{number} piece can be in a different position
 window.ota_widget.i18n = {
+
+  compiled: {},
+
+  load: function load() {
+    this.compiled = _.mapValues(ota_widget.i18n.locales, function (t) {
+      return ota_widget.i18n.flatten(t);
+    });
+  },
+
   translate: function translate(key, opts) {
     var value = ota_widget.i18n.compiled[ota_widget.locale][key];
     value && _.each(opts, function (v, k) {
@@ -74,7 +81,9 @@ window.ota_widget.i18n = {
     };
     return flattenOne(obj);
   }
+
 };
+window.ota_widget.t = window.ota_widget.i18n.translate;
 
 window.ota_widget.ui = {
 
@@ -106,12 +115,24 @@ window.ota_widget.ui = {
   mentions: {
 
     score: function score(m) {
-      var _ref = arguments.length <= 1 || arguments[1] === undefined ? opts : arguments[1];
+      var _ref = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
 
       var _ref$scale = _ref.scale;
       var scale = _ref$scale === undefined ? 5 : _ref$scale;
 
-      return scale * m.positive_opinions / m.opinions_count;
+      if (!m.positive_opinions && !m.negative_opinions) return 0;
+      var total = m.positive_opinions ? m.positive_opinions : m.negative_opinions;
+      return scale * (m.positive_opinions - m.negative_opinions) / total;
+    },
+
+    scoreLabel: function scoreLabel(m) {
+      var score = Math.round(this.score(m));
+      var label = ota_widget.t('mentions.' + (score > 0 ? 'positive' : 'negative'));
+      return score + ' ' + label;
+    },
+
+    percentage: function percentage(m) {
+      return 100 * m.positive_opinions / m.opinions_count;
     }
 
   },

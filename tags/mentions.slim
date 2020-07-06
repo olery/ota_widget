@@ -13,8 +13,9 @@ mentions.mdc-image-list__item
               '{t('opinions.topics.'+m.topic, {default: m.label})}
           .times
             '{m.opinions_count} {t('mentions.times')}
-        .mention-percentage class='{w.ratings.toCss100(m.percentage)}'
-          '{Math.round(m.percentage)}% {t('mentions.positive')}
+
+        .mention-percentage class='{w.ratings.toCss100(w.ui.mentions.percentage(m))}'
+          '{w.ui.mentions.scoreLabel(m)}
 
   javascript:
     this.w = window.ota_widget
