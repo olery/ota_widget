@@ -112,31 +112,6 @@ window.ota_widget.ui = {
     };
   },
 
-  mentions: {
-
-    score: function score(m) {
-      var _ref = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
-
-      var _ref$scale = _ref.scale;
-      var scale = _ref$scale === undefined ? 5 : _ref$scale;
-
-      if (!m.positive_opinions && !m.negative_opinions) return 0;
-      var total = m.positive_opinions ? m.positive_opinions : m.negative_opinions;
-      return scale * (m.positive_opinions - m.negative_opinions) / total;
-    },
-
-    scoreLabel: function scoreLabel(m) {
-      var score = Math.round(this.score(m));
-      var label = ota_widget.t('mentions.' + (score > 0 ? 'positive' : 'negative'));
-      return score + ' ' + label;
-    },
-
-    percentage: function percentage(m) {
-      return 100 * m.positive_opinions / m.opinions_count;
-    }
-
-  },
-
   // Make little changes in the received data to present it in the blocks.
   transformData: function transformData(data) {
     data.ratings = _.orderBy(data.ratings, 'value', 'desc');
@@ -202,6 +177,36 @@ window.ota_widget.rating_stars = function (ratings, category) {
   }for (var i = 0; i < parseInt(value % 20 / 10); i++) {
     classes.push('star_half');
   }return classes;
+};
+
+window.ota_widget.mentions = {
+
+  score: function score(m) {
+    var _ref = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+
+    var _ref$scale = _ref.scale;
+    var scale = _ref$scale === undefined ? 10 : _ref$scale;
+
+    var total = m.positive_opinions ? m.positive_opinions : m.negative_opinions;
+    if (!total) return 0;
+    return scale * (m.positive_opinions - m.negative_opinions) / total;
+  },
+
+  scoreLabel: function scoreLabel(m) {
+    var score = Math.round(this.score(m));
+    if (!score) return;
+    return score;
+  },
+
+  percentage: function percentage(m) {
+    return 100 * m.positive_opinions / m.opinions_count;
+  },
+
+  colorClass: function colorClass(m) {
+    if (!m.positive_opinions || !m.negative_opinions) return;
+    return ota_widget.ratings.toCss100(this.percentage(m));
+  }
+
 };
 
 // Generates classes for colouring the ratings from red (0) to green (100).

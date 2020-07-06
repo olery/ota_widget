@@ -16,8 +16,8 @@ covid_events.mdc-image-list__item if='{d.reviews_over_time}'
           .times
             '{m.opinions_count} {t('mentions.times')}
 
-        .mention-percentage class='{w.ratings.toCss100(w.ui.mentions.percentage(m))}'
-          '{w.ui.mentions.scoreLabel(m)}
+        .mention-score class='{(w.mentions.colorClass(m)}'
+          '{w.mentions.scoreLabel(m)}
 
   javascript:
     this.w = window.ota_widget

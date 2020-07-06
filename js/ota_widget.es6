@@ -119,26 +119,6 @@ window.ota_widget.ui = {
     }
   },
 
-  mentions: {
-
-    score(m, {scale = 5} = {}) {
-      if (!m.positive_opinions && !m.negative_opinions) return 0
-      var total = m.positive_opinions ? m.positive_opinions : m.negative_opinions
-      return scale * (m.positive_opinions - m.negative_opinions) / total
-    },
-
-    scoreLabel(m) {
-      var score = Math.round(this.score(m))
-      var label = ota_widget.t(`mentions.${score > 0 ? 'positive' : 'negative'}`) 
-      return `${score} ${label}`
-    },
-
-    percentage(m) {
-      return 100 * m.positive_opinions / m.opinions_count
-    },
-
-  },
-  
   // Make little changes in the received data to present it in the blocks.
   transformData: (data) => {
     data.ratings   = _.orderBy(data.ratings, 'value', 'desc')
@@ -194,6 +174,32 @@ window.ota_widget.rating_stars = (ratings, category) => {
 
   return classes;
 }
+
+window.ota_widget.mentions = {
+
+  score(m, {scale = 10} = {}) {
+    var total = m.positive_opinions ? m.positive_opinions : m.negative_opinions
+    if (!total) return 0
+    return scale * (m.positive_opinions - m.negative_opinions) / total
+  },
+
+  scoreLabel(m) {
+    var score = Math.round(this.score(m))
+    if (!score) return
+    return score
+  },
+
+  percentage(m) {
+    return 100 * m.positive_opinions / m.opinions_count
+  },
+
+  colorClass(m) {
+    if (!m.positive_opinions || !m.negative_opinions) return
+    return ota_widget.ratings.toCss100(this.percentage(m))
+  },
+
+}
+  
 
 // Generates classes for colouring the ratings from red (0) to green (100).
 window.ota_widget.ratings = {

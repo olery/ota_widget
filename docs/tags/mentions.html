@@ -13,8 +13,8 @@
             {m.opinions_count} {t('mentions.times')} 
           </div>
         </div>
-        <div class="mention-percentage {w.ratings.toCss100(w.ui.mentions.percentage(m))}">
-          {w.ui.mentions.scoreLabel(m)} 
+        <div class="mention-score {w.mentions.colorClass(m)}">
+          {w.mentions.scoreLabel(m)} 
         </div>
       </div>
     </div>

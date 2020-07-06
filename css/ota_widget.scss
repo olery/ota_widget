@@ -117,18 +117,19 @@ ota-widget {
   .mention {
     margin-top: 2*$padding;
 
-    .mention-percentage {
+    .mention-score {
       font-size: 14px;
       color: white;
       font-weight: bold;
       padding: 9px $padding;
-      min-width: 95px;
+      min-width: 15px;
+      text-align: center;
     }
 
-    .mention-meta, .mention-percentage {
+    .mention-meta, .mention-score {
       vertical-align: middle;
     }
-    .mention-meta, .times, .mention-percentage {
+    .mention-meta, .times, .mention-score {
       display: inline-block;
     }
     .mention-meta {

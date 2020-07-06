@@ -1075,15 +1075,16 @@ ota-widget {
     max-width: 30px; }
   ota-widget .mention {
     margin-top: 16px; }
-    ota-widget .mention .mention-percentage {
+    ota-widget .mention .mention-score {
       font-size: 14px;
       color: white;
       font-weight: bold;
       padding: 9px 8px;
-      min-width: 95px; }
-    ota-widget .mention .mention-meta, ota-widget .mention .mention-percentage {
+      min-width: 15px;
+      text-align: center; }
+    ota-widget .mention .mention-meta, ota-widget .mention .mention-score {
       vertical-align: middle; }
-    ota-widget .mention .mention-meta, ota-widget .mention .times, ota-widget .mention .mention-percentage {
+    ota-widget .mention .mention-meta, ota-widget .mention .times, ota-widget .mention .mention-score {
       display: inline-block; }
     ota-widget .mention .mention-meta {
       width: calc(100% - 120px); }
