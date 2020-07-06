@@ -1073,24 +1073,24 @@ ota-widget {
     position: absolute; }
   ota-widget .ratings.block .rating-value {
     max-width: 30px; }
-  ota-widget .mentions.block .mention {
+  ota-widget .mention {
     margin-top: 16px; }
-    ota-widget .mentions.block .mention .mention-percentage {
+    ota-widget .mention .mention-percentage {
       font-size: 14px;
       color: white;
       font-weight: bold;
       padding: 9px 8px;
       min-width: 95px; }
-    ota-widget .mentions.block .mention .mention-meta, ota-widget .mentions.block .mention .mention-percentage {
+    ota-widget .mention .mention-meta, ota-widget .mention .mention-percentage {
       vertical-align: middle; }
-    ota-widget .mentions.block .mention .mention-meta, ota-widget .mentions.block .mention .times, ota-widget .mentions.block .mention .mention-percentage {
+    ota-widget .mention .mention-meta, ota-widget .mention .times, ota-widget .mention .mention-percentage {
       display: inline-block; }
-    ota-widget .mentions.block .mention .mention-meta {
+    ota-widget .mention .mention-meta {
       width: calc(100% - 120px); }
-    ota-widget .mentions.block .mention .topic {
+    ota-widget .mention .topic {
       font-size: 15px;
       min-width: 130px; }
-    ota-widget .mentions.block .mention .times {
+    ota-widget .mention .times {
       font-size: 14px; }
   ota-widget .guests.block .guests-block .country, ota-widget .guests.block .guests-block .composition {
     display: table; }

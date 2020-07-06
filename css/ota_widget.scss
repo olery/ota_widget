@@ -114,36 +114,34 @@ ota-widget {
     }
   }
 
-  .mentions.block {
-    .mention {
-      margin-top: 2*$padding;
+  .mention {
+    margin-top: 2*$padding;
 
-      .mention-percentage {
-        font-size: 14px;
-        color: white;
-        font-weight: bold;
-        padding: 9px $padding;
-        min-width: 95px;
-      }
-
-      .mention-meta, .mention-percentage {
-        vertical-align: middle;
-      }
-      .mention-meta, .times, .mention-percentage {
-        display: inline-block;
-      }
-      .mention-meta {
-        width: calc(100% - 120px);
-      }
-      .topic {
-        font-size: 15px;
-        min-width: 130px;
-      }
-      .times {
-        font-size: 14px;
-      }
-
+    .mention-percentage {
+      font-size: 14px;
+      color: white;
+      font-weight: bold;
+      padding: 9px $padding;
+      min-width: 95px;
     }
+
+    .mention-meta, .mention-percentage {
+      vertical-align: middle;
+    }
+    .mention-meta, .times, .mention-percentage {
+      display: inline-block;
+    }
+    .mention-meta {
+      width: calc(100% - 120px);
+    }
+    .topic {
+      font-size: 15px;
+      min-width: 130px;
+    }
+    .times {
+      font-size: 14px;
+    }
+
   }
 
   .guests.block {
