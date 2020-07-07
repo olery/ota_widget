@@ -178,28 +178,32 @@ window.ota_widget.rating_stars = (ratings, category) => {
 window.ota_widget.mentions = {
 
   score(m, {scale = 10} = {}) {
-    var total = m.positive_opinions ? m.positive_opinions : m.negative_opinions
+    var total = m.positive_opinions > m.negative_opinions ? m.positive_opinions : m.negative_opinions
     if (!total) return 0
-    return scale * (m.positive_opinions - m.negative_opinions) / total
+    var score = scale * (m.positive_opinions - m.negative_opinions) / total
+    if (score < 0) score += scale
+    return score
   },
-
   scoreLabel(m) {
     var score = Math.round(this.score(m))
     if (!score) return
     return score
   },
+  scoreClass(m) {
+    if (!m.positive_opinions || !m.negative_opinions) return
+    return ota_widget.ratings.toCss100(this.score(m, {scale: 100})(m))
+  },
 
   percentage(m) {
     return 100 * m.positive_opinions / m.opinions_count
   },
-
-  colorClass(m) {
-    if (!m.positive_opinions || !m.negative_opinions) return
-    return ota_widget.ratings.toCss100(this.percentage(m))
+  percentageClass(m) {
+    return ota_widget.ratings.toCss100(100 * m.positive_opinions / m.opinions_count)
   },
-
+  percentageLabel(m) {
+    return `${Math.round(this.percentage(m))}% ${ota_widget.t('mentions.positive')}`
+  },
 }
-  
 
 // Generates classes for colouring the ratings from red (0) to green (100).
 window.ota_widget.ratings = {

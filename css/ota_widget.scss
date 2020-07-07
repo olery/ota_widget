@@ -125,11 +125,18 @@ ota-widget {
       min-width: 15px;
       text-align: center;
     }
+    .mention-percentage {
+      font-size: 14px;
+      color: white;
+      font-weight: bold;
+      padding: 9px $padding;
+      min-width: 95px;
+    }
 
-    .mention-meta, .mention-score {
+    .mention-meta, .mention-score, .mention-percentage {
       vertical-align: middle;
     }
-    .mention-meta, .times, .mention-score {
+    .mention-meta, .times, .mention-score, .mention-percentage {
       display: inline-block;
     }
     .mention-meta {

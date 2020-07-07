@@ -14,8 +14,8 @@ mentions.mdc-image-list__item
           .times
             '{m.opinions_count} {t('mentions.times')}
 
-        .mention-score class='{w.mentions.colorClass(m)}'
-          '{w.mentions.scoreLabel(m)}
+        .mention-percentage class='{w.mentions.percentageClass(m)}'
+          '{w.mentions.percentageLabel(m)}
 
   javascript:
     this.w = window.ota_widget
