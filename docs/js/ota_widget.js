@@ -191,8 +191,7 @@ window.ota_widget.mentions = {
     var nominator = m.positive_opinions - m.negative_opinions;
 
     var total = nominator > 0 ? m.positive_opinions : m.negative_opinions;
-    var score = total ? pScale * nominator / total : 0;
-    if (score >= 0) score += pScale;else score = Math.abs(score);
+    var score = pScale + (total ? pScale * nominator / total : 0);
     m.score = score;
     return m.score;
   },
