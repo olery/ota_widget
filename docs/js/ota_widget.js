@@ -187,20 +187,24 @@ window.ota_widget.mentions = {
     var _ref$scale = _ref.scale;
     var scale = _ref$scale === undefined ? 10 : _ref$scale;
 
-    var total = m.positive_opinions > m.negative_opinions ? m.positive_opinions : m.negative_opinions;
-    if (!total) return 0;
-    var score = scale * (m.positive_opinions - m.negative_opinions) / total;
-    if (score < 0) score += scale;
-    return score;
+    if (m.score) return m.score;
+
+    var pScale = scale / 2;
+    var nominator = m.positive_opinions - m.negative_opinions;
+
+    var total = nominator > 0 ? m.positive_opinions : m.negative_opinions;
+    var score = total ? pScale * nominator / total : 0;
+    if (score >= 0) score += pScale;else score = Math.abs(score);
+    m.score = score;
+    return m.score;
+  },
+  scoreClass: function scoreClass(m) {
+    return ota_widget.ratings.toCss(this.score(m));
   },
   scoreLabel: function scoreLabel(m) {
     var score = Math.round(this.score(m));
     if (!score) return;
     return score;
-  },
-  scoreClass: function scoreClass(m) {
-    if (!m.positive_opinions || !m.negative_opinions) return;
-    return ota_widget.ratings.toCss100(this.score(m, { scale: 100 })(m));
   },
 
   percentage: function percentage(m) {
@@ -228,7 +232,7 @@ window.ota_widget.ratings = {
   },
 
   toCss: function toCss(value10) {
-    return ota_widget.ratings.toCss100(parseFloat(value10) * 10);
+    return this.toCss100(parseFloat(value10) * 10);
   },
 
   toCss100: function toCss100(value) {
@@ -238,7 +242,7 @@ window.ota_widget.ratings = {
     if (value <= 4) return 'rating0-4';
     if (value >= 97) return 'rating97-100';
 
-    return 'rating' + (ota_widget.ratings.mod4(value) + 1) + '-' + (ota_widget.ratings.mod4(value) + 4);
+    return 'rating' + (this.mod4(value) + 1) + '-' + (this.mod4(value) + 4);
   }
 };
 

@@ -8,7 +8,7 @@ covid_events.mdc-image-list__item if='{d.reviews_over_time}'
     #covid_events-chart style="width: 100%; height: 500px;"
 
     .mentions-row
-      .mention each='{m,i in mentions}' if='{i < 8}'
+      .mention each='{m,i in mentions}'
         .mention-meta
           .topic
             strong
@@ -16,7 +16,7 @@ covid_events.mdc-image-list__item if='{d.reviews_over_time}'
           .times
             '{m.opinions_count} {t('mentions.times')}
 
-        .mention-score class='{(w.mentions.scoreClass(m)}'
+        .mention-score class='{w.mentions.scoreClass(m)}'
           '{w.mentions.scoreLabel(m)}
 
   javascript:
