@@ -16,10 +16,6 @@ window.ota_widget = {
 
     ota_widget.i18n.load();
 
-    if (ota_widget.url.params.lang && ota_widget.i18n.compiled[ota_widget.url.params.lang]) {
-      ota_widget.locale = ota_widget.url.params.lang;
-    }
-
     riot.compile(function () {
       ota_widget.tag = ota_widget.loadTag('ota-widget', ota_widget.ui.tagClass);
       ota_widget.api.review_widget({}).then(function (json) {
@@ -53,6 +49,8 @@ window.ota_widget.i18n = {
     this.compiled = _.mapValues(ota_widget.i18n.locales, function (t) {
       return ota_widget.i18n.flatten(t);
     });
+
+    if (ota_widget.url.params.lang && this.compiled[ota_widget.url.params.lang]) ota_widget.locale = ota_widget.url.params.lang;
   },
 
   translate: function translate(key, opts) {

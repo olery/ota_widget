@@ -17,10 +17,6 @@ window.ota_widget = {
 
     ota_widget.i18n.load()
 
-    if (ota_widget.url.params.lang && ota_widget.i18n.compiled[ota_widget.url.params.lang]) {
-      ota_widget.locale = ota_widget.url.params.lang
-    }
-
     riot.compile(() => {
       ota_widget.tag = ota_widget.loadTag('ota-widget', ota_widget.ui.tagClass)
       ota_widget.api.review_widget({}).then((json) => {
@@ -52,6 +48,9 @@ window.ota_widget.i18n = {
 
   load() {
     this.compiled = _.mapValues(ota_widget.i18n.locales, (t) => ota_widget.i18n.flatten(t))
+
+    if (ota_widget.url.params.lang && this.compiled[ota_widget.url.params.lang])
+      ota_widget.locale = ota_widget.url.params.lang
   },
 
   translate(key, opts) {
