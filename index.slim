@@ -27,10 +27,10 @@ html
     script type='riot/tag' src='tags/recent-reviews.html'
     script type='riot/tag' src='tags/nearby-attractions.html'
     script type='riot/tag' src='tags/nearby-restaurants.html'
-    script type='riot/tag' src='tags/reviews_over_time.html'
-    script type='riot/tag' src='tags/reviews_trends.html'
-    script type='riot/tag' src='tags/covid_events.html'
+    script type='riot/tag' src='tags/reviews-over-time.html'
+    script type='riot/tag' src='tags/reviews-trends.html'
     script type='riot/tag' src='tags/shifts.html'
+    script type='riot/tag' src='tags/covid-events.html'
 
     script src='js/ota_widget.js' type='text/javascript'
     script src='js/locales.js' type='text/javascript'
@@ -56,12 +56,11 @@ html
         nearby-attractions
         nearby-restaurants
 
-      .mdc-image-list.mdc-image-list--masonry.masonry-image-list style="column-count: 2;"
-        reviews_trends
-        reviews_over_time
+      .mdc-image-list.mdc-image-list--masonry.masonry-image-list style='column-count: 2'
+        reviews-trends
+        reviews-over-time
         shifts
-        covid_events
+        covid-events
 
     javascript:
-      // your token goes here
-      ota_widget.load('')
+      ota_widget.load()

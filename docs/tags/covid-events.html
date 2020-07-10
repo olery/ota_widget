@@ -1,5 +1,5 @@
-<covid_events class="mdc-image-list__item" if="{d.reviews_over_time}">
-  <div class="chart block mdc-elevation--z1">
+<covid-events class="mdc-image-list__item">
+  <div class="chart block mdc-elevation--z1" if="{d.events}">
     <h2>
       {t('covid_events.title')} 
     </h2>
@@ -31,4 +31,4 @@
       this.mentions = _.filter(this.d.mentions, function(m) {return _.includes(this.topics, m.topic)}.bind(this))
     })
   </script>
-</covid_events>
+</covid-events>

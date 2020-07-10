@@ -102,12 +102,8 @@ window.ota_widget.ui = {
   // function used by RiotJS when it's mounting the ota-widget tag
   tagClass: function tagClass(opts) {
     this.w = window.ota_widget;
+    this.d = this.w.data;
     this.t = this.w.i18n.translate;
-
-    this.clear = function () {
-      this.w.data = {};
-      this.update();
-    };
   },
 
   // Make little changes in the received data to present it in the blocks.
@@ -319,18 +315,20 @@ window.ota_widget.charts = {
 
   t: function t(arr) {
     return _.map(arr, function (n) {
-      return ota_widget.i18n.translate('charts.' + n);
+      return ota_widget.t('charts.' + n);
     });
   },
 
   draw: function draw(component) {
-    var data = ota_widget[component].loadData();
+    var driver = ota_widget[component];
+    if (!driver) return;
+    var data = driver.loadData();
     var dataTable = [data.header];
-    var dateFmt = ota_widget[component].period == 'quarter' ? 'week' : 'month';
+    var dateFmt = driver.period == 'quarter' ? 'week' : 'month';
     var chart = ota_widget.charts[component];
 
     _.each(data.series, function (serie) {
-      var obj = data.data[serie][window.ota_widget[component].period];
+      var obj = data.data[serie][driver.period];
       _.each(obj, function (d, i) {
         if (dataTable[i + 1] == undefined) dataTable.push([window.ota_widget.date.format(d['date'], dateFmt)]);
 
@@ -348,14 +346,14 @@ window.ota_widget.charts = {
       vAxis: { minValue: 0 }
     };
 
-    if (!ota_widget[component].chart) ota_widget[component].chart = new google.visualization.AreaChart(document.getElementById(data.id));
-    ota_widget[component].chart.draw(dataArray, options);
+    if (!driver.chart) driver.chart = new google.visualization.AreaChart(document.getElementById(data.id));
+    driver.chart.draw(dataArray, options);
   },
 
   changePeriod: function changePeriod(component, period) {
     if (window.ota_widget[component].period == period) return;
     window.ota_widget[component].period = period;
-    window.ota_widget.charts.draw([component]);
+    window.ota_widget.charts.draw(component);
     ota_widget.tag.update();
   }
 };

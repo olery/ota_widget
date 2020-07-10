@@ -13,18 +13,13 @@ ota-widget.mdc-layout-grid style='display: none'
     nearby-restaurants
 
   .mdc-image-list.mdc-image-list--masonry.masonry-image-list style="column-count: 2;"
-    reviews_trends
-    reviews_over_time
+    reviews-trends
+    reviews-over-time
     shifts
-    covid_events
+    covid-events
 
   javascript:
-    this.w = window.ota_widget
-    this.d = {}
-    this.t = this.w.i18n.translate
-
     this.clear = function () {
-      this.d = {}
       this.update()
     }
 

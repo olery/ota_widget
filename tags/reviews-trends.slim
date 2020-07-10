@@ -1,7 +1,7 @@
 ---
 ---
-reviews_trends.mdc-image-list__item if='{d.reviews_over_time}'
-  .trends.chart.block.mdc-elevation--z1
+reviews-trends.mdc-image-list__item
+  .trends.chart.block.mdc-elevation--z1 if='{d.reviews_over_time}'
     h2
       '{t('trends.title')}
 
@@ -15,3 +15,4 @@ reviews_trends.mdc-image-list__item if='{d.reviews_over_time}'
     this.w = window.ota_widget
     this.t = this.w.i18n.translate
     this.d = this.w.data
+
