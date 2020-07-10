@@ -2,12 +2,9 @@
   <div class="mdc-image-list mdc-image-list--masonry masonry-image-list">
     <overall-rating></overall-rating><ratings></ratings><mentions></mentions><guests></guests><summaries></summaries><recent-reviews></recent-reviews><nearby-attractions></nearby-attractions><nearby-restaurants></nearby-restaurants>
   </div>
-  <div class="mdc-image-list mdc-image-list--masonry masonry-image-list" style="column-count: 2;">
+  <div class="mdc-image-list mdc-image-list--masonry masonry-image-list" if="{d.reviews_over_time}" style="column-count: 2">
     <reviews-trends></reviews-trends><reviews-over-time></reviews-over-time><shifts></shifts><covid-events></covid-events>
   </div>
   <script>
-    this.clear = function () {
-      this.update()
-    }
   </script>
 </ota-widget>

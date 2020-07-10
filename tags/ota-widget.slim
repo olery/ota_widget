@@ -12,14 +12,10 @@ ota-widget.mdc-layout-grid style='display: none'
     nearby-attractions
     nearby-restaurants
 
-  .mdc-image-list.mdc-image-list--masonry.masonry-image-list style="column-count: 2;"
+  .mdc-image-list.mdc-image-list--masonry.masonry-image-list style='column-count: 2' if='{d.reviews_over_time}'
     reviews-trends
     reviews-over-time
     shifts
     covid-events
 
   javascript:
-    this.clear = function () {
-      this.update()
-    }
-
