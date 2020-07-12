@@ -22,8 +22,10 @@ window.ota_widget = {
         _.assign(ota_widget.data, ota_widget.ui.transformData(json.data));
         ota_widget.tag.update();
 
-        google.charts.load('current', { 'packages': ['corechart'] });
-        google.charts.setOnLoadCallback(ota_widget.charts.load);
+        if (window.google) {
+          google.charts.load('current', { 'packages': ['corechart'] });
+          google.charts.setOnLoadCallback(ota_widget.charts.load);
+        }
       });
     });
   },

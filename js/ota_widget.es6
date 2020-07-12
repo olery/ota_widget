@@ -23,8 +23,10 @@ window.ota_widget = {
         _.assign(ota_widget.data, ota_widget.ui.transformData(json.data))
         ota_widget.tag.update()
 
-        google.charts.load('current', {'packages': ['corechart']})
-        google.charts.setOnLoadCallback(ota_widget.charts.load)
+        if (window.google) {
+          google.charts.load('current', {'packages': ['corechart']})
+          google.charts.setOnLoadCallback(ota_widget.charts.load)
+        }
       })
     })
   },
@@ -350,9 +352,9 @@ window.ota_widget.reviews_over_time = {
     var series = ['current', 'previous']
     return {
       header: ota_widget.charts.t(['date'].concat(series)),
-      id: 'over-time-chart',
+      id:     'over-time-chart',
       series: series,
-      data: ota_widget.data.reviews_over_time.company
+      data:   ota_widget.data.reviews_over_time.company,
     }
   },
 }
@@ -409,3 +411,4 @@ window.ota_widget.date = {
       return `${month}`
   },
 }
+
