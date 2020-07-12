@@ -33,6 +33,10 @@ window.ota_widget = {
   // loadTag function. Mounts template tag
   loadTag: function loadTag(name, scriptFunc, opts) {
     riot.tag2(name, null, '', '', scriptFunc);
+    return this.mountTag(name, opts);
+  },
+
+  mountTag: function mountTag(name, opts) {
     var tag = riot.mount(name, opts)[0];
     tag.root.style.display = 'block';
     return tag;

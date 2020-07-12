@@ -12,7 +12,7 @@ window.ota_widget = {
   data: {},
 
   // initialization function: loads locale and loads Riot component
-  load: (token) => {
+  load(token) {
     if (token) ota_widget.api.token = token
 
     ota_widget.i18n.load()
@@ -32,8 +32,12 @@ window.ota_widget = {
   },
 
   // loadTag function. Mounts template tag
-  loadTag: (name, scriptFunc, opts) => {
+  loadTag(name, scriptFunc, opts) {
     riot.tag2(name, null, '', '', scriptFunc)
+    return this.mountTag(name, opts)
+  },
+
+  mountTag(name, opts) {
     var tag = riot.mount(name, opts)[0]
     tag.root.style.display = 'block'
     return tag
