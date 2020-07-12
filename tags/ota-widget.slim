@@ -19,4 +19,6 @@ ota-widget.mdc-layout-grid style='display: none'
     covid-events
 
   javascript:
-    ota_widget.tagClass.bind(this)()
+    this.w = window.ota_widget
+    this.d = this.w.data
+    this.t = this.w.i18n.translate

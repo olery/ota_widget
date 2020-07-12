@@ -6,6 +6,8 @@
     <reviews-trends></reviews-trends><reviews-over-time></reviews-over-time><shifts></shifts><covid-events></covid-events>
   </div>
   <script>
-    ota_widget.tagClass.bind(this)()
+    this.w = window.ota_widget
+    this.d = this.w.data
+    this.t = this.w.i18n.translate
   </script>
 </ota-widget>
