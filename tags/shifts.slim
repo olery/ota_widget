@@ -1,6 +1,6 @@
 ---
 ---
-shifts.mdc-image-list__item if='{d.shifts}'
+shifts.mdc-image-list__item
   .chart.block.mdc-elevation--z1 if='{d.shifts}'
     h2
       '{t('shifts.title')}
@@ -8,6 +8,5 @@ shifts.mdc-image-list__item if='{d.shifts}'
     #shifts-chart style="width: 100%; height: 500px;"
 
   javascript:
-    this.w = window.ota_widget
-    this.t = this.w.i18n.translate
-    this.d = this.w.data
+    ota_widget.ui.tagClass.bind(this)()
+

@@ -12,7 +12,5 @@ reviews-trends.mdc-image-list__item
     #trends-chart style="width: 100%; height: 500px;"
 
   javascript:
-    this.w = window.ota_widget
-    this.t = this.w.i18n.translate
-    this.d = this.w.data
+    ota_widget.ui.tagClass.bind(this)()
 

@@ -36,6 +36,5 @@ recent-reviews.mdc-image-list__item
         hr if='{ i < 3 }'
 
   javascript:
-    this.w = window.ota_widget
-    this.t = this.w.i18n.translate
-    this.d = this.w.data
+    ota_widget.ui.tagClass.bind(this)()
+

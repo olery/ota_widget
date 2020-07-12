@@ -1,4 +1,4 @@
-<shifts class="mdc-image-list__item" if="{d.shifts}">
+<shifts class="mdc-image-list__item">
   <div class="chart block mdc-elevation--z1" if="{d.shifts}">
     <h2>
       {t('shifts.title')} 
@@ -6,8 +6,6 @@
     <div id="shifts-chart" style="width: 100%; height: 500px;"></div>
   </div>
   <script>
-    this.w = window.ota_widget
-    this.t = this.w.i18n.translate
-    this.d = this.w.data
+    ota_widget.ui.tagClass.bind(this)()
   </script>
 </shifts>

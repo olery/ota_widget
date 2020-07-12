@@ -24,6 +24,5 @@ guests.mdc-image-list__item
           '{Math.round(c.percentage)}%
 
   javascript:
-    this.w = window.ota_widget
-    this.t = this.w.i18n.translate
-    this.d = this.w.data
+    ota_widget.ui.tagClass.bind(this)()
+
