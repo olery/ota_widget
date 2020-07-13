@@ -12,9 +12,7 @@ covid-events.mdc-image-list__item
         .mention-meta
           .topic
             strong
-              '{t('opinions.topics.'+m.topic, {default: m.label})}
-          .times
-            '{m.opinions_count} {t('mentions.times')}
+              '{t('opinions.topics.'+m.topic, {default: m.label})} Score
 
         .mention-score class='{w.mentions.scoreClass(m)}'
           '{w.mentions.scoreLabel(m)}

@@ -21,6 +21,7 @@ window.ota_widget = {
       ota_widget.api.review_widget({}).then(function (json) {
         _.assign(ota_widget.data, ota_widget.ui.transformData(json.data));
         ota_widget.tag.update();
+        ota_widget.tag.update(); // Sentiment Score only load on second call
 
         if (window.google) {
           google.charts.load('current', { 'packages': ['corechart'] });
