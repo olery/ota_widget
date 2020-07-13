@@ -315,8 +315,10 @@ window.ota_widget.charts = {
     var dataTable = [data.header]
     var dateFmt   = driver.period == 'quarter' ? 'week' : 'month'
     var chart     = ota_widget.charts[component]
+    var series    = {}
 
-    _.each(data.series, function(serie) {
+    _.each(data.series, function(serie,i) {
+      series[i] = {targetAxisIndex: i}
       var obj = data.data[serie][driver.period]
       _.each(obj, function(d, i) {
         if (dataTable[i + 1] == undefined)
@@ -327,8 +329,6 @@ window.ota_widget.charts = {
       })
     })
 
-    //console.log(data);
-    //console.log(dataTable);
     var dataArray = google.visualization.arrayToDataTable(dataTable)
     var options   = {
       hAxis: {
@@ -339,8 +339,13 @@ window.ota_widget.charts = {
       vAxis: {gridlines: { count: 4 }, minValue: 0},
     };
 
+    if (data.axesSeries) {
+      options['series'] = series
+      options['vAxis'] = { textPosition: 'none' }
+    }
+
     if (!driver.chart)
-      driver.chart = new google.visualization.AreaChart(document.getElementById(data.id));
+      driver.chart = new data.chartClass(document.getElementById(data.id));
     driver.chart.draw(dataArray, options);
   },
 
@@ -363,6 +368,7 @@ window.ota_widget.reviews_over_time = {
       id:     'over-time-chart',
       series: series,
       data:   ota_widget.data.reviews_over_time.company,
+      chartClass: google.visualization.AreaChart
     }
   },
 }
@@ -384,20 +390,11 @@ window.ota_widget.reviews_trends = {
       id:     'trends-chart',
       header: [''].concat(ota_widget.charts.t(series)),
       series: series,
+      axesSeries: true,
       data:   data,
+      chartClass: google.visualization.LineChart
     }
   },
-  //normalize: (data) => {
-    //_.each(data, (moments) => {
-      //_.each(moments, (periods, i) => {
-        //_.each(periods, (objs, i) => {
-          //var max = _.maxBy(objs, 'count')
-          //console.log(max);
-        //})
-      //})
-    //})
-    //return data
-  //}
 }
 
 window.ota_widget.covid_events = {
@@ -412,6 +409,7 @@ window.ota_widget.covid_events = {
       header: [''].concat(ota_widget.charts.t(series)),
       series: series,
       data:   ota_widget.data.events.continents,
+      chartClass: google.visualization.AreaChart
     }
   }
 }

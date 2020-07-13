@@ -306,7 +306,12 @@ ota-widget {
   }
 
   .chart {
-    h2 { line-height: 75px; }
+    h2 {
+      line-height: 75px;
+      button {
+        font-size: 13.3333px;
+      }
+    }
     button {
       background: transparent;
       border: none;

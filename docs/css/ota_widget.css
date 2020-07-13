@@ -1194,6 +1194,8 @@ ota-widget {
         font-weight: bold; }
   ota-widget .chart h2 {
     line-height: 75px; }
+    ota-widget .chart h2 button {
+      font-size: 13.3333px; }
   ota-widget .chart button {
     background: transparent;
     border: none;
