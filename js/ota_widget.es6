@@ -254,8 +254,8 @@ window.ota_widget.url = {
 // Build the api endpoint url. You should change at least baseURL and probably adjust the req function for your server url pattern.
 window.ota_widget.api = {
 
-  //baseUrl:    'https://agora.olery.com',
-  baseUrl:    'http://localhost:9292',
+  baseUrl:    'https://agora.olery.com',
+  //baseUrl:    'http://localhost:9292',
   version:    'v3',
   company_id: ota_widget.url.params.company_id || '',
   token:      ota_widget.url.params.token,
