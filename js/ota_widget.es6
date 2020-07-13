@@ -369,13 +369,13 @@ window.ota_widget.reviews_trends = {
   period: 'quarter',
 
   loadData() {
-    var series = ['property', 'covid_cases']
+    var series = ['property', 'country', 'continent', 'covid_cases']
 
     delete ota_widget.data.reviews_over_time.continent.antartica
     var data   = {
-      property:    ota_widget.data.reviews_over_time.company.current,
-      country:     ota_widget.data.reviews_over_time.country,
-      continent:   ota_widget.data.reviews_over_time.continent,
+      property:  ota_widget.data.reviews_over_time.company.current,
+      country:   ota_widget.data.reviews_over_time.country,
+      continent: ota_widget.data.reviews_over_time.continent,
       covid_cases: ota_widget.data.events.country,
     }
     return {
