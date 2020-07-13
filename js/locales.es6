@@ -57,7 +57,6 @@ window.ota_widget.i18n.locales = {
     },
 
     charts: {
-      haxis: 'Date',
       date: 'Date',
       current: 'This Year',
       previous: 'Last Year',
@@ -67,7 +66,7 @@ window.ota_widget.i18n.locales = {
       city: 'City',
       country: 'Country',
       continent: 'Continent',
-      covid_cases: 'Covid-19 cases in country',
+      covid_cases: 'Covid-19 cases in Country',
       seasons: 'Seasons',
       asia:      'Asia',
       africa:    'Africa',
