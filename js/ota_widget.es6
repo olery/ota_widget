@@ -308,6 +308,15 @@ window.ota_widget.charts = {
     return _.map(arr, (n) => ota_widget.t(`charts.${n}`))
   },
 
+  removeGaps(data) {
+    const size = data[0].length
+    _.each(data, (a, k) => {
+      if (a.length < size) {
+        _.remove(data, (n, j) => { return j == k })
+      }
+    })
+  },
+
   draw(component) {
     var driver    = ota_widget[component]
     if (!driver) return
@@ -328,6 +337,8 @@ window.ota_widget.charts = {
         dataTable[i+1].push(parseInt(count))
       })
     })
+
+    this.removeGaps(dataTable)
 
     var dataArray = google.visualization.arrayToDataTable(dataTable)
     var options   = {

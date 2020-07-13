@@ -326,6 +326,17 @@ window.ota_widget.charts = {
     });
   },
 
+  removeGaps: function removeGaps(data) {
+    var size = data[0].length;
+    _.each(data, function (a, k) {
+      if (a.length < size) {
+        _.remove(data, function (n, j) {
+          return j == k;
+        });
+      }
+    });
+  },
+
   draw: function draw(component) {
     var driver = ota_widget[component];
     if (!driver) return;
@@ -345,6 +356,8 @@ window.ota_widget.charts = {
         dataTable[i + 1].push(parseInt(count));
       });
     });
+
+    this.removeGaps(dataTable);
 
     var dataArray = google.visualization.arrayToDataTable(dataTable);
     var options = {
