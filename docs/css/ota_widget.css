@@ -1192,6 +1192,8 @@ ota-widget {
         font-size: 10px;
         color: #72bb53;
         font-weight: bold; }
+  ota-widget .chart h2 {
+    line-height: 75px; }
   ota-widget .chart button {
     background: transparent;
     border: none;

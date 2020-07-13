@@ -332,7 +332,8 @@ window.ota_widget.charts = {
         slantedText: true,
         titleTextStyle: {color: '#333', fontSize: '10px'}
       },
-      vAxis: {minValue: 0},
+      legend: { position: 'top', alignment: 'start' },
+      vAxis: {gridlines: { count: 4 }, minValue: 0},
     };
 
     if (!driver.chart)
@@ -369,10 +370,12 @@ window.ota_widget.reviews_trends = {
 
   loadData() {
     var series = ['property', 'covid_cases']
+
+    delete ota_widget.data.reviews_over_time.continent.antartica
     var data   = {
-      property: ota_widget.data.reviews_over_time.company.current,
-      //country: ota_widget.data.reviews_over_time.country,
-      //continent: ota_widget.data.reviews_over_time.continent,
+      property:    ota_widget.data.reviews_over_time.company.current,
+      country:     ota_widget.data.reviews_over_time.country,
+      continent:   ota_widget.data.reviews_over_time.continent,
       covid_cases: ota_widget.data.events.country,
     }
     return {
@@ -381,7 +384,18 @@ window.ota_widget.reviews_trends = {
       series: series,
       data:   data,
     }
-  }
+  },
+  //normalize: (data) => {
+    //_.each(data, (moments) => {
+      //_.each(moments, (periods, i) => {
+        //_.each(periods, (objs, i) => {
+          //var max = _.maxBy(objs, 'count')
+          //console.log(max);
+        //})
+      //})
+    //})
+    //return data
+  //}
 }
 
 window.ota_widget.covid_events = {
