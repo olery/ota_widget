@@ -339,7 +339,8 @@ window.ota_widget.charts = {
       _.each(obj, function (d, i) {
         if (dataTable[i + 1] == undefined) dataTable.push([window.ota_widget.date.format(d['date'], dateFmt)]);
 
-        dataTable[i + 1].push(parseInt(d['count']));
+        var count = d['count'] || 0;
+        dataTable[i + 1].push(parseInt(count));
       });
     });
 
