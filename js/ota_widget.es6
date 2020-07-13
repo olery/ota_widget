@@ -373,9 +373,9 @@ window.ota_widget.reviews_trends = {
 
     delete ota_widget.data.reviews_over_time.continent.antartica
     var data   = {
-      property:  ota_widget.data.reviews_over_time.company.current,
-      country:   ota_widget.data.reviews_over_time.country,
-      continent: ota_widget.data.reviews_over_time.continent,
+      property:    ota_widget.data.reviews_over_time.company.current,
+      country:     ota_widget.data.reviews_over_time.country.current,
+      continent:   ota_widget.data.reviews_over_time.continent.current,
       covid_cases: ota_widget.data.events.country,
     }
     return {
