@@ -371,7 +371,6 @@ window.ota_widget.reviews_trends = {
   loadData() {
     var series = ['property', 'country', 'continent', 'covid_cases']
 
-    delete ota_widget.data.reviews_over_time.continent.antartica
     var data   = {
       property:    ota_widget.data.reviews_over_time.company.current,
       country:     ota_widget.data.reviews_over_time.country.current,
@@ -403,6 +402,7 @@ window.ota_widget.covid_events = {
   period: 'quarter',
 
   loadData() {
+    delete ota_widget.data.events.continents.antarctica
     var series = _.keys(ota_widget.data.events.continents)
     return {
       id:     'covid_events-chart',
