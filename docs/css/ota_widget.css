@@ -1211,6 +1211,8 @@ ota-widget {
       margin-left: 50px; }
   ota-widget .spacer {
     margin: 15px; }
+  ota-widget .mentions-row {
+    padding-top: 30px; }
   ota-widget .rating0-4 {
     background-color: #d54939 !important; }
   ota-widget .rating5-8 {
