@@ -10,22 +10,27 @@ window.ota_widget = {
 
   data: {},
 
+  init: function init(token) {
+    if (token) this.api.token = token;
+    this.i18n.load();
+  },
+
   // initialization function: loads locale and loads Riot component
   load: function load(token) {
-    if (token) ota_widget.api.token = token;
+    var _this = this;
 
-    ota_widget.i18n.load();
+    this.init(token);
 
     riot.compile(function () {
-      ota_widget.tag = ota_widget.loadTag('ota-widget', ota_widget.ui.tagClass);
-      ota_widget.api.review_widget({}).then(function (json) {
-        _.assign(ota_widget.data, ota_widget.ui.transformData(json.data));
-        ota_widget.tag.update();
-        ota_widget.tag.update(); // Sentiment Score only load on second call
+      _this.tag = _this.loadTag('ota-widget', _this.ui.tagClass);
+      _this.api.review_widget({}).then(function (json) {
+        _.assign(_this.data, _this.ui.transformData(json.data));
+        _this.tag.update();
+        _this.tag.update(); // Sentiment Score only load on second call
 
         if (window.google) {
           google.charts.load('current', { 'packages': ['corechart'] });
-          google.charts.setOnLoadCallback(ota_widget.charts.load);
+          google.charts.setOnLoadCallback(_this.charts.load);
         }
       });
     });
@@ -50,11 +55,14 @@ window.ota_widget = {
 // Depending on the language, the %{number} piece can be in a different position
 window.ota_widget.i18n = {
 
-  compiled: {},
+  compiled: null,
 
   load: function load() {
-    this.compiled = _.mapValues(ota_widget.i18n.locales, function (t) {
-      return ota_widget.i18n.flatten(t);
+    var _this2 = this;
+
+    if (this.compiled) return;
+    this.compiled = _.mapValues(this.locales, function (t) {
+      return _this2.flatten(t);
     });
 
     if (ota_widget.url.params.lang && this.compiled[ota_widget.url.params.lang]) ota_widget.locale = ota_widget.url.params.lang;

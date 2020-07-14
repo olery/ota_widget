@@ -11,22 +11,25 @@ window.ota_widget = {
 
   data: {},
 
+  init(token) {
+    if (token) this.api.token = token
+    this.i18n.load()
+  },
+
   // initialization function: loads locale and loads Riot component
   load(token) {
-    if (token) ota_widget.api.token = token
-
-    ota_widget.i18n.load()
+    this.init(token)
 
     riot.compile(() => {
-      ota_widget.tag = ota_widget.loadTag('ota-widget', ota_widget.ui.tagClass)
-      ota_widget.api.review_widget({}).then(json => {
-        _.assign(ota_widget.data, ota_widget.ui.transformData(json.data))
-        ota_widget.tag.update()
-        ota_widget.tag.update() // Sentiment Score only load on second call
+      this.tag = this.loadTag('ota-widget', this.ui.tagClass)
+      this.api.review_widget({}).then(json => {
+        _.assign(this.data, this.ui.transformData(json.data))
+        this.tag.update()
+        this.tag.update() // Sentiment Score only load on second call
 
         if (window.google) {
           google.charts.load('current', {'packages': ['corechart']})
-          google.charts.setOnLoadCallback(ota_widget.charts.load)
+          google.charts.setOnLoadCallback(this.charts.load)
         }
       })
     })
@@ -51,10 +54,11 @@ window.ota_widget = {
 // Depending on the language, the %{number} piece can be in a different position
 window.ota_widget.i18n = {
 
-  compiled: {},
+  compiled: null,
 
   load() {
-    this.compiled = _.mapValues(ota_widget.i18n.locales, (t) => ota_widget.i18n.flatten(t))
+    if (this.compiled) return
+    this.compiled = _.mapValues(this.locales, (t) => this.flatten(t))
 
     if (ota_widget.url.params.lang && this.compiled[ota_widget.url.params.lang])
       ota_widget.locale = ota_widget.url.params.lang
