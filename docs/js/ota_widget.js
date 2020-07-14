@@ -393,12 +393,14 @@ window.ota_widget.reviews_over_time = {
   period: 'quarter',
 
   loadData: function loadData() {
+    var data = ota_widget.data.reviews_over_time;
+    if (!data) return;
     var series = ['current', 'previous'];
     return {
       header: [''].concat(ota_widget.charts.t(series)),
       id: 'over-time-chart',
       series: series,
-      data: ota_widget.data.reviews_over_time.company,
+      data: data.company,
       chartClass: google.visualization.AreaChart
     };
   }
@@ -409,14 +411,17 @@ window.ota_widget.reviews_trends = {
   period: 'quarter',
 
   loadData: function loadData() {
-    var series = ['property', 'country', 'continent', 'covid_cases'];
+    var data = ota_widget.data.reviews_over_time;
+    if (!data) return;
 
+    var series = ['property', 'country', 'continent', 'covid_cases'];
     var data = {
-      property: ota_widget.data.reviews_over_time.company.current,
-      country: ota_widget.data.reviews_over_time.country.current,
-      continent: ota_widget.data.reviews_over_time.continent.current,
+      property: data.company.current,
+      country: data.country.current,
+      continent: data.continent.current,
       covid_cases: ota_widget.data.events.country
     };
+
     return {
       id: 'trends-chart',
       header: [''].concat(ota_widget.charts.t(series)),
@@ -433,13 +438,16 @@ window.ota_widget.covid_events = {
   period: 'quarter',
 
   loadData: function loadData() {
-    delete ota_widget.data.events.continents.antarctica;
-    var series = _.keys(ota_widget.data.events.continents);
+    var data = ota_widget.data.events;
+    if (!data) return;
+
+    delete data.continents.antarctica;
+    var series = _.keys(data.continents);
     return {
       id: 'covid_events-chart',
       header: [''].concat(ota_widget.charts.t(series)),
       series: series,
-      data: ota_widget.data.events.continents,
+      data: data.continents,
       chartClass: google.visualization.AreaChart
     };
   }

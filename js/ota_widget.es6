@@ -19,7 +19,7 @@ window.ota_widget = {
 
     riot.compile(() => {
       ota_widget.tag = ota_widget.loadTag('ota-widget', ota_widget.ui.tagClass)
-      ota_widget.api.review_widget({}).then((json) => {
+      ota_widget.api.review_widget({}).then(json => {
         _.assign(ota_widget.data, ota_widget.ui.transformData(json.data))
         ota_widget.tag.update()
         ota_widget.tag.update() // Sentiment Score only load on second call
@@ -372,12 +372,14 @@ window.ota_widget.reviews_over_time = {
   period: 'quarter',
 
   loadData() {
+    var data = ota_widget.data.reviews_over_time
+    if (!data) return
     var series = ['current', 'previous']
     return {
-      header: [''].concat(ota_widget.charts.t(series)),
-      id:     'over-time-chart',
-      series: series,
-      data:   ota_widget.data.reviews_over_time.company,
+      header:     [''].concat(ota_widget.charts.t(series)),
+      id:         'over-time-chart',
+      series:     series,
+      data:       data.company,
       chartClass: google.visualization.AreaChart
     }
   },
@@ -388,21 +390,24 @@ window.ota_widget.reviews_trends = {
   period: 'quarter',
 
   loadData() {
-    var series = ['property', 'country', 'continent', 'covid_cases']
+    var data = ota_widget.data.reviews_over_time
+    if (!data) return
 
+    var series = ['property', 'country', 'continent', 'covid_cases']
     var data   = {
-      property:    ota_widget.data.reviews_over_time.company.current,
-      country:     ota_widget.data.reviews_over_time.country.current,
-      continent:   ota_widget.data.reviews_over_time.continent.current,
+      property:    data.company.current,
+      country:     data.country.current,
+      continent:   data.continent.current,
       covid_cases: ota_widget.data.events.country,
     }
+
     return {
-      id:     'trends-chart',
-      header: [''].concat(ota_widget.charts.t(series)),
-      series: series,
+      id:         'trends-chart',
+      header:     [''].concat(ota_widget.charts.t(series)),
+      series:     series,
       axesSeries: true,
-      data:   data,
-      chartClass: google.visualization.LineChart
+      data:       data,
+      chartClass: google.visualization.LineChart,
     }
   },
 }
@@ -412,14 +417,17 @@ window.ota_widget.covid_events = {
   period: 'quarter',
 
   loadData() {
-    delete ota_widget.data.events.continents.antarctica
-    var series = _.keys(ota_widget.data.events.continents)
+    var data = ota_widget.data.events
+    if (!data) return
+
+    delete data.continents.antarctica
+    var series = _.keys(data.continents)
     return {
-      id:     'covid_events-chart',
-      header: [''].concat(ota_widget.charts.t(series)),
-      series: series,
-      data:   ota_widget.data.events.continents,
-      chartClass: google.visualization.AreaChart
+      id:         'covid_events-chart',
+      header:     [''].concat(ota_widget.charts.t(series)),
+      series:     series,
+      data:       data.continents,
+      chartClass: google.visualization.AreaChart,
     }
   }
 }
