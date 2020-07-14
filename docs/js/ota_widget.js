@@ -274,22 +274,23 @@ window.ota_widget.api = {
     var _ref2$params = _ref2.params;
     var params = _ref2$params === undefined ? {} : _ref2$params;
 
+    if (!this.company_id) return Promise.reject();
     return ota_widget.api.req({
-      path: 'companies/' + ota_widget.api.company_id + '/review_widget'
+      path: 'companies/' + this.company_id + '/review_widget'
     });
   },
 
   req: function req(_ref3) {
     var path = _ref3.path;
     var _ref3$baseUrl = _ref3.baseUrl;
-    var baseUrl = _ref3$baseUrl === undefined ? ota_widget.api.baseUrl : _ref3$baseUrl;
+    var baseUrl = _ref3$baseUrl === undefined ? this.baseUrl : _ref3$baseUrl;
     var _ref3$version = _ref3.version;
-    var version = _ref3$version === undefined ? ota_widget.api.version : _ref3$version;
+    var version = _ref3$version === undefined ? this.version : _ref3$version;
     var _ref3$params = _ref3.params;
     var params = _ref3$params === undefined ? {} : _ref3$params;
 
-    if (ota_widget.api.token) params.auth_token = ota_widget.api.token;
-    if (ota_widget.api.ep) params.ep = ota_widget.api.ep;
+    if (this.token) params.auth_token = this.token;
+    if (this.ep) params.ep = this.ep;
     params = ota_widget.url.objectToQuery(params);
 
     return window.fetch(baseUrl + '/' + version + '/' + path + '?' + params).then(function (response) {

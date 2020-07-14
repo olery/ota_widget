@@ -262,23 +262,21 @@ window.ota_widget.api = {
   token:      ota_widget.url.params.token,
   ep:         ota_widget.url.params.ep,
 
-  review_widget: ({params = {}}) => {
+  review_widget({params = {}}) {
+    if (!this.company_id) return Promise.reject()
     return ota_widget.api.req({
-      path: `companies/${ota_widget.api.company_id}/review_widget`,
+      path: `companies/${this.company_id}/review_widget`,
     })
   },
 
-  req: ({path, baseUrl = ota_widget.api.baseUrl,
-        version = ota_widget.api.version, params = {}}) => {
-    if (ota_widget.api.token) params.auth_token = ota_widget.api.token
-    if (ota_widget.api.ep)    params.ep         = ota_widget.api.ep
+  req({path, baseUrl = this.baseUrl, version = this.version, params = {}}) {
+    if (this.token) params.auth_token = this.token
+    if (this.ep)    params.ep         = this.ep
     params = ota_widget.url.objectToQuery(params)
 
     return window
       .fetch(`${baseUrl}/${version}/${path}?${params}`)
-      .then((response) => {
-        return response.json()
-      })
+      .then(response => response.json())
   },
 }
 
