@@ -319,6 +319,7 @@ window.ota_widget.charts = {
     var driver    = ota_widget[component]
     if (!driver) return
     var data      = driver.loadData()
+    if (!data) return
     var dataTable = [data.header]
     var dateFmt   = driver.period == 'quarter' ? 'week' : 'month'
     var chart     = ota_widget.charts[component]
