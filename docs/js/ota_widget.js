@@ -381,6 +381,8 @@ window.ota_widget.charts = {
       chartArea: { width: '85%', height: '80%' }
     };
 
+    if (data.options) options = _.merge(options, data.options);
+
     if (data.axesSeries) {
       options['series'] = series;
       options['vAxis'] = { textPosition: 'none' };
@@ -405,13 +407,14 @@ window.ota_widget.reviews_over_time = {
   loadData: function loadData() {
     var data = ota_widget.data.reviews_over_time;
     if (!data) return;
+
     var series = ['current', 'previous'];
     return {
       header: [''].concat(ota_widget.charts.t(series)),
       id: 'over-time-chart',
       series: series,
       data: data.company,
-      chartClass: google.visualization.AreaChart
+      chartClass: google.visualization.LineChart
     };
   }
 };
@@ -436,8 +439,9 @@ window.ota_widget.reviews_trends = {
       id: 'trends-chart',
       header: [''].concat(ota_widget.charts.t(series)),
       series: series,
-      axesSeries: true,
+      axesSeries: false,
       data: data,
+      options: { title: 'Trends in logarithmic view', vAxis: { scaleType: 'log' } },
       chartClass: google.visualization.LineChart
     };
   }
@@ -458,7 +462,7 @@ window.ota_widget.covid_events = {
       header: [''].concat(ota_widget.charts.t(series)),
       series: series,
       data: data.continents,
-      chartClass: google.visualization.AreaChart
+      chartClass: google.visualization.LineChart
     };
   }
 };

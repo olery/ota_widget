@@ -351,9 +351,12 @@ window.ota_widget.charts = {
         titleTextStyle: {color: '#333', fontSize: '10px'}
       },
       legend: { position: 'top', alignment: 'start' },
-      vAxis:  {gridlines: { count: 4 }, minValue: 0},
+      vAxis:  {gridlines: { count: 4 }, minValue: 0 },
       chartArea: {width: '85%', height: '80%'},
     };
+
+    if (data.options)
+      options = _.merge(options, data.options)
 
     if (data.axesSeries) {
       options['series'] = series
@@ -380,13 +383,14 @@ window.ota_widget.reviews_over_time = {
   loadData() {
     var data = ota_widget.data.reviews_over_time
     if (!data) return
+
     var series = ['current', 'previous']
     return {
       header:     [''].concat(ota_widget.charts.t(series)),
       id:         'over-time-chart',
       series:     series,
       data:       data.company,
-      chartClass: google.visualization.AreaChart
+      chartClass: google.visualization.LineChart
     }
   },
 }
@@ -411,9 +415,10 @@ window.ota_widget.reviews_trends = {
       id:         'trends-chart',
       header:     [''].concat(ota_widget.charts.t(series)),
       series:     series,
-      axesSeries: true,
+      axesSeries: false,
       data:       data,
-      chartClass: google.visualization.LineChart,
+      options:    { title:'Trends in logarithmic view', vAxis: { scaleType: 'log' } },
+      chartClass: google.visualization.LineChart
     }
   },
 }
@@ -433,7 +438,7 @@ window.ota_widget.covid_events = {
       header:     [''].concat(ota_widget.charts.t(series)),
       series:     series,
       data:       data.continents,
-      chartClass: google.visualization.AreaChart,
+      chartClass: google.visualization.LineChart
     }
   }
 }
