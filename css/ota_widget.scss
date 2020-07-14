@@ -4,7 +4,7 @@
 $padding: 8px;
 $glutter: 15px;
 
-ota-widget {
+ota-widget, .ota-widget {
   @import 'flags-48x48';
   .flag-16-11 {
     @import 'flags-16x11';

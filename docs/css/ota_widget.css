@@ -1,1050 +1,1050 @@
-ota-widget {
+ota-widget, .ota-widget {
   /*!
    * Generated with CSS Flag Sprite generator (https://www.flag-sprites.com/)
    */
   font-size: 14px;
   color: #7f7a7a;
   font-family: Helvetica; }
-  ota-widget .flag {
+  ota-widget .flag, .ota-widget .flag {
     display: inline-block;
     width: 48px;
     height: 48px;
     background: url("../images/flags-48x48.png") no-repeat;
     vertical-align: middle; }
-  ota-widget .flag.flag-ae {
+  ota-widget .flag.flag-ae, .ota-widget .flag.flag-ae {
     background-position: -48px 0; }
-  ota-widget .flag.flag-ru {
+  ota-widget .flag.flag-ru, .ota-widget .flag.flag-ru {
     background-position: -288px -528px; }
-  ota-widget .flag.flag-cz {
+  ota-widget .flag.flag-cz, .ota-widget .flag.flag-cz {
     background-position: -144px -144px; }
-  ota-widget .flag.flag-ma {
+  ota-widget .flag.flag-ma, .ota-widget .flag.flag-ma {
     background-position: -96px -384px; }
-  ota-widget .flag.flag-vg {
+  ota-widget .flag.flag-vg, .ota-widget .flag.flag-vg {
     background-position: -144px -672px; }
-  ota-widget .flag.flag-fo {
+  ota-widget .flag.flag-fo, .ota-widget .flag.flag-fo {
     background-position: -288px -192px; }
-  ota-widget .flag.flag-cl {
+  ota-widget .flag.flag-cl, .ota-widget .flag.flag-cl {
     background-position: -480px -96px; }
-  ota-widget .flag.flag-gg {
+  ota-widget .flag.flag-gg, .ota-widget .flag.flag-gg {
     background-position: -576px -192px; }
-  ota-widget .flag.flag-gl {
+  ota-widget .flag.flag-gl, .ota-widget .flag.flag-gl {
     background-position: -720px -192px; }
-  ota-widget .flag.flag-sc {
+  ota-widget .flag.flag-sc, .ota-widget .flag.flag-sc {
     background-position: -480px -528px; }
-  ota-widget .flag.flag-gt {
+  ota-widget .flag.flag-gt, .ota-widget .flag.flag-gt {
     background-position: -240px -240px; }
-  ota-widget .flag.flag-mf {
+  ota-widget .flag.flag-mf, .ota-widget .flag.flag-mf {
     background-position: -288px -384px; }
-  ota-widget .flag.flag-yt {
+  ota-widget .flag.flag-yt, .ota-widget .flag.flag-yt {
     background-position: -480px -672px; }
-  ota-widget .flag.flag-bs {
+  ota-widget .flag.flag-bs, .ota-widget .flag.flag-bs {
     background-position: -672px -48px; }
-  ota-widget .flag.flag-om {
+  ota-widget .flag.flag-om, .ota-widget .flag.flag-om {
     background-position: -240px -480px; }
-  ota-widget .flag.flag-an {
+  ota-widget .flag.flag-an, .ota-widget .flag.flag-an {
     background-position: -336px 0; }
-  ota-widget .flag.flag-rw {
+  ota-widget .flag.flag-rw, .ota-widget .flag.flag-rw {
     background-position: -336px -528px; }
-  ota-widget .flag.flag-sz {
+  ota-widget .flag.flag-sz, .ota-widget .flag.flag-sz {
     background-position: -480px -576px; }
-  ota-widget .flag.flag-az {
+  ota-widget .flag.flag-az, .ota-widget .flag.flag-az {
     background-position: -720px 0; }
-  ota-widget .flag.flag-tz {
+  ota-widget .flag.flag-tz, .ota-widget .flag.flag-tz {
     background-position: -480px -624px; }
-  ota-widget .flag.flag-lu {
+  ota-widget .flag.flag-lu, .ota-widget .flag.flag-lu {
     background-position: -720px -336px; }
-  ota-widget .flag.flag-mu {
+  ota-widget .flag.flag-mu, .ota-widget .flag.flag-mu {
     background-position: -144px -432px; }
-  ota-widget .flag.flag-ax {
+  ota-widget .flag.flag-ax, .ota-widget .flag.flag-ax {
     background-position: -672px 0; }
-  ota-widget .flag.flag-gd {
+  ota-widget .flag.flag-gd, .ota-widget .flag.flag-gd {
     background-position: -480px -192px; }
-  ota-widget .flag.flag-tg {
+  ota-widget .flag.flag-tg, .ota-widget .flag.flag-tg {
     background-position: -672px -576px; }
-  ota-widget .flag.flag-hk {
+  ota-widget .flag.flag-hk, .ota-widget .flag.flag-hk {
     background-position: -432px -240px; }
-  ota-widget .flag.flag-vn {
+  ota-widget .flag.flag-vn, .ota-widget .flag.flag-vn {
     background-position: -240px -672px; }
-  ota-widget .flag.flag-by {
+  ota-widget .flag.flag-by, .ota-widget .flag.flag-by {
     background-position: -48px -96px; }
-  ota-widget .flag.flag-vi {
+  ota-widget .flag.flag-vi, .ota-widget .flag.flag-vi {
     background-position: -192px -672px; }
-  ota-widget .flag.flag-sa {
+  ota-widget .flag.flag-sa, .ota-widget .flag.flag-sa {
     background-position: -384px -528px; }
-  ota-widget .flag.flag-ao {
+  ota-widget .flag.flag-ao, .ota-widget .flag.flag-ao {
     background-position: -384px 0; }
-  ota-widget .flag.flag-be {
+  ota-widget .flag.flag-be, .ota-widget .flag.flag-be {
     background-position: -144px -48px; }
-  ota-widget .flag.flag-cu {
+  ota-widget .flag.flag-cu, .ota-widget .flag.flag-cu {
     background-position: -720px -96px; }
-  ota-widget .flag.flag-iq {
+  ota-widget .flag.flag-iq, .ota-widget .flag.flag-iq {
     background-position: -192px -288px; }
-  ota-widget .flag.flag-pt {
+  ota-widget .flag.flag-pt, .ota-widget .flag.flag-pt {
     background-position: 0 -528px; }
-  ota-widget .flag.flag-sb {
+  ota-widget .flag.flag-sb, .ota-widget .flag.flag-sb {
     background-position: -432px -528px; }
-  ota-widget .flag.flag-tm {
+  ota-widget .flag.flag-tm, .ota-widget .flag.flag-tm {
     background-position: -144px -624px; }
-  ota-widget .flag.flag-mg {
+  ota-widget .flag.flag-mg, .ota-widget .flag.flag-mg {
     background-position: -336px -384px; }
-  ota-widget .flag.flag-mc {
+  ota-widget .flag.flag-mc, .ota-widget .flag.flag-mc {
     background-position: -144px -384px; }
-  ota-widget .flag.flag-gw {
+  ota-widget .flag.flag-gw, .ota-widget .flag.flag-gw {
     background-position: -336px -240px; }
-  ota-widget .flag.flag-bm {
+  ota-widget .flag.flag-bm, .ota-widget .flag.flag-bm {
     background-position: -480px -48px; }
-  ota-widget .flag.flag-fi {
+  ota-widget .flag.flag-fi, .ota-widget .flag.flag-fi {
     background-position: -96px -192px; }
-  ota-widget .flag.flag-kw {
+  ota-widget .flag.flag-kw, .ota-widget .flag.flag-kw {
     background-position: -192px -336px; }
-  ota-widget .flag.flag-kh {
+  ota-widget .flag.flag-kh, .ota-widget .flag.flag-kh {
     background-position: -672px -288px; }
-  ota-widget .flag.flag-tk {
+  ota-widget .flag.flag-tk, .ota-widget .flag.flag-tk {
     background-position: -48px -624px; }
-  ota-widget .flag.flag-gb {
+  ota-widget .flag.flag-gb, .ota-widget .flag.flag-gb {
     background-position: -432px -192px; }
-  ota-widget .flag.flag-th {
+  ota-widget .flag.flag-th, .ota-widget .flag.flag-th {
     background-position: -720px -576px; }
-  ota-widget .flag.flag-cg {
+  ota-widget .flag.flag-cg, .ota-widget .flag.flag-cg {
     background-position: -288px -96px; }
-  ota-widget .flag.flag-my {
+  ota-widget .flag.flag-my, .ota-widget .flag.flag-my {
     background-position: -336px -432px; }
-  ota-widget .flag.flag-sn {
+  ota-widget .flag.flag-sn, .ota-widget .flag.flag-sn {
     background-position: -144px -576px; }
-  ota-widget .flag.flag-uy {
+  ota-widget .flag.flag-uy, .ota-widget .flag.flag-uy {
     background-position: -672px -624px; }
-  ota-widget .flag.flag-aw {
+  ota-widget .flag.flag-aw, .ota-widget .flag.flag-aw {
     background-position: -624px 0; }
-  ota-widget .flag.flag-nl {
+  ota-widget .flag.flag-nl, .ota-widget .flag.flag-nl {
     background-position: -720px -432px; }
-  ota-widget .flag.flag-hn {
+  ota-widget .flag.flag-hn, .ota-widget .flag.flag-hn {
     background-position: -480px -240px; }
-  ota-widget .flag.flag-mp {
+  ota-widget .flag.flag-mp, .ota-widget .flag.flag-mp {
     background-position: -672px -384px; }
-  ota-widget .flag.flag-cm {
+  ota-widget .flag.flag-cm, .ota-widget .flag.flag-cm {
     background-position: -528px -96px; }
-  ota-widget .flag.flag-na {
+  ota-widget .flag.flag-na, .ota-widget .flag.flag-na {
     background-position: -432px -432px; }
-  ota-widget .flag.flag-fr {
+  ota-widget .flag.flag-fr, .ota-widget .flag.flag-fr {
     background-position: -336px -192px; }
-  ota-widget .flag.flag-mr {
+  ota-widget .flag.flag-mr, .ota-widget .flag.flag-mr {
     background-position: 0 -432px; }
-  ota-widget .flag.flag-al {
+  ota-widget .flag.flag-al, .ota-widget .flag.flag-al {
     background-position: -240px 0; }
-  ota-widget .flag.flag-fk {
+  ota-widget .flag.flag-fk, .ota-widget .flag.flag-fk {
     background-position: -192px -192px; }
-  ota-widget .flag.flag-je {
+  ota-widget .flag.flag-je, .ota-widget .flag.flag-je {
     background-position: -384px -288px; }
-  ota-widget .flag.flag-ly {
+  ota-widget .flag.flag-ly, .ota-widget .flag.flag-ly {
     background-position: -48px -384px; }
-  ota-widget .flag.flag-tv {
+  ota-widget .flag.flag-tv, .ota-widget .flag.flag-tv {
     background-position: -384px -624px; }
-  ota-widget .flag.flag-ne {
+  ota-widget .flag.flag-ne, .ota-widget .flag.flag-ne {
     background-position: -528px -432px; }
-  ota-widget .flag.flag-np {
+  ota-widget .flag.flag-np, .ota-widget .flag.flag-np {
     background-position: -48px -480px; }
-  ota-widget .flag.flag-mo {
+  ota-widget .flag.flag-mo, .ota-widget .flag.flag-mo {
     background-position: -624px -384px; }
-  ota-widget .flag.flag-sm {
+  ota-widget .flag.flag-sm, .ota-widget .flag.flag-sm {
     background-position: -96px -576px; }
-  ota-widget .flag.flag-ca {
+  ota-widget .flag.flag-ca, .ota-widget .flag.flag-ca {
     background-position: -144px -96px; }
-  ota-widget .flag.flag-kr {
+  ota-widget .flag.flag-kr, .ota-widget .flag.flag-kr {
     background-position: -144px -336px; }
-  ota-widget .flag.flag-td {
+  ota-widget .flag.flag-td, .ota-widget .flag.flag-td {
     background-position: -576px -576px; }
-  ota-widget .flag.flag-nr {
+  ota-widget .flag.flag-nr, .ota-widget .flag.flag-nr {
     background-position: -96px -480px; }
-  ota-widget .flag.flag-ch {
+  ota-widget .flag.flag-ch, .ota-widget .flag.flag-ch {
     background-position: -336px -96px; }
-  ota-widget .flag.flag-bf {
+  ota-widget .flag.flag-bf, .ota-widget .flag.flag-bf {
     background-position: -192px -48px; }
-  ota-widget .flag.flag-il {
+  ota-widget .flag.flag-il, .ota-widget .flag.flag-il {
     background-position: -48px -288px; }
-  ota-widget .flag.flag-sk {
+  ota-widget .flag.flag-sk, .ota-widget .flag.flag-sk {
     background-position: 0 -576px; }
-  ota-widget .flag.flag-pg {
+  ota-widget .flag.flag-pg, .ota-widget .flag.flag-pg {
     background-position: -432px -480px; }
-  ota-widget .flag.flag-ga {
+  ota-widget .flag.flag-ga, .ota-widget .flag.flag-ga {
     background-position: -384px -192px; }
-  ota-widget .flag.flag-dm {
+  ota-widget .flag.flag-dm, .ota-widget .flag.flag-dm {
     background-position: -336px -144px; }
-  ota-widget .flag.flag-kz {
+  ota-widget .flag.flag-kz, .ota-widget .flag.flag-kz {
     background-position: -288px -336px; }
-  ota-widget .flag.flag-gy {
+  ota-widget .flag.flag-gy, .ota-widget .flag.flag-gy {
     background-position: -384px -240px; }
-  ota-widget .flag.flag-tn {
+  ota-widget .flag.flag-tn, .ota-widget .flag.flag-tn {
     background-position: -192px -624px; }
-  ota-widget .flag.flag-do {
+  ota-widget .flag.flag-do, .ota-widget .flag.flag-do {
     background-position: -384px -144px; }
-  ota-widget .flag.flag-in {
+  ota-widget .flag.flag-in, .ota-widget .flag.flag-in {
     background-position: -144px -288px; }
-  ota-widget .flag.flag-ph {
+  ota-widget .flag.flag-ph, .ota-widget .flag.flag-ph {
     background-position: -480px -480px; }
-  ota-widget .flag.flag-ua {
+  ota-widget .flag.flag-ua, .ota-widget .flag.flag-ua {
     background-position: -528px -624px; }
-  ota-widget .flag.flag-sl {
+  ota-widget .flag.flag-sl, .ota-widget .flag.flag-sl {
     background-position: -48px -576px; }
-  ota-widget .flag.flag-it {
+  ota-widget .flag.flag-it, .ota-widget .flag.flag-it {
     background-position: -336px -288px; }
-  ota-widget .flag.flag-uz {
+  ota-widget .flag.flag-uz, .ota-widget .flag.flag-uz {
     background-position: -720px -624px; }
-  ota-widget .flag.flag-at {
+  ota-widget .flag.flag-at, .ota-widget .flag.flag-at {
     background-position: -528px 0; }
-  ota-widget .flag.flag-as {
+  ota-widget .flag.flag-as, .ota-widget .flag.flag-as {
     background-position: -480px 0; }
-  ota-widget .flag.flag-nf {
+  ota-widget .flag.flag-nf, .ota-widget .flag.flag-nf {
     background-position: -576px -432px; }
-  ota-widget .flag.flag-ss {
+  ota-widget .flag.flag-ss, .ota-widget .flag.flag-ss {
     background-position: -288px -576px; }
-  ota-widget .flag.flag-hr {
+  ota-widget .flag.flag-hr, .ota-widget .flag.flag-hr {
     background-position: -528px -240px; }
-  ota-widget .flag.flag-va {
+  ota-widget .flag.flag-va, .ota-widget .flag.flag-va {
     background-position: 0 -672px; }
-  ota-widget .flag.flag-us {
+  ota-widget .flag.flag-us, .ota-widget .flag.flag-us {
     background-position: -624px -624px; }
-  ota-widget .flag.flag-bz {
+  ota-widget .flag.flag-bz, .ota-widget .flag.flag-bz {
     background-position: -96px -96px; }
-  ota-widget .flag.flag-eg {
+  ota-widget .flag.flag-eg, .ota-widget .flag.flag-eg {
     background-position: -576px -144px; }
-  ota-widget .flag.flag-dk {
+  ota-widget .flag.flag-dk, .ota-widget .flag.flag-dk {
     background-position: -288px -144px; }
-  ota-widget .flag.flag-ye {
+  ota-widget .flag.flag-ye, .ota-widget .flag.flag-ye {
     background-position: -432px -672px; }
-  ota-widget .flag.flag-ky {
+  ota-widget .flag.flag-ky, .ota-widget .flag.flag-ky {
     background-position: -240px -336px; }
-  ota-widget .flag.flag-kn {
+  ota-widget .flag.flag-kn, .ota-widget .flag.flag-kn {
     background-position: -48px -336px; }
-  ota-widget .flag.flag-bo {
+  ota-widget .flag.flag-bo, .ota-widget .flag.flag-bo {
     background-position: -576px -48px; }
-  ota-widget .flag.flag-vu {
+  ota-widget .flag.flag-vu, .ota-widget .flag.flag-vu {
     background-position: -288px -672px; }
-  ota-widget .flag.flag-cw {
+  ota-widget .flag.flag-cw, .ota-widget .flag.flag-cw {
     background-position: -48px -144px; }
-  ota-widget .flag.flag-nz {
+  ota-widget .flag.flag-nz, .ota-widget .flag.flag-nz {
     background-position: -192px -480px; }
-  ota-widget .flag.flag-ci {
+  ota-widget .flag.flag-ci, .ota-widget .flag.flag-ci {
     background-position: -384px -96px; }
-  ota-widget .flag.flag-gn {
+  ota-widget .flag.flag-gn, .ota-widget .flag.flag-gn {
     background-position: -48px -240px; }
-  ota-widget .flag.flag-mw {
+  ota-widget .flag.flag-mw, .ota-widget .flag.flag-mw {
     background-position: -240px -432px; }
-  ota-widget .flag.flag-bi {
+  ota-widget .flag.flag-bi, .ota-widget .flag.flag-bi {
     background-position: -336px -48px; }
-  ota-widget .flag.flag-ps {
+  ota-widget .flag.flag-ps, .ota-widget .flag.flag-ps {
     background-position: -720px -480px; }
-  ota-widget .flag.flag-lc {
+  ota-widget .flag.flag-lc, .ota-widget .flag.flag-lc {
     background-position: -432px -336px; }
-  ota-widget .flag.flag-ir {
+  ota-widget .flag.flag-ir, .ota-widget .flag.flag-ir {
     background-position: -240px -288px; }
-  ota-widget .flag.flag-la {
+  ota-widget .flag.flag-la, .ota-widget .flag.flag-la {
     background-position: -336px -336px; }
-  ota-widget .flag.flag-ck {
+  ota-widget .flag.flag-ck, .ota-widget .flag.flag-ck {
     background-position: -432px -96px; }
-  ota-widget .flag.flag-bh {
+  ota-widget .flag.flag-bh, .ota-widget .flag.flag-bh {
     background-position: -288px -48px; }
-  ota-widget .flag.flag-to {
+  ota-widget .flag.flag-to, .ota-widget .flag.flag-to {
     background-position: -240px -624px; }
-  ota-widget .flag.flag-pn {
+  ota-widget .flag.flag-pn, .ota-widget .flag.flag-pn {
     background-position: -624px -480px; }
-  ota-widget .flag.flag-nu {
+  ota-widget .flag.flag-nu, .ota-widget .flag.flag-nu {
     background-position: -144px -480px; }
-  ota-widget .flag.flag-mt {
+  ota-widget .flag.flag-mt, .ota-widget .flag.flag-mt {
     background-position: -96px -432px; }
-  ota-widget .flag.flag-pa {
+  ota-widget .flag.flag-pa, .ota-widget .flag.flag-pa {
     background-position: -288px -480px; }
-  ota-widget .flag.flag-km {
+  ota-widget .flag.flag-km, .ota-widget .flag.flag-km {
     background-position: 0 -336px; }
-  ota-widget .flag.flag-fm {
+  ota-widget .flag.flag-fm, .ota-widget .flag.flag-fm {
     background-position: -240px -192px; }
-  ota-widget .flag.flag-kg {
+  ota-widget .flag.flag-kg, .ota-widget .flag.flag-kg {
     background-position: -624px -288px; }
-  ota-widget .flag.flag-gs {
+  ota-widget .flag.flag-gs, .ota-widget .flag.flag-gs {
     background-position: -192px -240px; }
-  ota-widget .flag.flag-ag {
+  ota-widget .flag.flag-ag, .ota-widget .flag.flag-ag {
     background-position: -144px 0; }
-  ota-widget .flag.flag-so {
+  ota-widget .flag.flag-so, .ota-widget .flag.flag-so {
     background-position: -192px -576px; }
-  ota-widget .flag.flag-gr {
+  ota-widget .flag.flag-gr, .ota-widget .flag.flag-gr {
     background-position: -144px -240px; }
-  ota-widget .flag.flag-nc {
+  ota-widget .flag.flag-nc, .ota-widget .flag.flag-nc {
     background-position: -480px -432px; }
-  ota-widget .flag.flag-bt {
+  ota-widget .flag.flag-bt, .ota-widget .flag.flag-bt {
     background-position: -720px -48px; }
-  ota-widget .flag.flag-ht {
+  ota-widget .flag.flag-ht, .ota-widget .flag.flag-ht {
     background-position: -576px -240px; }
-  ota-widget .flag.flag-ml {
+  ota-widget .flag.flag-ml, .ota-widget .flag.flag-ml {
     background-position: -480px -384px; }
-  ota-widget .flag.flag-cf {
+  ota-widget .flag.flag-cf, .ota-widget .flag.flag-cf {
     background-position: -240px -96px; }
-  ota-widget .flag.flag-bl {
+  ota-widget .flag.flag-bl, .ota-widget .flag.flag-bl {
     background-position: -432px -48px; }
-  ota-widget .flag.flag-ar {
+  ota-widget .flag.flag-ar, .ota-widget .flag.flag-ar {
     background-position: -432px 0; }
-  ota-widget .flag.flag-ad {
+  ota-widget .flag.flag-ad, .ota-widget .flag.flag-ad {
     background-position: 0 0; }
-  ota-widget .flag.flag-au {
+  ota-widget .flag.flag-au, .ota-widget .flag.flag-au {
     background-position: -576px 0; }
-  ota-widget .flag.flag-st {
+  ota-widget .flag.flag-st, .ota-widget .flag.flag-st {
     background-position: -336px -576px; }
-  ota-widget .flag.flag-af {
+  ota-widget .flag.flag-af, .ota-widget .flag.flag-af {
     background-position: -96px 0; }
-  ota-widget .flag.flag-sv {
+  ota-widget .flag.flag-sv, .ota-widget .flag.flag-sv {
     background-position: -384px -576px; }
-  ota-widget .flag.flag-jo {
+  ota-widget .flag.flag-jo, .ota-widget .flag.flag-jo {
     background-position: -480px -288px; }
-  ota-widget .flag.flag-bw {
+  ota-widget .flag.flag-bw, .ota-widget .flag.flag-bw {
     background-position: 0 -96px; }
-  ota-widget .flag.flag-rs {
+  ota-widget .flag.flag-rs, .ota-widget .flag.flag-rs {
     background-position: -240px -528px; }
-  ota-widget .flag.flag-et {
+  ota-widget .flag.flag-et, .ota-widget .flag.flag-et {
     background-position: 0 -192px; }
-  ota-widget .flag.flag-dz {
+  ota-widget .flag.flag-dz, .ota-widget .flag.flag-dz {
     background-position: -432px -144px; }
-  ota-widget .flag.flag-id {
+  ota-widget .flag.flag-id, .ota-widget .flag.flag-id {
     background-position: -720px -240px; }
-  ota-widget .flag.flag-bn {
+  ota-widget .flag.flag-bn, .ota-widget .flag.flag-bn {
     background-position: -528px -48px; }
-  ota-widget .flag.flag-py {
+  ota-widget .flag.flag-py, .ota-widget .flag.flag-py {
     background-position: -96px -528px; }
-  ota-widget .flag.flag-lr {
+  ota-widget .flag.flag-lr, .ota-widget .flag.flag-lr {
     background-position: -576px -336px; }
-  ota-widget .flag.flag-ic {
+  ota-widget .flag.flag-ic, .ota-widget .flag.flag-ic {
     background-position: -672px -240px; }
-  ota-widget .flag.flag-is {
+  ota-widget .flag.flag-is, .ota-widget .flag.flag-is {
     background-position: -288px -288px; }
-  ota-widget .flag.flag-er {
+  ota-widget .flag.flag-er, .ota-widget .flag.flag-er {
     background-position: -672px -144px; }
-  ota-widget .flag.flag-tj {
+  ota-widget .flag.flag-tj, .ota-widget .flag.flag-tj {
     background-position: 0 -624px; }
-  ota-widget .flag.flag-am {
+  ota-widget .flag.flag-am, .ota-widget .flag.flag-am {
     background-position: -288px 0; }
-  ota-widget .flag.flag-gi {
+  ota-widget .flag.flag-gi, .ota-widget .flag.flag-gi {
     background-position: -672px -192px; }
-  ota-widget .flag.flag-si {
+  ota-widget .flag.flag-si, .ota-widget .flag.flag-si {
     background-position: -720px -528px; }
-  ota-widget .flag.flag-ug {
+  ota-widget .flag.flag-ug, .ota-widget .flag.flag-ug {
     background-position: -576px -624px; }
-  ota-widget .flag.flag-cy {
+  ota-widget .flag.flag-cy, .ota-widget .flag.flag-cy {
     background-position: -96px -144px; }
-  ota-widget .flag.flag-pr {
+  ota-widget .flag.flag-pr, .ota-widget .flag.flag-pr {
     background-position: -672px -480px; }
-  ota-widget .flag.flag-lt {
+  ota-widget .flag.flag-lt, .ota-widget .flag.flag-lt {
     background-position: -672px -336px; }
-  ota-widget .flag.flag-tw {
+  ota-widget .flag.flag-tw, .ota-widget .flag.flag-tw {
     background-position: -432px -624px; }
-  ota-widget .flag.flag-tl {
+  ota-widget .flag.flag-tl, .ota-widget .flag.flag-tl {
     background-position: -96px -624px; }
-  ota-widget .flag.flag-tc {
+  ota-widget .flag.flag-tc, .ota-widget .flag.flag-tc {
     background-position: -528px -576px; }
-  ota-widget .flag.flag-li {
+  ota-widget .flag.flag-li, .ota-widget .flag.flag-li {
     background-position: -480px -336px; }
-  ota-widget .flag.flag-ki {
+  ota-widget .flag.flag-ki, .ota-widget .flag.flag-ki {
     background-position: -720px -288px; }
-  ota-widget .flag.flag-cn {
+  ota-widget .flag.flag-cn, .ota-widget .flag.flag-cn {
     background-position: -576px -96px; }
-  ota-widget .flag.flag-mm {
+  ota-widget .flag.flag-mm, .ota-widget .flag.flag-mm {
     background-position: -528px -384px; }
-  ota-widget .flag.flag-ng {
+  ota-widget .flag.flag-ng, .ota-widget .flag.flag-ng {
     background-position: -624px -432px; }
-  ota-widget .flag.flag-bj {
+  ota-widget .flag.flag-bj, .ota-widget .flag.flag-bj {
     background-position: -384px -48px; }
-  ota-widget .flag.flag-eu {
+  ota-widget .flag.flag-eu, .ota-widget .flag.flag-eu {
     background-position: -48px -192px; }
-  ota-widget .flag.flag-ni {
+  ota-widget .flag.flag-ni, .ota-widget .flag.flag-ni {
     background-position: -672px -432px; }
-  ota-widget .flag.flag-lb {
+  ota-widget .flag.flag-lb, .ota-widget .flag.flag-lb {
     background-position: -384px -336px; }
-  ota-widget .flag.flag-md {
+  ota-widget .flag.flag-md, .ota-widget .flag.flag-md {
     background-position: -192px -384px; }
-  ota-widget .flag.flag-bd {
+  ota-widget .flag.flag-bd, .ota-widget .flag.flag-bd {
     background-position: -96px -48px; }
-  ota-widget .flag.flag-pk {
+  ota-widget .flag.flag-pk, .ota-widget .flag.flag-pk {
     background-position: -528px -480px; }
-  ota-widget .flag.flag-pf {
+  ota-widget .flag.flag-pf, .ota-widget .flag.flag-pf {
     background-position: -384px -480px; }
-  ota-widget .flag.flag-ba {
+  ota-widget .flag.flag-ba, .ota-widget .flag.flag-ba {
     background-position: 0 -48px; }
-  ota-widget .flag.flag-mx {
+  ota-widget .flag.flag-mx, .ota-widget .flag.flag-mx {
     background-position: -288px -432px; }
-  ota-widget .flag.flag-sg {
+  ota-widget .flag.flag-sg, .ota-widget .flag.flag-sg {
     background-position: -624px -528px; }
-  ota-widget .flag.flag-mv {
+  ota-widget .flag.flag-mv, .ota-widget .flag.flag-mv {
     background-position: -192px -432px; }
-  ota-widget .flag.flag-qa {
+  ota-widget .flag.flag-qa, .ota-widget .flag.flag-qa {
     background-position: -144px -528px; }
-  ota-widget .flag.flag-pw {
+  ota-widget .flag.flag-pw, .ota-widget .flag.flag-pw {
     background-position: -48px -528px; }
-  ota-widget .flag.flag-ms {
+  ota-widget .flag.flag-ms, .ota-widget .flag.flag-ms {
     background-position: -48px -432px; }
-  ota-widget .flag.flag-sr {
+  ota-widget .flag.flag-sr, .ota-widget .flag.flag-sr {
     background-position: -240px -576px; }
-  ota-widget .flag.flag-me {
+  ota-widget .flag.flag-me, .ota-widget .flag.flag-me {
     background-position: -240px -384px; }
-  ota-widget .flag.flag-pl {
+  ota-widget .flag.flag-pl, .ota-widget .flag.flag-pl {
     background-position: -576px -480px; }
-  ota-widget .flag.flag-hu {
+  ota-widget .flag.flag-hu, .ota-widget .flag.flag-hu {
     background-position: -624px -240px; }
-  ota-widget .flag.flag-mz {
+  ota-widget .flag.flag-mz, .ota-widget .flag.flag-mz {
     background-position: -384px -432px; }
-  ota-widget .flag.flag-ie {
+  ota-widget .flag.flag-ie, .ota-widget .flag.flag-ie {
     background-position: 0 -288px; }
-  ota-widget .flag.flag-tr {
+  ota-widget .flag.flag-tr, .ota-widget .flag.flag-tr {
     background-position: -288px -624px; }
-  ota-widget .flag.flag-lk {
+  ota-widget .flag.flag-lk, .ota-widget .flag.flag-lk {
     background-position: -528px -336px; }
-  ota-widget .flag.flag-eh {
+  ota-widget .flag.flag-eh, .ota-widget .flag.flag-eh {
     background-position: -624px -144px; }
-  ota-widget .flag.flag-cr {
+  ota-widget .flag.flag-cr, .ota-widget .flag.flag-cr {
     background-position: -672px -96px; }
-  ota-widget .flag.flag-zm {
+  ota-widget .flag.flag-zm, .ota-widget .flag.flag-zm {
     background-position: -576px -672px; }
-  ota-widget .flag.flag-se {
+  ota-widget .flag.flag-se, .ota-widget .flag.flag-se {
     background-position: -576px -528px; }
-  ota-widget .flag.flag-sd {
+  ota-widget .flag.flag-sd, .ota-widget .flag.flag-sd {
     background-position: -528px -528px; }
-  ota-widget .flag.flag-mk {
+  ota-widget .flag.flag-mk, .ota-widget .flag.flag-mk {
     background-position: -432px -384px; }
-  ota-widget .flag.flag-bg {
+  ota-widget .flag.flag-bg, .ota-widget .flag.flag-bg {
     background-position: -240px -48px; }
-  ota-widget .flag.flag-im {
+  ota-widget .flag.flag-im, .ota-widget .flag.flag-im {
     background-position: -96px -288px; }
-  ota-widget .flag.flag-es {
+  ota-widget .flag.flag-es, .ota-widget .flag.flag-es {
     background-position: -720px -144px; }
-  ota-widget .flag.flag-ge {
+  ota-widget .flag.flag-ge, .ota-widget .flag.flag-ge {
     background-position: -528px -192px; }
-  ota-widget .flag.flag-br {
+  ota-widget .flag.flag-br, .ota-widget .flag.flag-br {
     background-position: -624px -48px; }
-  ota-widget .flag.flag-tf {
+  ota-widget .flag.flag-tf, .ota-widget .flag.flag-tf {
     background-position: -624px -576px; }
-  ota-widget .flag.flag-za {
+  ota-widget .flag.flag-za, .ota-widget .flag.flag-za {
     background-position: -528px -672px; }
-  ota-widget .flag.flag-cd {
+  ota-widget .flag.flag-cd, .ota-widget .flag.flag-cd {
     background-position: -192px -96px; }
-  ota-widget .flag.flag-zw {
+  ota-widget .flag.flag-zw, .ota-widget .flag.flag-zw {
     background-position: -624px -672px; }
-  ota-widget .flag.flag-jp {
+  ota-widget .flag.flag-jp, .ota-widget .flag.flag-jp {
     background-position: -528px -288px; }
-  ota-widget .flag.flag-gh {
+  ota-widget .flag.flag-gh, .ota-widget .flag.flag-gh {
     background-position: -624px -192px; }
-  ota-widget .flag.flag-ec {
+  ota-widget .flag.flag-ec, .ota-widget .flag.flag-ec {
     background-position: -480px -144px; }
-  ota-widget .flag.flag-dj {
+  ota-widget .flag.flag-dj, .ota-widget .flag.flag-dj {
     background-position: -240px -144px; }
-  ota-widget .flag.flag-ro {
+  ota-widget .flag.flag-ro, .ota-widget .flag.flag-ro {
     background-position: -192px -528px; }
-  ota-widget .flag.flag-wf {
+  ota-widget .flag.flag-wf, .ota-widget .flag.flag-wf {
     background-position: -336px -672px; }
-  ota-widget .flag.flag-ai {
+  ota-widget .flag.flag-ai, .ota-widget .flag.flag-ai {
     background-position: -192px 0; }
-  ota-widget .flag.flag-tt {
+  ota-widget .flag.flag-tt, .ota-widget .flag.flag-tt {
     background-position: -336px -624px; }
-  ota-widget .flag.flag-ws {
+  ota-widget .flag.flag-ws, .ota-widget .flag.flag-ws {
     background-position: -384px -672px; }
-  ota-widget .flag.flag-sh {
+  ota-widget .flag.flag-sh, .ota-widget .flag.flag-sh {
     background-position: -672px -528px; }
-  ota-widget .flag.flag-mq {
+  ota-widget .flag.flag-mq, .ota-widget .flag.flag-mq {
     background-position: -720px -384px; }
-  ota-widget .flag.flag-no {
+  ota-widget .flag.flag-no, .ota-widget .flag.flag-no {
     background-position: 0 -480px; }
-  ota-widget .flag.flag-co {
+  ota-widget .flag.flag-co, .ota-widget .flag.flag-co {
     background-position: -624px -96px; }
-  ota-widget .flag.flag-kp {
+  ota-widget .flag.flag-kp, .ota-widget .flag.flag-kp {
     background-position: -96px -336px; }
-  ota-widget .flag.flag-gu {
+  ota-widget .flag.flag-gu, .ota-widget .flag.flag-gu {
     background-position: -288px -240px; }
-  ota-widget .flag.flag-fj {
+  ota-widget .flag.flag-fj, .ota-widget .flag.flag-fj {
     background-position: -144px -192px; }
-  ota-widget .flag.flag-gm {
+  ota-widget .flag.flag-gm, .ota-widget .flag.flag-gm {
     background-position: 0 -240px; }
-  ota-widget .flag.flag-mh {
+  ota-widget .flag.flag-mh, .ota-widget .flag.flag-mh {
     background-position: -384px -384px; }
-  ota-widget .flag.flag-mn {
+  ota-widget .flag.flag-mn, .ota-widget .flag.flag-mn {
     background-position: -576px -384px; }
-  ota-widget .flag.flag-de {
+  ota-widget .flag.flag-de, .ota-widget .flag.flag-de {
     background-position: -192px -144px; }
-  ota-widget .flag.flag-ls {
+  ota-widget .flag.flag-ls, .ota-widget .flag.flag-ls {
     background-position: -624px -336px; }
-  ota-widget .flag.flag-vc {
+  ota-widget .flag.flag-vc, .ota-widget .flag.flag-vc {
     background-position: -48px -672px; }
-  ota-widget .flag.flag-gq {
+  ota-widget .flag.flag-gq, .ota-widget .flag.flag-gq {
     background-position: -96px -240px; }
-  ota-widget .flag.flag-ee {
+  ota-widget .flag.flag-ee, .ota-widget .flag.flag-ee {
     background-position: -528px -144px; }
-  ota-widget .flag.flag-ke {
+  ota-widget .flag.flag-ke, .ota-widget .flag.flag-ke {
     background-position: -576px -288px; }
-  ota-widget .flag.flag-lv {
+  ota-widget .flag.flag-lv, .ota-widget .flag.flag-lv {
     background-position: 0 -384px; }
-  ota-widget .flag.flag-sy {
+  ota-widget .flag.flag-sy, .ota-widget .flag.flag-sy {
     background-position: -432px -576px; }
-  ota-widget .flag.flag-pe {
+  ota-widget .flag.flag-pe, .ota-widget .flag.flag-pe {
     background-position: -336px -480px; }
-  ota-widget .flag.flag-cv {
+  ota-widget .flag.flag-cv, .ota-widget .flag.flag-cv {
     background-position: 0 -144px; }
-  ota-widget .flag.flag-jm {
+  ota-widget .flag.flag-jm, .ota-widget .flag.flag-jm {
     background-position: -432px -288px; }
-  ota-widget .flag.flag-bb {
+  ota-widget .flag.flag-bb, .ota-widget .flag.flag-bb {
     background-position: -48px -48px; }
-  ota-widget .flag.flag-ve {
+  ota-widget .flag.flag-ve, .ota-widget .flag.flag-ve {
     background-position: -96px -672px; }
-  ota-widget .flag-16-11 {
+  ota-widget .flag-16-11, .ota-widget .flag-16-11 {
     /*!
      * Generated with CSS Flag Sprite generator (https://www.flag-sprites.com/)
      */ }
-    ota-widget .flag-16-11 .flag {
+    ota-widget .flag-16-11 .flag, .ota-widget .flag-16-11 .flag {
       display: inline-block;
       width: 16px;
       height: 11px;
       background: url("../images/flags-16x11.png") no-repeat; }
-    ota-widget .flag-16-11 .flag.flag-gb {
+    ota-widget .flag-16-11 .flag.flag-gb, .ota-widget .flag-16-11 .flag.flag-gb {
       background-position: -176px -44px; }
-    ota-widget .flag-16-11 .flag.flag-gh {
+    ota-widget .flag-16-11 .flag.flag-gh, .ota-widget .flag-16-11 .flag.flag-gh {
       background-position: 0 -55px; }
-    ota-widget .flag-16-11 .flag.flag-ic {
+    ota-widget .flag-16-11 .flag.flag-ic, .ota-widget .flag-16-11 .flag.flag-ic {
       background-position: -48px -66px; }
-    ota-widget .flag-16-11 .flag.flag-fj {
+    ota-widget .flag-16-11 .flag.flag-fj, .ota-widget .flag-16-11 .flag.flag-fj {
       background-position: -80px -44px; }
-    ota-widget .flag-16-11 .flag.flag-eg {
+    ota-widget .flag-16-11 .flag.flag-eg, .ota-widget .flag-16-11 .flag.flag-eg {
       background-position: -208px -33px; }
-    ota-widget .flag-16-11 .flag.flag-ki {
+    ota-widget .flag-16-11 .flag.flag-ki, .ota-widget .flag-16-11 .flag.flag-ki {
       background-position: -80px -77px; }
-    ota-widget .flag-16-11 .flag.flag-pn {
+    ota-widget .flag-16-11 .flag.flag-pn, .ota-widget .flag-16-11 .flag.flag-pn {
       background-position: -64px -121px; }
-    ota-widget .flag-16-11 .flag.flag-catalonia {
+    ota-widget .flag-16-11 .flag.flag-catalonia, .ota-widget .flag-16-11 .flag.flag-catalonia {
       background-position: -64px -22px; }
-    ota-widget .flag-16-11 .flag.flag-gu {
+    ota-widget .flag-16-11 .flag.flag-gu, .ota-widget .flag-16-11 .flag.flag-gu {
       background-position: -160px -55px; }
-    ota-widget .flag-16-11 .flag.flag-ky {
+    ota-widget .flag-16-11 .flag.flag-ky, .ota-widget .flag-16-11 .flag.flag-ky {
       background-position: -192px -77px; }
-    ota-widget .flag-16-11 .flag.flag-ss {
+    ota-widget .flag-16-11 .flag.flag-ss, .ota-widget .flag-16-11 .flag.flag-ss {
       background-position: -16px -143px; }
-    ota-widget .flag-16-11 .flag.flag-bd {
+    ota-widget .flag-16-11 .flag.flag-bd, .ota-widget .flag-16-11 .flag.flag-bd {
       background-position: -32px -11px; }
-    ota-widget .flag-16-11 .flag.flag-sh {
+    ota-widget .flag-16-11 .flag.flag-sh, .ota-widget .flag-16-11 .flag.flag-sh {
       background-position: -112px -132px; }
-    ota-widget .flag-16-11 .flag.flag-bj {
+    ota-widget .flag-16-11 .flag.flag-bj, .ota-widget .flag-16-11 .flag.flag-bj {
       background-position: -128px -11px; }
-    ota-widget .flag-16-11 .flag.flag-rw {
+    ota-widget .flag-16-11 .flag.flag-rw, .ota-widget .flag-16-11 .flag.flag-rw {
       background-position: -240px -121px; }
-    ota-widget .flag-16-11 .flag.flag-md {
+    ota-widget .flag-16-11 .flag.flag-md, .ota-widget .flag-16-11 .flag.flag-md {
       background-position: -176px -88px; }
-    ota-widget .flag-16-11 .flag.flag-gn {
+    ota-widget .flag-16-11 .flag.flag-gn, .ota-widget .flag-16-11 .flag.flag-gn {
       background-position: -64px -55px; }
-    ota-widget .flag-16-11 .flag.flag-tl {
+    ota-widget .flag-16-11 .flag.flag-tl, .ota-widget .flag-16-11 .flag.flag-tl {
       background-position: -240px -143px; }
-    ota-widget .flag-16-11 .flag.flag-bh {
+    ota-widget .flag-16-11 .flag.flag-bh, .ota-widget .flag-16-11 .flag.flag-bh {
       background-position: -96px -11px; }
-    ota-widget .flag-16-11 .flag.flag-mq {
+    ota-widget .flag-16-11 .flag.flag-mq, .ota-widget .flag-16-11 .flag.flag-mq {
       background-position: -80px -99px; }
-    ota-widget .flag-16-11 .flag.flag-fr {
+    ota-widget .flag-16-11 .flag.flag-fr, .ota-widget .flag-16-11 .flag.flag-fr {
       background-position: -144px -44px; }
-    ota-widget .flag-16-11 .flag.flag-tt {
+    ota-widget .flag-16-11 .flag.flag-tt, .ota-widget .flag-16-11 .flag.flag-tt {
       background-position: -64px -154px; }
-    ota-widget .flag-16-11 .flag.flag-be {
+    ota-widget .flag-16-11 .flag.flag-be, .ota-widget .flag-16-11 .flag.flag-be {
       background-position: -48px -11px; }
-    ota-widget .flag-16-11 .flag.flag-tc {
+    ota-widget .flag-16-11 .flag.flag-tc, .ota-widget .flag-16-11 .flag.flag-tc {
       background-position: -112px -143px; }
-    ota-widget .flag-16-11 .flag.flag-je {
+    ota-widget .flag-16-11 .flag.flag-je, .ota-widget .flag-16-11 .flag.flag-je {
       background-position: -224px -66px; }
-    ota-widget .flag-16-11 .flag.flag-cn {
+    ota-widget .flag-16-11 .flag.flag-cn, .ota-widget .flag-16-11 .flag.flag-cn {
       background-position: -208px -22px; }
-    ota-widget .flag-16-11 .flag.flag-nz {
+    ota-widget .flag-16-11 .flag.flag-nz, .ota-widget .flag-16-11 .flag.flag-nz {
       background-position: -160px -110px; }
-    ota-widget .flag-16-11 .flag.flag-ke {
+    ota-widget .flag-16-11 .flag.flag-ke, .ota-widget .flag-16-11 .flag.flag-ke {
       background-position: -32px -77px; }
-    ota-widget .flag-16-11 .flag.flag-sx {
+    ota-widget .flag-16-11 .flag.flag-sx, .ota-widget .flag-16-11 .flag.flag-sx {
       background-position: -64px -143px; }
-    ota-widget .flag-16-11 .flag.flag-et {
+    ota-widget .flag-16-11 .flag.flag-et, .ota-widget .flag-16-11 .flag.flag-et {
       background-position: -32px -44px; }
-    ota-widget .flag-16-11 .flag.flag-cg {
+    ota-widget .flag-16-11 .flag.flag-cg, .ota-widget .flag-16-11 .flag.flag-cg {
       background-position: -112px -22px; }
-    ota-widget .flag-16-11 .flag.flag-fi {
+    ota-widget .flag-16-11 .flag.flag-fi, .ota-widget .flag-16-11 .flag.flag-fi {
       background-position: -64px -44px; }
-    ota-widget .flag-16-11 .flag.flag-fo {
+    ota-widget .flag-16-11 .flag.flag-fo, .ota-widget .flag-16-11 .flag.flag-fo {
       background-position: -128px -44px; }
-    ota-widget .flag-16-11 .flag.flag-lb {
+    ota-widget .flag-16-11 .flag.flag-lb, .ota-widget .flag-16-11 .flag.flag-lb {
       background-position: -240px -77px; }
-    ota-widget .flag-16-11 .flag.flag-li {
+    ota-widget .flag-16-11 .flag.flag-li, .ota-widget .flag-16-11 .flag.flag-li {
       background-position: -16px -88px; }
-    ota-widget .flag-16-11 .flag.flag-nf {
+    ota-widget .flag-16-11 .flag.flag-nf, .ota-widget .flag-16-11 .flag.flag-nf {
       background-position: -32px -110px; }
-    ota-widget .flag-16-11 .flag.flag-io {
+    ota-widget .flag-16-11 .flag.flag-io, .ota-widget .flag-16-11 .flag.flag-io {
       background-position: -144px -66px; }
-    ota-widget .flag-16-11 .flag.flag-re {
+    ota-widget .flag-16-11 .flag.flag-re, .ota-widget .flag-16-11 .flag.flag-re {
       background-position: -176px -121px; }
-    ota-widget .flag-16-11 .flag.flag-sc {
+    ota-widget .flag-16-11 .flag.flag-sc, .ota-widget .flag-16-11 .flag.flag-sc {
       background-position: -32px -132px; }
-    ota-widget .flag-16-11 .flag.flag-co {
+    ota-widget .flag-16-11 .flag.flag-co, .ota-widget .flag-16-11 .flag.flag-co {
       background-position: -224px -22px; }
-    ota-widget .flag-16-11 .flag.flag-cd {
+    ota-widget .flag-16-11 .flag.flag-cd, .ota-widget .flag-16-11 .flag.flag-cd {
       background-position: -80px -22px; }
-    ota-widget .flag-16-11 .flag.flag-lu {
+    ota-widget .flag-16-11 .flag.flag-lu, .ota-widget .flag-16-11 .flag.flag-lu {
       background-position: -96px -88px; }
-    ota-widget .flag-16-11 .flag.flag-ma {
+    ota-widget .flag-16-11 .flag.flag-ma, .ota-widget .flag-16-11 .flag.flag-ma {
       background-position: -144px -88px; }
-    ota-widget .flag-16-11 .flag.flag-fm {
+    ota-widget .flag-16-11 .flag.flag-fm, .ota-widget .flag-16-11 .flag.flag-fm {
       background-position: -112px -44px; }
-    ota-widget .flag-16-11 .flag.flag-ao {
+    ota-widget .flag-16-11 .flag.flag-ao, .ota-widget .flag-16-11 .flag.flag-ao {
       background-position: -128px 0; }
-    ota-widget .flag-16-11 .flag.flag-pf {
+    ota-widget .flag-16-11 .flag.flag-pf, .ota-widget .flag-16-11 .flag.flag-pf {
       background-position: -224px -110px; }
-    ota-widget .flag-16-11 .flag.flag-pl {
+    ota-widget .flag-16-11 .flag.flag-pl, .ota-widget .flag-16-11 .flag.flag-pl {
       background-position: -32px -121px; }
-    ota-widget .flag-16-11 .flag.flag-ru {
+    ota-widget .flag-16-11 .flag.flag-ru, .ota-widget .flag-16-11 .flag.flag-ru {
       background-position: -224px -121px; }
-    ota-widget .flag-16-11 .flag.flag-eu {
+    ota-widget .flag-16-11 .flag.flag-eu, .ota-widget .flag-16-11 .flag.flag-eu {
       background-position: -48px -44px; }
-    ota-widget .flag-16-11 .flag.flag-pw {
+    ota-widget .flag-16-11 .flag.flag-pw, .ota-widget .flag-16-11 .flag.flag-pw {
       background-position: -128px -121px; }
-    ota-widget .flag-16-11 .flag.flag-pm {
+    ota-widget .flag-16-11 .flag.flag-pm, .ota-widget .flag-16-11 .flag.flag-pm {
       background-position: -48px -121px; }
-    ota-widget .flag-16-11 .flag.flag-cv {
+    ota-widget .flag-16-11 .flag.flag-cv, .ota-widget .flag-16-11 .flag.flag-cv {
       background-position: -16px -33px; }
-    ota-widget .flag-16-11 .flag.flag-im {
+    ota-widget .flag-16-11 .flag.flag-im, .ota-widget .flag-16-11 .flag.flag-im {
       background-position: -112px -66px; }
-    ota-widget .flag-16-11 .flag.flag-kw {
+    ota-widget .flag-16-11 .flag.flag-kw, .ota-widget .flag-16-11 .flag.flag-kw {
       background-position: -176px -77px; }
-    ota-widget .flag-16-11 .flag.flag-kg {
+    ota-widget .flag-16-11 .flag.flag-kg, .ota-widget .flag-16-11 .flag.flag-kg {
       background-position: -48px -77px; }
-    ota-widget .flag-16-11 .flag.flag-nr {
+    ota-widget .flag-16-11 .flag.flag-nr, .ota-widget .flag-16-11 .flag.flag-nr {
       background-position: -128px -110px; }
-    ota-widget .flag-16-11 .flag.flag-ro {
+    ota-widget .flag-16-11 .flag.flag-ro, .ota-widget .flag-16-11 .flag.flag-ro {
       background-position: -192px -121px; }
-    ota-widget .flag-16-11 .flag.flag-sy {
+    ota-widget .flag-16-11 .flag.flag-sy, .ota-widget .flag-16-11 .flag.flag-sy {
       background-position: -80px -143px; }
-    ota-widget .flag-16-11 .flag.flag-nc {
+    ota-widget .flag-16-11 .flag.flag-nc, .ota-widget .flag-16-11 .flag.flag-nc {
       background-position: 0 -110px; }
-    ota-widget .flag-16-11 .flag.flag-england {
+    ota-widget .flag-16-11 .flag.flag-england, .ota-widget .flag-16-11 .flag.flag-england {
       background-position: -240px -33px; }
-    ota-widget .flag-16-11 .flag.flag-bw {
+    ota-widget .flag-16-11 .flag.flag-bw, .ota-widget .flag-16-11 .flag.flag-bw {
       background-position: 0 -22px; }
-    ota-widget .flag-16-11 .flag.flag-gs {
+    ota-widget .flag-16-11 .flag.flag-gs, .ota-widget .flag-16-11 .flag.flag-gs {
       background-position: -128px -55px; }
-    ota-widget .flag-16-11 .flag.flag-ba {
+    ota-widget .flag-16-11 .flag.flag-ba, .ota-widget .flag-16-11 .flag.flag-ba {
       background-position: 0 -11px; }
-    ota-widget .flag-16-11 .flag.flag-kr {
+    ota-widget .flag-16-11 .flag.flag-kr, .ota-widget .flag-16-11 .flag.flag-kr {
       background-position: -144px -77px; }
-    ota-widget .flag-16-11 .flag.flag-sz {
+    ota-widget .flag-16-11 .flag.flag-sz, .ota-widget .flag-16-11 .flag.flag-sz {
       background-position: -96px -143px; }
-    ota-widget .flag-16-11 .flag.flag-ad {
+    ota-widget .flag-16-11 .flag.flag-ad, .ota-widget .flag-16-11 .flag.flag-ad {
       background-position: 0 0; }
-    ota-widget .flag-16-11 .flag.flag-do {
+    ota-widget .flag-16-11 .flag.flag-do, .ota-widget .flag-16-11 .flag.flag-do {
       background-position: -144px -33px; }
-    ota-widget .flag-16-11 .flag.flag-gt {
+    ota-widget .flag-16-11 .flag.flag-gt, .ota-widget .flag-16-11 .flag.flag-gt {
       background-position: -144px -55px; }
-    ota-widget .flag-16-11 .flag.flag-scotland {
+    ota-widget .flag-16-11 .flag.flag-scotland, .ota-widget .flag-16-11 .flag.flag-scotland {
       background-position: -48px -132px; }
-    ota-widget .flag-16-11 .flag.flag-dj {
+    ota-widget .flag-16-11 .flag.flag-dj, .ota-widget .flag-16-11 .flag.flag-dj {
       background-position: -96px -33px; }
-    ota-widget .flag-16-11 .flag.flag-ca {
+    ota-widget .flag-16-11 .flag.flag-ca, .ota-widget .flag-16-11 .flag.flag-ca {
       background-position: -48px -22px; }
-    ota-widget .flag-16-11 .flag.flag-as {
+    ota-widget .flag-16-11 .flag.flag-as, .ota-widget .flag-16-11 .flag.flag-as {
       background-position: -160px 0; }
-    ota-widget .flag-16-11 .flag.flag-tr {
+    ota-widget .flag-16-11 .flag.flag-tr, .ota-widget .flag-16-11 .flag.flag-tr {
       background-position: -48px -154px; }
-    ota-widget .flag-16-11 .flag.flag-ee {
+    ota-widget .flag-16-11 .flag.flag-ee, .ota-widget .flag-16-11 .flag.flag-ee {
       background-position: -192px -33px; }
-    ota-widget .flag-16-11 .flag.flag-gw {
+    ota-widget .flag-16-11 .flag.flag-gw, .ota-widget .flag-16-11 .flag.flag-gw {
       background-position: -176px -55px; }
-    ota-widget .flag-16-11 .flag.flag-sd {
+    ota-widget .flag-16-11 .flag.flag-sd, .ota-widget .flag-16-11 .flag.flag-sd {
       background-position: -64px -132px; }
-    ota-widget .flag-16-11 .flag.flag-ck {
+    ota-widget .flag-16-11 .flag.flag-ck, .ota-widget .flag-16-11 .flag.flag-ck {
       background-position: -160px -22px; }
-    ota-widget .flag-16-11 .flag.flag-eh {
+    ota-widget .flag-16-11 .flag.flag-eh, .ota-widget .flag-16-11 .flag.flag-eh {
       background-position: -224px -33px; }
-    ota-widget .flag-16-11 .flag.flag-tw {
+    ota-widget .flag-16-11 .flag.flag-tw, .ota-widget .flag-16-11 .flag.flag-tw {
       background-position: -96px -154px; }
-    ota-widget .flag-16-11 .flag.flag-se {
+    ota-widget .flag-16-11 .flag.flag-se, .ota-widget .flag-16-11 .flag.flag-se {
       background-position: -80px -132px; }
-    ota-widget .flag-16-11 .flag.flag-gg {
+    ota-widget .flag-16-11 .flag.flag-gg, .ota-widget .flag-16-11 .flag.flag-gg {
       background-position: -240px -44px; }
-    ota-widget .flag-16-11 .flag.flag-mz {
+    ota-widget .flag-16-11 .flag.flag-mz, .ota-widget .flag-16-11 .flag.flag-mz {
       background-position: -224px -99px; }
-    ota-widget .flag-16-11 .flag.flag-sb {
+    ota-widget .flag-16-11 .flag.flag-sb, .ota-widget .flag-16-11 .flag.flag-sb {
       background-position: -16px -132px; }
-    ota-widget .flag-16-11 .flag.flag-ng {
+    ota-widget .flag-16-11 .flag.flag-ng, .ota-widget .flag-16-11 .flag.flag-ng {
       background-position: -48px -110px; }
-    ota-widget .flag-16-11 .flag.flag-br {
+    ota-widget .flag-16-11 .flag.flag-br, .ota-widget .flag-16-11 .flag.flag-br {
       background-position: -192px -11px; }
-    ota-widget .flag-16-11 .flag.flag-fk {
+    ota-widget .flag-16-11 .flag.flag-fk, .ota-widget .flag-16-11 .flag.flag-fk {
       background-position: -96px -44px; }
-    ota-widget .flag-16-11 .flag.flag-xk {
+    ota-widget .flag-16-11 .flag.flag-xk, .ota-widget .flag-16-11 .flag.flag-xk {
       background-position: -128px -165px; }
-    ota-widget .flag-16-11 .flag.flag-gi {
+    ota-widget .flag-16-11 .flag.flag-gi, .ota-widget .flag-16-11 .flag.flag-gi {
       background-position: -16px -55px; }
-    ota-widget .flag-16-11 .flag.flag-at {
+    ota-widget .flag-16-11 .flag.flag-at, .ota-widget .flag-16-11 .flag.flag-at {
       background-position: -176px 0; }
-    ota-widget .flag-16-11 .flag.flag-mk {
+    ota-widget .flag-16-11 .flag.flag-mk, .ota-widget .flag-16-11 .flag.flag-mk {
       background-position: -240px -88px; }
-    ota-widget .flag-16-11 .flag.flag-ax {
+    ota-widget .flag-16-11 .flag.flag-ax, .ota-widget .flag-16-11 .flag.flag-ax {
       background-position: -224px 0; }
-    ota-widget .flag-16-11 .flag.flag-an {
+    ota-widget .flag-16-11 .flag.flag-an, .ota-widget .flag-16-11 .flag.flag-an {
       background-position: -112px 0; }
-    ota-widget .flag-16-11 .flag.flag-es {
+    ota-widget .flag-16-11 .flag.flag-es, .ota-widget .flag-16-11 .flag.flag-es {
       background-position: -16px -44px; }
-    ota-widget .flag-16-11 .flag.flag-jm {
+    ota-widget .flag-16-11 .flag.flag-jm, .ota-widget .flag-16-11 .flag.flag-jm {
       background-position: -240px -66px; }
-    ota-widget .flag-16-11 .flag.flag-kp {
+    ota-widget .flag-16-11 .flag.flag-kp, .ota-widget .flag-16-11 .flag.flag-kp {
       background-position: -128px -77px; }
-    ota-widget .flag-16-11 .flag.flag-uz {
+    ota-widget .flag-16-11 .flag.flag-uz, .ota-widget .flag-16-11 .flag.flag-uz {
       background-position: -208px -154px; }
-    ota-widget .flag-16-11 .flag.flag-cu {
+    ota-widget .flag-16-11 .flag.flag-cu, .ota-widget .flag-16-11 .flag.flag-cu {
       background-position: 0 -33px; }
-    ota-widget .flag-16-11 .flag.flag-td {
+    ota-widget .flag-16-11 .flag.flag-td, .ota-widget .flag-16-11 .flag.flag-td {
       background-position: -128px -143px; }
-    ota-widget .flag-16-11 .flag.flag-bi {
+    ota-widget .flag-16-11 .flag.flag-bi, .ota-widget .flag-16-11 .flag.flag-bi {
       background-position: -112px -11px; }
-    ota-widget .flag-16-11 .flag.flag-lt {
+    ota-widget .flag-16-11 .flag.flag-lt, .ota-widget .flag-16-11 .flag.flag-lt {
       background-position: -80px -88px; }
-    ota-widget .flag-16-11 .flag.flag-de {
+    ota-widget .flag-16-11 .flag.flag-de, .ota-widget .flag-16-11 .flag.flag-de {
       background-position: -80px -33px; }
-    ota-widget .flag-16-11 .flag.flag-bm {
+    ota-widget .flag-16-11 .flag.flag-bm, .ota-widget .flag-16-11 .flag.flag-bm {
       background-position: -144px -11px; }
-    ota-widget .flag-16-11 .flag.flag-om {
+    ota-widget .flag-16-11 .flag.flag-om, .ota-widget .flag-16-11 .flag.flag-om {
       background-position: -176px -110px; }
-    ota-widget .flag-16-11 .flag.flag-sk {
+    ota-widget .flag-16-11 .flag.flag-sk, .ota-widget .flag-16-11 .flag.flag-sk {
       background-position: -160px -132px; }
-    ota-widget .flag-16-11 .flag.flag-tk {
+    ota-widget .flag-16-11 .flag.flag-tk, .ota-widget .flag-16-11 .flag.flag-tk {
       background-position: -224px -143px; }
-    ota-widget .flag-16-11 .flag.flag-vu {
+    ota-widget .flag-16-11 .flag.flag-vu, .ota-widget .flag-16-11 .flag.flag-vu {
       background-position: -64px -165px; }
-    ota-widget .flag-16-11 .flag.flag-mg {
+    ota-widget .flag-16-11 .flag.flag-mg, .ota-widget .flag-16-11 .flag.flag-mg {
       background-position: -208px -88px; }
-    ota-widget .flag-16-11 .flag.flag-ar {
+    ota-widget .flag-16-11 .flag.flag-ar, .ota-widget .flag-16-11 .flag.flag-ar {
       background-position: -144px 0; }
-    ota-widget .flag-16-11 .flag.flag-zw {
+    ota-widget .flag-16-11 .flag.flag-zw, .ota-widget .flag-16-11 .flag.flag-zw {
       background-position: -224px -165px; }
-    ota-widget .flag-16-11 .flag.flag-vn {
+    ota-widget .flag-16-11 .flag.flag-vn, .ota-widget .flag-16-11 .flag.flag-vn {
       background-position: -48px -165px; }
-    ota-widget .flag-16-11 .flag.flag-tv {
+    ota-widget .flag-16-11 .flag.flag-tv, .ota-widget .flag-16-11 .flag.flag-tv {
       background-position: -80px -154px; }
-    ota-widget .flag-16-11 .flag.flag-to {
+    ota-widget .flag-16-11 .flag.flag-to, .ota-widget .flag-16-11 .flag.flag-to {
       background-position: -32px -154px; }
-    ota-widget .flag-16-11 .flag.flag-vc {
+    ota-widget .flag-16-11 .flag.flag-vc, .ota-widget .flag-16-11 .flag.flag-vc {
       background-position: -240px -154px; }
-    ota-widget .flag-16-11 .flag.flag-sn {
+    ota-widget .flag-16-11 .flag.flag-sn, .ota-widget .flag-16-11 .flag.flag-sn {
       background-position: -208px -132px; }
-    ota-widget .flag-16-11 .flag.flag-va {
+    ota-widget .flag-16-11 .flag.flag-va, .ota-widget .flag-16-11 .flag.flag-va {
       background-position: -224px -154px; }
-    ota-widget .flag-16-11 .flag.flag-ly {
+    ota-widget .flag-16-11 .flag.flag-ly, .ota-widget .flag-16-11 .flag.flag-ly {
       background-position: -128px -88px; }
-    ota-widget .flag-16-11 .flag.flag-nu {
+    ota-widget .flag-16-11 .flag.flag-nu, .ota-widget .flag-16-11 .flag.flag-nu {
       background-position: -144px -110px; }
-    ota-widget .flag-16-11 .flag.flag-ir {
+    ota-widget .flag-16-11 .flag.flag-ir, .ota-widget .flag-16-11 .flag.flag-ir {
       background-position: -176px -66px; }
-    ota-widget .flag-16-11 .flag.flag-mn {
+    ota-widget .flag-16-11 .flag.flag-mn, .ota-widget .flag-16-11 .flag.flag-mn {
       background-position: -32px -99px; }
-    ota-widget .flag-16-11 .flag.flag-ls {
+    ota-widget .flag-16-11 .flag.flag-ls, .ota-widget .flag-16-11 .flag.flag-ls {
       background-position: -64px -88px; }
-    ota-widget .flag-16-11 .flag.flag-cr {
+    ota-widget .flag-16-11 .flag.flag-cr, .ota-widget .flag-16-11 .flag.flag-cr {
       background-position: -240px -22px; }
-    ota-widget .flag-16-11 .flag.flag-az {
+    ota-widget .flag-16-11 .flag.flag-az, .ota-widget .flag-16-11 .flag.flag-az {
       background-position: -240px 0; }
-    ota-widget .flag-16-11 .flag.flag-ec {
+    ota-widget .flag-16-11 .flag.flag-ec, .ota-widget .flag-16-11 .flag.flag-ec {
       background-position: -176px -33px; }
-    ota-widget .flag-16-11 .flag.flag-lk {
+    ota-widget .flag-16-11 .flag.flag-lk, .ota-widget .flag-16-11 .flag.flag-lk {
       background-position: -32px -88px; }
-    ota-widget .flag-16-11 .flag.flag-my {
+    ota-widget .flag-16-11 .flag.flag-my, .ota-widget .flag-16-11 .flag.flag-my {
       background-position: -208px -99px; }
-    ota-widget .flag-16-11 .flag.flag-pt {
+    ota-widget .flag-16-11 .flag.flag-pt, .ota-widget .flag-16-11 .flag.flag-pt {
       background-position: -112px -121px; }
-    ota-widget .flag-16-11 .flag.flag-bb {
+    ota-widget .flag-16-11 .flag.flag-bb, .ota-widget .flag-16-11 .flag.flag-bb {
       background-position: -16px -11px; }
-    ota-widget .flag-16-11 .flag.flag-hu {
+    ota-widget .flag-16-11 .flag.flag-hu, .ota-widget .flag-16-11 .flag.flag-hu {
       background-position: -32px -66px; }
-    ota-widget .flag-16-11 .flag.flag-vg {
+    ota-widget .flag-16-11 .flag.flag-vg, .ota-widget .flag-16-11 .flag.flag-vg {
       background-position: -16px -165px; }
-    ota-widget .flag-16-11 .flag.flag-in {
+    ota-widget .flag-16-11 .flag.flag-in, .ota-widget .flag-16-11 .flag.flag-in {
       background-position: -128px -66px; }
-    ota-widget .flag-16-11 .flag.flag-tg {
+    ota-widget .flag-16-11 .flag.flag-tg, .ota-widget .flag-16-11 .flag.flag-tg {
       background-position: -160px -143px; }
-    ota-widget .flag-16-11 .flag.flag-au {
+    ota-widget .flag-16-11 .flag.flag-au, .ota-widget .flag-16-11 .flag.flag-au {
       background-position: -192px 0; }
-    ota-widget .flag-16-11 .flag.flag-sm {
+    ota-widget .flag-16-11 .flag.flag-sm, .ota-widget .flag-16-11 .flag.flag-sm {
       background-position: -192px -132px; }
-    ota-widget .flag-16-11 .flag.flag-us {
+    ota-widget .flag-16-11 .flag.flag-us, .ota-widget .flag-16-11 .flag.flag-us {
       background-position: -176px -154px; }
-    ota-widget .flag-16-11 .flag.flag-gq {
+    ota-widget .flag-16-11 .flag.flag-gq, .ota-widget .flag-16-11 .flag.flag-gq {
       background-position: -96px -55px; }
-    ota-widget .flag-16-11 .flag.flag-cf {
+    ota-widget .flag-16-11 .flag.flag-cf, .ota-widget .flag-16-11 .flag.flag-cf {
       background-position: -96px -22px; }
-    ota-widget .flag-16-11 .flag.flag-pg {
+    ota-widget .flag-16-11 .flag.flag-pg, .ota-widget .flag-16-11 .flag.flag-pg {
       background-position: -240px -110px; }
-    ota-widget .flag-16-11 .flag.flag-mr {
+    ota-widget .flag-16-11 .flag.flag-mr, .ota-widget .flag-16-11 .flag.flag-mr {
       background-position: -96px -99px; }
-    ota-widget .flag-16-11 .flag.flag-dm {
+    ota-widget .flag-16-11 .flag.flag-dm, .ota-widget .flag-16-11 .flag.flag-dm {
       background-position: -128px -33px; }
-    ota-widget .flag-16-11 .flag.flag-lc {
+    ota-widget .flag-16-11 .flag.flag-lc, .ota-widget .flag-16-11 .flag.flag-lc {
       background-position: 0 -88px; }
-    ota-widget .flag-16-11 .flag.flag-mv {
+    ota-widget .flag-16-11 .flag.flag-mv, .ota-widget .flag-16-11 .flag.flag-mv {
       background-position: -160px -99px; }
-    ota-widget .flag-16-11 .flag.flag-ve {
+    ota-widget .flag-16-11 .flag.flag-ve, .ota-widget .flag-16-11 .flag.flag-ve {
       background-position: 0 -165px; }
-    ota-widget .flag-16-11 .flag.flag-mo {
+    ota-widget .flag-16-11 .flag.flag-mo, .ota-widget .flag-16-11 .flag.flag-mo {
       background-position: -48px -99px; }
-    ota-widget .flag-16-11 .flag.flag-kurdistan {
+    ota-widget .flag-16-11 .flag.flag-kurdistan, .ota-widget .flag-16-11 .flag.flag-kurdistan {
       background-position: -160px -77px; }
-    ota-widget .flag-16-11 .flag.flag-uy {
+    ota-widget .flag-16-11 .flag.flag-uy, .ota-widget .flag-16-11 .flag.flag-uy {
       background-position: -192px -154px; }
-    ota-widget .flag-16-11 .flag.flag-qa {
+    ota-widget .flag-16-11 .flag.flag-qa, .ota-widget .flag-16-11 .flag.flag-qa {
       background-position: -160px -121px; }
-    ota-widget .flag-16-11 .flag.flag-iq {
+    ota-widget .flag-16-11 .flag.flag-iq, .ota-widget .flag-16-11 .flag.flag-iq {
       background-position: -160px -66px; }
-    ota-widget .flag-16-11 .flag.flag-cz {
+    ota-widget .flag-16-11 .flag.flag-cz, .ota-widget .flag-16-11 .flag.flag-cz {
       background-position: -64px -33px; }
-    ota-widget .flag-16-11 .flag.flag-bt {
+    ota-widget .flag-16-11 .flag.flag-bt, .ota-widget .flag-16-11 .flag.flag-bt {
       background-position: -224px -11px; }
-    ota-widget .flag-16-11 .flag.flag-bf {
+    ota-widget .flag-16-11 .flag.flag-bf, .ota-widget .flag-16-11 .flag.flag-bf {
       background-position: -64px -11px; }
-    ota-widget .flag-16-11 .flag.flag-zanzibar {
+    ota-widget .flag-16-11 .flag.flag-zanzibar, .ota-widget .flag-16-11 .flag.flag-zanzibar {
       background-position: -192px -165px; }
-    ota-widget .flag-16-11 .flag.flag-gl {
+    ota-widget .flag-16-11 .flag.flag-gl, .ota-widget .flag-16-11 .flag.flag-gl {
       background-position: -32px -55px; }
-    ota-widget .flag-16-11 .flag.flag-me {
+    ota-widget .flag-16-11 .flag.flag-me, .ota-widget .flag-16-11 .flag.flag-me {
       background-position: -192px -88px; }
-    ota-widget .flag-16-11 .flag.flag-jp {
+    ota-widget .flag-16-11 .flag.flag-jp, .ota-widget .flag-16-11 .flag.flag-jp {
       background-position: -16px -77px; }
-    ota-widget .flag-16-11 .flag.flag-ae {
+    ota-widget .flag-16-11 .flag.flag-ae, .ota-widget .flag-16-11 .flag.flag-ae {
       background-position: -16px 0; }
-    ota-widget .flag-16-11 .flag.flag-er {
+    ota-widget .flag-16-11 .flag.flag-er, .ota-widget .flag-16-11 .flag.flag-er {
       background-position: 0 -44px; }
-    ota-widget .flag-16-11 .flag.flag-dk {
+    ota-widget .flag-16-11 .flag.flag-dk, .ota-widget .flag-16-11 .flag.flag-dk {
       background-position: -112px -33px; }
-    ota-widget .flag-16-11 .flag.flag-cm {
+    ota-widget .flag-16-11 .flag.flag-cm, .ota-widget .flag-16-11 .flag.flag-cm {
       background-position: -192px -22px; }
-    ota-widget .flag-16-11 .flag.flag-aw {
+    ota-widget .flag-16-11 .flag.flag-aw, .ota-widget .flag-16-11 .flag.flag-aw {
       background-position: -208px 0; }
-    ota-widget .flag-16-11 .flag.flag-rs {
+    ota-widget .flag-16-11 .flag.flag-rs, .ota-widget .flag-16-11 .flag.flag-rs {
       background-position: -208px -121px; }
-    ota-widget .flag-16-11 .flag.flag-mh {
+    ota-widget .flag-16-11 .flag.flag-mh, .ota-widget .flag-16-11 .flag.flag-mh {
       background-position: -224px -88px; }
-    ota-widget .flag-16-11 .flag.flag-bo {
+    ota-widget .flag-16-11 .flag.flag-bo, .ota-widget .flag-16-11 .flag.flag-bo {
       background-position: -176px -11px; }
-    ota-widget .flag-16-11 .flag.flag-th {
+    ota-widget .flag-16-11 .flag.flag-th, .ota-widget .flag-16-11 .flag.flag-th {
       background-position: -176px -143px; }
-    ota-widget .flag-16-11 .flag.flag-hk {
+    ota-widget .flag-16-11 .flag.flag-hk, .ota-widget .flag-16-11 .flag.flag-hk {
       background-position: -208px -55px; }
-    ota-widget .flag-16-11 .flag.flag-am {
+    ota-widget .flag-16-11 .flag.flag-am, .ota-widget .flag-16-11 .flag.flag-am {
       background-position: -96px 0; }
-    ota-widget .flag-16-11 .flag.flag-kh {
+    ota-widget .flag-16-11 .flag.flag-kh, .ota-widget .flag-16-11 .flag.flag-kh {
       background-position: -64px -77px; }
-    ota-widget .flag-16-11 .flag.flag-ni {
+    ota-widget .flag-16-11 .flag.flag-ni, .ota-widget .flag-16-11 .flag.flag-ni {
       background-position: -64px -110px; }
-    ota-widget .flag-16-11 .flag.flag-pa {
+    ota-widget .flag-16-11 .flag.flag-pa, .ota-widget .flag-16-11 .flag.flag-pa {
       background-position: -192px -110px; }
-    ota-widget .flag-16-11 .flag.flag-mc {
+    ota-widget .flag-16-11 .flag.flag-mc, .ota-widget .flag-16-11 .flag.flag-mc {
       background-position: -160px -88px; }
-    ota-widget .flag-16-11 .flag.flag-sg {
+    ota-widget .flag-16-11 .flag.flag-sg, .ota-widget .flag-16-11 .flag.flag-sg {
       background-position: -96px -132px; }
-    ota-widget .flag-16-11 .flag.flag-bs {
+    ota-widget .flag-16-11 .flag.flag-bs, .ota-widget .flag-16-11 .flag.flag-bs {
       background-position: -208px -11px; }
-    ota-widget .flag-16-11 .flag.flag-it {
+    ota-widget .flag-16-11 .flag.flag-it, .ota-widget .flag-16-11 .flag.flag-it {
       background-position: -208px -66px; }
-    ota-widget .flag-16-11 .flag.flag-kz {
+    ota-widget .flag-16-11 .flag.flag-kz, .ota-widget .flag-16-11 .flag.flag-kz {
       background-position: -208px -77px; }
-    ota-widget .flag-16-11 .flag.flag-mu {
+    ota-widget .flag-16-11 .flag.flag-mu, .ota-widget .flag-16-11 .flag.flag-mu {
       background-position: -144px -99px; }
-    ota-widget .flag-16-11 .flag.flag-ci {
+    ota-widget .flag-16-11 .flag.flag-ci, .ota-widget .flag-16-11 .flag.flag-ci {
       background-position: -144px -22px; }
-    ota-widget .flag-16-11 .flag.flag-ht {
+    ota-widget .flag-16-11 .flag.flag-ht, .ota-widget .flag-16-11 .flag.flag-ht {
       background-position: -16px -66px; }
-    ota-widget .flag-16-11 .flag.flag-cy {
+    ota-widget .flag-16-11 .flag.flag-cy, .ota-widget .flag-16-11 .flag.flag-cy {
       background-position: -48px -33px; }
-    ota-widget .flag-16-11 .flag.flag-no {
+    ota-widget .flag-16-11 .flag.flag-no, .ota-widget .flag-16-11 .flag.flag-no {
       background-position: -96px -110px; }
-    ota-widget .flag-16-11 .flag.flag-ps {
+    ota-widget .flag-16-11 .flag.flag-ps, .ota-widget .flag-16-11 .flag.flag-ps {
       background-position: -96px -121px; }
-    ota-widget .flag-16-11 .flag.flag-hn {
+    ota-widget .flag-16-11 .flag.flag-hn, .ota-widget .flag-16-11 .flag.flag-hn {
       background-position: -240px -55px; }
-    ota-widget .flag-16-11 .flag.flag-al {
+    ota-widget .flag-16-11 .flag.flag-al, .ota-widget .flag-16-11 .flag.flag-al {
       background-position: -80px 0; }
-    ota-widget .flag-16-11 .flag.flag-sr {
+    ota-widget .flag-16-11 .flag.flag-sr, .ota-widget .flag-16-11 .flag.flag-sr {
       background-position: 0 -143px; }
-    ota-widget .flag-16-11 .flag.flag-si {
+    ota-widget .flag-16-11 .flag.flag-si, .ota-widget .flag-16-11 .flag.flag-si {
       background-position: -128px -132px; }
-    ota-widget .flag-16-11 .flag.flag-ws {
+    ota-widget .flag-16-11 .flag.flag-ws, .ota-widget .flag-16-11 .flag.flag-ws {
       background-position: -112px -165px; }
-    ota-widget .flag-16-11 .flag.flag-lv {
+    ota-widget .flag-16-11 .flag.flag-lv, .ota-widget .flag-16-11 .flag.flag-lv {
       background-position: -112px -88px; }
-    ota-widget .flag-16-11 .flag.flag-hm {
+    ota-widget .flag-16-11 .flag.flag-hm, .ota-widget .flag-16-11 .flag.flag-hm {
       background-position: -224px -55px; }
-    ota-widget .flag-16-11 .flag.flag-gm {
+    ota-widget .flag-16-11 .flag.flag-gm, .ota-widget .flag-16-11 .flag.flag-gm {
       background-position: -48px -55px; }
-    ota-widget .flag-16-11 .flag.flag-il {
+    ota-widget .flag-16-11 .flag.flag-il, .ota-widget .flag-16-11 .flag.flag-il {
       background-position: -96px -66px; }
-    ota-widget .flag-16-11 .flag.flag-ph {
+    ota-widget .flag-16-11 .flag.flag-ph, .ota-widget .flag-16-11 .flag.flag-ph {
       background-position: 0 -121px; }
-    ota-widget .flag-16-11 .flag.flag-sv {
+    ota-widget .flag-16-11 .flag.flag-sv, .ota-widget .flag-16-11 .flag.flag-sv {
       background-position: -48px -143px; }
-    ota-widget .flag-16-11 .flag.flag-pr {
+    ota-widget .flag-16-11 .flag.flag-pr, .ota-widget .flag-16-11 .flag.flag-pr {
       background-position: -80px -121px; }
-    ota-widget .flag-16-11 .flag.flag-gr {
+    ota-widget .flag-16-11 .flag.flag-gr, .ota-widget .flag-16-11 .flag.flag-gr {
       background-position: -112px -55px; }
-    ota-widget .flag-16-11 .flag.flag-nl {
+    ota-widget .flag-16-11 .flag.flag-nl, .ota-widget .flag-16-11 .flag.flag-nl {
       background-position: -80px -110px; }
-    ota-widget .flag-16-11 .flag.flag-um {
+    ota-widget .flag-16-11 .flag.flag-um, .ota-widget .flag-16-11 .flag.flag-um {
       background-position: -160px -154px; }
-    ota-widget .flag-16-11 .flag.flag-sl {
+    ota-widget .flag-16-11 .flag.flag-sl, .ota-widget .flag-16-11 .flag.flag-sl {
       background-position: -176px -132px; }
-    ota-widget .flag-16-11 .flag.flag-py {
+    ota-widget .flag-16-11 .flag.flag-py, .ota-widget .flag-16-11 .flag.flag-py {
       background-position: -144px -121px; }
-    ota-widget .flag-16-11 .flag.flag-is {
+    ota-widget .flag-16-11 .flag.flag-is, .ota-widget .flag-16-11 .flag.flag-is {
       background-position: -192px -66px; }
-    ota-widget .flag-16-11 .flag.flag-gd {
+    ota-widget .flag-16-11 .flag.flag-gd, .ota-widget .flag-16-11 .flag.flag-gd {
       background-position: -192px -44px; }
-    ota-widget .flag-16-11 .flag.flag-by {
+    ota-widget .flag-16-11 .flag.flag-by, .ota-widget .flag-16-11 .flag.flag-by {
       background-position: -16px -22px; }
-    ota-widget .flag-16-11 .flag.flag-pe {
+    ota-widget .flag-16-11 .flag.flag-pe, .ota-widget .flag-16-11 .flag.flag-pe {
       background-position: -208px -110px; }
-    ota-widget .flag-16-11 .flag.flag-mt {
+    ota-widget .flag-16-11 .flag.flag-mt, .ota-widget .flag-16-11 .flag.flag-mt {
       background-position: -128px -99px; }
-    ota-widget .flag-16-11 .flag.flag-tibet {
+    ota-widget .flag-16-11 .flag.flag-tibet, .ota-widget .flag-16-11 .flag.flag-tibet {
       background-position: -192px -143px; }
-    ota-widget .flag-16-11 .flag.flag-kn {
+    ota-widget .flag-16-11 .flag.flag-kn, .ota-widget .flag-16-11 .flag.flag-kn {
       background-position: -112px -77px; }
-    ota-widget .flag-16-11 .flag.flag-ml {
+    ota-widget .flag-16-11 .flag.flag-ml, .ota-widget .flag-16-11 .flag.flag-ml {
       background-position: 0 -99px; }
-    ota-widget .flag-16-11 .flag.flag-gf {
+    ota-widget .flag-16-11 .flag.flag-gf, .ota-widget .flag-16-11 .flag.flag-gf {
       background-position: -224px -44px; }
-    ota-widget .flag-16-11 .flag.flag-ug {
+    ota-widget .flag-16-11 .flag.flag-ug, .ota-widget .flag-16-11 .flag.flag-ug {
       background-position: -144px -154px; }
-    ota-widget .flag-16-11 .flag.flag-pk {
+    ota-widget .flag-16-11 .flag.flag-pk, .ota-widget .flag-16-11 .flag.flag-pk {
       background-position: -16px -121px; }
-    ota-widget .flag-16-11 .flag.flag-gp {
+    ota-widget .flag-16-11 .flag.flag-gp, .ota-widget .flag-16-11 .flag.flag-gp {
       background-position: -80px -55px; }
-    ota-widget .flag-16-11 .flag.flag-cl {
+    ota-widget .flag-16-11 .flag.flag-cl, .ota-widget .flag-16-11 .flag.flag-cl {
       background-position: -176px -22px; }
-    ota-widget .flag-16-11 .flag.flag-mx {
+    ota-widget .flag-16-11 .flag.flag-mx, .ota-widget .flag-16-11 .flag.flag-mx {
       background-position: -192px -99px; }
-    ota-widget .flag-16-11 .flag.flag-bv {
+    ota-widget .flag-16-11 .flag.flag-bv, .ota-widget .flag-16-11 .flag.flag-bv {
       background-position: -240px -11px; }
-    ota-widget .flag-16-11 .flag.flag-ag {
+    ota-widget .flag-16-11 .flag.flag-ag, .ota-widget .flag-16-11 .flag.flag-ag {
       background-position: -48px 0; }
-    ota-widget .flag-16-11 .flag.flag-somaliland {
+    ota-widget .flag-16-11 .flag.flag-somaliland, .ota-widget .flag-16-11 .flag.flag-somaliland {
       background-position: -240px -132px; }
-    ota-widget .flag-16-11 .flag.flag-tz {
+    ota-widget .flag-16-11 .flag.flag-tz, .ota-widget .flag-16-11 .flag.flag-tz {
       background-position: -112px -154px; }
-    ota-widget .flag-16-11 .flag.flag-dz {
+    ota-widget .flag-16-11 .flag.flag-dz, .ota-widget .flag-16-11 .flag.flag-dz {
       background-position: -160px -33px; }
-    ota-widget .flag-16-11 .flag.flag-id {
+    ota-widget .flag-16-11 .flag.flag-id, .ota-widget .flag-16-11 .flag.flag-id {
       background-position: -64px -66px; }
-    ota-widget .flag-16-11 .flag.flag-mm {
+    ota-widget .flag-16-11 .flag.flag-mm, .ota-widget .flag-16-11 .flag.flag-mm {
       background-position: -16px -99px; }
-    ota-widget .flag-16-11 .flag.flag-jo {
+    ota-widget .flag-16-11 .flag.flag-jo, .ota-widget .flag-16-11 .flag.flag-jo {
       background-position: 0 -77px; }
-    ota-widget .flag-16-11 .flag.flag-ai {
+    ota-widget .flag-16-11 .flag.flag-ai, .ota-widget .flag-16-11 .flag.flag-ai {
       background-position: -64px 0; }
-    ota-widget .flag-16-11 .flag.flag-mw {
+    ota-widget .flag-16-11 .flag.flag-mw, .ota-widget .flag-16-11 .flag.flag-mw {
       background-position: -176px -99px; }
-    ota-widget .flag-16-11 .flag.flag-ie {
+    ota-widget .flag-16-11 .flag.flag-ie, .ota-widget .flag-16-11 .flag.flag-ie {
       background-position: -80px -66px; }
-    ota-widget .flag-16-11 .flag.flag-bz {
+    ota-widget .flag-16-11 .flag.flag-bz, .ota-widget .flag-16-11 .flag.flag-bz {
       background-position: -32px -22px; }
-    ota-widget .flag-16-11 .flag.flag-ga {
+    ota-widget .flag-16-11 .flag.flag-ga, .ota-widget .flag-16-11 .flag.flag-ga {
       background-position: -160px -44px; }
-    ota-widget .flag-16-11 .flag.flag-sa {
+    ota-widget .flag-16-11 .flag.flag-sa, .ota-widget .flag-16-11 .flag.flag-sa {
       background-position: 0 -132px; }
-    ota-widget .flag-16-11 .flag.flag-cw {
+    ota-widget .flag-16-11 .flag.flag-cw, .ota-widget .flag-16-11 .flag.flag-cw {
       background-position: -32px -33px; }
-    ota-widget .flag-16-11 .flag.flag-vi {
+    ota-widget .flag-16-11 .flag.flag-vi, .ota-widget .flag-16-11 .flag.flag-vi {
       background-position: -32px -165px; }
-    ota-widget .flag-16-11 .flag.flag-bn {
+    ota-widget .flag-16-11 .flag.flag-bn, .ota-widget .flag-16-11 .flag.flag-bn {
       background-position: -160px -11px; }
-    ota-widget .flag-16-11 .flag.flag-ge {
+    ota-widget .flag-16-11 .flag.flag-ge, .ota-widget .flag-16-11 .flag.flag-ge {
       background-position: -208px -44px; }
-    ota-widget .flag-16-11 .flag.flag-wales {
+    ota-widget .flag-16-11 .flag.flag-wales, .ota-widget .flag-16-11 .flag.flag-wales {
       background-position: -80px -165px; }
-    ota-widget .flag-16-11 .flag.flag-tf {
+    ota-widget .flag-16-11 .flag.flag-tf, .ota-widget .flag-16-11 .flag.flag-tf {
       background-position: -144px -143px; }
-    ota-widget .flag-16-11 .flag.flag-mp {
+    ota-widget .flag-16-11 .flag.flag-mp, .ota-widget .flag-16-11 .flag.flag-mp {
       background-position: -64px -99px; }
-    ota-widget .flag-16-11 .flag.flag-bg {
+    ota-widget .flag-16-11 .flag.flag-bg, .ota-widget .flag-16-11 .flag.flag-bg {
       background-position: -80px -11px; }
-    ota-widget .flag-16-11 .flag.flag-sj {
+    ota-widget .flag-16-11 .flag.flag-sj, .ota-widget .flag-16-11 .flag.flag-sj {
       background-position: -144px -132px; }
-    ota-widget .flag-16-11 .flag.flag-lr {
+    ota-widget .flag-16-11 .flag.flag-lr, .ota-widget .flag-16-11 .flag.flag-lr {
       background-position: -48px -88px; }
-    ota-widget .flag-16-11 .flag.flag-tn {
+    ota-widget .flag-16-11 .flag.flag-tn, .ota-widget .flag-16-11 .flag.flag-tn {
       background-position: -16px -154px; }
-    ota-widget .flag-16-11 .flag.flag-tj {
+    ota-widget .flag-16-11 .flag.flag-tj, .ota-widget .flag-16-11 .flag.flag-tj {
       background-position: -208px -143px; }
-    ota-widget .flag-16-11 .flag.flag-np {
+    ota-widget .flag-16-11 .flag.flag-np, .ota-widget .flag-16-11 .flag.flag-np {
       background-position: -112px -110px; }
-    ota-widget .flag-16-11 .flag.flag-tm {
+    ota-widget .flag-16-11 .flag.flag-tm, .ota-widget .flag-16-11 .flag.flag-tm {
       background-position: 0 -154px; }
-    ota-widget .flag-16-11 .flag.flag-af {
+    ota-widget .flag-16-11 .flag.flag-af, .ota-widget .flag-16-11 .flag.flag-af {
       background-position: -32px 0; }
-    ota-widget .flag-16-11 .flag.flag-zm {
+    ota-widget .flag-16-11 .flag.flag-zm, .ota-widget .flag-16-11 .flag.flag-zm {
       background-position: -208px -165px; }
-    ota-widget .flag-16-11 .flag.flag-ua {
+    ota-widget .flag-16-11 .flag.flag-ua, .ota-widget .flag-16-11 .flag.flag-ua {
       background-position: -128px -154px; }
-    ota-widget .flag-16-11 .flag.flag-ye {
+    ota-widget .flag-16-11 .flag.flag-ye, .ota-widget .flag-16-11 .flag.flag-ye {
       background-position: -144px -165px; }
-    ota-widget .flag-16-11 .flag.flag-wf {
+    ota-widget .flag-16-11 .flag.flag-wf, .ota-widget .flag-16-11 .flag.flag-wf {
       background-position: -96px -165px; }
-    ota-widget .flag-16-11 .flag.flag-st {
+    ota-widget .flag-16-11 .flag.flag-st, .ota-widget .flag-16-11 .flag.flag-st {
       background-position: -32px -143px; }
-    ota-widget .flag-16-11 .flag.flag-ch {
+    ota-widget .flag-16-11 .flag.flag-ch, .ota-widget .flag-16-11 .flag.flag-ch {
       background-position: -128px -22px; }
-    ota-widget .flag-16-11 .flag.flag-la {
+    ota-widget .flag-16-11 .flag.flag-la, .ota-widget .flag-16-11 .flag.flag-la {
       background-position: -224px -77px; }
-    ota-widget .flag-16-11 .flag.flag-yt {
+    ota-widget .flag-16-11 .flag.flag-yt, .ota-widget .flag-16-11 .flag.flag-yt {
       background-position: -160px -165px; }
-    ota-widget .flag-16-11 .flag.flag-ms {
+    ota-widget .flag-16-11 .flag.flag-ms, .ota-widget .flag-16-11 .flag.flag-ms {
       background-position: -112px -99px; }
-    ota-widget .flag-16-11 .flag.flag-gy {
+    ota-widget .flag-16-11 .flag.flag-gy, .ota-widget .flag-16-11 .flag.flag-gy {
       background-position: -192px -55px; }
-    ota-widget .flag-16-11 .flag.flag-na {
+    ota-widget .flag-16-11 .flag.flag-na, .ota-widget .flag-16-11 .flag.flag-na {
       background-position: -240px -99px; }
-    ota-widget .flag-16-11 .flag.flag-ne {
+    ota-widget .flag-16-11 .flag.flag-ne, .ota-widget .flag-16-11 .flag.flag-ne {
       background-position: -16px -110px; }
-    ota-widget .flag-16-11 .flag.flag-hr {
+    ota-widget .flag-16-11 .flag.flag-hr, .ota-widget .flag-16-11 .flag.flag-hr {
       background-position: 0 -66px; }
-    ota-widget .flag-16-11 .flag.flag-so {
+    ota-widget .flag-16-11 .flag.flag-so, .ota-widget .flag-16-11 .flag.flag-so {
       background-position: -224px -132px; }
-    ota-widget .flag-16-11 .flag.flag-km {
+    ota-widget .flag-16-11 .flag.flag-km, .ota-widget .flag-16-11 .flag.flag-km {
       background-position: -96px -77px; }
-    ota-widget .flag-16-11 .flag.flag-za {
+    ota-widget .flag-16-11 .flag.flag-za, .ota-widget .flag-16-11 .flag.flag-za {
       background-position: -176px -165px; }
-  ota-widget h1 {
+  ota-widget h1, .ota-widget h1 {
     font-size: 2em; }
-    ota-widget h1 span {
+    ota-widget h1 span, .ota-widget h1 span {
       max-width: calc(100vw - 120px);
       display: inline-block; }
-    ota-widget h1 img {
+    ota-widget h1 img, .ota-widget h1 img {
       vertical-align: middle;
       height: 90px;
       width: auto;
       margin-left: 10px; }
-  ota-widget .cached_at {
+  ota-widget .cached_at, .ota-widget .cached_at {
     color: grey;
     font-size: 14px;
     margin-bottom: 10px; }
-  ota-widget .masonry-image-list {
+  ota-widget .masonry-image-list, .ota-widget .masonry-image-list {
     -webkit-column-count: 1;
     column-count: 1;
     -webkit-column-gap: 16px;
     column-gap: 16px; }
-    ota-widget .masonry-image-list .mdc-image-list__item {
+    ota-widget .masonry-image-list .mdc-image-list__item, .ota-widget .masonry-image-list .mdc-image-list__item {
       padding-top: 1px; }
-    ota-widget .masonry-image-list .mdc-image-list__item .block {
+    ota-widget .masonry-image-list .mdc-image-list__item .block, .ota-widget .masonry-image-list .mdc-image-list__item .block {
       width: 100%;
       box-sizing: border-box; }
-  ota-widget .block {
+  ota-widget .block, .ota-widget .block {
     background-color: white;
     padding: 16px;
     min-height: 50px;
     margin-bottom: 20px;
     page-break-inside: avoid; }
-    ota-widget .block.overall {
+    ota-widget .block.overall, .ota-widget .block.overall {
       overflow: hidden; }
-      ota-widget .block.overall > * {
+      ota-widget .block.overall > *, .ota-widget .block.overall > * {
         float: left; }
-      ota-widget .block.overall img.seal {
+      ota-widget .block.overall img.seal, .ota-widget .block.overall img.seal {
         margin-right: 20px; }
-      ota-widget .block.overall .count {
+      ota-widget .block.overall .count, .ota-widget .block.overall .count {
         margin-top: 10px; }
-      ota-widget .block.overall .rating {
+      ota-widget .block.overall .rating, .ota-widget .block.overall .rating {
         width: 130px;
         height: 75px;
         line-height: 75px;
@@ -1053,150 +1053,150 @@ ota-widget {
         text-align: center;
         color: white;
         margin-right: 10px; }
-  ota-widget .ratings.block .subrating {
+  ota-widget .ratings.block .subrating, .ota-widget .ratings.block .subrating {
     margin-top: 16px; }
-  ota-widget .ratings.block .title, ota-widget .ratings.block .rating-bar, ota-widget .ratings.block .rating-value {
+  ota-widget .ratings.block .title, ota-widget .ratings.block .rating-bar, ota-widget .ratings.block .rating-value, .ota-widget .ratings.block .title, .ota-widget .ratings.block .rating-bar, .ota-widget .ratings.block .rating-value {
     display: inline-block;
     vertical-align: middle; }
-  ota-widget .ratings.block .title {
+  ota-widget .ratings.block .title, .ota-widget .ratings.block .title {
     min-width: 110px;
     line-height: 20px; }
-  ota-widget .ratings.block .rating-bar {
+  ota-widget .ratings.block .rating-bar, .ota-widget .ratings.block .rating-bar {
     width: calc(100% - 150px);
     height: 20px;
     padding: 0;
     position: relative;
     display: inline-block;
     background-color: #d6d6d6; }
-  ota-widget .ratings.block .rating-value-bar {
+  ota-widget .ratings.block .rating-value-bar, .ota-widget .ratings.block .rating-value-bar {
     height: 20px;
     position: absolute; }
-  ota-widget .ratings.block .rating-value {
+  ota-widget .ratings.block .rating-value, .ota-widget .ratings.block .rating-value {
     max-width: 30px; }
-  ota-widget .mention {
+  ota-widget .mention, .ota-widget .mention {
     margin-top: 16px; }
-    ota-widget .mention .mention-score {
+    ota-widget .mention .mention-score, .ota-widget .mention .mention-score {
       font-size: 14px;
       color: white;
       font-weight: bold;
       padding: 9px 8px;
       min-width: 15px;
       text-align: center; }
-    ota-widget .mention .mention-percentage {
+    ota-widget .mention .mention-percentage, .ota-widget .mention .mention-percentage {
       font-size: 14px;
       color: white;
       font-weight: bold;
       padding: 9px 8px;
       min-width: 95px; }
-    ota-widget .mention .mention-meta, ota-widget .mention .mention-score, ota-widget .mention .mention-percentage {
+    ota-widget .mention .mention-meta, ota-widget .mention .mention-score, ota-widget .mention .mention-percentage, .ota-widget .mention .mention-meta, .ota-widget .mention .mention-score, .ota-widget .mention .mention-percentage {
       vertical-align: middle; }
-    ota-widget .mention .mention-meta, ota-widget .mention .times, ota-widget .mention .mention-score, ota-widget .mention .mention-percentage {
+    ota-widget .mention .mention-meta, ota-widget .mention .times, ota-widget .mention .mention-score, ota-widget .mention .mention-percentage, .ota-widget .mention .mention-meta, .ota-widget .mention .times, .ota-widget .mention .mention-score, .ota-widget .mention .mention-percentage {
       display: inline-block; }
-    ota-widget .mention .mention-meta {
+    ota-widget .mention .mention-meta, .ota-widget .mention .mention-meta {
       width: calc(100% - 120px); }
-    ota-widget .mention .topic {
+    ota-widget .mention .topic, .ota-widget .mention .topic {
       font-size: 15px;
       min-width: 130px; }
-    ota-widget .mention .times {
+    ota-widget .mention .times, .ota-widget .mention .times {
       font-size: 14px; }
-  ota-widget .guests.block .guests-block .country, ota-widget .guests.block .guests-block .composition {
+  ota-widget .guests.block .guests-block .country, ota-widget .guests.block .guests-block .composition, .ota-widget .guests.block .guests-block .country, .ota-widget .guests.block .guests-block .composition {
     display: table; }
-    ota-widget .guests.block .guests-block .country > div, ota-widget .guests.block .guests-block .composition > div {
+    ota-widget .guests.block .guests-block .country > div, ota-widget .guests.block .guests-block .composition > div, .ota-widget .guests.block .guests-block .country > div, .ota-widget .guests.block .guests-block .composition > div {
       padding: 4px 8px;
       display: inline-block; }
-    ota-widget .guests.block .guests-block .country .icon, ota-widget .guests.block .guests-block .composition .icon {
+    ota-widget .guests.block .guests-block .country .icon, ota-widget .guests.block .guests-block .composition .icon, .ota-widget .guests.block .guests-block .country .icon, .ota-widget .guests.block .guests-block .composition .icon {
       width: 40px; }
-    ota-widget .guests.block .guests-block .country .label-text, ota-widget .guests.block .guests-block .composition .label-text {
+    ota-widget .guests.block .guests-block .country .label-text, ota-widget .guests.block .guests-block .composition .label-text, .ota-widget .guests.block .guests-block .country .label-text, .ota-widget .guests.block .guests-block .composition .label-text {
       width: 100%;
       line-height: 1.2;
       font-weight: bold; }
-    ota-widget .guests.block .guests-block .country .label-text, ota-widget .guests.block .guests-block .country .percentage, ota-widget .guests.block .guests-block .country .icon, ota-widget .guests.block .guests-block .composition .label-text, ota-widget .guests.block .guests-block .composition .percentage, ota-widget .guests.block .guests-block .composition .icon {
+    ota-widget .guests.block .guests-block .country .label-text, ota-widget .guests.block .guests-block .country .percentage, ota-widget .guests.block .guests-block .country .icon, ota-widget .guests.block .guests-block .composition .label-text, ota-widget .guests.block .guests-block .composition .percentage, ota-widget .guests.block .guests-block .composition .icon, .ota-widget .guests.block .guests-block .country .label-text, .ota-widget .guests.block .guests-block .country .percentage, .ota-widget .guests.block .guests-block .country .icon, .ota-widget .guests.block .guests-block .composition .label-text, .ota-widget .guests.block .guests-block .composition .percentage, .ota-widget .guests.block .guests-block .composition .icon {
       vertical-align: middle;
       display: table-cell; }
-  ota-widget .guests.block .guests-block .percentage {
+  ota-widget .guests.block .guests-block .percentage, .ota-widget .guests.block .guests-block .percentage {
     font-size: 18px;
     font-weight: bold;
     line-height: 1.2; }
-  ota-widget .guests.block .guests-block .composition .icon {
+  ota-widget .guests.block .guests-block .composition .icon, .ota-widget .guests.block .guests-block .composition .icon {
     font-size: 48px;
     color: #2882bb; }
-  ota-widget .summaries.block .summary {
+  ota-widget .summaries.block .summary, .ota-widget .summaries.block .summary {
     display: table; }
-    ota-widget .summaries.block .summary .icon, ota-widget .summaries.block .summary .name {
+    ota-widget .summaries.block .summary .icon, ota-widget .summaries.block .summary .name, .ota-widget .summaries.block .summary .icon, .ota-widget .summaries.block .summary .name {
       display: table-cell;
       vertical-align: middle;
       padding: 4px; }
-      ota-widget .summaries.block .summary .icon:first-child, ota-widget .summaries.block .summary .name:first-child {
+      ota-widget .summaries.block .summary .icon:first-child, ota-widget .summaries.block .summary .name:first-child, .ota-widget .summaries.block .summary .icon:first-child, .ota-widget .summaries.block .summary .name:first-child {
         padding-left: 0; }
-    ota-widget .summaries.block .summary .name {
+    ota-widget .summaries.block .summary .name, .ota-widget .summaries.block .summary .name {
       width: 100%; }
-    ota-widget .summaries.block .summary .icon {
+    ota-widget .summaries.block .summary .icon, .ota-widget .summaries.block .summary .icon {
       color: #74bc55; }
-      ota-widget .summaries.block .summary .icon.negative {
+      ota-widget .summaries.block .summary .icon.negative, .ota-widget .summaries.block .summary .icon.negative {
         color: grey; }
-  ota-widget .recent-reviews h2 {
+  ota-widget .recent-reviews h2, .ota-widget .recent-reviews h2 {
     margin-bottom: 8px; }
-  ota-widget .recent-reviews .subtitle {
+  ota-widget .recent-reviews .subtitle, .ota-widget .recent-reviews .subtitle {
     font-size: 14px;
     color: #aaa;
     margin-bottom: 15px; }
-  ota-widget .recent-reviews .recent-reviews-block .recent-review {
+  ota-widget .recent-reviews .recent-reviews-block .recent-review, .ota-widget .recent-reviews .recent-reviews-block .recent-review {
     margin-top: 24px; }
-    ota-widget .recent-reviews .recent-reviews-block .recent-review .star {
+    ota-widget .recent-reviews .recent-reviews-block .recent-review .star, .ota-widget .recent-reviews .recent-reviews-block .recent-review .star {
       color: #2882bb;
       font-size: 19px;
       display: inline-block; }
-    ota-widget .recent-reviews .recent-reviews-block .recent-review .star, ota-widget .recent-reviews .recent-reviews-block .recent-review .date {
+    ota-widget .recent-reviews .recent-reviews-block .recent-review .star, ota-widget .recent-reviews .recent-reviews-block .recent-review .date, .ota-widget .recent-reviews .recent-reviews-block .recent-review .star, .ota-widget .recent-reviews .recent-reviews-block .recent-review .date {
       display: inline-block;
       vertical-align: middle; }
-    ota-widget .recent-reviews .recent-reviews-block .recent-review .date {
+    ota-widget .recent-reviews .recent-reviews-block .recent-review .date, .ota-widget .recent-reviews .recent-reviews-block .recent-review .date {
       color: #b3b3b3;
       font-size: 10px; }
-    ota-widget .recent-reviews .recent-reviews-block .recent-review .stars {
+    ota-widget .recent-reviews .recent-reviews-block .recent-review .stars, .ota-widget .recent-reviews .recent-reviews-block .recent-review .stars {
       width: 100px;
       margin-bottom: 15px;
       display: inline-block; }
-    ota-widget .recent-reviews .recent-reviews-block .recent-review .comment {
+    ota-widget .recent-reviews .recent-reviews-block .recent-review .comment, .ota-widget .recent-reviews .recent-reviews-block .recent-review .comment {
       margin-bottom: 10px; }
-    ota-widget .recent-reviews .recent-reviews-block .recent-review .reviewer_info {
+    ota-widget .recent-reviews .recent-reviews-block .recent-review .reviewer_info, .ota-widget .recent-reviews .recent-reviews-block .recent-review .reviewer_info {
       color: #b3b3b3;
       font-size: 10px;
       display: table; }
-      ota-widget .recent-reviews .recent-reviews-block .recent-review .reviewer_info .icon, ota-widget .recent-reviews .recent-reviews-block .recent-review .reviewer_info .label-text {
+      ota-widget .recent-reviews .recent-reviews-block .recent-review .reviewer_info .icon, ota-widget .recent-reviews .recent-reviews-block .recent-review .reviewer_info .label-text, .ota-widget .recent-reviews .recent-reviews-block .recent-review .reviewer_info .icon, .ota-widget .recent-reviews .recent-reviews-block .recent-review .reviewer_info .label-text {
         vertical-align: middle;
         display: table-cell; }
-      ota-widget .recent-reviews .recent-reviews-block .recent-review .reviewer_info .icon {
+      ota-widget .recent-reviews .recent-reviews-block .recent-review .reviewer_info .icon, .ota-widget .recent-reviews .recent-reviews-block .recent-review .reviewer_info .icon {
         padding-right: 6px; }
-      ota-widget .recent-reviews .recent-reviews-block .recent-review .reviewer_info .country {
+      ota-widget .recent-reviews .recent-reviews-block .recent-review .reviewer_info .country, .ota-widget .recent-reviews .recent-reviews-block .recent-review .reviewer_info .country {
         padding-right: 6px; }
-      ota-widget .recent-reviews .recent-reviews-block .recent-review .reviewer_info .composition .icon {
+      ota-widget .recent-reviews .recent-reviews-block .recent-review .reviewer_info .composition .icon, .ota-widget .recent-reviews .recent-reviews-block .recent-review .reviewer_info .composition .icon {
         color: #2882bb;
         font-size: 14px; }
-    ota-widget .recent-reviews .recent-reviews-block .recent-review hr {
+    ota-widget .recent-reviews .recent-reviews-block .recent-review hr, .ota-widget .recent-reviews .recent-reviews-block .recent-review hr {
       width: 100%;
       border-top: 1px solid #d6d6d6; }
-  ota-widget .nearby .place {
+  ota-widget .nearby .place, .ota-widget .nearby .place {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 20px; }
-    ota-widget .nearby .place .name {
+    ota-widget .nearby .place .name, .ota-widget .nearby .place .name {
       width: calc(100% - 140px); }
-    ota-widget .nearby .place .distance, ota-widget .nearby .place .name {
+    ota-widget .nearby .place .distance, ota-widget .nearby .place .name, .ota-widget .nearby .place .distance, .ota-widget .nearby .place .name {
       font-size: 14px; }
-    ota-widget .nearby .place .distance {
+    ota-widget .nearby .place .distance, .ota-widget .nearby .place .distance {
       width: 65px; }
-    ota-widget .nearby .place .details {
+    ota-widget .nearby .place .details, .ota-widget .nearby .place .details {
       width: 70px; }
-      ota-widget .nearby .place .details .very_popular, ota-widget .nearby .place .details .highly_rated {
+      ota-widget .nearby .place .details .very_popular, ota-widget .nearby .place .details .highly_rated, .ota-widget .nearby .place .details .very_popular, .ota-widget .nearby .place .details .highly_rated {
         font-size: 10px;
         color: #72bb53;
         font-weight: bold; }
-  ota-widget .chart h2 {
+  ota-widget .chart h2, .ota-widget .chart h2 {
     line-height: 75px; }
-    ota-widget .chart h2 button {
+    ota-widget .chart h2 button, .ota-widget .chart h2 button {
       font-size: 13.3333px; }
-  ota-widget .chart button {
+  ota-widget .chart button, .ota-widget .chart button {
     background: transparent;
     border: none;
     color: #339;
@@ -1204,85 +1204,85 @@ ota-widget {
     margin: 20px;
     line-height: 30px;
     outline: none; }
-    ota-widget .chart button.selected {
+    ota-widget .chart button.selected, .ota-widget .chart button.selected {
       border-bottom: 1px solid blue;
       color: blue; }
-    ota-widget .chart button:first-child {
+    ota-widget .chart button:first-child, .ota-widget .chart button:first-child {
       margin-left: 50px; }
-  ota-widget .spacer {
+  ota-widget .spacer, .ota-widget .spacer {
     margin: 15px; }
-  ota-widget .mentions-row {
+  ota-widget .mentions-row, .ota-widget .mentions-row {
     padding-top: 30px; }
-  ota-widget .rating0-4 {
+  ota-widget .rating0-4, .ota-widget .rating0-4 {
     background-color: #d54939 !important; }
-  ota-widget .rating5-8 {
+  ota-widget .rating5-8, .ota-widget .rating5-8 {
     background-color: #e64d3c !important; }
-  ota-widget .rating9-12 {
+  ota-widget .rating9-12, .ota-widget .rating9-12 {
     background-color: #ea5c39 !important; }
-  ota-widget .rating13-16 {
+  ota-widget .rating13-16, .ota-widget .rating13-16 {
     background-color: #ee6a36 !important; }
-  ota-widget .rating17-20 {
+  ota-widget .rating17-20, .ota-widget .rating17-20 {
     background-color: #f37c33 !important; }
-  ota-widget .rating21-24 {
+  ota-widget .rating21-24, .ota-widget .rating21-24 {
     background-color: #f48e2f !important; }
-  ota-widget .rating25-28 {
+  ota-widget .rating25-28, .ota-widget .rating25-28 {
     background-color: #f4992d !important; }
-  ota-widget .rating29-32 {
+  ota-widget .rating29-32, .ota-widget .rating29-32 {
     background-color: #f4a42c !important; }
-  ota-widget .rating33-36 {
+  ota-widget .rating33-36, .ota-widget .rating33-36 {
     background-color: #f4ae2c !important; }
-  ota-widget .rating37-40 {
+  ota-widget .rating37-40, .ota-widget .rating37-40 {
     background-color: #f4b82c !important; }
-  ota-widget .rating41-44 {
+  ota-widget .rating41-44, .ota-widget .rating41-44 {
     background-color: #f4c02c !important; }
-  ota-widget .rating45-48 {
+  ota-widget .rating45-48, .ota-widget .rating45-48 {
     background-color: #f4c72c !important; }
-  ota-widget .rating49-52 {
+  ota-widget .rating49-52, .ota-widget .rating49-52 {
     background-color: #f4cd2c !important; }
-  ota-widget .rating53-56 {
+  ota-widget .rating53-56, .ota-widget .rating53-56 {
     background-color: #f0ce2e !important; }
-  ota-widget .rating57-60 {
+  ota-widget .rating57-60, .ota-widget .rating57-60 {
     background-color: #e8ce31 !important; }
-  ota-widget .rating61-64 {
+  ota-widget .rating61-64, .ota-widget .rating61-64 {
     background-color: #ddce36 !important; }
-  ota-widget .rating65-68 {
+  ota-widget .rating65-68, .ota-widget .rating65-68 {
     background-color: #d2ce3b !important; }
-  ota-widget .rating69-72 {
+  ota-widget .rating69-72, .ota-widget .rating69-72 {
     background-color: #c5ce40 !important; }
-  ota-widget .rating73-76 {
+  ota-widget .rating73-76, .ota-widget .rating73-76 {
     background-color: #b8ce46 !important; }
-  ota-widget .rating77-80 {
+  ota-widget .rating77-80, .ota-widget .rating77-80 {
     background-color: #a7ce4e !important; }
-  ota-widget .rating81-84 {
+  ota-widget .rating81-84, .ota-widget .rating81-84 {
     background-color: #96ce56 !important; }
-  ota-widget .rating85-88 {
+  ota-widget .rating85-88, .ota-widget .rating85-88 {
     background-color: #83ce5f !important; }
-  ota-widget .rating89-92 {
+  ota-widget .rating89-92, .ota-widget .rating89-92 {
     background-color: #75ce65 !important; }
-  ota-widget .rating93-96 {
+  ota-widget .rating93-96, .ota-widget .rating93-96 {
     background-color: #63cc6d !important; }
-  ota-widget .rating97-100 {
+  ota-widget .rating97-100, .ota-widget .rating97-100 {
     background-color: #54ca74 !important; }
   @media (min-width: 768px) {
-    ota-widget {
+    ota-widget, .ota-widget {
       font-size: 14px; }
-      ota-widget .mentions .topic {
+      ota-widget .mentions .topic, .ota-widget .mentions .topic {
         font-size: 15px;
         text-transform: capitalize; }
-      ota-widget .masonry-image-list {
+      ota-widget .masonry-image-list, .ota-widget .masonry-image-list {
         -webkit-column-count: 2;
         column-count: 2; } }
   @media (min-width: 1200px) {
-    ota-widget {
+    ota-widget, .ota-widget {
       font-size: 15px; }
-      ota-widget .masonry-image-list {
+      ota-widget .masonry-image-list, .ota-widget .masonry-image-list {
         -webkit-column-count: 3;
         column-count: 3; } }
   @media (min-width: 1500px) {
-    ota-widget .masonry-image-list {
+    ota-widget .masonry-image-list, .ota-widget .masonry-image-list {
       -webkit-column-count: 4;
       column-count: 4; } }
   @media (min-width: 1800px) {
-    ota-widget .masonry-image-list {
+    ota-widget .masonry-image-list, .ota-widget .masonry-image-list {
       -webkit-column-count: 5;
       column-count: 5; } }

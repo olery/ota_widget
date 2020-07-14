@@ -21,7 +21,8 @@ window.ota_widget = {
     this.init(token)
 
     riot.compile(() => {
-      this.tag = this.loadTag('ota-widget', this.ui.tagClass)
+      if (!this.tag) this.tag = this.loadTag('ota-widget', this.ui.tagClass)
+
       this.api.review_widget({}).then(json => {
         _.assign(this.data, this.ui.transformData(json.data))
         this.tag.update()
