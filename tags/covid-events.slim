@@ -21,8 +21,10 @@ covid-events.mdc-image-list__item
     ota_widget.ui.tagClass.bind(this)()
 
     this.topics = ['covid', 'sanitary_safety', 'health_precautions']
-
-    this.on('update', function() {
+    load() {
       this.mentions = _.filter(this.d.mentions, function(m) {return _.includes(this.topics, m.topic)}.bind(this))
-    })
+    }
+
+    this.load()
+    this.on('update', this.load)
 

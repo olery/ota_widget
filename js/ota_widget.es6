@@ -11,9 +11,14 @@ window.ota_widget = {
 
   data: {},
 
+  initted: false,
+
   init(token) {
+    if (this.initted) return
+    if (window.google) google.charts.load('current', {'packages': ['corechart']})
     if (token) this.api.token = token
     this.i18n.load()
+    this.initted = true
   },
 
   // initialization function: loads locale and loads Riot component
@@ -26,11 +31,10 @@ window.ota_widget = {
       this.api.review_widget({}).then(json => {
         _.assign(this.data, this.ui.transformData(json.data))
         this.tag.update()
-        this.tag.update() // Sentiment Score only load on second call
 
         if (window.google) {
-          google.charts.load('current', {'packages': ['corechart']})
-          google.charts.setOnLoadCallback(this.charts.load)
+          if (!google.visualization) google.charts.setOnLoadCallback(this.charts.load)
+          else this.charts.load()
         }
       })
     })
@@ -314,9 +318,9 @@ window.ota_widget.charts = {
   removeGaps(data) {
     const size = data[0].length
     _.each(data, (a, k) => {
-      if (a.length < size) {
-        _.remove(data, (n, j) => { return j == k })
-      }
+      if (!a) return
+      if (a.length < size)
+        _.remove(data, (n, j) => j == k)
     })
   },
 

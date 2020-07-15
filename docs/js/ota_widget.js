@@ -10,9 +10,14 @@ window.ota_widget = {
 
   data: {},
 
+  initted: false,
+
   init: function init(token) {
+    if (this.initted) return;
+    if (window.google) google.charts.load('current', { 'packages': ['corechart'] });
     if (token) this.api.token = token;
     this.i18n.load();
+    this.initted = true;
   },
 
   // initialization function: loads locale and loads Riot component
@@ -27,11 +32,9 @@ window.ota_widget = {
       _this.api.review_widget({}).then(function (json) {
         _.assign(_this.data, _this.ui.transformData(json.data));
         _this.tag.update();
-        _this.tag.update(); // Sentiment Score only load on second call
 
         if (window.google) {
-          google.charts.load('current', { 'packages': ['corechart'] });
-          google.charts.setOnLoadCallback(_this.charts.load);
+          if (!google.visualization) google.charts.setOnLoadCallback(_this.charts.load);else _this.charts.load();
         }
       });
     });
@@ -339,11 +342,10 @@ window.ota_widget.charts = {
   removeGaps: function removeGaps(data) {
     var size = data[0].length;
     _.each(data, function (a, k) {
-      if (a.length < size) {
-        _.remove(data, function (n, j) {
-          return j == k;
-        });
-      }
+      if (!a) return;
+      if (a.length < size) _.remove(data, function (n, j) {
+        return j == k;
+      });
     });
   },
 
