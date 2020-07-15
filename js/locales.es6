@@ -98,7 +98,7 @@ window.ota_widget.i18n.locales = {
         sanitary_safety: 'Sanitary Safety Score',
         health_precautions: 'Health Precaution Score',
         covid: 'Covid Count',
-        breakfast_area: 'breakfast',
+        breakfast_area: 'Breakfast Area',
         chemicals: 'Chemical Odor',
         defects: 'Defects in the Room',
         entertainment: 'Entertainment Facilities',
