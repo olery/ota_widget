@@ -1277,7 +1277,9 @@ ota-widget, .ota-widget {
       font-size: 15px; }
       ota-widget .masonry-image-list, .ota-widget .masonry-image-list {
         -webkit-column-count: 3;
-        column-count: 3; } }
+        column-count: 3; }
+      ota-widget .masonry-image-list.charts-blocks, .ota-widget .masonry-image-list.charts-blocks {
+        column-count: 2; } }
   @media (min-width: 1500px) {
     ota-widget .masonry-image-list, .ota-widget .masonry-image-list {
       -webkit-column-count: 4;

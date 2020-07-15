@@ -484,6 +484,10 @@ ota-widget, .ota-widget {
       -webkit-column-count: 3;
       column-count: 3;
     }
+    .masonry-image-list.charts-blocks {
+      column-count: 2
+    }
+
   }
   @media (min-width: 1500px) {
     .masonry-image-list {
