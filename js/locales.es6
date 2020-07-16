@@ -94,7 +94,7 @@ window.ota_widget.i18n.locales = {
 
     covid_events: {
       title: 'COVID-19',
-      description: 'This information provides you with an update on the total number of active cases on a continental level. The information is taken directly from the WHO API and is updated daily. Keep track of the regional Covid-19 infections to better understand when regions will re-open up for travel. This data is based on weekly confirmed cases.',
+      description: 'This information provides you with an update on the total number of weekly confirmed cases on a continental level. The information is taken directly from the WHO API and is updated daily. Keep track of the regional Covid-19 infections to better understand when regions will re-open up for travel. This data is based on weekly confirmed cases.'
     },
 
     opinions: {
