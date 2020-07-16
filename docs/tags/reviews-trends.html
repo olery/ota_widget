@@ -1,5 +1,8 @@
 <reviews-trends class="mdc-image-list__item">
-  <div class="trends chart block mdc-elevation--z1">
+  <div class="trends chart block mdc-elevation--z1" if="{d.reviews_over_time &amp;&amp; d.events}">
+    <div aria-describedby="tooltip-recent_reviews" class="material-icons info">
+      info 
+    </div>
     <h2>
       {t('trends.title')} <button class="{selected: ota_widget.reviews_trends.period == &quot;quarter&quot;}" onclick="ota_widget.charts.changePeriod(&#39;reviews_trends&#39;, &#39;quarter&#39;);">{t('charts.quarter')} </button><button class="{selected: ota_widget.reviews_trends.period == &quot;year&quot;}" onclick="ota_widget.charts.changePeriod(&#39;reviews_trends&#39;, &#39;year&#39;)">{t('charts.year')} </button>
     </h2>
@@ -7,5 +10,11 @@
   </div>
   <script>
     ota_widget.ui.tagClass.bind(this)()
+    
+    this.on('mount', function() {
+      tippy('reviews-trends .material-icons.info', {
+        content: this.t('trends.description'),
+      });
+    })
   </script>
 </reviews-trends>

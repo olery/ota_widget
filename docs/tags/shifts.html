@@ -1,5 +1,8 @@
 <shifts class="mdc-image-list__item">
   <div class="chart block mdc-elevation--z1" if="{d.shifts}">
+    <div class="material-icons info">
+      info 
+    </div>
     <h2>
       {t('shifts.title')} 
     </h2>
@@ -7,5 +10,11 @@
   </div>
   <script>
     ota_widget.ui.tagClass.bind(this)()
+    
+    this.on('mount', function() {
+      tippy('shifts .material-icons.info', {
+        content: this.t('shifts.description'),
+      });
+    })
   </script>
 </shifts>

@@ -2,6 +2,8 @@
 ---
 reviews-over-time.mdc-image-list__item
   .over_time.chart.block.mdc-elevation--z1 if='{d.reviews_over_time}'
+    .material-icons.info
+      'info
     h2
       '{t('over_time.title')}
 
@@ -14,3 +16,8 @@ reviews-over-time.mdc-image-list__item
   javascript:
     ota_widget.ui.tagClass.bind(this)()
 
+    this.on('mount', function() {
+      tippy('reviews-over-time .material-icons.info', {
+        content: this.t('over_time.description'),
+      });
+    })

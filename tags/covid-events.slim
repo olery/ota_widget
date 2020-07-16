@@ -2,6 +2,8 @@
 ---
 covid-events.mdc-image-list__item
   .chart.block.mdc-elevation--z1 if='{d.events}'
+    .material-icons.info
+      'info
     h2
       '{t('covid_events.title')}
 
@@ -28,3 +30,8 @@ covid-events.mdc-image-list__item
     this.load()
     this.on('update', this.load)
 
+    this.on('mount', function() {
+      tippy('covid-events .material-icons.info', {
+        content: this.t('covid_events.description'),
+      });
+    })

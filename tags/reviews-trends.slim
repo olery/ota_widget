@@ -1,9 +1,12 @@
 ---
 ---
 reviews-trends.mdc-image-list__item
-  .trends.chart.block.mdc-elevation--z1
+  .trends.chart.block.mdc-elevation--z1 if='{d.reviews_over_time && d.events}'
+    .material-icons.info aria-describedby="tooltip-recent_reviews"
+      'info
     h2
       '{t('trends.title')}
+
 
       button onclick="ota_widget.charts.changePeriod('reviews_trends', 'quarter');" class='{selected: ota_widget.reviews_trends.period == "quarter"}'
         '{t('charts.quarter')}
@@ -14,3 +17,8 @@ reviews-trends.mdc-image-list__item
   javascript:
     ota_widget.ui.tagClass.bind(this)()
 
+    this.on('mount', function() {
+      tippy('reviews-trends .material-icons.info', {
+        content: this.t('trends.description'),
+      });
+    })

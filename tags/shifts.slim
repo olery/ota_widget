@@ -2,6 +2,8 @@
 ---
 shifts.mdc-image-list__item
   .chart.block.mdc-elevation--z1 if='{d.shifts}'
+    .material-icons.info
+      'info
     h2
       '{t('shifts.title')}
 
@@ -10,3 +12,8 @@ shifts.mdc-image-list__item
   javascript:
     ota_widget.ui.tagClass.bind(this)()
 
+    this.on('mount', function() {
+      tippy('shifts .material-icons.info', {
+        content: this.t('shifts.description'),
+      });
+    })
