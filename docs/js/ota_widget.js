@@ -443,7 +443,7 @@ window.ota_widget.reviews_trends = {
       series: series,
       axesSeries: false,
       data: data,
-      options: { title: 'Trends in logarithmic view', vAxis: { scaleType: 'log' } },
+      options: { vAxis: { title: 'log', scaleType: 'log' } },
       chartClass: google.visualization.LineChart
     };
   }

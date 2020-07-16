@@ -355,7 +355,7 @@ window.ota_widget.charts = {
         titleTextStyle: {color: '#333', fontSize: '10px'}
       },
       legend: { position: 'top', alignment: 'start' },
-      vAxis:  {gridlines: { count: 4 }, minValue: 0 },
+      vAxis:  { gridlines: { count: 4 }, minValue: 0 },
       chartArea: {width: '85%', height: '80%'},
     };
 
@@ -421,7 +421,7 @@ window.ota_widget.reviews_trends = {
       series:     series,
       axesSeries: false,
       data:       data,
-      options:    { title:'Trends in logarithmic view', vAxis: { scaleType: 'log' } },
+      options:    { vAxis: { title: 'log', scaleType: 'log' } },
       chartClass: google.visualization.LineChart
     }
   },
