@@ -4,6 +4,11 @@
 $padding: 8px;
 $glutter: 15px;
 
+.tippy-box {
+  font-family: Helvetica;
+  font-size: 15px;
+}
+
 ota-widget, .ota-widget {
   @import 'flags-48x48';
   .flag-16-11 {

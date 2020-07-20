@@ -81,7 +81,7 @@ window.ota_widget.i18n.locales = {
 
     trends: {
       title: 'Trends',
-      description: 'Utilising our worldwide coverage of hotels consisting of almost 1 million properties. We track the review volume per your property, country and continent level. Track how your country is recovering from Covid-19 by monitoring the review volume and compare how your property is doing to the national average. Also, keep a track of active cases of Covid-19 in your country with data directly from WHO on a daily basis.'
+      description: 'Utilising our worldwide coverage of hotels consisting of almost 1 million properties. We track the review volume per your property, country and continent level. Track how your country is recovering from Covid-19 by monitoring the review volume and compare how your property is doing to the national average. Also, keep a track of confirmed cases of Covid-19 in your country with data directly from WHO on a daily basis.'
     },
 
     shifts: {
