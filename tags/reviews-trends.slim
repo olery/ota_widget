@@ -7,18 +7,52 @@ reviews-trends.mdc-image-list__item
     h2
       '{t('trends.title')}
 
-
-      button onclick="ota_widget.charts.changePeriod('reviews_trends', 'quarter');" class='{selected: ota_widget.reviews_trends.period == "quarter"}'
+      button period='quarter' onclick='{changePeriod}' class='{selected: this.period == "quarter"}'
         '{t('charts.quarter')}
-      button onclick="ota_widget.charts.changePeriod('reviews_trends', 'year')" class='{selected: ota_widget.reviews_trends.period == "year"}'
+      button period='year' onclick='{changePeriod}' class='{selected: this.period == "year"}'
         '{t('charts.year')}
-    #trends-chart style="width: 100%; height: 500px;"
+
+    #trends-chart style='width: 100%; height: 500px;'
 
   javascript:
     ota_widget.ui.tagClass.bind(this)()
+    this.period = 'quarter'
 
-    this.on('mount', function() {
+    changePeriod(e) {
+      this.w.charts.changePeriod(this, e.target.getAttribute('period'))
+    }
+
+    load() {
       tippy('reviews-trends .material-icons.info', {
         content: this.t('trends.description'),
-      });
-    })
+      })
+
+      this.w.charts.draw(this)
+    }
+
+    data() {
+      var data = this.d.reviews_over_time
+      if (!data) return
+
+      var series = ['property', 'country', 'continent', 'covid_cases']
+      var data   = {
+        property:    data.company.current,
+        country:     data.country.current,
+        continent:   data.continent.current,
+        covid_cases: this.d.events.country,
+      }
+
+      return {
+        id:         'trends-chart',
+        header:     [''].concat(this.w.charts.t(series)),
+        series:     series,
+        axesSeries: false,
+        data:       data,
+        options:    { vAxis: { title: 'log', scaleType: 'log' } },
+        chartClass: google.visualization.LineChart,
+      }
+    }
+
+    this.on('mount',  this.load)
+    this.on('update', this.load)
+

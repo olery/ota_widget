@@ -348,8 +348,10 @@ ota-widget, .ota-widget {
     color: #333;
   }
 
-  reviews-trends, covid-events, reviews-over-time {
-    h2 { display: inline; }
+  .chart {
+    h2 {
+      display: inline;
+    }
     .material-icons.info {
       float: right;
     }

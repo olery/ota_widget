@@ -21,17 +21,34 @@ covid-events.mdc-image-list__item
 
   javascript:
     ota_widget.ui.tagClass.bind(this)()
-
+    this.period = 'quarter'
     this.topics = ['covid', 'sanitary_safety', 'health_precautions']
+
     load() {
       this.mentions = _.filter(this.d.mentions, function(m) {return _.includes(this.topics, m.topic)}.bind(this))
-    }
 
-    this.load()
-    this.on('update', this.load)
-
-    this.on('mount', function() {
       tippy('covid-events .material-icons.info', {
         content: this.t('covid_events.description'),
-      });
-    })
+      })
+
+      this.w.charts.draw(this)
+    }
+
+    data() {
+      var data = this.d.events
+      if (!data) return
+
+      delete data.continents.antarctica
+      var series = _.keys(data.continents)
+      return {
+        id:         'covid_events-chart',
+        header:     [''].concat(ota_widget.charts.t(series)),
+        series:     series,
+        data:       data.continents,
+        chartClass: google.visualization.LineChart
+      }
+    }
+
+    this.on('mount',  this.load)
+    this.on('update', this.load)
+

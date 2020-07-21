@@ -1,20 +1,28 @@
 <shifts class="mdc-image-list__item">
-  <div class="chart block mdc-elevation--z1" if="{d.shifts}">
+  <div class="shifts chart block mdc-elevation--z1" if="{d.shifts}">
     <div class="material-icons info">
       info 
     </div>
     <h2>
-      {t('shifts.title')} 
+      {t('shifts.title')} <button class="{selected: this.period == &quot;quarter&quot;}" onclick="{changePeriod}" period="quarter">{t('charts.quarter')} </button><button class="{selected: this.period == &quot;year&quot;}" onclick="{changePeriod}" period="year">{t('charts.year')} </button>
     </h2>
-    <div id="shifts-chart" style="width: 100%; height: 500px;"></div>
+    <div id="shifts-chart" style="width: 100%; height: 500px"></div>
   </div>
   <script>
     ota_widget.ui.tagClass.bind(this)()
+    this.period = 'quarter'
     
-    this.on('mount', function() {
+    changePeriod(e) {
+      this.w.charts.changePeriod(this, e.target.getAttribute('period'))
+    }
+    
+    load() {
       tippy('shifts .material-icons.info', {
         content: this.t('shifts.description'),
-      });
-    })
+      })
+    }
+    
+    this.on('mount',  this.load)
+    this.on('update', this.load)
   </script>
 </shifts>

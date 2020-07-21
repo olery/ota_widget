@@ -7,17 +7,43 @@ reviews-over-time.mdc-image-list__item
     h2
       '{t('over_time.title')}
 
-      button onclick="ota_widget.charts.changePeriod('reviews_over_time', 'quarter');" class='{selected: ota_widget.reviews_over_time.period == "quarter"}'
+      button period='quarter' onclick='{changePeriod}' class='{selected: this.period == "quarter"}'
         '{t('charts.quarter')}
-      button onclick="ota_widget.charts.changePeriod('reviews_over_time', 'year')" class='{selected: ota_widget.reviews_over_time.period == "year"}'
+      button period='year' onclick='{changePeriod}' class='{selected: this.period == "year"}'
         '{t('charts.year')}
-    #over-time-chart style="width: 100%; height: 500px;"
+
+    #over-time-chart style="width: 100%; height: 500px"
 
   javascript:
     ota_widget.ui.tagClass.bind(this)()
+    this.period = 'quarter'
 
-    this.on('mount', function() {
+    changePeriod(e) {
+      this.w.charts.changePeriod(this, e.target.getAttribute('period'))
+    }
+
+    load() {
       tippy('reviews-over-time .material-icons.info', {
         content: this.t('over_time.description'),
-      });
-    })
+      })
+
+      this.w.charts.draw(this)
+    }
+
+    data() {
+      var data = this.d.reviews_over_time
+      if (!data) return
+
+      var series = ['current', 'previous']
+      return {
+        header:     [''].concat(this.w.charts.t(series)),
+        id:         'over-time-chart',
+        series:     series,
+        data:       data.company,
+        chartClass: google.visualization.LineChart,
+      }
+    }
+
+    this.on('mount',  this.load)
+    this.on('update', this.load)
+

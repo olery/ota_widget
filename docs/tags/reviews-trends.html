@@ -4,17 +4,50 @@
       info 
     </div>
     <h2>
-      {t('trends.title')} <button class="{selected: ota_widget.reviews_trends.period == &quot;quarter&quot;}" onclick="ota_widget.charts.changePeriod(&#39;reviews_trends&#39;, &#39;quarter&#39;);">{t('charts.quarter')} </button><button class="{selected: ota_widget.reviews_trends.period == &quot;year&quot;}" onclick="ota_widget.charts.changePeriod(&#39;reviews_trends&#39;, &#39;year&#39;)">{t('charts.year')} </button>
+      {t('trends.title')} <button class="{selected: this.period == &quot;quarter&quot;}" onclick="{changePeriod}" period="quarter">{t('charts.quarter')} </button><button class="{selected: this.period == &quot;year&quot;}" onclick="{changePeriod}" period="year">{t('charts.year')} </button>
     </h2>
     <div id="trends-chart" style="width: 100%; height: 500px;"></div>
   </div>
   <script>
     ota_widget.ui.tagClass.bind(this)()
+    this.period = 'quarter'
     
-    this.on('mount', function() {
+    changePeriod(e) {
+      this.w.charts.changePeriod(this, e.target.getAttribute('period'))
+    }
+    
+    load() {
       tippy('reviews-trends .material-icons.info', {
         content: this.t('trends.description'),
-      });
-    })
+      })
+    
+      this.w.charts.draw(this)
+    }
+    
+    data() {
+      var data = this.d.reviews_over_time
+      if (!data) return
+    
+      var series = ['property', 'country', 'continent', 'covid_cases']
+      var data   = {
+        property:    data.company.current,
+        country:     data.country.current,
+        continent:   data.continent.current,
+        covid_cases: this.d.events.country,
+      }
+    
+      return {
+        id:         'trends-chart',
+        header:     [''].concat(this.w.charts.t(series)),
+        series:     series,
+        axesSeries: false,
+        data:       data,
+        options:    { vAxis: { title: 'log', scaleType: 'log' } },
+        chartClass: google.visualization.LineChart,
+      }
+    }
+    
+    this.on('mount',  this.load)
+    this.on('update', this.load)
   </script>
 </reviews-trends>

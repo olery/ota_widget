@@ -1220,9 +1220,9 @@ ota-widget, .ota-widget {
   ota-widget .material-icons.info, .ota-widget .material-icons.info {
     cursor: pointer;
     color: #333; }
-  ota-widget reviews-trends h2, ota-widget covid-events h2, ota-widget reviews-over-time h2, .ota-widget reviews-trends h2, .ota-widget covid-events h2, .ota-widget reviews-over-time h2 {
+  ota-widget .chart h2, .ota-widget .chart h2 {
     display: inline; }
-  ota-widget reviews-trends .material-icons.info, ota-widget covid-events .material-icons.info, ota-widget reviews-over-time .material-icons.info, .ota-widget reviews-trends .material-icons.info, .ota-widget covid-events .material-icons.info, .ota-widget reviews-over-time .material-icons.info {
+  ota-widget .chart .material-icons.info, .ota-widget .chart .material-icons.info {
     float: right; }
   ota-widget .rating0-4, .ota-widget .rating0-4 {
     background-color: #d54939 !important; }

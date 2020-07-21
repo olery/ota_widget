@@ -320,18 +320,14 @@ window.ota_widget.ml2km = function (distance) {
 // It's a fallback function for missing topic translations
 window.ota_widget.topic_label_for = function (topic) {
   var label = ota_widget.i18n.translate('opinions.topics.' + topic, { 'default': undefined });
-  if (label == undefined) {
-    label = _.startCase(topic);
-  }
+  if (!label) label = _.startCase(topic);
+
   return label.toLowerCase();
 };
 
 window.ota_widget.charts = {
-  load: function load() {
-    window.ota_widget.charts.draw('reviews_over_time');
-    window.ota_widget.charts.draw('reviews_trends');
-    window.ota_widget.charts.draw('covid_events');
-  },
+
+  load: function load() {},
 
   t: function t(arr) {
     return _.map(arr, function (n) {
@@ -349,29 +345,25 @@ window.ota_widget.charts = {
     });
   },
 
-  draw: function draw(component) {
-    var driver = ota_widget[component];
-    if (!driver) return;
-    var data = driver.loadData();
+  draw: function draw(tag) {
+    var data = tag.data();
     if (!data) return;
-    var dataTable = [data.header];
-    var dateFmt = driver.period == 'quarter' ? 'week' : 'month';
-    var chart = ota_widget.charts[component];
-    var series = {};
 
+    var dataTable = [data.header];
+    var dateFmt = tag.period == 'quarter' ? 'week' : 'month';
+    var series = {};
     _.each(data.series, function (serie, i) {
       series[i] = { targetAxisIndex: i };
-      var obj = data.data[serie][driver.period];
+      var obj = data.data[serie][tag.period];
       _.each(obj, function (d, i) {
-        if (dataTable[i + 1] == undefined) dataTable.push([window.ota_widget.date.format(d['date'], dateFmt)]);
+        if (!dataTable[i + 1]) dataTable.push([ota_widget.date.format(d.date, dateFmt)]);
 
-        var count = d['count'] || 0;
+        var count = d.count || 0;
         dataTable[i + 1].push(parseInt(count));
       });
     });
 
     this.removeGaps(dataTable);
-
     var dataArray = google.visualization.arrayToDataTable(dataTable);
     var options = {
       hAxis: {
@@ -382,90 +374,20 @@ window.ota_widget.charts = {
       vAxis: { gridlines: { count: 4 }, minValue: 0 },
       chartArea: { width: '85%', height: '80%' }
     };
-
     if (data.options) options = _.merge(options, data.options);
-
     if (data.axesSeries) {
-      options['series'] = series;
-      options['vAxis'] = { textPosition: 'none' };
+      options.series = series;
+      options.vAxis = { textPosition: 'none' };
     }
 
-    if (!driver.chart) driver.chart = new data.chartClass(document.getElementById(data.id));
-    driver.chart.draw(dataArray, options);
+    if (!tag.chart) tag.chart = new data.chartClass(document.getElementById(data.id));
+    tag.chart.draw(dataArray, options);
   },
 
-  changePeriod: function changePeriod(component, period) {
-    if (window.ota_widget[component].period == period) return;
-    window.ota_widget[component].period = period;
-    window.ota_widget.charts.draw(component);
-    ota_widget.tag.update();
-  }
-};
-
-window.ota_widget.reviews_over_time = {
-
-  period: 'quarter',
-
-  loadData: function loadData() {
-    var data = ota_widget.data.reviews_over_time;
-    if (!data) return;
-
-    var series = ['current', 'previous'];
-    return {
-      header: [''].concat(ota_widget.charts.t(series)),
-      id: 'over-time-chart',
-      series: series,
-      data: data.company,
-      chartClass: google.visualization.LineChart
-    };
-  }
-};
-
-window.ota_widget.reviews_trends = {
-
-  period: 'quarter',
-
-  loadData: function loadData() {
-    var data = ota_widget.data.reviews_over_time;
-    if (!data) return;
-
-    var series = ['property', 'country', 'continent', 'covid_cases'];
-    var data = {
-      property: data.company.current,
-      country: data.country.current,
-      continent: data.continent.current,
-      covid_cases: ota_widget.data.events.country
-    };
-
-    return {
-      id: 'trends-chart',
-      header: [''].concat(ota_widget.charts.t(series)),
-      series: series,
-      axesSeries: false,
-      data: data,
-      options: { vAxis: { title: 'log', scaleType: 'log' } },
-      chartClass: google.visualization.LineChart
-    };
-  }
-};
-
-window.ota_widget.covid_events = {
-
-  period: 'quarter',
-
-  loadData: function loadData() {
-    var data = ota_widget.data.events;
-    if (!data) return;
-
-    delete data.continents.antarctica;
-    var series = _.keys(data.continents);
-    return {
-      id: 'covid_events-chart',
-      header: [''].concat(ota_widget.charts.t(series)),
-      series: series,
-      data: data.continents,
-      chartClass: google.visualization.LineChart
-    };
+  changePeriod: function changePeriod(tag, period) {
+    if (tag.period == period) return;
+    tag.period = period;
+    tag.update();
   }
 };
 
