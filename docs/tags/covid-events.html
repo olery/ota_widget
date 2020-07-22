@@ -8,7 +8,7 @@
     </h2>
     <div id="covid_events-chart" style="width: 100%; height: 500px;"></div>
     <div class="mentions-row">
-      <div class="mention" each="{m,i in mentions}">
+      <div class="mention" each="{m in scoreMentions}">
         <div class="mention-meta">
           <div class="topic">
             <strong>{t('opinions.topics.'+m.topic, {default: m.label})} </strong>
@@ -18,15 +18,27 @@
           {w.mentions.scoreLabel(m)} 
         </div>
       </div>
+      <div class="mention" if="{covid}">
+        <div class="mention-meta">
+          <div class="topic">
+            <strong>{t('opinions.topics.'+covid.topic, {default: covid.label})} </strong>
+          </div>
+          <div class="times">
+            {covid.opinions_count} {t('mentions.times')} 
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <script>
     ota_widget.ui.tagClass.bind(this)()
-    this.period = 'quarter'
-    this.topics = ['covid', 'sanitary_safety', 'health_precautions']
+    this.period      = 'quarter'
+    this.scoreTopics = ['sanitary_safety', 'health_precautions']
     
     load() {
-      this.mentions = _.filter(this.d.mentions, function(m) {return _.includes(this.topics, m.topic)}.bind(this))
+      this.mentions      = _.keyBy(this.d.mentions, 'topic')
+      this.scoreMentions = _.values(_.pick(this.mentions, this.scoreTopics))
+      this.covid         = this.mentions.covid
     
       tippy('covid-events .material-icons.info', {
         content: this.t('covid_events.description'),

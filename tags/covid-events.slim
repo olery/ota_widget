@@ -10,22 +10,31 @@ covid-events.mdc-image-list__item
     #covid_events-chart style="width: 100%; height: 500px;"
 
     .mentions-row
-      .mention each='{m,i in mentions}'
+      .mention each='{m in scoreMentions}'
         .mention-meta
           .topic
             strong
               '{t('opinions.topics.'+m.topic, {default: m.label})}
-
         .mention-score class='{w.mentions.scoreClass(m)}'
           '{w.mentions.scoreLabel(m)}
 
+      .mention if='{covid}'
+        .mention-meta
+          .topic
+            strong
+              '{t('opinions.topics.'+covid.topic, {default: covid.label})}
+          .times
+            '{covid.opinions_count} {t('mentions.times')}
+
   javascript:
     ota_widget.ui.tagClass.bind(this)()
-    this.period = 'quarter'
-    this.topics = ['covid', 'sanitary_safety', 'health_precautions']
+    this.period      = 'quarter'
+    this.scoreTopics = ['sanitary_safety', 'health_precautions']
 
     load() {
-      this.mentions = _.filter(this.d.mentions, function(m) {return _.includes(this.topics, m.topic)}.bind(this))
+      this.mentions      = _.keyBy(this.d.mentions, 'topic')
+      this.scoreMentions = _.values(_.pick(this.mentions, this.scoreTopics))
+      this.covid         = this.mentions.covid
 
       tippy('covid-events .material-icons.info', {
         content: this.t('covid_events.description'),
