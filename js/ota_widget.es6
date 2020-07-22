@@ -32,10 +32,8 @@ window.ota_widget = {
         _.assign(this.data, this.ui.transformData(json.data))
         this.tag.update()
 
-        if (window.google) {
-          if (!google.visualization) google.charts.setOnLoadCallback(this.charts.load)
-          else this.charts.load()
-        }
+        if (window.google) 
+          google.charts.setOnLoadCallback(this.tag.update)
       })
     })
   },
@@ -304,9 +302,6 @@ window.ota_widget.topic_label_for = (topic) => {
 }
 
 window.ota_widget.charts = {
-
-  load() {
-  },
 
   t(arr) {
     return _.map(arr, (n) => ota_widget.t(`charts.${n}`))

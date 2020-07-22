@@ -33,9 +33,7 @@ window.ota_widget = {
         _.assign(_this.data, _this.ui.transformData(json.data));
         _this.tag.update();
 
-        if (window.google) {
-          if (!google.visualization) google.charts.setOnLoadCallback(_this.charts.load);else _this.charts.load();
-        }
+        if (window.google) google.charts.setOnLoadCallback(_this.tag.update);
       });
     });
   },
@@ -326,8 +324,6 @@ window.ota_widget.topic_label_for = function (topic) {
 };
 
 window.ota_widget.charts = {
-
-  load: function load() {},
 
   t: function t(arr) {
     return _.map(arr, function (n) {

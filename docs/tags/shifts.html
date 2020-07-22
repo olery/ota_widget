@@ -20,6 +20,36 @@
       tippy('shifts .material-icons.info', {
         content: this.t('shifts.description'),
       })
+    
+      this.w.charts.draw(this)
+    }
+    
+    data() {
+      var data = this.d.shifts
+      if (!data) return
+    
+      var fData = {}
+      _.each(_.values(data.company), (sdata) => {
+        _.each(sdata, (pdata, period) => {
+          _.each(pdata.downwards.concat(pdata.upwards), (d) => {
+            fData[d.segment_title] = fData[d.segment_title] || {}
+            var cdata   = (fData[d.segment_title][period] = fData[d.segment_title][period] || [])
+            _.each(d.over_time, (e) => {
+              var count = e.current.review_count - e.previous.review_count
+              cdata.push({count: e.review_count})
+            })
+          })
+        })
+      })
+    
+      var series = _.keys(data)
+      return {
+        header:     [''].concat(series),
+        id:         'shifts-chart',
+        series:     series,
+        data:       data,
+        chartClass: google.visualization.LineChart,
+      }
     }
     
     this.on('mount',  this.load)
