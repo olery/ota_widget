@@ -1,7 +1,7 @@
 ---
 ---
 shifts.mdc-image-list__item
-  .shifts.chart.block.mdc-elevation--z1 if='{false}'
+  .shifts.chart.block.mdc-elevation--z1 if='{d.shifts}'
     .material-icons.info
       'info
     h2
@@ -36,24 +36,26 @@ shifts.mdc-image-list__item
 
       var fData = {}
       _.each(_.values(data.company), (sdata) => {
-        _.each(sdata, (pdata, period) => {
-          _.each(pdata.downwards.concat(pdata.upwards), (d) => {
-            fData[d.segment_title] = fData[d.segment_title] || {}
-            var cdata   = (fData[d.segment_title][period] = fData[d.segment_title][period] || [])
-            _.each(d.over_time, (e) => {
-              var count = e.current.review_count - e.previous.review_count
-              cdata.push({count: e.review_count})
-            })
+        var pdata = sdata[this.period]
+        // many data not available in quarter
+        if (!pdata) return
+
+        _.each(pdata.downwards.concat(pdata.upwards), (d) => {
+          fData[d.segment_title] = fData[d.segment_title] || {}
+          var cdata   = (fData[d.segment_title][this.period] = fData[d.segment_title][this.period] || [])
+          _.each(d.over_time, (e) => {
+            var count = e.current.review_count - e.previous.review_count
+            cdata.push({date: e.current.date, count: count})
           })
         })
       })
 
-      var series = _.keys(data)
+      var series = _.keys(fData)
       return {
         header:     [''].concat(series),
         id:         'shifts-chart',
         series:     series,
-        data:       data,
+        data:       fData,
         chartClass: google.visualization.LineChart,
       }
     }
