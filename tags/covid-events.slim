@@ -15,7 +15,9 @@ covid-events.mdc-image-list__item
           .topic
             strong
               '{t('opinions.topics.'+m.topic, {default: m.label})}
-        .mention-score class='{w.mentions.scoreClass(m)}'
+          .times if='{isEmpty(m)}'
+            'not enough data
+        .mention-score class='{w.mentions.scoreClass(m)}' if='{!isEmpty(m)}'
           '{w.mentions.scoreLabel(m)}
 
       .mention if='{covid}'
@@ -31,10 +33,19 @@ covid-events.mdc-image-list__item
     this.period      = 'quarter'
     this.scoreTopics = ['sanitary_safety', 'health_precautions']
 
+    isEmpty(m) {
+      return !m.positive_opinions && !m.negative_opinions
+    }
+
     load() {
       this.mentions      = _.keyBy(this.d.mentions, 'topic')
       this.scoreMentions = _.values(_.pick(this.mentions, this.scoreTopics))
       this.covid         = this.mentions.covid
+
+      if (!this.mentions.health_precautions)
+        this.scoreMentions.push({topic: 'health_precautions'})
+      if (!this.mentions.sanitary_safety)
+        this.scoreMentions.push({topic: 'sanitary_safety'})
 
       tippy('covid-events .material-icons.info', {
         content: this.t('covid_events.description'),

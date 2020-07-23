@@ -25,16 +25,16 @@
     }
     
     data() {
-      var data = this.d.reviews_over_time
+      var data  = this.d.reviews_over_time
       if (!data) return
     
-      var series = ['property', 'country', 'continent', 'covid_cases']
-      var data   = {
+      data      = {
         property:    data.company.current,
         country:     data.country.current,
         continent:   data.continent.current,
         covid_cases: this.d.events.country,
       }
+      var series = _.keys(data)
     
       return {
         id:         'trends-chart',
