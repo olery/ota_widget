@@ -34,7 +34,10 @@
         // many data not available in quarter
         if (!pdata) return
     
-        _.each(pdata.downwards.concat(pdata.upwards), (d) => {
+        var downwards = _.take(pdata.downwards, 2)
+        var upwards   = _.take(pdata.upwards,   2)
+        var overTime  = downwards.concat(upwards)
+        _.each(overTime, (d) => {
           fData[d.segment_title] = fData[d.segment_title] || {}
           var cdata   = (fData[d.segment_title][this.period] = fData[d.segment_title][this.period] || [])
           _.each(d.over_time, (e) => {
