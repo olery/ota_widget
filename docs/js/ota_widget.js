@@ -213,7 +213,7 @@ window.ota_widget.mentions = {
   },
   scoreLabel: function scoreLabel(m) {
     var score = Math.round(this.score(m));
-    if (!score) return;
+    if (score == undefined) return;
     return score;
   },
 
