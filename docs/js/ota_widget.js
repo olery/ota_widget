@@ -32,8 +32,6 @@ window.ota_widget = {
       _this.api.review_widget({}).then(function (json) {
         _.assign(_this.data, _this.ui.transformData(json.data));
         _this.tag.update();
-
-        if (window.google) google.charts.setOnLoadCallback(_this.tag.update);
       });
     });
   },
@@ -142,7 +140,7 @@ window.ota_widget.ui = {
     data.cached_at = new Date(data.updated_at).toLocaleDateString();
 
     _.each(data.recent_reviews, function (review) {
-      ota_widget.ui.join_topics(review, ota_widget.i18n.translate('recent_reviews.separator').toLowerCase());
+      ota_widget.ui.joinTopics(review, ota_widget.i18n.translate('recent_reviews.separator').toLowerCase());
     });
 
     return data;
@@ -162,7 +160,9 @@ window.ota_widget.ui = {
   },
 
   // transforms data needed by recent reviews block
-  join_topics: function join_topics(review, sep) {
+  joinTopics: function joinTopics(review, sep) {
+    var _this3 = this;
+
     _.each(['positive', 'negative'], function (polarity) {
 
       var topics = _.compact(_.uniq(_.flatten(_.map(review.opinions, function (op) {
@@ -171,9 +171,18 @@ window.ota_widget.ui = {
 
       var key = polarity + '_topics';
       review[key] = _.join(_.map(topics, function (topic) {
-        return ota_widget.topic_label_for(topic);
+        return _this3.topicLabelFor(topic);
       }), sep);
     });
+  },
+
+  // Try to load a translation for a topic. If none found, returns the capitalized version of the topic.
+  // It's a fallback function for missing topic translations
+  topicLabelFor: function topicLabelFor(topic) {
+    var label = ota_widget.i18n.translate('opinions.topics.' + topic, { 'default': undefined });
+    if (!label) label = _.startCase(topic);
+
+    return label.toLowerCase();
   }
 };
 
@@ -314,15 +323,6 @@ window.ota_widget.ml2km = function (distance) {
   return Math.round(distance * 160.934) / 100;
 };
 
-// Try to load a translation for a topic. If none found, returns the capitalized version of the topic.
-// It's a fallback function for missing topic translations
-window.ota_widget.topic_label_for = function (topic) {
-  var label = ota_widget.i18n.translate('opinions.topics.' + topic, { 'default': undefined });
-  if (!label) label = _.startCase(topic);
-
-  return label.toLowerCase();
-};
-
 window.ota_widget.charts = {
 
   t: function t(arr) {
@@ -342,6 +342,9 @@ window.ota_widget.charts = {
   },
 
   draw: function draw(tag) {
+    if (!window.google) return;
+    if (!google.visualization) return google.charts.setOnLoadCallback(tag.update);
+
     var data = tag.data();
     if (!data) return;
 

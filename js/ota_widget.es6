@@ -31,9 +31,6 @@ window.ota_widget = {
       this.api.review_widget({}).then(json => {
         _.assign(this.data, this.ui.transformData(json.data))
         this.tag.update()
-
-        if (window.google) 
-          google.charts.setOnLoadCallback(this.tag.update)
       })
     })
   },
@@ -143,14 +140,14 @@ window.ota_widget.ui = {
     data.cached_at = new Date(data.updated_at).toLocaleDateString()
 
     _.each(data.recent_reviews, (review) => {
-      ota_widget.ui.join_topics(review, ota_widget.i18n.translate('recent_reviews.separator').toLowerCase())
+      ota_widget.ui.joinTopics(review, ota_widget.i18n.translate('recent_reviews.separator').toLowerCase())
     })
 
     return data
   },
 
   // calculates the overall ratings percentages
-  calcRatingsPercentages: (groupedRatings) => {
+  calcRatingsPercentages(groupedRatings) {
     var total = _.sumBy(groupedRatings, (c) => {
       c.review_count = _.find(c.ratings, (r) => r.topic == 'overall').review_count
       return c.review_count
@@ -159,7 +156,7 @@ window.ota_widget.ui = {
   },
 
   // transforms data needed by recent reviews block
-  join_topics: (review, sep) => {
+  joinTopics(review, sep) {
     _.each(['positive', 'negative'], (polarity) => {
 
       var topics = _.compact(_.uniq(_.flatten(_.map(review.opinions, (op) => {
@@ -167,9 +164,18 @@ window.ota_widget.ui = {
       }))))
 
       var key = polarity + '_topics'
-      review[key] = _.join(_.map(topics, (topic) => { return ota_widget.topic_label_for(topic) }), sep)
+      review[key] = _.join(_.map(topics, (topic) => this.topicLabelFor(topic)), sep)
     })
-  }
+  },
+
+  // Try to load a translation for a topic. If none found, returns the capitalized version of the topic.
+  // It's a fallback function for missing topic translations
+  topicLabelFor(topic) {
+    let label = ota_widget.i18n.translate('opinions.topics.'+topic, {default: undefined})
+    if (!label) label = _.startCase(topic)
+
+    return label.toLowerCase()
+  },
 }
 
 // Generates classes to render in the recent reviews block with ratings through stars.
@@ -254,7 +260,7 @@ window.ota_widget.url = {
     .fromPairs()
     .value(),
 
-  objectToQuery: (obj) => {
+  objectToQuery(obj) {
     return _.map(obj, (v, k) => `${k}=${encodeURIComponent(v)}` ).join('&')
   },
 }
@@ -292,15 +298,6 @@ window.ota_widget.ml2km = (distance) => {
   return Math.round(distance * 160.934) / 100;
 }
 
-// Try to load a translation for a topic. If none found, returns the capitalized version of the topic.
-// It's a fallback function for missing topic translations
-window.ota_widget.topic_label_for = (topic) => {
-  let label = ota_widget.i18n.translate('opinions.topics.'+topic, {default: undefined})
-  if (!label) label = _.startCase(topic)
-
-  return label.toLowerCase()
-}
-
 window.ota_widget.charts = {
 
   t(arr) {
@@ -317,7 +314,10 @@ window.ota_widget.charts = {
   },
 
   draw(tag) {
-    var data      = tag.data()
+    if (!window.google) return
+    if (!google.visualization) return google.charts.setOnLoadCallback(tag.update)
+
+    var data = tag.data()
     if (!data) return
 
     var dataTable = [data.header]
