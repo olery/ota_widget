@@ -37,7 +37,7 @@ covid-events.mdc-image-list__item
       return !m.positive_opinions && !m.negative_opinions
     }
 
-    load() {
+    loadScoreMentions() {
       this.mentions      = _.keyBy(this.d.mentions, 'topic')
       this.scoreMentions = _.values(_.pick(this.mentions, this.scoreTopics))
       this.covid         = this.mentions.covid
@@ -46,6 +46,10 @@ covid-events.mdc-image-list__item
         this.scoreMentions.push({topic: 'health_precautions'})
       if (!this.mentions.sanitary_safety)
         this.scoreMentions.push({topic: 'sanitary_safety'})
+    }
+
+    load() {
+      this.loadScoreMentions()
 
       tippy('covid-events .material-icons.info', {
         content: this.t('covid_events.description'),
@@ -69,6 +73,7 @@ covid-events.mdc-image-list__item
       }
     }
 
+    this.loadScoreMentions() //needed for sanitary sentiment score
     this.on('mount',  this.load)
     this.on('update', this.load)
 
