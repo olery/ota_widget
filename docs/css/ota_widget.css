@@ -1215,8 +1215,6 @@ ota-widget, .ota-widget {
       margin-left: 50px; }
   ota-widget .spacer, .ota-widget .spacer {
     margin: 15px; }
-  ota-widget .mentions-row, .ota-widget .mentions-row {
-    padding-top: 30px; }
   ota-widget .material-icons.info, .ota-widget .material-icons.info {
     cursor: pointer;
     color: #333; }

@@ -7,8 +7,6 @@ covid-events.mdc-image-list__item
     h2
       '{t('covid_events.title')}
 
-    #covid_events-chart style="width: 100%; height: 500px;"
-
     .mentions-row
       .mention each='{m in scoreMentions}'
         .mention-meta
@@ -27,6 +25,8 @@ covid-events.mdc-image-list__item
               '{t('opinions.topics.'+covid.topic, {default: covid.label})}
           .times
             '{covid.opinions_count} {t('mentions.times')}
+
+    #covid_events-chart style="width: 100%; height: 500px;"
 
   javascript:
     ota_widget.ui.tagClass.bind(this)()

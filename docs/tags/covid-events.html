@@ -6,7 +6,6 @@
     <h2>
       {t('covid_events.title')} 
     </h2>
-    <div id="covid_events-chart" style="width: 100%; height: 500px;"></div>
     <div class="mentions-row">
       <div class="mention" each="{m in scoreMentions}">
         <div class="mention-meta">
@@ -32,6 +31,7 @@
         </div>
       </div>
     </div>
+    <div id="covid_events-chart" style="width: 100%; height: 500px;"></div>
   </div>
   <script>
     ota_widget.ui.tagClass.bind(this)()
