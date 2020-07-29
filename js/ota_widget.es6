@@ -30,7 +30,8 @@ window.ota_widget = {
 
       this.api.review_widget({}).then(json => {
         _.assign(this.data, this.ui.transformData(json.data))
-        this.tag.update()
+        if (window.google) return google.charts.setOnLoadCallback(this.tag.update)
+        else this.tag.update()
       })
     })
   },
@@ -315,7 +316,6 @@ window.ota_widget.charts = {
 
   draw(tag) {
     if (!window.google) return
-    if (!google.visualization) return google.charts.setOnLoadCallback(tag.update)
 
     var data = tag.data()
     if (!data) return

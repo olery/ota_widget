@@ -31,7 +31,7 @@ window.ota_widget = {
 
       _this.api.review_widget({}).then(function (json) {
         _.assign(_this.data, _this.ui.transformData(json.data));
-        _this.tag.update();
+        if (window.google) return google.charts.setOnLoadCallback(_this.tag.update);else _this.tag.update();
       });
     });
   },
@@ -343,7 +343,6 @@ window.ota_widget.charts = {
 
   draw: function draw(tag) {
     if (!window.google) return;
-    if (!google.visualization) return google.charts.setOnLoadCallback(tag.update);
 
     var data = tag.data();
     if (!data) return;
