@@ -305,37 +305,30 @@ window.ota_widget.charts = {
     return _.map(arr, (n) => ota_widget.t(`charts.${n}`))
   },
 
-  removeGaps(data) {
-    const size = data[0].length
-    _.each(data, (a, k) => {
-      if (!a) return
-      if (a.length < size)
-        _.remove(data, (n, j) => j == k)
-    })
+  findObjFromDateKey(rows, period, date) {
+    return _.find(rows, (row) => { return ota_widget.date.format(row.date, period, new Date().getFullYear()) == date })
   },
 
   draw(tag) {
+    var dateKey, count, rows, obj
     if (!window.google) return
 
     var data = tag.data()
     if (!data) return
 
     var dataTable = [data.header]
-    var dateFmt   = tag.period == 'quarter' ? 'week' : 'month'
     var series    = {}
-    _.each(data.series, (serie, i) => {
-      series[i] = {targetAxisIndex: i}
-      var obj   = data.data[serie][tag.period]
-      _.each(obj, (d, i) => {
-        if (!dataTable[i + 1])
-          dataTable.push([ota_widget.date.format(d.date, dateFmt)])
 
-        var count = d.count || 0
+    _.each(data.data[data.series[0]][tag.period], (d, i) => {
+      dataTable[i+1] = [ota_widget.date.format(d.date, tag.period)]
+      _.each(data.series, (serie) => {
+        series[i] = {targetAxisIndex: i}
+        obj       = this.findObjFromDateKey(data.data[serie][tag.period], tag.period, dataTable[i+1][0])
+        count     = (!obj || !obj.count) ? 0 : obj.count
         dataTable[i+1].push(parseInt(count))
       })
     })
 
-    this.removeGaps(dataTable)
     var dataArray = google.visualization.arrayToDataTable(dataTable)
     var options   = {
       hAxis: {
@@ -370,9 +363,24 @@ window.ota_widget.date = {
 
   days_from(date) { return parseInt((Date.now() - Date.parse(date)) / (1000*3600*24)) },
 
-  format(dateStr, fmt) {
+  getMonday(date, year) {
+    if (year && date.getFullYear() != year) {
+      date.setYear(year)
+    }
+    var day   = date.getDay()
+    var diff  = date.getDate() - day + (day == 0 ? -6:1);
+    return new Date(date.setDate(diff));
+  },
+
+  // it can be based on a specific year to match dates by beginning of week
+  format(dateStr, period, year) {
+    var fmt        = period == 'quarter' ? 'week' : 'month'
     var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ]
     var date       = new Date(dateStr.split('-'))
+
+    if (period == 'quarter')
+      date = this.getMonday(date, year)
+
     var month      = monthNames[date.getMonth()]
 
     if (fmt == 'week')
