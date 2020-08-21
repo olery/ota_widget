@@ -69,9 +69,10 @@
     
       delete data.continents.antarctica
       var series = _.keys(data.continents)
+      var header = _.map(this.w.charts.t(series), function(c) { return { label: c, type: 'number' } })
       return {
         id:         'covid_events-chart',
-        header:     [''].concat(ota_widget.charts.t(series)),
+        header:     [''].concat(header),
         series:     series,
         data:       data.continents,
         chartClass: google.visualization.LineChart

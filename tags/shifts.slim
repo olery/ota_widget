@@ -54,8 +54,9 @@ shifts.mdc-image-list__item
       })
 
       var series = _.keys(fData)
+      var header = _.map(series, function(c) { return { label: c, type: 'number' } })
       return {
-        header:     [''].concat(series),
+        header:     [''].concat(header),
         id:         'shifts-chart',
         series:     series,
         data:       fData,

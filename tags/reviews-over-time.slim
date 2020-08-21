@@ -35,8 +35,9 @@ reviews-over-time.mdc-image-list__item
       if (!data) return
 
       var series = ['current', 'previous']
+      var header = _.map(this.w.charts.t(series), function(c) { return { label: c, type: 'number' } })
       return {
-        header:     [''].concat(this.w.charts.t(series)),
+        header:     [''].concat(header),
         id:         'over-time-chart',
         series:     series,
         data:       data.company,

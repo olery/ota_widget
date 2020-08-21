@@ -36,9 +36,10 @@
       }
       var series = _.keys(data)
     
+      var header = _.map(this.w.charts.t(series), function(c) { return { label: c, type: 'number' } })
       return {
         id:         'trends-chart',
-        header:     [''].concat(this.w.charts.t(series)),
+        header:     [''].concat(header),
         series:     series,
         axesSeries: false,
         data:       data,
