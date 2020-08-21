@@ -16,7 +16,15 @@ window.ota_widget.i18n.locales = {
     ratings: {
       title: 'Ratings',
       topics: {
-        overall: 'General'
+        overall: 'General',
+        service: 'Service',
+        location: 'Location',
+        cleanliness: 'Cleanliness',
+        facilities: 'Facilities',
+        value: 'Value',
+        room: 'Room',
+        food: 'Food',
+        ambience: 'Ambience'
       }
     },
 

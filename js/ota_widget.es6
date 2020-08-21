@@ -323,9 +323,9 @@ window.ota_widget.charts = {
       dataTable[i+1] = [ota_widget.date.format(d.date, tag.period)]
       _.each(data.series, (serie) => {
         series[i] = {targetAxisIndex: i}
-        obj       = this.findObjFromDateKey(data.data[serie][tag.period], tag.period, dataTable[i+1][0])
-        count     = (!obj || !obj.count) ? 0 : obj.count
-        dataTable[i+1].push(parseInt(count))
+        var obj   = this.findObjFromDateKey(data.data[serie][tag.period], tag.period, dataTable[i+1][0])
+        var count = this.getCount(obj)
+        dataTable[i+1].push(count)
       })
     })
 
@@ -349,6 +349,12 @@ window.ota_widget.charts = {
     if (!tag.chart)
       tag.chart = new data.chartClass(document.getElementById(data.id))
     tag.chart.draw(dataArray, options)
+  },
+
+  getCount(obj) {
+    if (!obj) return null
+    if (obj.count) return parseInt(obj.count)
+    return obj.count
   },
 
   changePeriod(tag, period) {

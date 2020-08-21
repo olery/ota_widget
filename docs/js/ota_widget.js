@@ -353,9 +353,9 @@ window.ota_widget.charts = {
       dataTable[i + 1] = [ota_widget.date.format(d.date, tag.period)];
       _.each(data.series, function (serie) {
         series[i] = { targetAxisIndex: i };
-        obj = _this4.findObjFromDateKey(data.data[serie][tag.period], tag.period, dataTable[i + 1][0]);
-        count = !obj || !obj.count ? 0 : obj.count;
-        dataTable[i + 1].push(parseInt(count));
+        var obj = _this4.findObjFromDateKey(data.data[serie][tag.period], tag.period, dataTable[i + 1][0]);
+        var count = _this4.getCount(obj);
+        dataTable[i + 1].push(count);
       });
     });
 
@@ -377,6 +377,12 @@ window.ota_widget.charts = {
 
     if (!tag.chart) tag.chart = new data.chartClass(document.getElementById(data.id));
     tag.chart.draw(dataArray, options);
+  },
+
+  getCount: function getCount(obj) {
+    if (!obj) return null;
+    if (obj.count) return parseInt(obj.count);
+    return obj.count;
   },
 
   changePeriod: function changePeriod(tag, period) {
