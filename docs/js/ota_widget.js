@@ -359,6 +359,10 @@ window.ota_widget.charts = {
       });
     });
 
+    // Remove last row if data is empty
+    var lastRow = _.last(dataTable);
+    if (_.compact(lastRow).length == 1) dataTable.splice(-1, 1);
+
     var dataArray = google.visualization.arrayToDataTable(dataTable);
     var options = {
       hAxis: {
