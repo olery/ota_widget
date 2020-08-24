@@ -10,9 +10,13 @@ summaries.mdc-image-list__item
         .icon class='material-icons {s.sentiment}'
           '{s.sentiment == 'positive' ? 'add_circle_outline' : 'remove_circle_outline'}
         strong.name
-          '{s.text}
+          '{translate_summary(s)}
 
 
   javascript:
     ota_widget.ui.tagClass.bind(this)()
+
+    translate_summary(s) {
+      return this.t('summaries.'+s.slug) || s.text
+    }
 
