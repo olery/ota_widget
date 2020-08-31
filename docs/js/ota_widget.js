@@ -70,6 +70,9 @@ window.ota_widget.i18n = {
 
   translate: function translate(key, opts) {
     var value = ota_widget.i18n.compiled[ota_widget.locale][key];
+    if (value == undefined) // fallback to en
+      value = ota_widget.i18n.compiled['en'][key];
+
     value && _.each(opts, function (v, k) {
       value = value.replace("%{" + k + "}", v);
     });
