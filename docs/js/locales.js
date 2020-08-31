@@ -400,11 +400,55 @@ window.ota_widget.i18n.locales = {
       reviewed_at: 'vor %{days} Tagen bewertet',
       reviewed_a_while_ago: 'vor einiger Zeit bewertet'
     },
-    nearby_attractions: {
-      title: 'Sehenswürdigkeiten in der Nähe',
+
+    nearby: {
+      attractions: 'Sehenswürdigkeiten in der Nähe',
+      restaurants: 'Nearby Places to Eat',
       very_popular: 'stark besucht',
       highly_rated: 'hoch bewertet'
     },
+
+    charts: {
+      date: 'Date',
+      current: 'This Year',
+      previous: 'Last Year',
+      quarter: 'Quarter',
+      year: 'Year',
+      property: 'Property',
+      city: 'City',
+      country: 'Country',
+      continent: 'Continent',
+      covid_cases: 'Covid-19 cases in Country',
+      seasons: 'Seasons',
+      asia: 'Asia',
+      africa: 'Africa',
+      antarctica: 'Antartica',
+      europe: 'Europe',
+      oceania: 'Oceania',
+      'north-america': 'North America',
+      'south-america': 'South America'
+    },
+
+    over_time: {
+      title: 'Over Time',
+      description: 'Tracking your review volume over time and comparing how you performed the previous year. This data allows you to track your recovery based on review volume.'
+    },
+
+    trends: {
+      title: 'Trends',
+      description: 'Utilising our worldwide coverage of hotels consisting of almost 1 million properties. We track the review volume per your property, country and continent level. Track how your country is recovering from Covid-19 by monitoring the review volume and compare how your property is doing to the national average. Also, keep a track of confirmed cases of Covid-19 in your country with data directly from WHO on a daily basis.'
+    },
+
+    shifts: {
+      title: 'Shifts',
+      description: 'Track the shifts in the types of customers who are coming to your establishment. With this data you can see the changes in where your customers are coming from and what type of customers your establishment attracts. Do you still get 40 percent portuguese customers? or is it the Spanish who come to your establishment now? '
+    },
+
+    covid_events: {
+      title: 'COVID-19',
+      description: 'This information provides you with an update on the total number of weekly confirmed cases on a continental level. The information is taken directly from the WHO API and is updated daily. Keep track of the regional Covid-19 infections to better understand when regions will re-open up for travel. This data is based on weekly confirmed cases.'
+    },
+
     opinions: {
       topics: {
         breakfast_area: 'Frühstück',
@@ -725,108 +769,6 @@ window.ota_widget.i18n.locales = {
         walls: 'walls',
         windows: 'windows',
         swimming_pool: 'swimming pool'
-      }
-    }
-  },
-
-  de: {
-    review_date: 'Aktualisiert am %{date}',
-    overall: {
-      reviews: 'Bewertungen',
-      period: 'in den letzten 12 Monaten'
-    },
-    ratings: {
-      title: 'Bewertungen',
-      topics: {
-        overall: 'Algemein'
-      }
-    },
-    mentions: {
-      title: 'Was Gäste sagen',
-      times: 'mal geäußert',
-      positive: 'positiv'
-    },
-    guests: {
-      title: 'Wer hier Gast ist',
-      countries: {},
-      compositions: {}
-    },
-    summaries: {
-      title: 'Zusammenfassung'
-    },
-    recent_reviews: {
-      title: 'Neueste Bewertungen',
-      subtitle: 'von überall aus dem Internet',
-      guest_liked: 'Gäste mochten ',
-      separator: ' und ',
-      negative_comms: 'Negative Kommentare über ',
-      reviewed_at: 'vor %{days} Tagen bewertet',
-      reviewed_a_while_ago: 'vor einiger Zeit bewertet'
-    },
-    nearby_attractions: {
-      title: 'Sehenswürdigkeiten in der Nähe',
-      very_popular: 'stark besucht',
-      highly_rated: 'hoch bewertet'
-    },
-    opinions: {
-      topics: {
-        breakfast_area: 'Frühstück',
-        chemicals: 'chemischer Geruch',
-        defects: 'Defekte im Zimmer',
-        entertainment: 'Unterhaltungsangebote',
-        fitness: 'Fitness Center',
-        fnb: 'Essen & Trinken',
-        outdoor_sports: 'Sportanalgen',
-        ptec: 'Klimaanalge & Heizung',
-        surroundings: 'Hotel Umgebung',
-        bar: 'Bar',
-        bath_accessories: 'Badzimmerartikel',
-        bathroom: 'Badezimmer',
-        bathtub: 'Badewanne',
-        bed: 'Bett',
-        bedlinen: 'Bettzeug',
-        beverages: 'Getränke',
-        breakfast: 'Frühstück',
-        cleanliness: 'Sauberkeit',
-        corridor: 'Flur',
-        decor: 'Dekor',
-        dirt: 'Schmutz',
-        dust: 'Staub',
-        elevator: 'Aufzug',
-        facilities: 'Anlagen',
-        floor: 'Boden',
-        food: 'Essen',
-        furniture: 'Möbel',
-        health_hazards: 'Gesundheitsrisiken',
-        hotel_building: 'Hotelgebäude',
-        humidity: 'Luftfeuchtigkeit',
-        internet: 'Internet',
-        lobby: 'Lobby',
-        location: 'Lage',
-        noise: 'Lärm',
-        odor: 'Geruch',
-        parking: 'Parkplatz',
-        pests: 'Ungeziefer',
-        problem: 'Problem',
-        restaurant: 'Restaurant',
-        room: 'Zimmer',
-        room_equipment: 'Zimmerausstattung',
-        shower: 'Dusche',
-        sleeping_comfort: 'Schlafcomfort',
-        smell: 'Geruch',
-        smoke: 'Rauch',
-        spa: 'Wellness',
-        staff: 'Personal',
-        stains: 'Flecken',
-        tableware: 'Gedeck',
-        toilet: 'Toilette',
-        toiletries: 'Toilettenartikel',
-        towels: 'Handtücher',
-        tranquility: 'Ruhe',
-        value_for_money: 'Preis/Leistung',
-        walls: 'Wände',
-        windows: 'Fenster',
-        swimming_pool: 'Swimming Pool'
       }
     }
   },
