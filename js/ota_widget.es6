@@ -389,17 +389,21 @@ window.ota_widget.date = {
   format(dateStr, period, year) {
     var fmt        = period == 'quarter' ? 'week' : 'month'
     var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ]
-    var date       = new Date(dateStr.split('-'))
+    var date_arr   = dateStr.split('-')
+
+    if (period == 'year') date_arr[2] = 1
+    var date       = new Date(date_arr)
 
     if (period == 'quarter')
       date = this.getMonday(date, year)
 
     var month      = monthNames[date.getMonth()]
+    var year       = date.getFullYear()
 
     if (fmt == 'week')
       return `${date.getDate()} of ${month}`
     else if (fmt == 'month')
-      return `${month}`
+      return `${month} ${year}`
   },
 }
 
