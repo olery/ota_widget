@@ -24,7 +24,8 @@ window.ota_widget.i18n.locales = {
         value: 'Value',
         room: 'Room',
         food: 'Food',
-        ambience: 'Ambience'
+        ambience: 'Ambience',
+        friendliness: 'Friendliness'
       }
     },
 
@@ -530,7 +531,8 @@ window.ota_widget.i18n.locales = {
         value: 'Value',
         room: 'Room',
         food: 'Food',
-        ambience: 'Ambience'
+        ambience: 'Ambience',
+        friendliness: 'Friendliness'
       }
     },
 
@@ -791,7 +793,8 @@ window.ota_widget.i18n.locales = {
         value: 'Value',
         room: 'Room',
         food: 'Food',
-        ambience: 'Ambience'
+        ambience: 'Ambience',
+        friendliness: 'Friendliness'
       }
     },
 
@@ -1052,7 +1055,8 @@ window.ota_widget.i18n.locales = {
         value: 'Value',
         room: 'Room',
         food: 'Food',
-        ambience: 'Ambience'
+        ambience: 'Ambience',
+        friendliness: 'Friendliness'
       }
     },
 
@@ -1313,7 +1317,8 @@ window.ota_widget.i18n.locales = {
         value: 'Value',
         room: 'Room',
         food: 'Food',
-        ambience: 'Ambience'
+        ambience: 'Ambience',
+        friendliness: 'Friendliness'
       }
     },
 
@@ -1574,7 +1579,8 @@ window.ota_widget.i18n.locales = {
         value: 'Value',
         room: 'Room',
         food: 'Food',
-        ambience: 'Ambience'
+        ambience: 'Ambience',
+        friendliness: 'Friendliness'
       }
     },
 
@@ -1835,7 +1841,8 @@ window.ota_widget.i18n.locales = {
         value: 'Value',
         room: 'Room',
         food: 'Food',
-        ambience: 'Ambience'
+        ambience: 'Ambience',
+        friendliness: 'Friendliness'
       }
     },
 
@@ -2097,7 +2104,8 @@ window.ota_widget.i18n.locales = {
         value: 'Value',
         room: 'Room',
         food: 'Food',
-        ambience: 'Ambience'
+        ambience: 'Ambience',
+        friendliness: 'Friendliness'
       }
     },
 
