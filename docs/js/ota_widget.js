@@ -115,7 +115,7 @@ window.ota_widget.ui = {
     young_adults: 'person'
   },
 
-  topicIgnoreList: ['room', 'cleanliness', 'facilities', 'food', 'location', 'problem', 'value_for_money'],
+  topicIgnoreList: ['room', 'cleanliness', 'facilities', 'food', 'location', 'problem', 'value_for_money', 'health_precautions', 'sanitary_safety', 'covid'],
 
   // function used by RiotJS when it's mounting the ota-widget tag
   tagClass: function tagClass(opts) {
