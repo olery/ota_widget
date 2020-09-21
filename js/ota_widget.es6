@@ -119,10 +119,7 @@ window.ota_widget.ui = {
     'food',
     'location',
     'problem',
-    'value_for_money',
-    'health_precautions',
-    'sanitary_safety',
-    'covid',
+    'value_for_money'
   ],
 
   // function used by RiotJS when it's mounting the ota-widget tag
