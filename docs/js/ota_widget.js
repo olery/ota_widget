@@ -115,8 +115,6 @@ window.ota_widget.ui = {
     young_adults: 'person'
   },
 
-  topicIgnoreList: ['room', 'cleanliness', 'facilities', 'food', 'location', 'problem', 'value_for_money'],
-
   // function used by RiotJS when it's mounting the ota-widget tag
   tagClass: function tagClass(opts) {
     this.w = window.ota_widget;
@@ -127,12 +125,6 @@ window.ota_widget.ui = {
   // Make little changes in the received data to present it in the blocks.
   transformData: function transformData(data) {
     data.ratings = _.orderBy(data.ratings, 'value', 'desc');
-
-    _.remove(data.mentions, function (m) {
-      return _.find(ota_widget.ui.topicIgnoreList, function (t) {
-        return t == m.topic;
-      });
-    });
 
     data.summaries = _.map(data.summaries, function (s) {
       return s[Object.keys(s)[0]];

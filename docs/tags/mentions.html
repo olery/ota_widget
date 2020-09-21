@@ -4,7 +4,7 @@
       {t('mentions.title')} 
     </h2>
     <div class="mentions-row">
-      <div class="mention" each="{m,i in d.mentions}" if="{i &lt; 8}">
+      <div class="mention" each="{m,i in mentions}" if="{i &lt; 8}">
         <div class="mention-meta">
           <div class="topic">
             <strong>{t('opinions.topics.'+m.topic, {default: m.label})} </strong>
@@ -21,5 +21,27 @@
   </div>
   <script>
     ota_widget.ui.tagClass.bind(this)()
+    
+    load() {
+      this.topicIgnoreList = [
+        'room',
+        'cleanliness',
+        'facilities',
+        'food',
+        'location',
+        'problem',
+        'value_for_money',
+        'health_precautions',
+        'sanitary_safety',
+        'covid',
+      ],
+    
+      this.mentions = _.filter(this.d.mentions, function(m) {
+        return !_.find(this.topicIgnoreList, function(t) { return t == m.topic })
+      }.bind(this))
+    }
+    
+    this.on('mount',  this.load)
+    this.on('update', this.load)
   </script>
 </mentions>

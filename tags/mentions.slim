@@ -6,7 +6,7 @@ mentions.mdc-image-list__item
       '{t('mentions.title')}
 
     .mentions-row
-      .mention each='{m,i in d.mentions}' if='{i < 8}'
+      .mention each='{m,i in mentions}' if='{i < 8}'
         .mention-meta
           .topic
             strong
@@ -20,3 +20,24 @@ mentions.mdc-image-list__item
   javascript:
     ota_widget.ui.tagClass.bind(this)()
 
+    load() {
+      this.topicIgnoreList = [
+        'room',
+        'cleanliness',
+        'facilities',
+        'food',
+        'location',
+        'problem',
+        'value_for_money',
+        'health_precautions',
+        'sanitary_safety',
+        'covid',
+      ],
+
+      this.mentions = _.filter(this.d.mentions, function(m) {
+        return !_.find(this.topicIgnoreList, function(t) { return t == m.topic })
+      }.bind(this))
+    }
+
+    this.on('mount',  this.load)
+    this.on('update', this.load)
