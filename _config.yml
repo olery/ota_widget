@@ -5,6 +5,8 @@ layouts_dir: ./_layouts
 plugins:
   - jekyll-babel
 
+babel_js_extensions: 'es6, babel, jsx' # Do not process .js files
+
 sass:
   sass_dir: ./_scss
 

@@ -1276,8 +1276,7 @@ ota-widget, .ota-widget {
     ota-widget, .ota-widget {
       font-size: 14px; }
       ota-widget .mentions .topic, .ota-widget .mentions .topic {
-        font-size: 15px;
-        text-transform: capitalize; }
+        font-size: 15px; }
       ota-widget .masonry-image-list, .ota-widget .masonry-image-list {
         -webkit-column-count: 2;
         column-count: 2; } }

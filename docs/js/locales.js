@@ -2,15 +2,13 @@
 // For more translations, copy the entire english version and translate all the sentences on it.
 //
 // You can also change the default locale in the ota_widget.js file (ota_widget.locale)
-'use strict';
-
 window.ota_widget.i18n.locales = {
 
   en: {
     review_date: 'data from %{date}',
     overall: {
       reviews: 'reviews',
-      period: 'in the past 12 months'
+      period:  'in the past 12 months',
     },
 
     ratings: {
@@ -25,20 +23,22 @@ window.ota_widget.i18n.locales = {
         room: 'Room',
         food: 'Food',
         ambience: 'Ambience',
-        friendliness: 'Friendliness'
-      }
+        friendliness: 'Friendliness',
+      },
     },
 
     mentions: {
       title: 'What People Mention',
       times: 'times mentioned',
-      positive: 'positive'
+      positive: 'positive',
     },
 
     guests: {
       title: 'Who stays here',
-      countries: {},
-      compositions: {}
+      countries: {
+      },
+      compositions: {
+      },
     },
 
     summaries: {
@@ -141,7 +141,7 @@ window.ota_widget.i18n.locales = {
       unfriendly_staff_at_breakfast: 'unfriendly staff at breakfast',
       reports_of_bad_smells_in_the_hotel: 'reports of bad smells in the hotel',
       issues_with_the_windows: 'issues with the windows',
-      mold_in_some_bathrooms: 'mold in some bathrooms'
+      mold_in_some_bathrooms: 'mold in some bathrooms',
     },
 
     recent_reviews: {
@@ -173,28 +173,28 @@ window.ota_widget.i18n.locales = {
       continent: 'Continent',
       covid_cases: 'Covid-19 cases in Country',
       seasons: 'Seasons',
-      asia: 'Asia',
-      africa: 'Africa',
+      asia:      'Asia',
+      africa:    'Africa',
       antarctica: 'Antartica',
-      europe: 'Europe',
-      oceania: 'Oceania',
+      europe:    'Europe',
+      oceania:   'Oceania',
       'north-america': 'North America',
-      'south-america': 'South America'
+      'south-america': 'South America',
     },
 
     over_time: {
       title: 'Over Time',
-      description: 'Tracking your review volume over time and comparing how you performed the previous year. This data allows you to track your recovery based on review volume.'
+      description: 'Tracking your review volume over time and comparing how you performed the previous year. This data allows you to track your recovery based on review volume.',
     },
 
     trends: {
       title: 'Trends',
-      description: 'Utilising our worldwide coverage of hotels consisting of almost 1 million properties. We track the review volume per your property, country and continent level. Track how your country is recovering from Covid-19 by monitoring the review volume and compare how your property is doing to the national average. Also, keep a track of confirmed cases of Covid-19 in your country with data directly from WHO on a daily basis.'
+      description: 'Utilising our worldwide coverage of hotels consisting of almost 1 million properties. We track the review volume per your property, country and continent level. Track how your country is recovering from Covid-19 by monitoring the review volume and compare how your property is doing to the national average. Also, keep a track of confirmed cases of Covid-19 in your country with data directly from WHO on a daily basis.',
     },
 
     shifts: {
       title: 'Shifts',
-      description: 'Track the shifts in the types of customers who are coming to your establishment. With this data you can see the changes in where your customers are coming from and what type of customers your establishment attracts. Do you still get 40 percent portuguese customers? or is it the Spanish who come to your establishment now? '
+      description: 'Track the shifts in the types of customers who are coming to your establishment. With this data you can see the changes in where your customers are coming from and what type of customers your establishment attracts. Do you still get 40 percent portuguese customers? or is it the Spanish who come to your establishment now? ',
     },
 
     covid_events: {
@@ -204,91 +204,93 @@ window.ota_widget.i18n.locales = {
 
     opinions: {
       topics: {
-        sanitary_safety: 'Sanitary Safety Score',
+        sanitary_safety:    'Sanitary Safety Score',
         health_precautions: 'Pandemic Precaution Score',
-        covid: 'Covid',
-        breakfast_area: 'Breakfast Area',
-        chemicals: 'Chemical Odor',
-        defects: 'Defects in the Room',
-        entertainment: 'Entertainment Facilities',
-        fitness: 'Fitness Center',
-        fnb: 'Food & Beverages',
-        outdoor_sports: 'Outdoor Sport Grounds',
-        ptec: 'Air Conditioning & Heating',
-        surroundings: 'Location Surroundings',
-        bar: 'bar',
-        bath_accessories: 'bath accessories',
-        bathroom: 'bathroom',
-        bathtub: 'bathtub',
-        bed: 'bed',
-        bedlinen: 'bedlinen',
-        beverages: 'beverages',
-        breakfast: 'breakfast',
-        cleanliness: 'cleanliness',
-        corridor: 'corridor',
-        decor: 'decor',
-        dirt: 'dirt',
-        dust: 'dust',
-        elevator: 'elevator',
-        facilities: 'facilities',
-        floor: 'floor',
-        food: 'food',
-        furniture: 'furniture',
-        health_hazards: 'health hazards',
-        hotel_building: 'Building',
-        humidity: 'humidity',
-        internet: 'internet',
-        lobby: 'lobby',
-        location: 'location',
-        noise: 'noise',
-        odor: 'odor',
-        parking: 'parking',
-        pests: 'pests',
-        problem: 'problem',
-        restaurant: 'restaurant',
-        room: 'room',
-        room_equipment: 'room equipment',
-        shower: 'shower',
-        sleeping_comfort: 'sleeping comfort',
-        smell: 'smell',
-        smoke: 'smoke',
-        spa: 'spa',
-        staff: 'staff',
-        stains: 'stains',
-        tableware: 'tableware',
-        toilet: 'toilet',
-        toiletries: 'toiletries',
-        towels: 'towels',
-        tranquility: 'tranquility',
-        value_for_money: 'value for money',
-        walls: 'walls',
-        windows: 'windows',
-        swimming_pool: 'swimming pool'
-      }
-    }
+        covid:              'Covid',
+        breakfast_area:     'Breakfast Area',
+        chemicals:          'Chemical Odor',
+        defects:            'Defects in the Room',
+        entertainment:      'Entertainment Facilities',
+        fitness:            'Fitness Center',
+        fnb:                'Food & Beverages',
+        outdoor_sports:     'Outdoor Sport Grounds',
+        ptec:               'Air Conditioning & Heating',
+        surroundings:       'Location Surroundings',
+        bar:                'Bar',
+        bath_accessories:   'Bath accessories',
+        bathroom:           'Bathroom',
+        bathtub:            'Bathtub',
+        bed:                'Bed',
+        bedlinen:           'Bedlinen',
+        beverages:          'Beverages',
+        breakfast:          'Breakfast',
+        cleanliness:        'Cleanliness',
+        corridor:           'Corridor',
+        decor:              'Decor',
+        dirt:               'Dirt',
+        dust:               'Dust',
+        elevator:           'Elevator',
+        facilities:         'Facilities',
+        floor:              'Floor',
+        food:               'Food',
+        furniture:          'Furniture',
+        health_hazards:     'Health hazards',
+        hotel_building:     'Building',
+        humidity:           'Humidity',
+        internet:           'Internet',
+        lobby:              'Lobby',
+        location:           'Location',
+        noise:              'Noise',
+        odor:               'Odor',
+        parking:            'Parking',
+        pests:              'Pests',
+        problem:            'Problem',
+        restaurant:         'Restaurant',
+        room:               'Room',
+        room_equipment:     'Room equipment',
+        shower:             'Shower',
+        sleeping_comfort:   'Sleeping comfort',
+        smell:              'Smell',
+        smoke:              'Smoke',
+        spa:                'Spa',
+        staff:              'Staff',
+        stains:             'Stains',
+        tableware:          'Tableware',
+        toilet:             'Toilet',
+        toiletries:         'Toiletries',
+        towels:             'Towels',
+        tranquility:        'Tranquility',
+        value_for_money:    'Value for money',
+        walls:              'Walls',
+        windows:            'Windows',
+        swimming_pool:      'Swimming pool',
+      },
+    },
   },
 
   de: {
     review_date: 'Aktualisiert am %{date}',
     overall: {
       reviews: 'Bewertungen',
-      period: 'in den letzten 12 Monaten'
+      period:  'in den letzten 12 Monaten',
     },
     ratings: {
       title: 'Bewertungen',
       topics: {
-        overall: 'Algemein'
-      }
+        overall: 'Algemein',
+      },
     },
     mentions: {
       title: 'Was Gäste sagen',
       times: 'mal geäußert',
-      positive: 'positiv'
+      positive: 'positiv',
     },
     guests: {
       title: 'Wer hier Gast ist',
-      countries: {},
-      compositions: {}
+      countries: {
+      },
+      compositions: {
+      },
     },
     summaries: {
       title: 'Zusammenfassung',
@@ -390,7 +392,7 @@ window.ota_widget.i18n.locales = {
       unfriendly_staff_at_breakfast: 'unfriendly staff at breakfast',
       reports_of_bad_smells_in_the_hotel: 'reports of bad smells in the hotel',
       issues_with_the_windows: 'issues with the windows',
-      mold_in_some_bathrooms: 'mold in some bathrooms'
+      mold_in_some_bathrooms: 'mold in some bathrooms',
     },
     recent_reviews: {
       title: 'Neueste Bewertungen',
@@ -421,28 +423,28 @@ window.ota_widget.i18n.locales = {
       continent: 'Continent',
       covid_cases: 'Covid-19 cases in Country',
       seasons: 'Seasons',
-      asia: 'Asia',
-      africa: 'Africa',
+      asia:      'Asia',
+      africa:    'Africa',
       antarctica: 'Antartica',
-      europe: 'Europe',
-      oceania: 'Oceania',
+      europe:    'Europe',
+      oceania:   'Oceania',
       'north-america': 'North America',
-      'south-america': 'South America'
+      'south-america': 'South America',
     },
 
     over_time: {
       title: 'Over Time',
-      description: 'Tracking your review volume over time and comparing how you performed the previous year. This data allows you to track your recovery based on review volume.'
+      description: 'Tracking your review volume over time and comparing how you performed the previous year. This data allows you to track your recovery based on review volume.',
     },
 
     trends: {
       title: 'Trends',
-      description: 'Utilising our worldwide coverage of hotels consisting of almost 1 million properties. We track the review volume per your property, country and continent level. Track how your country is recovering from Covid-19 by monitoring the review volume and compare how your property is doing to the national average. Also, keep a track of confirmed cases of Covid-19 in your country with data directly from WHO on a daily basis.'
+      description: 'Utilising our worldwide coverage of hotels consisting of almost 1 million properties. We track the review volume per your property, country and continent level. Track how your country is recovering from Covid-19 by monitoring the review volume and compare how your property is doing to the national average. Also, keep a track of confirmed cases of Covid-19 in your country with data directly from WHO on a daily basis.',
     },
 
     shifts: {
       title: 'Shifts',
-      description: 'Track the shifts in the types of customers who are coming to your establishment. With this data you can see the changes in where your customers are coming from and what type of customers your establishment attracts. Do you still get 40 percent portuguese customers? or is it the Spanish who come to your establishment now? '
+      description: 'Track the shifts in the types of customers who are coming to your establishment. With this data you can see the changes in where your customers are coming from and what type of customers your establishment attracts. Do you still get 40 percent portuguese customers? or is it the Spanish who come to your establishment now? ',
     },
 
     covid_events: {
@@ -508,16 +510,16 @@ window.ota_widget.i18n.locales = {
         value_for_money: 'Preis/Leistung',
         walls: 'Wände',
         windows: 'Fenster',
-        swimming_pool: 'Swimming Pool'
-      }
-    }
+        swimming_pool: 'Swimming Pool',
+      },
+    },
   },
 
   nl: {
     review_date: 'data from %{date}',
     overall: {
       reviews: 'reviews',
-      period: 'in the past 12 months'
+      period:  'in the past 12 months',
     },
 
     ratings: {
@@ -532,20 +534,22 @@ window.ota_widget.i18n.locales = {
         room: 'Room',
         food: 'Food',
         ambience: 'Ambience',
-        friendliness: 'Friendliness'
-      }
+        friendliness: 'Friendliness',
+      },
     },
 
     mentions: {
       title: 'What People Mention',
       times: 'times mentioned',
-      positive: 'positive'
+      positive: 'positive',
     },
 
     guests: {
       title: 'Who stays here',
-      countries: {},
-      compositions: {}
+      countries: {
+      },
+      compositions: {
+      },
     },
 
     summaries: {
@@ -648,7 +652,7 @@ window.ota_widget.i18n.locales = {
       unfriendly_staff_at_breakfast: 'onvriendelijk personeel bij het ontbijt',
       reports_of_bad_smells_in_the_hotel: 'meldingen van stank',
       issues_with_the_windows: 'problemen met de ramen',
-      mold_in_some_bathrooms: 'schimmel in sommige badkamers'
+      mold_in_some_bathrooms: 'schimmel in sommige badkamers',
     },
 
     recent_reviews: {
@@ -680,28 +684,28 @@ window.ota_widget.i18n.locales = {
       continent: 'Continent',
       covid_cases: 'Covid-19 cases in Country',
       seasons: 'Seasons',
-      asia: 'Asia',
-      africa: 'Africa',
+      asia:      'Asia',
+      africa:    'Africa',
       antarctica: 'Antartica',
-      europe: 'Europe',
-      oceania: 'Oceania',
+      europe:    'Europe',
+      oceania:   'Oceania',
       'north-america': 'North America',
-      'south-america': 'South America'
+      'south-america': 'South America',
     },
 
     over_time: {
       title: 'Over Time',
-      description: 'Tracking your review volume over time and comparing how you performed the previous year. This data allows you to track your recovery based on review volume.'
+      description: 'Tracking your review volume over time and comparing how you performed the previous year. This data allows you to track your recovery based on review volume.',
     },
 
     trends: {
       title: 'Trends',
-      description: 'Utilising our worldwide coverage of hotels consisting of almost 1 million properties. We track the review volume per your property, country and continent level. Track how your country is recovering from Covid-19 by monitoring the review volume and compare how your property is doing to the national average. Also, keep a track of confirmed cases of Covid-19 in your country with data directly from WHO on a daily basis.'
+      description: 'Utilising our worldwide coverage of hotels consisting of almost 1 million properties. We track the review volume per your property, country and continent level. Track how your country is recovering from Covid-19 by monitoring the review volume and compare how your property is doing to the national average. Also, keep a track of confirmed cases of Covid-19 in your country with data directly from WHO on a daily basis.',
     },
 
     shifts: {
       title: 'Shifts',
-      description: 'Track the shifts in the types of customers who are coming to your establishment. With this data you can see the changes in where your customers are coming from and what type of customers your establishment attracts. Do you still get 40 percent portuguese customers? or is it the Spanish who come to your establishment now? '
+      description: 'Track the shifts in the types of customers who are coming to your establishment. With this data you can see the changes in where your customers are coming from and what type of customers your establishment attracts. Do you still get 40 percent portuguese customers? or is it the Spanish who come to your establishment now? ',
     },
 
     covid_events: {
@@ -711,75 +715,75 @@ window.ota_widget.i18n.locales = {
 
     opinions: {
       topics: {
-        sanitary_safety: 'Sanitary Safety Score',
+        sanitary_safety:    'Sanitary Safety Score',
         health_precautions: 'Pandemic Precaution Score',
-        covid: 'Covid',
-        breakfast_area: 'Breakfast Area',
-        chemicals: 'Chemical Odor',
-        defects: 'Defects in the Room',
-        entertainment: 'Entertainment Facilities',
-        fitness: 'Fitness Center',
-        fnb: 'Food & Beverages',
-        outdoor_sports: 'Outdoor Sport Grounds',
-        ptec: 'Air Conditioning & Heating',
-        surroundings: 'Location Surroundings',
-        bar: 'bar',
-        bath_accessories: 'bath accessories',
-        bathroom: 'bathroom',
-        bathtub: 'bathtub',
-        bed: 'bed',
-        bedlinen: 'bedlinen',
-        beverages: 'beverages',
-        breakfast: 'breakfast',
-        cleanliness: 'cleanliness',
-        corridor: 'corridor',
-        decor: 'decor',
-        dirt: 'dirt',
-        dust: 'dust',
-        elevator: 'elevator',
-        facilities: 'facilities',
-        floor: 'floor',
-        food: 'food',
-        furniture: 'furniture',
-        health_hazards: 'health hazards',
-        hotel_building: 'Building',
-        humidity: 'humidity',
-        internet: 'internet',
-        lobby: 'lobby',
-        location: 'location',
-        noise: 'noise',
-        odor: 'odor',
-        parking: 'parking',
-        pests: 'pests',
-        problem: 'problem',
-        restaurant: 'restaurant',
-        room: 'room',
-        room_equipment: 'room equipment',
-        shower: 'shower',
-        sleeping_comfort: 'sleeping comfort',
-        smell: 'smell',
-        smoke: 'smoke',
-        spa: 'spa',
-        staff: 'staff',
-        stains: 'stains',
-        tableware: 'tableware',
-        toilet: 'toilet',
-        toiletries: 'toiletries',
-        towels: 'towels',
-        tranquility: 'tranquility',
-        value_for_money: 'value for money',
-        walls: 'walls',
-        windows: 'windows',
-        swimming_pool: 'swimming pool'
-      }
-    }
+        covid:              'Covid',
+        breakfast_area:     'Breakfast Area',
+        chemicals:          'Chemical Odor',
+        defects:            'Defects in the Room',
+        entertainment:      'Entertainment Facilities',
+        fitness:            'Fitness Center',
+        fnb:                'Food & Beverages',
+        outdoor_sports:     'Outdoor Sport Grounds',
+        ptec:               'Air Conditioning & Heating',
+        surroundings:       'Location Surroundings',
+        bar:                'Bar',
+        bath_accessories:   'Bath accessories',
+        bathroom:           'Bathroom',
+        bathtub:            'Bathtub',
+        bed:                'Bed',
+        bedlinen:           'Bedlinen',
+        beverages:          'Beverages',
+        breakfast:          'Breakfast',
+        cleanliness:        'Cleanliness',
+        corridor:           'Corridor',
+        decor:              'Decor',
+        dirt:               'Dirt',
+        dust:               'Dust',
+        elevator:           'Elevator',
+        facilities:         'Facilities',
+        floor:              'Floor',
+        food:               'Food',
+        furniture:          'Furniture',
+        health_hazards:     'Health hazards',
+        hotel_building:     'Building',
+        humidity:           'Humidity',
+        internet:           'Internet',
+        lobby:              'Lobby',
+        location:           'Location',
+        noise:              'Noise',
+        odor:               'Odor',
+        parking:            'Parking',
+        pests:              'Pests',
+        problem:            'Problem',
+        restaurant:         'Restaurant',
+        room:               'Room',
+        room_equipment:     'Room equipment',
+        shower:             'Shower',
+        sleeping_comfort:   'Sleeping comfort',
+        smell:              'Smell',
+        smoke:              'Smoke',
+        spa:                'Spa',
+        staff:              'Staff',
+        stains:             'Stains',
+        tableware:          'Tableware',
+        toilet:             'Toilet',
+        toiletries:         'Toiletries',
+        towels:             'Towels',
+        tranquility:        'Tranquility',
+        value_for_money:    'Value for money',
+        walls:              'Walls',
+        windows:            'Windows',
+        swimming_pool:      'Swimming pool',
+      },
+    },
   },
 
   pt: {
     review_date: 'dados desde %{date}',
     overall: {
       reviews: 'avaliações',
-      period: 'nos últimos 12 meses'
+      period:  'nos últimos 12 meses',
     },
 
     ratings: {
@@ -794,20 +798,22 @@ window.ota_widget.i18n.locales = {
         room: 'Room',
         food: 'Food',
         ambience: 'Ambience',
-        friendliness: 'Friendliness'
-      }
+        friendliness: 'Friendliness',
+      },
     },
 
     mentions: {
       title: 'What People Mention',
       times: 'times mentioned',
-      positive: 'positive'
+      positive: 'positive',
     },
 
     guests: {
       title: 'Who stays here',
-      countries: {},
-      compositions: {}
+      countries: {
+      },
+      compositions: {
+      },
     },
 
     summaries: {
@@ -910,7 +916,7 @@ window.ota_widget.i18n.locales = {
       unfriendly_staff_at_breakfast: 'funcionários hostis no café da manhã',
       reports_of_bad_smells_in_the_hotel: 'relatos de maus cheiros no hotel',
       issues_with_the_windows: 'problemas com as janelas',
-      mold_in_some_bathrooms: 'mofo em alguns banheiros'
+      mold_in_some_bathrooms: 'mofo em alguns banheiros',
     },
 
     recent_reviews: {
@@ -942,28 +948,28 @@ window.ota_widget.i18n.locales = {
       continent: 'Continent',
       covid_cases: 'Covid-19 cases in Country',
       seasons: 'Seasons',
-      asia: 'Asia',
-      africa: 'Africa',
+      asia:      'Asia',
+      africa:    'Africa',
       antarctica: 'Antartica',
-      europe: 'Europe',
-      oceania: 'Oceania',
+      europe:    'Europe',
+      oceania:   'Oceania',
       'north-america': 'North America',
-      'south-america': 'South America'
+      'south-america': 'South America',
     },
 
     over_time: {
       title: 'Over Time',
-      description: 'Tracking your review volume over time and comparing how you performed the previous year. This data allows you to track your recovery based on review volume.'
+      description: 'Tracking your review volume over time and comparing how you performed the previous year. This data allows you to track your recovery based on review volume.',
     },
 
     trends: {
       title: 'Trends',
-      description: 'Utilising our worldwide coverage of hotels consisting of almost 1 million properties. We track the review volume per your property, country and continent level. Track how your country is recovering from Covid-19 by monitoring the review volume and compare how your property is doing to the national average. Also, keep a track of confirmed cases of Covid-19 in your country with data directly from WHO on a daily basis.'
+      description: 'Utilising our worldwide coverage of hotels consisting of almost 1 million properties. We track the review volume per your property, country and continent level. Track how your country is recovering from Covid-19 by monitoring the review volume and compare how your property is doing to the national average. Also, keep a track of confirmed cases of Covid-19 in your country with data directly from WHO on a daily basis.',
     },
 
     shifts: {
       title: 'Shifts',
-      description: 'Track the shifts in the types of customers who are coming to your establishment. With this data you can see the changes in where your customers are coming from and what type of customers your establishment attracts. Do you still get 40 percent portuguese customers? or is it the Spanish who come to your establishment now? '
+      description: 'Track the shifts in the types of customers who are coming to your establishment. With this data you can see the changes in where your customers are coming from and what type of customers your establishment attracts. Do you still get 40 percent portuguese customers? or is it the Spanish who come to your establishment now? ',
     },
 
     covid_events: {
@@ -973,75 +979,75 @@ window.ota_widget.i18n.locales = {
 
     opinions: {
       topics: {
-        sanitary_safety: 'Sanitary Safety Score',
+        sanitary_safety:    'Sanitary Safety Score',
         health_precautions: 'Pandemic Precaution Score',
-        covid: 'Covid',
-        breakfast_area: 'Breakfast Area',
-        chemicals: 'Chemical Odor',
-        defects: 'Defects in the Room',
-        entertainment: 'Entertainment Facilities',
-        fitness: 'Fitness Center',
-        fnb: 'Food & Beverages',
-        outdoor_sports: 'Outdoor Sport Grounds',
-        ptec: 'Air Conditioning & Heating',
-        surroundings: 'Location Surroundings',
-        bar: 'bar',
-        bath_accessories: 'bath accessories',
-        bathroom: 'bathroom',
-        bathtub: 'bathtub',
-        bed: 'bed',
-        bedlinen: 'bedlinen',
-        beverages: 'beverages',
-        breakfast: 'breakfast',
-        cleanliness: 'cleanliness',
-        corridor: 'corridor',
-        decor: 'decor',
-        dirt: 'dirt',
-        dust: 'dust',
-        elevator: 'elevator',
-        facilities: 'facilities',
-        floor: 'floor',
-        food: 'food',
-        furniture: 'furniture',
-        health_hazards: 'health hazards',
-        hotel_building: 'Building',
-        humidity: 'humidity',
-        internet: 'internet',
-        lobby: 'lobby',
-        location: 'location',
-        noise: 'noise',
-        odor: 'odor',
-        parking: 'parking',
-        pests: 'pests',
-        problem: 'problem',
-        restaurant: 'restaurant',
-        room: 'room',
-        room_equipment: 'room equipment',
-        shower: 'shower',
-        sleeping_comfort: 'sleeping comfort',
-        smell: 'smell',
-        smoke: 'smoke',
-        spa: 'spa',
-        staff: 'staff',
-        stains: 'stains',
-        tableware: 'tableware',
-        toilet: 'toilet',
-        toiletries: 'toiletries',
-        towels: 'towels',
-        tranquility: 'tranquility',
-        value_for_money: 'value for money',
-        walls: 'walls',
-        windows: 'windows',
-        swimming_pool: 'swimming pool'
-      }
-    }
+        covid:              'Covid',
+        breakfast_area:     'Breakfast Area',
+        chemicals:          'Chemical Odor',
+        defects:            'Defects in the Room',
+        entertainment:      'Entertainment Facilities',
+        fitness:            'Fitness Center',
+        fnb:                'Food & Beverages',
+        outdoor_sports:     'Outdoor Sport Grounds',
+        ptec:               'Air Conditioning & Heating',
+        surroundings:       'Location Surroundings',
+        bar:                'Bar',
+        bath_accessories:   'Bath accessories',
+        bathroom:           'Bathroom',
+        bathtub:            'Bathtub',
+        bed:                'Bed',
+        bedlinen:           'Bedlinen',
+        beverages:          'Beverages',
+        breakfast:          'Breakfast',
+        cleanliness:        'Cleanliness',
+        corridor:           'Corridor',
+        decor:              'Decor',
+        dirt:               'Dirt',
+        dust:               'Dust',
+        elevator:           'Elevator',
+        facilities:         'Facilities',
+        floor:              'Floor',
+        food:               'Food',
+        furniture:          'Furniture',
+        health_hazards:     'Health hazards',
+        hotel_building:     'Building',
+        humidity:           'Humidity',
+        internet:           'Internet',
+        lobby:              'Lobby',
+        location:           'Location',
+        noise:              'Noise',
+        odor:               'Odor',
+        parking:            'Parking',
+        pests:              'Pests',
+        problem:            'Problem',
+        restaurant:         'Restaurant',
+        room:               'Room',
+        room_equipment:     'Room equipment',
+        shower:             'Shower',
+        sleeping_comfort:   'Sleeping comfort',
+        smell:              'Smell',
+        smoke:              'Smoke',
+        spa:                'Spa',
+        staff:              'Staff',
+        stains:             'Stains',
+        tableware:          'Tableware',
+        toilet:             'Toilet',
+        toiletries:         'Toiletries',
+        towels:             'Towels',
+        tranquility:        'Tranquility',
+        value_for_money:    'Value for money',
+        walls:              'Walls',
+        windows:            'Windows',
+        swimming_pool:      'Swimming pool',
+      },
+    },
   },
 
   hu: {
     review_date: 'data from %{date}',
     overall: {
       reviews: 'reviews',
-      period: 'in the past 12 months'
+      period:  'in the past 12 months',
     },
 
     ratings: {
@@ -1056,20 +1062,22 @@ window.ota_widget.i18n.locales = {
         room: 'Room',
         food: 'Food',
         ambience: 'Ambience',
-        friendliness: 'Friendliness'
-      }
+        friendliness: 'Friendliness',
+      },
     },
 
     mentions: {
       title: 'What People Mention',
       times: 'times mentioned',
-      positive: 'positive'
+      positive: 'positive',
     },
 
     guests: {
       title: 'Who stays here',
-      countries: {},
-      compositions: {}
+      countries: {
+      },
+      compositions: {
+      },
     },
 
     summaries: {
@@ -1172,7 +1180,7 @@ window.ota_widget.i18n.locales = {
       unfriendly_staff_at_breakfast: 'barátságtalan személyzet a regeliztetéskor',
       reports_of_bad_smells_in_the_hotel: 'jelentések kellemetlen szagokról a szálláshelyen',
       issues_with_the_windows: 'probléma az ablakokkal',
-      mold_in_some_bathrooms: 'néhány fürdőszoba penészes'
+      mold_in_some_bathrooms: 'néhány fürdőszoba penészes',
     },
 
     recent_reviews: {
@@ -1204,28 +1212,28 @@ window.ota_widget.i18n.locales = {
       continent: 'Continent',
       covid_cases: 'Covid-19 cases in Country',
       seasons: 'Seasons',
-      asia: 'Asia',
-      africa: 'Africa',
+      asia:      'Asia',
+      africa:    'Africa',
       antarctica: 'Antartica',
-      europe: 'Europe',
-      oceania: 'Oceania',
+      europe:    'Europe',
+      oceania:   'Oceania',
       'north-america': 'North America',
-      'south-america': 'South America'
+      'south-america': 'South America',
     },
 
     over_time: {
       title: 'Over Time',
-      description: 'Tracking your review volume over time and comparing how you performed the previous year. This data allows you to track your recovery based on review volume.'
+      description: 'Tracking your review volume over time and comparing how you performed the previous year. This data allows you to track your recovery based on review volume.',
     },
 
     trends: {
       title: 'Trends',
-      description: 'Utilising our worldwide coverage of hotels consisting of almost 1 million properties. We track the review volume per your property, country and continent level. Track how your country is recovering from Covid-19 by monitoring the review volume and compare how your property is doing to the national average. Also, keep a track of confirmed cases of Covid-19 in your country with data directly from WHO on a daily basis.'
+      description: 'Utilising our worldwide coverage of hotels consisting of almost 1 million properties. We track the review volume per your property, country and continent level. Track how your country is recovering from Covid-19 by monitoring the review volume and compare how your property is doing to the national average. Also, keep a track of confirmed cases of Covid-19 in your country with data directly from WHO on a daily basis.',
     },
 
     shifts: {
       title: 'Shifts',
-      description: 'Track the shifts in the types of customers who are coming to your establishment. With this data you can see the changes in where your customers are coming from and what type of customers your establishment attracts. Do you still get 40 percent portuguese customers? or is it the Spanish who come to your establishment now? '
+      description: 'Track the shifts in the types of customers who are coming to your establishment. With this data you can see the changes in where your customers are coming from and what type of customers your establishment attracts. Do you still get 40 percent portuguese customers? or is it the Spanish who come to your establishment now? ',
     },
 
     covid_events: {
@@ -1235,75 +1243,75 @@ window.ota_widget.i18n.locales = {
 
     opinions: {
       topics: {
-        sanitary_safety: 'Sanitary Safety Score',
+        sanitary_safety:    'Sanitary Safety Score',
         health_precautions: 'Pandemic Precaution Score',
-        covid: 'Covid',
-        breakfast_area: 'Breakfast Area',
-        chemicals: 'Chemical Odor',
-        defects: 'Defects in the Room',
-        entertainment: 'Entertainment Facilities',
-        fitness: 'Fitness Center',
-        fnb: 'Food & Beverages',
-        outdoor_sports: 'Outdoor Sport Grounds',
-        ptec: 'Air Conditioning & Heating',
-        surroundings: 'Location Surroundings',
-        bar: 'bar',
-        bath_accessories: 'bath accessories',
-        bathroom: 'bathroom',
-        bathtub: 'bathtub',
-        bed: 'bed',
-        bedlinen: 'bedlinen',
-        beverages: 'beverages',
-        breakfast: 'breakfast',
-        cleanliness: 'cleanliness',
-        corridor: 'corridor',
-        decor: 'decor',
-        dirt: 'dirt',
-        dust: 'dust',
-        elevator: 'elevator',
-        facilities: 'facilities',
-        floor: 'floor',
-        food: 'food',
-        furniture: 'furniture',
-        health_hazards: 'health hazards',
-        hotel_building: 'Building',
-        humidity: 'humidity',
-        internet: 'internet',
-        lobby: 'lobby',
-        location: 'location',
-        noise: 'noise',
-        odor: 'odor',
-        parking: 'parking',
-        pests: 'pests',
-        problem: 'problem',
-        restaurant: 'restaurant',
-        room: 'room',
-        room_equipment: 'room equipment',
-        shower: 'shower',
-        sleeping_comfort: 'sleeping comfort',
-        smell: 'smell',
-        smoke: 'smoke',
-        spa: 'spa',
-        staff: 'staff',
-        stains: 'stains',
-        tableware: 'tableware',
-        toilet: 'toilet',
-        toiletries: 'toiletries',
-        towels: 'towels',
-        tranquility: 'tranquility',
-        value_for_money: 'value for money',
-        walls: 'walls',
-        windows: 'windows',
-        swimming_pool: 'swimming pool'
-      }
-    }
+        covid:              'Covid',
+        breakfast_area:     'Breakfast Area',
+        chemicals:          'Chemical Odor',
+        defects:            'Defects in the Room',
+        entertainment:      'Entertainment Facilities',
+        fitness:            'Fitness Center',
+        fnb:                'Food & Beverages',
+        outdoor_sports:     'Outdoor Sport Grounds',
+        ptec:               'Air Conditioning & Heating',
+        surroundings:       'Location Surroundings',
+        bar:                'Bar',
+        bath_accessories:   'Bath accessories',
+        bathroom:           'Bathroom',
+        bathtub:            'Bathtub',
+        bed:                'Bed',
+        bedlinen:           'Bedlinen',
+        beverages:          'Beverages',
+        breakfast:          'Breakfast',
+        cleanliness:        'Cleanliness',
+        corridor:           'Corridor',
+        decor:              'Decor',
+        dirt:               'Dirt',
+        dust:               'Dust',
+        elevator:           'Elevator',
+        facilities:         'Facilities',
+        floor:              'Floor',
+        food:               'Food',
+        furniture:          'Furniture',
+        health_hazards:     'Health hazards',
+        hotel_building:     'Building',
+        humidity:           'Humidity',
+        internet:           'Internet',
+        lobby:              'Lobby',
+        location:           'Location',
+        noise:              'Noise',
+        odor:               'Odor',
+        parking:            'Parking',
+        pests:              'Pests',
+        problem:            'Problem',
+        restaurant:         'Restaurant',
+        room:               'Room',
+        room_equipment:     'Room equipment',
+        shower:             'Shower',
+        sleeping_comfort:   'Sleeping comfort',
+        smell:              'Smell',
+        smoke:              'Smoke',
+        spa:                'Spa',
+        staff:              'Staff',
+        stains:             'Stains',
+        tableware:          'Tableware',
+        toilet:             'Toilet',
+        toiletries:         'Toiletries',
+        towels:             'Towels',
+        tranquility:        'Tranquility',
+        value_for_money:    'Value for money',
+        walls:              'Walls',
+        windows:            'Windows',
+        swimming_pool:      'Swimming pool',
+      },
+    },
   },
 
   sp: {
     review_date: 'data from %{date}',
     overall: {
       reviews: 'reviews',
-      period: 'in the past 12 months'
+      period:  'in the past 12 months',
     },
 
     ratings: {
@@ -1318,20 +1326,22 @@ window.ota_widget.i18n.locales = {
         room: 'Room',
         food: 'Food',
         ambience: 'Ambience',
-        friendliness: 'Friendliness'
-      }
+        friendliness: 'Friendliness',
+      },
     },
 
     mentions: {
       title: 'What People Mention',
       times: 'times mentioned',
-      positive: 'positive'
+      positive: 'positive',
     },
 
     guests: {
       title: 'Who stays here',
-      countries: {},
-      compositions: {}
+      countries: {
+      },
+      compositions: {
+      },
     },
 
     summaries: {
@@ -1434,7 +1444,7 @@ window.ota_widget.i18n.locales = {
       unfriendly_staff_at_breakfast: 'Persona del desayuno desagradable',
       reports_of_bad_smells_in_the_hotel: 'Informes de malos olores en el hotel',
       issues_with_the_windows: 'Problemas con las ventanas',
-      mold_in_some_bathrooms: 'Moho en algunos baños'
+      mold_in_some_bathrooms: 'Moho en algunos baños',
     },
 
     recent_reviews: {
@@ -1466,28 +1476,28 @@ window.ota_widget.i18n.locales = {
       continent: 'Continent',
       covid_cases: 'Covid-19 cases in Country',
       seasons: 'Seasons',
-      asia: 'Asia',
-      africa: 'Africa',
+      asia:      'Asia',
+      africa:    'Africa',
       antarctica: 'Antartica',
-      europe: 'Europe',
-      oceania: 'Oceania',
+      europe:    'Europe',
+      oceania:   'Oceania',
       'north-america': 'North America',
-      'south-america': 'South America'
+      'south-america': 'South America',
     },
 
     over_time: {
       title: 'Over Time',
-      description: 'Tracking your review volume over time and comparing how you performed the previous year. This data allows you to track your recovery based on review volume.'
+      description: 'Tracking your review volume over time and comparing how you performed the previous year. This data allows you to track your recovery based on review volume.',
     },
 
     trends: {
       title: 'Trends',
-      description: 'Utilising our worldwide coverage of hotels consisting of almost 1 million properties. We track the review volume per your property, country and continent level. Track how your country is recovering from Covid-19 by monitoring the review volume and compare how your property is doing to the national average. Also, keep a track of confirmed cases of Covid-19 in your country with data directly from WHO on a daily basis.'
+      description: 'Utilising our worldwide coverage of hotels consisting of almost 1 million properties. We track the review volume per your property, country and continent level. Track how your country is recovering from Covid-19 by monitoring the review volume and compare how your property is doing to the national average. Also, keep a track of confirmed cases of Covid-19 in your country with data directly from WHO on a daily basis.',
     },
 
     shifts: {
       title: 'Shifts',
-      description: 'Track the shifts in the types of customers who are coming to your establishment. With this data you can see the changes in where your customers are coming from and what type of customers your establishment attracts. Do you still get 40 percent portuguese customers? or is it the Spanish who come to your establishment now? '
+      description: 'Track the shifts in the types of customers who are coming to your establishment. With this data you can see the changes in where your customers are coming from and what type of customers your establishment attracts. Do you still get 40 percent portuguese customers? or is it the Spanish who come to your establishment now? ',
     },
 
     covid_events: {
@@ -1497,75 +1507,75 @@ window.ota_widget.i18n.locales = {
 
     opinions: {
       topics: {
-        sanitary_safety: 'Sanitary Safety Score',
+        sanitary_safety:    'Sanitary Safety Score',
         health_precautions: 'Pandemic Precaution Score',
-        covid: 'Covid',
-        breakfast_area: 'Breakfast Area',
-        chemicals: 'Chemical Odor',
-        defects: 'Defects in the Room',
-        entertainment: 'Entertainment Facilities',
-        fitness: 'Fitness Center',
-        fnb: 'Food & Beverages',
-        outdoor_sports: 'Outdoor Sport Grounds',
-        ptec: 'Air Conditioning & Heating',
-        surroundings: 'Location Surroundings',
-        bar: 'bar',
-        bath_accessories: 'bath accessories',
-        bathroom: 'bathroom',
-        bathtub: 'bathtub',
-        bed: 'bed',
-        bedlinen: 'bedlinen',
-        beverages: 'beverages',
-        breakfast: 'breakfast',
-        cleanliness: 'cleanliness',
-        corridor: 'corridor',
-        decor: 'decor',
-        dirt: 'dirt',
-        dust: 'dust',
-        elevator: 'elevator',
-        facilities: 'facilities',
-        floor: 'floor',
-        food: 'food',
-        furniture: 'furniture',
-        health_hazards: 'health hazards',
-        hotel_building: 'Building',
-        humidity: 'humidity',
-        internet: 'internet',
-        lobby: 'lobby',
-        location: 'location',
-        noise: 'noise',
-        odor: 'odor',
-        parking: 'parking',
-        pests: 'pests',
-        problem: 'problem',
-        restaurant: 'restaurant',
-        room: 'room',
-        room_equipment: 'room equipment',
-        shower: 'shower',
-        sleeping_comfort: 'sleeping comfort',
-        smell: 'smell',
-        smoke: 'smoke',
-        spa: 'spa',
-        staff: 'staff',
-        stains: 'stains',
-        tableware: 'tableware',
-        toilet: 'toilet',
-        toiletries: 'toiletries',
-        towels: 'towels',
-        tranquility: 'tranquility',
-        value_for_money: 'value for money',
-        walls: 'walls',
-        windows: 'windows',
-        swimming_pool: 'swimming pool'
-      }
-    }
+        covid:              'Covid',
+        breakfast_area:     'Breakfast Area',
+        chemicals:          'Chemical Odor',
+        defects:            'Defects in the Room',
+        entertainment:      'Entertainment Facilities',
+        fitness:            'Fitness Center',
+        fnb:                'Food & Beverages',
+        outdoor_sports:     'Outdoor Sport Grounds',
+        ptec:               'Air Conditioning & Heating',
+        surroundings:       'Location Surroundings',
+        bar:                'Bar',
+        bath_accessories:   'Bath accessories',
+        bathroom:           'Bathroom',
+        bathtub:            'Bathtub',
+        bed:                'Bed',
+        bedlinen:           'Bedlinen',
+        beverages:          'Beverages',
+        breakfast:          'Breakfast',
+        cleanliness:        'Cleanliness',
+        corridor:           'Corridor',
+        decor:              'Decor',
+        dirt:               'Dirt',
+        dust:               'Dust',
+        elevator:           'Elevator',
+        facilities:         'Facilities',
+        floor:              'Floor',
+        food:               'Food',
+        furniture:          'Furniture',
+        health_hazards:     'Health hazards',
+        hotel_building:     'Building',
+        humidity:           'Humidity',
+        internet:           'Internet',
+        lobby:              'Lobby',
+        location:           'Location',
+        noise:              'Noise',
+        odor:               'Odor',
+        parking:            'Parking',
+        pests:              'Pests',
+        problem:            'Problem',
+        restaurant:         'Restaurant',
+        room:               'Room',
+        room_equipment:     'Room equipment',
+        shower:             'Shower',
+        sleeping_comfort:   'Sleeping comfort',
+        smell:              'Smell',
+        smoke:              'Smoke',
+        spa:                'Spa',
+        staff:              'Staff',
+        stains:             'Stains',
+        tableware:          'Tableware',
+        toilet:             'Toilet',
+        toiletries:         'Toiletries',
+        towels:             'Towels',
+        tranquility:        'Tranquility',
+        value_for_money:    'Value for money',
+        walls:              'Walls',
+        windows:            'Windows',
+        swimming_pool:      'Swimming pool',
+      },
+    },
   },
 
   ru: {
     review_date: 'data from %{date}',
     overall: {
       reviews: 'reviews',
-      period: 'in the past 12 months'
+      period:  'in the past 12 months',
     },
 
     ratings: {
@@ -1580,20 +1590,22 @@ window.ota_widget.i18n.locales = {
         room: 'Room',
         food: 'Food',
         ambience: 'Ambience',
-        friendliness: 'Friendliness'
-      }
+        friendliness: 'Friendliness',
+      },
     },
 
     mentions: {
       title: 'What People Mention',
       times: 'times mentioned',
-      positive: 'positive'
+      positive: 'positive',
     },
 
     guests: {
       title: 'Who stays here',
-      countries: {},
-      compositions: {}
+      countries: {
+      },
+      compositions: {
+      },
     },
 
     summaries: {
@@ -1696,7 +1708,7 @@ window.ota_widget.i18n.locales = {
       unfriendly_staff_at_breakfast: 'недружелюбный персонал за завтраком',
       reports_of_bad_smells_in_the_hotel: 'в отеле замечены плохие запахи',
       issues_with_the_windows: 'проблемы с окнами',
-      mold_in_some_bathrooms: 'плесень в некоторых ванных комнатах'
+      mold_in_some_bathrooms: 'плесень в некоторых ванных комнатах',
     },
 
     recent_reviews: {
@@ -1728,28 +1740,28 @@ window.ota_widget.i18n.locales = {
       continent: 'Continent',
       covid_cases: 'Covid-19 cases in Country',
       seasons: 'Seasons',
-      asia: 'Asia',
-      africa: 'Africa',
+      asia:      'Asia',
+      africa:    'Africa',
       antarctica: 'Antartica',
-      europe: 'Europe',
-      oceania: 'Oceania',
+      europe:    'Europe',
+      oceania:   'Oceania',
       'north-america': 'North America',
-      'south-america': 'South America'
+      'south-america': 'South America',
     },
 
     over_time: {
       title: 'Over Time',
-      description: 'Tracking your review volume over time and comparing how you performed the previous year. This data allows you to track your recovery based on review volume.'
+      description: 'Tracking your review volume over time and comparing how you performed the previous year. This data allows you to track your recovery based on review volume.',
     },
 
     trends: {
       title: 'Trends',
-      description: 'Utilising our worldwide coverage of hotels consisting of almost 1 million properties. We track the review volume per your property, country and continent level. Track how your country is recovering from Covid-19 by monitoring the review volume and compare how your property is doing to the national average. Also, keep a track of confirmed cases of Covid-19 in your country with data directly from WHO on a daily basis.'
+      description: 'Utilising our worldwide coverage of hotels consisting of almost 1 million properties. We track the review volume per your property, country and continent level. Track how your country is recovering from Covid-19 by monitoring the review volume and compare how your property is doing to the national average. Also, keep a track of confirmed cases of Covid-19 in your country with data directly from WHO on a daily basis.',
     },
 
     shifts: {
       title: 'Shifts',
-      description: 'Track the shifts in the types of customers who are coming to your establishment. With this data you can see the changes in where your customers are coming from and what type of customers your establishment attracts. Do you still get 40 percent portuguese customers? or is it the Spanish who come to your establishment now? '
+      description: 'Track the shifts in the types of customers who are coming to your establishment. With this data you can see the changes in where your customers are coming from and what type of customers your establishment attracts. Do you still get 40 percent portuguese customers? or is it the Spanish who come to your establishment now? ',
     },
 
     covid_events: {
@@ -1759,75 +1771,75 @@ window.ota_widget.i18n.locales = {
 
     opinions: {
       topics: {
-        sanitary_safety: 'Sanitary Safety Score',
+        sanitary_safety:    'Sanitary Safety Score',
         health_precautions: 'Pandemic Precaution Score',
-        covid: 'Covid',
-        breakfast_area: 'Breakfast Area',
-        chemicals: 'Chemical Odor',
-        defects: 'Defects in the Room',
-        entertainment: 'Entertainment Facilities',
-        fitness: 'Fitness Center',
-        fnb: 'Food & Beverages',
-        outdoor_sports: 'Outdoor Sport Grounds',
-        ptec: 'Air Conditioning & Heating',
-        surroundings: 'Location Surroundings',
-        bar: 'bar',
-        bath_accessories: 'bath accessories',
-        bathroom: 'bathroom',
-        bathtub: 'bathtub',
-        bed: 'bed',
-        bedlinen: 'bedlinen',
-        beverages: 'beverages',
-        breakfast: 'breakfast',
-        cleanliness: 'cleanliness',
-        corridor: 'corridor',
-        decor: 'decor',
-        dirt: 'dirt',
-        dust: 'dust',
-        elevator: 'elevator',
-        facilities: 'facilities',
-        floor: 'floor',
-        food: 'food',
-        furniture: 'furniture',
-        health_hazards: 'health hazards',
-        hotel_building: 'Building',
-        humidity: 'humidity',
-        internet: 'internet',
-        lobby: 'lobby',
-        location: 'location',
-        noise: 'noise',
-        odor: 'odor',
-        parking: 'parking',
-        pests: 'pests',
-        problem: 'problem',
-        restaurant: 'restaurant',
-        room: 'room',
-        room_equipment: 'room equipment',
-        shower: 'shower',
-        sleeping_comfort: 'sleeping comfort',
-        smell: 'smell',
-        smoke: 'smoke',
-        spa: 'spa',
-        staff: 'staff',
-        stains: 'stains',
-        tableware: 'tableware',
-        toilet: 'toilet',
-        toiletries: 'toiletries',
-        towels: 'towels',
-        tranquility: 'tranquility',
-        value_for_money: 'value for money',
-        walls: 'walls',
-        windows: 'windows',
-        swimming_pool: 'swimming pool'
-      }
-    }
+        covid:              'Covid',
+        breakfast_area:     'Breakfast Area',
+        chemicals:          'Chemical Odor',
+        defects:            'Defects in the Room',
+        entertainment:      'Entertainment Facilities',
+        fitness:            'Fitness Center',
+        fnb:                'Food & Beverages',
+        outdoor_sports:     'Outdoor Sport Grounds',
+        ptec:               'Air Conditioning & Heating',
+        surroundings:       'Location Surroundings',
+        bar:                'Bar',
+        bath_accessories:   'Bath accessories',
+        bathroom:           'Bathroom',
+        bathtub:            'Bathtub',
+        bed:                'Bed',
+        bedlinen:           'Bedlinen',
+        beverages:          'Beverages',
+        breakfast:          'Breakfast',
+        cleanliness:        'Cleanliness',
+        corridor:           'Corridor',
+        decor:              'Decor',
+        dirt:               'Dirt',
+        dust:               'Dust',
+        elevator:           'Elevator',
+        facilities:         'Facilities',
+        floor:              'Floor',
+        food:               'Food',
+        furniture:          'Furniture',
+        health_hazards:     'Health hazards',
+        hotel_building:     'Building',
+        humidity:           'Humidity',
+        internet:           'Internet',
+        lobby:              'Lobby',
+        location:           'Location',
+        noise:              'Noise',
+        odor:               'Odor',
+        parking:            'Parking',
+        pests:              'Pests',
+        problem:            'Problem',
+        restaurant:         'Restaurant',
+        room:               'Room',
+        room_equipment:     'Room equipment',
+        shower:             'Shower',
+        sleeping_comfort:   'Sleeping comfort',
+        smell:              'Smell',
+        smoke:              'Smoke',
+        spa:                'Spa',
+        staff:              'Staff',
+        stains:             'Stains',
+        tableware:          'Tableware',
+        toilet:             'Toilet',
+        toiletries:         'Toiletries',
+        towels:             'Towels',
+        tranquility:        'Tranquility',
+        value_for_money:    'Value for money',
+        walls:              'Walls',
+        windows:            'Windows',
+        swimming_pool:      'Swimming pool',
+      },
+    },
   },
 
   po: {
     review_date: 'data from %{date}',
     overall: {
       reviews: 'reviews',
-      period: 'in the past 12 months'
+      period:  'in the past 12 months',
     },
 
     ratings: {
@@ -1842,20 +1854,22 @@ window.ota_widget.i18n.locales = {
         room: 'Room',
         food: 'Food',
         ambience: 'Ambience',
-        friendliness: 'Friendliness'
-      }
+        friendliness: 'Friendliness',
+      },
     },
 
     mentions: {
       title: 'What People Mention',
       times: 'times mentioned',
-      positive: 'positive'
+      positive: 'positive',
     },
 
     guests: {
       title: 'Who stays here',
-      countries: {},
-      compositions: {}
+      countries: {
+      },
+      compositions: {
+      },
     },
 
     summaries: {
@@ -1958,7 +1972,7 @@ window.ota_widget.i18n.locales = {
       unfriendly_staff_at_breakfast: 'nieprzyjazny personel przy śniadaniu',
       reports_of_bad_smells_in_the_hotel: 'doniesienia o nieprzyjemnych zapachach w hotelu',
       issues_with_the_windows: 'problemy z oknami',
-      mold_in_some_bathrooms: 'pleśń w niektórych łazienkach'
+      mold_in_some_bathrooms: 'pleśń w niektórych łazienkach',
     },
 
     recent_reviews: {
@@ -1990,28 +2004,28 @@ window.ota_widget.i18n.locales = {
       continent: 'Continent',
       covid_cases: 'Covid-19 cases in Country',
       seasons: 'Seasons',
-      asia: 'Asia',
-      africa: 'Africa',
+      asia:      'Asia',
+      africa:    'Africa',
       antarctica: 'Antartica',
-      europe: 'Europe',
-      oceania: 'Oceania',
+      europe:    'Europe',
+      oceania:   'Oceania',
       'north-america': 'North America',
-      'south-america': 'South America'
+      'south-america': 'South America',
     },
 
     over_time: {
       title: 'Over Time',
-      description: 'Tracking your review volume over time and comparing how you performed the previous year. This data allows you to track your recovery based on review volume.'
+      description: 'Tracking your review volume over time and comparing how you performed the previous year. This data allows you to track your recovery based on review volume.',
     },
 
     trends: {
       title: 'Trends',
-      description: 'Utilising our worldwide coverage of hotels consisting of almost 1 million properties. We track the review volume per your property, country and continent level. Track how your country is recovering from Covid-19 by monitoring the review volume and compare how your property is doing to the national average. Also, keep a track of confirmed cases of Covid-19 in your country with data directly from WHO on a daily basis.'
+      description: 'Utilising our worldwide coverage of hotels consisting of almost 1 million properties. We track the review volume per your property, country and continent level. Track how your country is recovering from Covid-19 by monitoring the review volume and compare how your property is doing to the national average. Also, keep a track of confirmed cases of Covid-19 in your country with data directly from WHO on a daily basis.',
     },
 
     shifts: {
       title: 'Shifts',
-      description: 'Track the shifts in the types of customers who are coming to your establishment. With this data you can see the changes in where your customers are coming from and what type of customers your establishment attracts. Do you still get 40 percent portuguese customers? or is it the Spanish who come to your establishment now? '
+      description: 'Track the shifts in the types of customers who are coming to your establishment. With this data you can see the changes in where your customers are coming from and what type of customers your establishment attracts. Do you still get 40 percent portuguese customers? or is it the Spanish who come to your establishment now? ',
     },
 
     covid_events: {
@@ -2021,68 +2035,68 @@ window.ota_widget.i18n.locales = {
 
     opinions: {
       topics: {
-        sanitary_safety: 'Sanitary Safety Score',
+        sanitary_safety:    'Sanitary Safety Score',
         health_precautions: 'Pandemic Precaution Score',
-        covid: 'Covid',
-        breakfast_area: 'Breakfast Area',
-        chemicals: 'Chemical Odor',
-        defects: 'Defects in the Room',
-        entertainment: 'Entertainment Facilities',
-        fitness: 'Fitness Center',
-        fnb: 'Food & Beverages',
-        outdoor_sports: 'Outdoor Sport Grounds',
-        ptec: 'Air Conditioning & Heating',
-        surroundings: 'Location Surroundings',
-        bar: 'bar',
-        bath_accessories: 'bath accessories',
-        bathroom: 'bathroom',
-        bathtub: 'bathtub',
-        bed: 'bed',
-        bedlinen: 'bedlinen',
-        beverages: 'beverages',
-        breakfast: 'breakfast',
-        cleanliness: 'cleanliness',
-        corridor: 'corridor',
-        decor: 'decor',
-        dirt: 'dirt',
-        dust: 'dust',
-        elevator: 'elevator',
-        facilities: 'facilities',
-        floor: 'floor',
-        food: 'food',
-        furniture: 'furniture',
-        health_hazards: 'health hazards',
-        hotel_building: 'Building',
-        humidity: 'humidity',
-        internet: 'internet',
-        lobby: 'lobby',
-        location: 'location',
-        noise: 'noise',
-        odor: 'odor',
-        parking: 'parking',
-        pests: 'pests',
-        problem: 'problem',
-        restaurant: 'restaurant',
-        room: 'room',
-        room_equipment: 'room equipment',
-        shower: 'shower',
-        sleeping_comfort: 'sleeping comfort',
-        smell: 'smell',
-        smoke: 'smoke',
-        spa: 'spa',
-        staff: 'staff',
-        stains: 'stains',
-        tableware: 'tableware',
-        toilet: 'toilet',
-        toiletries: 'toiletries',
-        towels: 'towels',
-        tranquility: 'tranquility',
-        value_for_money: 'value for money',
-        walls: 'walls',
-        windows: 'windows',
-        swimming_pool: 'swimming pool'
-      }
-    }
+        covid:              'Covid',
+        breakfast_area:     'Breakfast Area',
+        chemicals:          'Chemical Odor',
+        defects:            'Defects in the Room',
+        entertainment:      'Entertainment Facilities',
+        fitness:            'Fitness Center',
+        fnb:                'Food & Beverages',
+        outdoor_sports:     'Outdoor Sport Grounds',
+        ptec:               'Air Conditioning & Heating',
+        surroundings:       'Location Surroundings',
+        bar:                'Bar',
+        bath_accessories:   'Bath accessories',
+        bathroom:           'Bathroom',
+        bathtub:            'Bathtub',
+        bed:                'Bed',
+        bedlinen:           'Bedlinen',
+        beverages:          'Beverages',
+        breakfast:          'Breakfast',
+        cleanliness:        'Cleanliness',
+        corridor:           'Corridor',
+        decor:              'Decor',
+        dirt:               'Dirt',
+        dust:               'Dust',
+        elevator:           'Elevator',
+        facilities:         'Facilities',
+        floor:              'Floor',
+        food:               'Food',
+        furniture:          'Furniture',
+        health_hazards:     'Health hazards',
+        hotel_building:     'Building',
+        humidity:           'Humidity',
+        internet:           'Internet',
+        lobby:              'Lobby',
+        location:           'Location',
+        noise:              'Noise',
+        odor:               'Odor',
+        parking:            'Parking',
+        pests:              'Pests',
+        problem:            'Problem',
+        restaurant:         'Restaurant',
+        room:               'Room',
+        room_equipment:     'Room equipment',
+        shower:             'Shower',
+        sleeping_comfort:   'Sleeping comfort',
+        smell:              'Smell',
+        smoke:              'Smoke',
+        spa:                'Spa',
+        staff:              'Staff',
+        stains:             'Stains',
+        tableware:          'Tableware',
+        toilet:             'Toilet',
+        toiletries:         'Toiletries',
+        towels:             'Towels',
+        tranquility:        'Tranquility',
+        value_for_money:    'Value for money',
+        walls:              'Walls',
+        windows:            'Windows',
+        swimming_pool:      'Swimming pool',
+      },
+    },
   },
 
   // swedish
@@ -2090,7 +2104,7 @@ window.ota_widget.i18n.locales = {
     review_date: 'data from %{date}',
     overall: {
       reviews: 'reviews',
-      period: 'in the past 12 months'
+        period:  'in the past 12 months',
     },
 
     ratings: {
@@ -2105,20 +2119,22 @@ window.ota_widget.i18n.locales = {
         room: 'Room',
         food: 'Food',
         ambience: 'Ambience',
-        friendliness: 'Friendliness'
-      }
+        friendliness: 'Friendliness',
+      },
     },
 
     mentions: {
       title: 'What People Mention',
       times: 'times mentioned',
-      positive: 'positive'
+      positive: 'positive',
     },
 
     guests: {
       title: 'Who stays here',
-      countries: {},
-      compositions: {}
+      countries: {
+      },
+      compositions: {
+      },
     },
 
     summaries: {
@@ -2221,7 +2237,7 @@ window.ota_widget.i18n.locales = {
       unfriendly_staff_at_breakfast: "Otrevlig personal vid frukosten",
       reports_of_bad_smells_in_the_hotel: "Rapporter om dåliga lukter i hotellet",
       issues_with_the_windows: "Problem med fönstren",
-      mold_in_some_bathrooms: "Mögel i badrummen"
+      mold_in_some_bathrooms: "Mögel i badrummen",
     },
 
     recent_reviews: {
@@ -2253,28 +2269,28 @@ window.ota_widget.i18n.locales = {
       continent: 'Continent',
       covid_cases: 'Covid-19 cases in Country',
       seasons: 'Seasons',
-      asia: 'Asia',
-      africa: 'Africa',
+      asia:      'Asia',
+      africa:    'Africa',
       antarctica: 'Antartica',
-      europe: 'Europe',
-      oceania: 'Oceania',
+      europe:    'Europe',
+      oceania:   'Oceania',
       'north-america': 'North America',
-      'south-america': 'South America'
+      'south-america': 'South America',
     },
 
     over_time: {
       title: 'Over Time',
-      description: 'Tracking your review volume over time and comparing how you performed the previous year. This data allows you to track your recovery based on review volume.'
+      description: 'Tracking your review volume over time and comparing how you performed the previous year. This data allows you to track your recovery based on review volume.',
     },
 
     trends: {
       title: 'Trends',
-      description: 'Utilising our worldwide coverage of hotels consisting of almost 1 million properties. We track the review volume per your property, country and continent level. Track how your country is recovering from Covid-19 by monitoring the review volume and compare how your property is doing to the national average. Also, keep a track of confirmed cases of Covid-19 in your country with data directly from WHO on a daily basis.'
+      description: 'Utilising our worldwide coverage of hotels consisting of almost 1 million properties. We track the review volume per your property, country and continent level. Track how your country is recovering from Covid-19 by monitoring the review volume and compare how your property is doing to the national average. Also, keep a track of confirmed cases of Covid-19 in your country with data directly from WHO on a daily basis.',
     },
 
     shifts: {
       title: 'Shifts',
-      description: 'Track the shifts in the types of customers who are coming to your establishment. With this data you can see the changes in where your customers are coming from and what type of customers your establishment attracts. Do you still get 40 percent portuguese customers? or is it the Spanish who come to your establishment now? '
+      description: 'Track the shifts in the types of customers who are coming to your establishment. With this data you can see the changes in where your customers are coming from and what type of customers your establishment attracts. Do you still get 40 percent portuguese customers? or is it the Spanish who come to your establishment now? ',
     },
 
     covid_events: {
@@ -2284,67 +2300,67 @@ window.ota_widget.i18n.locales = {
 
     opinions: {
       topics: {
-        sanitary_safety: 'Sanitary Safety Score',
+        sanitary_safety:    'Sanitary Safety Score',
         health_precautions: 'Pandemic Precaution Score',
-        covid: 'Covid',
-        breakfast_area: 'Breakfast Area',
-        chemicals: 'Chemical Odor',
-        defects: 'Defects in the Room',
-        entertainment: 'Entertainment Facilities',
-        fitness: 'Fitness Center',
-        fnb: 'Food & Beverages',
-        outdoor_sports: 'Outdoor Sport Grounds',
-        ptec: 'Air Conditioning & Heating',
-        surroundings: 'Location Surroundings',
-        bar: 'bar',
-        bath_accessories: 'bath accessories',
-        bathroom: 'bathroom',
-        bathtub: 'bathtub',
-        bed: 'bed',
-        bedlinen: 'bedlinen',
-        beverages: 'beverages',
-        breakfast: 'breakfast',
-        cleanliness: 'cleanliness',
-        corridor: 'corridor',
-        decor: 'decor',
-        dirt: 'dirt',
-        dust: 'dust',
-        elevator: 'elevator',
-        facilities: 'facilities',
-        floor: 'floor',
-        food: 'food',
-        furniture: 'furniture',
-        health_hazards: 'health hazards',
-        hotel_building: 'Building',
-        humidity: 'humidity',
-        internet: 'internet',
-        lobby: 'lobby',
-        location: 'location',
-        noise: 'noise',
-        odor: 'odor',
-        parking: 'parking',
-        pests: 'pests',
-        problem: 'problem',
-        restaurant: 'restaurant',
-        room: 'room',
-        room_equipment: 'room equipment',
-        shower: 'shower',
-        sleeping_comfort: 'sleeping comfort',
-        smell: 'smell',
-        smoke: 'smoke',
-        spa: 'spa',
-        staff: 'staff',
-        stains: 'stains',
-        tableware: 'tableware',
-        toilet: 'toilet',
-        toiletries: 'toiletries',
-        towels: 'towels',
-        tranquility: 'tranquility',
-        value_for_money: 'value for money',
-        walls: 'walls',
-        windows: 'windows',
-        swimming_pool: 'swimming pool'
-      }
-    }
-  }
-};
+        covid:              'Covid',
+        breakfast_area:     'Breakfast Area',
+        chemicals:          'Chemical Odor',
+        defects:            'Defects in the Room',
+        entertainment:      'Entertainment Facilities',
+        fitness:            'Fitness Center',
+        fnb:                'Food & Beverages',
+        outdoor_sports:     'Outdoor Sport Grounds',
+        ptec:               'Air Conditioning & Heating',
+        surroundings:       'Location Surroundings',
+        bar:                'Bar',
+        bath_accessories:   'Bath accessories',
+        bathroom:           'Bathroom',
+        bathtub:            'Bathtub',
+        bed:                'Bed',
+        bedlinen:           'Bedlinen',
+        beverages:          'Beverages',
+        breakfast:          'Breakfast',
+        cleanliness:        'Cleanliness',
+        corridor:           'Corridor',
+        decor:              'Decor',
+        dirt:               'Dirt',
+        dust:               'Dust',
+        elevator:           'Elevator',
+        facilities:         'Facilities',
+        floor:              'Floor',
+        food:               'Food',
+        furniture:          'Furniture',
+        health_hazards:     'Health hazards',
+        hotel_building:     'Building',
+        humidity:           'Humidity',
+        internet:           'Internet',
+        lobby:              'Lobby',
+        location:           'Location',
+        noise:              'Noise',
+        odor:               'Odor',
+        parking:            'Parking',
+        pests:              'Pests',
+        problem:            'Problem',
+        restaurant:         'Restaurant',
+        room:               'Room',
+        room_equipment:     'Room equipment',
+        shower:             'Shower',
+        sleeping_comfort:   'Sleeping comfort',
+        smell:              'Smell',
+        smoke:              'Smoke',
+        spa:                'Spa',
+        staff:              'Staff',
+        stains:             'Stains',
+        tableware:          'Tableware',
+        toilet:             'Toilet',
+        toiletries:         'Toiletries',
+        towels:             'Towels',
+        tranquility:        'Tranquility',
+        value_for_money:    'Value for money',
+        walls:              'Walls',
+        windows:            'Windows',
+        swimming_pool:      'Swimming pool',
+      },
+    },
+  },
+}

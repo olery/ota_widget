@@ -123,7 +123,6 @@ window.ota_widget.ui = {
   transformData: (data) => {
     data.ratings   = _.orderBy(data.ratings, 'value', 'desc')
 
-
     data.summaries = _.map(data.summaries, (s) => s[Object.keys(s)[0]] )
 
     ota_widget.ui.calcRatingsPercentages(data.guests.countries)
