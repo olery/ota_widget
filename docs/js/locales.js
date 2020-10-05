@@ -205,7 +205,7 @@ window.ota_widget.i18n.locales = {
     opinions: {
       topics: {
         sanitary_safety:    'Sanitary Safety Score',
-        health_precautions: 'Pandemic Precaution Score',
+        health_precautions: 'Pandemic Precautions Score',
         covid:              'Covid',
         breakfast_area:     'Breakfast Area',
         chemicals:          'Chemical Odor',
@@ -716,7 +716,7 @@ window.ota_widget.i18n.locales = {
     opinions: {
       topics: {
         sanitary_safety:    'Sanitary Safety Score',
-        health_precautions: 'Pandemic Precaution Score',
+        health_precautions: 'Pandemic Precautions Score',
         covid:              'Covid',
         breakfast_area:     'Breakfast Area',
         chemicals:          'Chemical Odor',
@@ -980,7 +980,7 @@ window.ota_widget.i18n.locales = {
     opinions: {
       topics: {
         sanitary_safety:    'Sanitary Safety Score',
-        health_precautions: 'Pandemic Precaution Score',
+        health_precautions: 'Pandemic Precautions Score',
         covid:              'Covid',
         breakfast_area:     'Breakfast Area',
         chemicals:          'Chemical Odor',
@@ -1244,7 +1244,7 @@ window.ota_widget.i18n.locales = {
     opinions: {
       topics: {
         sanitary_safety:    'Sanitary Safety Score',
-        health_precautions: 'Pandemic Precaution Score',
+        health_precautions: 'Pandemic Precautions Score',
         covid:              'Covid',
         breakfast_area:     'Breakfast Area',
         chemicals:          'Chemical Odor',
@@ -1508,7 +1508,7 @@ window.ota_widget.i18n.locales = {
     opinions: {
       topics: {
         sanitary_safety:    'Sanitary Safety Score',
-        health_precautions: 'Pandemic Precaution Score',
+        health_precautions: 'Pandemic Precautions Score',
         covid:              'Covid',
         breakfast_area:     'Breakfast Area',
         chemicals:          'Chemical Odor',
@@ -1772,7 +1772,7 @@ window.ota_widget.i18n.locales = {
     opinions: {
       topics: {
         sanitary_safety:    'Sanitary Safety Score',
-        health_precautions: 'Pandemic Precaution Score',
+        health_precautions: 'Pandemic Precautions Score',
         covid:              'Covid',
         breakfast_area:     'Breakfast Area',
         chemicals:          'Chemical Odor',
@@ -2036,7 +2036,7 @@ window.ota_widget.i18n.locales = {
     opinions: {
       topics: {
         sanitary_safety:    'Sanitary Safety Score',
-        health_precautions: 'Pandemic Precaution Score',
+        health_precautions: 'Pandemic Precautions Score',
         covid:              'Covid',
         breakfast_area:     'Breakfast Area',
         chemicals:          'Chemical Odor',
@@ -2301,7 +2301,7 @@ window.ota_widget.i18n.locales = {
     opinions: {
       topics: {
         sanitary_safety:    'Sanitary Safety Score',
-        health_precautions: 'Pandemic Precaution Score',
+        health_precautions: 'Pandemic Precautions Score',
         covid:              'Covid',
         breakfast_area:     'Breakfast Area',
         chemicals:          'Chemical Odor',
