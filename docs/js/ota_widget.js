@@ -221,11 +221,15 @@ window.ota_widget.mentions = {
     return score;
   },
 
+  total: function total(m) {
+    return m.positive_opinions + m.negative_opinions;
+  },
+
   percentage: function percentage(m) {
-    return 100 * m.positive_opinions / (m.positive_opinions + m.negative_opinions);
+    return 100 * m.positive_opinions / this.total(m);
   },
   percentageClass: function percentageClass(m) {
-    return ota_widget.ratings.toCss100(100 * m.positive_opinions / (m.positive_opinions + m.negative_opinions));
+    return ota_widget.ratings.toCss100(100 * m.positive_opinions / this.total(m));
   },
   percentageLabel: function percentageLabel(m) {
     return Math.round(this.percentage(m)) + '% ' + ota_widget.t('mentions.positive');
