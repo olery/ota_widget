@@ -203,10 +203,10 @@ window.ota_widget.mentions = {
   },
 
   percentage(m) {
-    return 100 * m.positive_opinions / m.opinions_count
+    return 100 * m.positive_opinions / (m.positive_opinions + m.negative_opinions)
   },
   percentageClass(m) {
-    return ota_widget.ratings.toCss100(100 * m.positive_opinions / m.opinions_count)
+    return ota_widget.ratings.toCss100(100 * m.positive_opinions / (m.positive_opinions + m.negative_opinions))
   },
   percentageLabel(m) {
     return `${Math.round(this.percentage(m))}% ${ota_widget.t('mentions.positive')}`

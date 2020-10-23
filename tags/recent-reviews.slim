@@ -12,16 +12,19 @@ recent-reviews.mdc-image-list__item
         .stars
           .material-icons.star each='{class in w.rating_stars(r.ratings, "overall")}'
             '{class}
+
         .date if='{w.date.days_from(r.review_date) <= 90}'
           '{t('recent_reviews.reviewed_at', {days: w.date.days_from(r.review_date)})}
         .date if='{w.date.days_from(r.review_date) > 90}'
           '{t('recent_reviews.reviewed_a_while_ago')}
         .date if='{w.date.days_from(r.review_date) > 90}'
+
         .comment
           span if='{r.positive_topics}'
             '{t('recent_reviews.guest_liked')}{r.positive_topics}.
           span if='{r.negative_topics}'
             '{t('recent_reviews.negative_comms')}{r.negative_topics}.
+
         .reviewer_info
           span.country if='{r.country_code}'
             .icon.flag-16-11
