@@ -32,7 +32,7 @@ $ cd ota_widget
 
 3. If you don't have it. Install Bundler. You should have ruby and rubygem installed.
 ```
-$ gem install bundler
+$ gem install -v 1.17.1 bundler
 ```
 
 4. Install dependencies
