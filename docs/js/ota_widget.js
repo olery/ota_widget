@@ -415,10 +415,10 @@ window.ota_widget.date = {
   format: function format(dateStr, period, year) {
     var fmt = period == 'quarter' ? 'week' : 'month';
     var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    var date_arr = dateStr.split('-');
+    var dateArr = dateStr.split('-');
 
-    if (period == 'year') date_arr[2] = 1;
-    var date = new Date(date_arr);
+    if (period == 'year') dateArr[2] = 1;
+    var date = new Date(_.join(dateArr, '-'));
 
     if (period == 'quarter') date = this.getMonday(date, year);
 
