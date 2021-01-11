@@ -309,13 +309,15 @@ window.ota_widget.charts = {
     var series    = {}
 
     _.each(data.data[data.series[0]][tag.period], (d, i) => {
-      dataTable[i+1] = [ota_widget.date.format(d.date, tag.period)]
+      var header  = ota_widget.date.format(d.date, tag.period)
+      var row     = [header]
       _.each(data.series, (serie) => {
         series[i] = {targetAxisIndex: i}
-        var obj   = data.data[serie][tag.period][i+1]
+        var obj   = data.data[serie][tag.period][i]
         var count = this.getCount(obj)
-        dataTable[i+1].push(count)
+        row.push(count)
       })
+      dataTable[i+1] = row
     })
 
     // Remove last row if data is empty
