@@ -330,12 +330,6 @@ window.ota_widget.charts = {
     });
   },
 
-  findObjFromDateKey: function findObjFromDateKey(rows, period, date) {
-    return _.find(rows, function (row) {
-      return ota_widget.date.format(row.date, period, new Date().getFullYear()) == date;
-    });
-  },
-
   draw: function draw(tag) {
     var _this4 = this;
 
@@ -352,7 +346,7 @@ window.ota_widget.charts = {
       dataTable[i + 1] = [ota_widget.date.format(d.date, tag.period)];
       _.each(data.series, function (serie) {
         series[i] = { targetAxisIndex: i };
-        var obj = _this4.findObjFromDateKey(data.data[serie][tag.period], tag.period, dataTable[i + 1][0]);
+        var obj = data.data[serie][tag.period][i + 1];
         var count = _this4.getCount(obj);
         dataTable[i + 1].push(count);
       });
@@ -373,10 +367,6 @@ window.ota_widget.charts = {
       chartArea: { width: '85%', height: '80%' }
     };
     if (data.options) options = _.merge(options, data.options);
-    if (data.axesSeries) {
-      options.series = series;
-      options.vAxis = { textPosition: 'none' };
-    }
 
     if (!tag.chart) tag.chart = new data.chartClass(document.getElementById(data.id));
     tag.chart.draw(dataArray, options);
@@ -402,22 +392,21 @@ window.ota_widget.date = {
     return parseInt((Date.now() - Date.parse(date)) / (1000 * 3600 * 24));
   },
 
-  getMonday: function getMonday(date, year) {
-    var day = date.getDay();
-    var diff = date.getDate() - day + 1;
-    return new Date(date.setDate(diff));
+  quarterWeek: function quarterWeek(date) {
+    var monday = date.getDate() - date.getDay() + 1;
+    return new Date(date.setDate(monday));
   },
 
   // it can be based on a specific year to match dates by beginning of week
   format: function format(dateStr, period, year) {
     var fmt = period == 'quarter' ? 'week' : 'month';
-    var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    var monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     var dateArr = dateStr.split('-');
 
     if (period == 'year') dateArr[2] = 1;
     var date = new Date(_.join(dateArr, '-'));
 
-    if (period == 'quarter') date = this.getMonday(date, year);
+    if (period == 'quarter') date = this.quarterWeek(date);
 
     var month = monthNames[date.getMonth()];
     var year = date.getFullYear();
