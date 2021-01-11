@@ -403,11 +403,8 @@ window.ota_widget.date = {
   },
 
   getMonday: function getMonday(date, year) {
-    if (year && date.getFullYear() != year) {
-      date.setYear(year);
-    }
     var day = date.getDay();
-    var diff = date.getDate() - day + (day == 0 ? -6 : 1);
+    var diff = date.getDate() - day + 1;
     return new Date(date.setDate(diff));
   },
 

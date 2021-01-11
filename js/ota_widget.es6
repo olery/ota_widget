@@ -367,11 +367,8 @@ window.ota_widget.date = {
   days_from(date) { return parseInt((Date.now() - Date.parse(date)) / (1000*3600*24)) },
 
   getMonday(date, year) {
-    if (year && date.getFullYear() != year) {
-      date.setYear(year)
-    }
     var day   = date.getDay()
-    var diff  = date.getDate() - day + (day == 0 ? -6:1);
+    var diff  = date.getDate() - day + 1;
     return new Date(date.setDate(diff));
   },
 
