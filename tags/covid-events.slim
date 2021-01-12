@@ -12,7 +12,7 @@ covid-events.mdc-image-list__item
         .mention-meta
           .topic
             strong
-              '{t('opinions.topics.'+m.topic, {default: m.label})}
+              '{t('opinions.topics.'+m.topic, {default: m.label})} {t('sentiment.score', {default: 'Score'})}
           .times if='{isEmpty(m)}'
             'not enough data
         .mention-score class='{w.mentions.scoreClass(m)}' if='{!isEmpty(m)}'
