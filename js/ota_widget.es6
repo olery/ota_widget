@@ -154,17 +154,8 @@ window.ota_widget.ui = {
       }))))
 
       var key = polarity + '_topics'
-      review[key] = _.join(_.map(topics, (topic) => this.topicLabelFor(topic)), sep)
+      review[key] = _.join(_.uniq(_.map(topics, (topic) => topic.label.toLowerCase())), sep)
     })
-  },
-
-  // Try to load a translation for a topic. If none found, returns the capitalized version of the topic.
-  // It's a fallback function for missing topic translations
-  topicLabelFor(topic) {
-    let label = ota_widget.i18n.translate('opinions.topics.'+topic, {default: undefined})
-    if (!label) label = _.startCase(topic)
-
-    return label.toLowerCase()
   },
 }
 
