@@ -156,29 +156,31 @@ window.ota_widget.ui = {
 
   // transforms data needed by recent reviews block
   joinTopics: function joinTopics(review, sep) {
-    var _this3 = this;
-
     _.each(['positive', 'negative'], function (polarity) {
 
-      var topics = _.compact(_.uniq(_.flatten(_.map(review.opinions, function (op) {
-        if (op.polarity == polarity) return op.topics;
-      }))));
+      var ops = _.filter(review.opinions, function (op) {
+        return op.polarity == polarity;
+      });
+      var topics = _.uniqBy(_.flatMap(ops, function (o) {
+        return _.flatMap(o.ratings, function (r) {
+          return r.topics;
+        });
+      }), 'key');
 
       var key = polarity + '_topics';
       review[key] = _.join(_.map(topics, function (topic) {
-        return _this3.topicLabelFor(topic);
+        return ota_widget.sentiment.translateTopic(topic);
       }), sep);
     });
-  },
-
-  // Try to load a translation for a topic. If none found, returns the capitalized version of the topic.
-  // It's a fallback function for missing topic translations
-  topicLabelFor: function topicLabelFor(topic) {
-    var label = ota_widget.i18n.translate('opinions.topics.' + topic, { 'default': undefined });
-    if (!label) label = _.startCase(topic);
-
-    return label.toLowerCase();
   }
+};
+
+window.ota_widget.sentiment = {
+
+  translateTopic: function translateTopic(topic) {
+    return ota_widget.i18n.translate('opinions.topics.' + topic.key, { 'default': topic.label }).toLowerCase();
+  }
+
 };
 
 // Generates classes to render in the recent reviews block with ratings through stars.
@@ -331,7 +333,7 @@ window.ota_widget.charts = {
   },
 
   draw: function draw(tag) {
-    var _this4 = this;
+    var _this3 = this;
 
     var dateKey, count, rows, obj;
     if (!window.google) return;
@@ -348,7 +350,7 @@ window.ota_widget.charts = {
       _.each(data.series, function (serie) {
         series[i] = { targetAxisIndex: i };
         var obj = data.data[serie][tag.period][i];
-        var count = _this4.getCount(obj);
+        var count = _this3.getCount(obj);
         row.push(count);
       });
       dataTable[i + 1] = row;

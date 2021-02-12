@@ -149,23 +149,21 @@ window.ota_widget.ui = {
   joinTopics(review, sep) {
     _.each(['positive', 'negative'], (polarity) => {
 
-      var topics = _.compact(_.uniq(_.flatten(_.map(review.opinions, (op) => {
-        if (op.polarity == polarity) return op.topics
-      }))))
+      var ops     = _.filter(review.opinions, (op) => op.polarity == polarity)
+      var topics  = _.uniqBy(_.flatMap(ops, (o) => _.flatMap(o.ratings, (r) => r.topics)), 'key')
 
-      var key = polarity + '_topics'
-      review[key] = _.join(_.map(topics, (topic) => this.topicLabelFor(topic)), sep)
+      var key     = polarity + '_topics'
+      review[key] = _.join(_.map(topics, (topic) => ota_widget.sentiment.translateTopic(topic)), sep)
     })
   },
+}
 
-  // Try to load a translation for a topic. If none found, returns the capitalized version of the topic.
-  // It's a fallback function for missing topic translations
-  topicLabelFor(topic) {
-    let label = ota_widget.i18n.translate('opinions.topics.'+topic, {default: undefined})
-    if (!label) label = _.startCase(topic)
+window.ota_widget.sentiment = {
 
-    return label.toLowerCase()
+  translateTopic(topic) {
+    return ota_widget.i18n.translate('opinions.topics.'+topic.key, {default: topic.label}).toLowerCase()
   },
+
 }
 
 // Generates classes to render in the recent reviews block with ratings through stars.
