@@ -88,20 +88,15 @@ ota-widget, .ota-widget {
 
   }
 
-  .ratings.block {
-
-    .subrating {
-      margin-top: 2*$padding;
-    }
-    .title,.rating-bar,.rating-value {
-      display: inline-block;
-      vertical-align: middle;
-    }
+  .ratings {
     .title {
       min-width: 110px;
       line-height: 20px;
     }
-
+    .title, .rating-bar, .rating-value {
+      display: inline-block;
+      vertical-align: middle;
+    }
     .rating-bar {
       width: calc(100% - 150px);
       height: 20px;
@@ -119,8 +114,27 @@ ota-widget, .ota-widget {
     }
   }
 
+  .ratings.block {
+
+    .subrating {
+      margin-top: 2*$padding;
+    }
+
+  }
+
   .mention {
     margin-top: 2*$padding;
+
+    .times {
+      font-size: 14px;
+    }
+
+    .title {
+      min-width: 170px;
+    }
+    .rating-bar {
+      width: calc(100% - 200px);
+    }
 
     .mention-score {
       font-size: 14px;
@@ -129,13 +143,6 @@ ota-widget, .ota-widget {
       padding: 9px $padding;
       min-width: 15px;
       text-align: center;
-    }
-    .mention-percentage {
-      font-size: 14px;
-      color: white;
-      font-weight: bold;
-      padding: 9px $padding;
-      min-width: 95px;
     }
 
     .mention-meta, .mention-score, .mention-percentage {
@@ -147,14 +154,6 @@ ota-widget, .ota-widget {
     .mention-meta {
       width: calc(100% - 120px);
     }
-    .topic {
-      font-size: 15px;
-      min-width: 130px;
-    }
-    .times {
-      font-size: 14px;
-    }
-
   }
 
   .guests.block {

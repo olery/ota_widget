@@ -4,17 +4,20 @@
       {t('mentions.title')} 
     </h2>
     <div class="mentions-row">
-      <div class="mention" each="{m,i in mentions}" if="{i &lt; 8}">
-        <div class="mention-meta">
-          <div class="topic">
-            <strong>{t('opinions.topics.'+m.topic, {default: m.label})} </strong>
+      <div class="mention" each="{r in ratings}">
+        <div class="ratings">
+          <div class="title">
+            <strong>{t('opinions.topics.'+r.topic, {default: r.label})} </strong>
           </div>
-          <div class="times">
-            {m.opinions_count} {t('mentions.times')} 
+          <div class="rating-bar">
+            <div class="rating-value-bar {w.mentions.scoreClass(r)}" style="width: {10*r.score}%"></div>
+          </div>
+          <div class="rating-value">
+            {w.mentions.scoreLabel(r)} 
           </div>
         </div>
-        <div class="mention-percentage {w.mentions.percentageClass(m)}">
-          {w.mentions.percentageLabel(m)} 
+        <div class="times">
+          {r.opinions_count} {t('mentions.times')} 
         </div>
       </div>
     </div>
@@ -23,22 +26,27 @@
     ota_widget.ui.tagClass.bind(this)()
     
     load() {
-      this.topicIgnoreList = [
-        'room',
-        'cleanliness',
-        'facilities',
-        'food',
-        'location',
-        'problem',
-        'value_for_money',
-        'health_precautions',
-        'sanitary_safety',
-        'covid',
-      ],
+      this.ratings = {}
+      _.each(this.d.mentions, function(m) {
+        if (m.topic == 'overall') return this.ratings[m.topic] = m
+        if (!m.rating) return
     
-      this.mentions = _.filter(this.d.mentions, function(m) {
-        return !_.find(this.topicIgnoreList, function(t) { return t == m.topic })
+        var topic  = m.rating.key
+        var rating = (this.ratings[topic] = this.ratings[topic] || _.merge({
+          topic:             topic,
+          neutral_opinions:  0,
+          negative_opinions: 0,
+          positive_opinions: 0,
+          opinions_count:    0,
+        }, m.rating))
+        rating.neutral_opinions  += m.neutral_opinions
+        rating.negative_opinions += m.negative_opinions
+        rating.positive_opinions += m.positive_opinions
+        rating.opinions_count    += m.opinions_count
+    
       }.bind(this))
+    
+      this.ratings = _.orderBy(_.values(this.ratings), 'opinions_count', 'desc')
     }
     
     this.on('mount',  this.load)

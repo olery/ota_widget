@@ -9,7 +9,7 @@
     <div class="recent-reviews-block">
       <div class="recent-review" each="{r,i in d.recent_reviews}" if="{r.ratings &amp;&amp; i &lt; 4}">
         <div class="stars">
-          <div class="material-icons star" each="{class in w.rating_stars(r.ratings, &quot;overall&quot;)}">
+          <div class="material-icons star" each="{class in w.ui.ratingStars(r.ratings, &quot;overall&quot;)}">
             {class} 
           </div>
         </div>

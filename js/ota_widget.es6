@@ -130,7 +130,7 @@ window.ota_widget.ui = {
     data.cached_at = new Date(data.updated_at).toLocaleDateString()
 
     _.each(data.recent_reviews, (review) => {
-      ota_widget.ui.joinTopics(review, ota_widget.i18n.translate('recent_reviews.separator').toLowerCase())
+      ota_widget.sentiment.joinTopics(review, ota_widget.i18n.translate('recent_reviews.separator').toLowerCase())
     })
 
     return data
@@ -145,17 +145,19 @@ window.ota_widget.ui = {
     _.each(groupedRatings, (c) => c.percentage = 100*c.review_count/total )
   },
 
-  // transforms data needed by recent reviews block
-  joinTopics(review, sep) {
-    _.each(['positive', 'negative'], (polarity) => {
+  // Generates classes to render in the recent reviews block with ratings through stars.
+  ratingStars(ratings, category) {
+    let value = _.compact(_.map(ratings, (rating) => { if (rating.category == category) return rating.rating }))[0]
 
-      var ops     = _.filter(review.opinions, (op) => op.polarity == polarity)
-      var topics  = _.uniqBy(_.flatMap(ops, (o) => _.flatMap(o.ratings, (r) => r.topics)), 'key')
+    let classes = []
+    for (let i = 0; i < parseInt(value / 20); i++ )
+    classes.push('star')
+    for (let i = 0; i < parseInt((value % 20)/10); i++ )
+    classes.push('star_half')
 
-      var key     = polarity + '_topics'
-      review[key] = _.join(_.map(topics, (topic) => ota_widget.sentiment.translateTopic(topic)), sep)
-    })
+    return classes
   },
+
 }
 
 window.ota_widget.sentiment = {
@@ -164,18 +166,16 @@ window.ota_widget.sentiment = {
     return ota_widget.i18n.translate('opinions.topics.'+topic.key, {default: topic.label}).toLowerCase()
   },
 
-}
+  // transforms data needed by recent reviews block
+  joinTopics(review, sep) {
+    _.each(['positive', 'negative'], (polarity) => {
+      var ops     = _.filter(review.opinions, (op) => op.polarity == polarity)
+      var topics  = _.uniqBy(_.flatMap(ops, (o) => _.flatMap(o.ratings, (r) => r.topics)), 'key')
 
-// Generates classes to render in the recent reviews block with ratings through stars.
-window.ota_widget.rating_stars = (ratings, category) => {
-  let value = _.compact(_.map(ratings, (rating) => { if (rating.category == category) return rating.rating }))[0]
-  let classes = []
-  for (let i = 0; i < parseInt(value / 20); i++ )
-    classes.push('star')
-  for (let i = 0; i < parseInt((value % 20)/10); i++ )
-    classes.push('star_half')
-
-  return classes
+      var key     = polarity + '_topics'
+      review[key] = _.join(_.map(topics, (topic) => ota_widget.sentiment.translateTopic(topic)), sep)
+    })
+  },
 }
 
 window.ota_widget.mentions = {
@@ -195,7 +195,7 @@ window.ota_widget.mentions = {
     return ota_widget.ratings.toCss(this.score(m))
   },
   scoreLabel(m) {
-    var score = Math.round(this.score(m))
+    var score = this.score(m).toFixed(1)
     if (score == undefined) return
     return score
   },

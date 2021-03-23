@@ -10,7 +10,7 @@ recent-reviews.mdc-image-list__item
     .recent-reviews-block
       .recent-review each='{r,i in d.recent_reviews}' if='{r.ratings && i < 4}'
         .stars
-          .material-icons.star each='{class in w.rating_stars(r.ratings, "overall")}'
+          .material-icons.star each='{class in w.ui.ratingStars(r.ratings, "overall")}'
             '{class}
 
         .date if='{w.date.days_from(r.review_date) <= 90}'

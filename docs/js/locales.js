@@ -32,7 +32,7 @@ window.ota_widget.i18n.locales = {
     },
 
     mentions: {
-      title: 'What People Mention',
+      title: 'Sentiment Ratings',
       times: 'times mentioned',
       positive: 'positive',
     },
@@ -494,7 +494,7 @@ window.ota_widget.i18n.locales = {
     },
 
     mentions: {
-      title: 'What People Mention',
+      title: 'Sentiment Ratings',
       times: 'times mentioned',
       positive: 'positive',
     },
@@ -762,7 +762,7 @@ window.ota_widget.i18n.locales = {
     },
 
     mentions: {
-      title: 'What People Mention',
+      title: 'Sentiment Ratings',
       times: 'times mentioned',
       positive: 'positive',
     },
@@ -1030,7 +1030,7 @@ window.ota_widget.i18n.locales = {
     },
 
     mentions: {
-      title: 'What People Mention',
+      title: 'Sentiment Ratings',
       times: 'times mentioned',
       positive: 'positive',
     },
@@ -1298,7 +1298,7 @@ window.ota_widget.i18n.locales = {
     },
 
     mentions: {
-      title: 'What People Mention',
+      title: 'Sentiment Ratings',
       times: 'times mentioned',
       positive: 'positive',
     },
@@ -1566,7 +1566,7 @@ window.ota_widget.i18n.locales = {
     },
 
     mentions: {
-      title: 'What People Mention',
+      title: 'Sentiment Ratings',
       times: 'times mentioned',
       positive: 'positive',
     },
@@ -1834,7 +1834,7 @@ window.ota_widget.i18n.locales = {
     },
 
     mentions: {
-      title: 'What People Mention',
+      title: 'Sentiment Ratings',
       times: 'times mentioned',
       positive: 'positive',
     },
@@ -2103,7 +2103,7 @@ window.ota_widget.i18n.locales = {
     },
 
     mentions: {
-      title: 'What People Mention',
+      title: 'Sentiment Ratings',
       times: 'times mentioned',
       positive: 'positive',
     },

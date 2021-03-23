@@ -1057,28 +1057,34 @@ ota-widget, .ota-widget {
         text-align: center;
         color: white;
         margin-right: 10px; }
-  ota-widget .ratings.block .subrating, .ota-widget .ratings.block .subrating {
-    margin-top: 16px; }
-  ota-widget .ratings.block .title, ota-widget .ratings.block .rating-bar, ota-widget .ratings.block .rating-value, .ota-widget .ratings.block .title, .ota-widget .ratings.block .rating-bar, .ota-widget .ratings.block .rating-value {
-    display: inline-block;
-    vertical-align: middle; }
-  ota-widget .ratings.block .title, .ota-widget .ratings.block .title {
+  ota-widget .ratings .title, .ota-widget .ratings .title {
     min-width: 110px;
     line-height: 20px; }
-  ota-widget .ratings.block .rating-bar, .ota-widget .ratings.block .rating-bar {
+  ota-widget .ratings .title, ota-widget .ratings .rating-bar, ota-widget .ratings .rating-value, .ota-widget .ratings .title, .ota-widget .ratings .rating-bar, .ota-widget .ratings .rating-value {
+    display: inline-block;
+    vertical-align: middle; }
+  ota-widget .ratings .rating-bar, .ota-widget .ratings .rating-bar {
     width: calc(100% - 150px);
     height: 20px;
     padding: 0;
     position: relative;
     display: inline-block;
     background-color: #d6d6d6; }
-  ota-widget .ratings.block .rating-value-bar, .ota-widget .ratings.block .rating-value-bar {
+  ota-widget .ratings .rating-value-bar, .ota-widget .ratings .rating-value-bar {
     height: 20px;
     position: absolute; }
-  ota-widget .ratings.block .rating-value, .ota-widget .ratings.block .rating-value {
+  ota-widget .ratings .rating-value, .ota-widget .ratings .rating-value {
     max-width: 30px; }
+  ota-widget .ratings.block .subrating, .ota-widget .ratings.block .subrating {
+    margin-top: 16px; }
   ota-widget .mention, .ota-widget .mention {
     margin-top: 16px; }
+    ota-widget .mention .times, .ota-widget .mention .times {
+      font-size: 14px; }
+    ota-widget .mention .title, .ota-widget .mention .title {
+      min-width: 170px; }
+    ota-widget .mention .rating-bar, .ota-widget .mention .rating-bar {
+      width: calc(100% - 200px); }
     ota-widget .mention .mention-score, .ota-widget .mention .mention-score {
       font-size: 14px;
       color: white;
@@ -1086,23 +1092,12 @@ ota-widget, .ota-widget {
       padding: 9px 8px;
       min-width: 15px;
       text-align: center; }
-    ota-widget .mention .mention-percentage, .ota-widget .mention .mention-percentage {
-      font-size: 14px;
-      color: white;
-      font-weight: bold;
-      padding: 9px 8px;
-      min-width: 95px; }
     ota-widget .mention .mention-meta, ota-widget .mention .mention-score, ota-widget .mention .mention-percentage, .ota-widget .mention .mention-meta, .ota-widget .mention .mention-score, .ota-widget .mention .mention-percentage {
       vertical-align: middle; }
     ota-widget .mention .mention-meta, ota-widget .mention .times, ota-widget .mention .mention-score, ota-widget .mention .mention-percentage, .ota-widget .mention .mention-meta, .ota-widget .mention .times, .ota-widget .mention .mention-score, .ota-widget .mention .mention-percentage {
       display: inline-block; }
     ota-widget .mention .mention-meta, .ota-widget .mention .mention-meta {
       width: calc(100% - 120px); }
-    ota-widget .mention .topic, .ota-widget .mention .topic {
-      font-size: 15px;
-      min-width: 130px; }
-    ota-widget .mention .times, .ota-widget .mention .times {
-      font-size: 14px; }
   ota-widget .guests.block .guests-block .country, ota-widget .guests.block .guests-block .composition, .ota-widget .guests.block .guests-block .country, .ota-widget .guests.block .guests-block .composition {
     display: table; }
     ota-widget .guests.block .guests-block .country > div, ota-widget .guests.block .guests-block .composition > div, .ota-widget .guests.block .guests-block .country > div, .ota-widget .guests.block .guests-block .composition > div {

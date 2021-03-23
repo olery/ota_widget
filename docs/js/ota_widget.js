@@ -135,7 +135,7 @@ window.ota_widget.ui = {
     data.cached_at = new Date(data.updated_at).toLocaleDateString();
 
     _.each(data.recent_reviews, function (review) {
-      ota_widget.ui.joinTopics(review, ota_widget.i18n.translate('recent_reviews.separator').toLowerCase());
+      ota_widget.sentiment.joinTopics(review, ota_widget.i18n.translate('recent_reviews.separator').toLowerCase());
     });
 
     return data;
@@ -154,10 +154,31 @@ window.ota_widget.ui = {
     });
   },
 
+  // Generates classes to render in the recent reviews block with ratings through stars.
+  ratingStars: function ratingStars(ratings, category) {
+    var value = _.compact(_.map(ratings, function (rating) {
+      if (rating.category == category) return rating.rating;
+    }))[0];
+
+    var classes = [];
+    for (var i = 0; i < parseInt(value / 20); i++) {
+      classes.push('star');
+    }for (var i = 0; i < parseInt(value % 20 / 10); i++) {
+      classes.push('star_half');
+    }return classes;
+  }
+
+};
+
+window.ota_widget.sentiment = {
+
+  translateTopic: function translateTopic(topic) {
+    return ota_widget.i18n.translate('opinions.topics.' + topic.key, { 'default': topic.label }).toLowerCase();
+  },
+
   // transforms data needed by recent reviews block
   joinTopics: function joinTopics(review, sep) {
     _.each(['positive', 'negative'], function (polarity) {
-
       var ops = _.filter(review.opinions, function (op) {
         return op.polarity == polarity;
       });
@@ -173,27 +194,6 @@ window.ota_widget.ui = {
       }), sep);
     });
   }
-};
-
-window.ota_widget.sentiment = {
-
-  translateTopic: function translateTopic(topic) {
-    return ota_widget.i18n.translate('opinions.topics.' + topic.key, { 'default': topic.label }).toLowerCase();
-  }
-
-};
-
-// Generates classes to render in the recent reviews block with ratings through stars.
-window.ota_widget.rating_stars = function (ratings, category) {
-  var value = _.compact(_.map(ratings, function (rating) {
-    if (rating.category == category) return rating.rating;
-  }))[0];
-  var classes = [];
-  for (var i = 0; i < parseInt(value / 20); i++) {
-    classes.push('star');
-  }for (var i = 0; i < parseInt(value % 20 / 10); i++) {
-    classes.push('star_half');
-  }return classes;
 };
 
 window.ota_widget.mentions = {
@@ -218,7 +218,7 @@ window.ota_widget.mentions = {
     return ota_widget.ratings.toCss(this.score(m));
   },
   scoreLabel: function scoreLabel(m) {
-    var score = Math.round(this.score(m));
+    var score = this.score(m).toFixed(1);
     if (score == undefined) return;
     return score;
   },
