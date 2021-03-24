@@ -218,9 +218,7 @@ window.ota_widget.mentions = {
     return ota_widget.ratings.toCss(this.score(m));
   },
   scoreLabel: function scoreLabel(m) {
-    var score = this.score(m).toFixed(1);
-    if (score == undefined) return;
-    return score;
+    return ota_widget.ratings.format(m.score);
   },
 
   total: function total(m) {
