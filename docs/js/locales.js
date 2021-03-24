@@ -33,6 +33,7 @@ window.ota_widget.i18n.locales = {
 
     mentions: {
       title: 'Sentiment Ratings',
+      description: 'Extracting sentiment from written reviews, Olery’s world leading Sentiment V2 (Fusion of Data) enables deeper insights with its more translatable Sentiment Rating.',
       times: 'times mentioned',
       positive: 'positive',
     },

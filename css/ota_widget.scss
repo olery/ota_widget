@@ -309,10 +309,21 @@ ota-widget, .ota-widget {
     }
   }
 
-  .chart {
+  .block {
     h2, .material-icons.info {
       line-height: 65px;
     }
+    h2 {
+      display: inline;
+    }
+    .material-icons.info {
+      float: right;
+      cursor: pointer;
+      color: #333;
+    }
+  }
+
+  .chart {
     h2 button {
       font-size: 13.3333px;
     }
@@ -335,22 +346,9 @@ ota-widget, .ota-widget {
       }
     }
   }
+
   .spacer {
     margin: 15px;
-  }
-
-  .material-icons.info {
-    cursor: pointer;
-    color: #333;
-  }
-
-  .chart {
-    h2 {
-      display: inline;
-    }
-    .material-icons.info {
-      float: right;
-    }
   }
 
   .rating0-4

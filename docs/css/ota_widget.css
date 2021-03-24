@@ -1191,8 +1191,14 @@ ota-widget, .ota-widget {
         font-size: 10px;
         color: #72bb53;
         font-weight: bold; }
-  ota-widget .chart h2, ota-widget .chart .material-icons.info, .ota-widget .chart h2, .ota-widget .chart .material-icons.info {
+  ota-widget .block h2, ota-widget .block .material-icons.info, .ota-widget .block h2, .ota-widget .block .material-icons.info {
     line-height: 65px; }
+  ota-widget .block h2, .ota-widget .block h2 {
+    display: inline; }
+  ota-widget .block .material-icons.info, .ota-widget .block .material-icons.info {
+    float: right;
+    cursor: pointer;
+    color: #333; }
   ota-widget .chart h2 button, .ota-widget .chart h2 button {
     font-size: 13.3333px; }
   ota-widget .chart button, .ota-widget .chart button {
@@ -1210,13 +1216,6 @@ ota-widget, .ota-widget {
       margin-left: 50px; }
   ota-widget .spacer, .ota-widget .spacer {
     margin: 15px; }
-  ota-widget .material-icons.info, .ota-widget .material-icons.info {
-    cursor: pointer;
-    color: #333; }
-  ota-widget .chart h2, .ota-widget .chart h2 {
-    display: inline; }
-  ota-widget .chart .material-icons.info, .ota-widget .chart .material-icons.info {
-    float: right; }
   ota-widget .rating0-4, .ota-widget .rating0-4 {
     background-color: #d54939 !important; }
   ota-widget .rating5-8, .ota-widget .rating5-8 {

@@ -1,5 +1,8 @@
 <mentions class="mdc-image-list__item">
   <div class="mentions block mdc-elevation--z1">
+    <div class="material-icons info">
+      info 
+    </div>
     <h2>
       {t('mentions.title')} 
     </h2>
@@ -26,6 +29,10 @@
     ota_widget.ui.tagClass.bind(this)()
     
     load() {
+      tippy('mentions .material-icons.info', {
+        content: this.t('mentions.description'),
+      })
+    
       this.ratings = {}
       _.each(this.d.mentions, function(m) {
         if (m.topic == 'overall') return this.ratings[m.topic] = m

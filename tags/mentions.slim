@@ -2,6 +2,8 @@
 ---
 mentions.mdc-image-list__item
   .mentions.block.mdc-elevation--z1
+    .material-icons.info
+      'info
     h2
       '{t('mentions.title')}
 
@@ -26,6 +28,10 @@ mentions.mdc-image-list__item
     ota_widget.ui.tagClass.bind(this)()
 
     load() {
+      tippy('mentions .material-icons.info', {
+        content: this.t('mentions.description'),
+      })
+
       this.ratings = {}
       _.each(this.d.mentions, function(m) {
         if (m.topic == 'overall') return this.ratings[m.topic] = m
