@@ -287,6 +287,7 @@ window.ota_widget.api = {
   company_id: ota_widget.url.params.company_id || '',
   token: ota_widget.url.params.token,
   ep: ota_widget.url.params.ep,
+  update: ota_widget.url.params.update,
 
   review_widget: function review_widget(_ref2) {
     var _ref2$params = _ref2.params;
@@ -309,6 +310,7 @@ window.ota_widget.api = {
 
     if (this.token) params.auth_token = this.token;
     if (this.ep) params.ep = this.ep;
+    params.update = ota_widget.api.update;
     params = ota_widget.url.objectToQuery(params);
 
     return window.fetch(baseUrl + '/' + version + '/' + path + '?' + params).then(function (response) {
