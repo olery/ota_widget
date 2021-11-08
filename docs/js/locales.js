@@ -192,11 +192,6 @@ window.ota_widget.i18n.locales = {
       description: 'Tracking your review volume over time and comparing how you performed the previous year. This data allows you to track your recovery based on review volume.',
     },
 
-    trends: {
-      title: 'Trends',
-      description: 'Utilising our worldwide coverage of hotels consisting of almost 1 million properties. We track the review volume per your property, country and continent level. Track how your country is recovering from Covid-19 by monitoring the review volume and compare how your property is doing to the national average. Also, keep a track of confirmed cases of Covid-19 in your country with data directly from WHO on a daily basis.',
-    },
-
     shifts: {
       title: 'Shifts',
       description: 'Track the shifts in the types of customers who are coming to your establishment. With this data you can see the changes in where your customers are coming from and what type of customers your establishment attracts. Do you still get 40 percent portuguese customers? or is it the Spanish who come to your establishment now? ',
@@ -389,10 +384,7 @@ window.ota_widget.i18n.locales = {
       title: "Im Laufe der Zeit",
       description: "Verfolgen Sie Ihr Bewertungsvolumen im Zeitverlauf und vergleichen Sie, wie Sie im Vorjahr abgeschnitten haben. Mit diesen Daten können Sie Ihre Genesung basierend auf dem Überprüfungsvolumen verfolgen.",
     },
-    trends: {
-      title: "Trends",
-      description: "Nutzen Sie unsere weltweite Bewertungen von fast 1 million Hotels. Wir verfolgen das Bewertungsvolumen pro Unterkunft, Land und Kontinent. Verfolgen Sie, wie sich Ihr Land von Covid-19 erhalt, indem Sie das Bewertungsvolumen überwachen und vergleichen Sie, wie es Ihrer Immobilie mit dem nationalen Durchschnitt geht. Verfolgen Sie auch täglich bestätigte Fälle von Covid-19 in Ihrem Land mit Daten direkt von der WHO.",
-    },
+
     shifts: {
       title: "Verschiebungen",
       description: "Verfolgen Sie die Veränderungen bei den Kundentypen, die zu Ihrem Unternehmen kommen. Anhand dieser Daten können Sie sehen, woher Ihre Kunden kommen und welche Art von Kunden Ihr Unternehmen anzieht. Bekommen Sie immer noch 40 Prozent portugiesische Kunden? oder kommen jetzt die Spanier zu Ihnen?",
@@ -642,10 +634,7 @@ window.ota_widget.i18n.locales = {
       title: "Gedurende de volgende periode",
       description: "Uw beoordelingen analyseren gedurende een bepaalde periode en vergelijken met het voorgaande jaar. Op basis van deze gegevens kunt u uw herstel analyseren",
     },
-    trends: {
-      title: "Trends",
-      description: "We analyseren het beoordelingsvolume op het niveau van uw accommodatie, land en continent. Houd bij hoe uw land herstelt van Covid-19 op basis van het aantal beoordelingen en deze te vergelijken met uw accommodatie en hoe u het doet op basis van het nationaal gemiddelde. Houd ook dagelijks de bevestigde gevallen van Covid-19 in uw land bij met gegevens rechtstreeks van de WHO.",
-    },
+
     shifts: {
       title: "Veranderingen",
       description: "Volg de verschuivingen in de soorten klanten die naar uw accomodatie komen. Met deze gegevens kunt u de veranderingen zien in waar uw klanten vandaan komen en wat voor soort klanten uw accomodatie bezoeken. Krijgt u nog steeds 40 procent Portugese klanten? of zijn het de Spanjaarden die nu naar uw accomodatie komen? ",
@@ -905,11 +894,6 @@ window.ota_widget.i18n.locales = {
     over_time: {
       title: 'Over Time',
       description: 'Tracking your review volume over time and comparing how you performed the previous year. This data allows you to track your recovery based on review volume.',
-    },
-
-    trends: {
-      title: 'Trends',
-      description: 'Utilising our worldwide coverage of hotels consisting of almost 1 million properties. We track the review volume per your property, country and continent level. Track how your country is recovering from Covid-19 by monitoring the review volume and compare how your property is doing to the national average. Also, keep a track of confirmed cases of Covid-19 in your country with data directly from WHO on a daily basis.',
     },
 
     shifts: {
@@ -1175,11 +1159,6 @@ window.ota_widget.i18n.locales = {
       description: 'Tracking your review volume over time and comparing how you performed the previous year. This data allows you to track your recovery based on review volume.',
     },
 
-    trends: {
-      title: 'Trends',
-      description: 'Utilising our worldwide coverage of hotels consisting of almost 1 million properties. We track the review volume per your property, country and continent level. Track how your country is recovering from Covid-19 by monitoring the review volume and compare how your property is doing to the national average. Also, keep a track of confirmed cases of Covid-19 in your country with data directly from WHO on a daily basis.',
-    },
-
     shifts: {
       title: 'Shifts',
       description: 'Track the shifts in the types of customers who are coming to your establishment. With this data you can see the changes in where your customers are coming from and what type of customers your establishment attracts. Do you still get 40 percent portuguese customers? or is it the Spanish who come to your establishment now? ',
@@ -1441,11 +1420,6 @@ window.ota_widget.i18n.locales = {
     over_time: {
       title: 'Over Time',
       description: 'Tracking your review volume over time and comparing how you performed the previous year. This data allows you to track your recovery based on review volume.',
-    },
-
-    trends: {
-      title: 'Trends',
-      description: 'Utilising our worldwide coverage of hotels consisting of almost 1 million properties. We track the review volume per your property, country and continent level. Track how your country is recovering from Covid-19 by monitoring the review volume and compare how your property is doing to the national average. Also, keep a track of confirmed cases of Covid-19 in your country with data directly from WHO on a daily basis.',
     },
 
     shifts: {
@@ -1711,11 +1685,6 @@ window.ota_widget.i18n.locales = {
       description: 'Tracking your review volume over time and comparing how you performed the previous year. This data allows you to track your recovery based on review volume.',
     },
 
-    trends: {
-      title: 'Trends',
-      description: 'Utilising our worldwide coverage of hotels consisting of almost 1 million properties. We track the review volume per your property, country and continent level. Track how your country is recovering from Covid-19 by monitoring the review volume and compare how your property is doing to the national average. Also, keep a track of confirmed cases of Covid-19 in your country with data directly from WHO on a daily basis.',
-    },
-
     shifts: {
       title: 'Shifts',
       description: 'Track the shifts in the types of customers who are coming to your establishment. With this data you can see the changes in where your customers are coming from and what type of customers your establishment attracts. Do you still get 40 percent portuguese customers? or is it the Spanish who come to your establishment now? ',
@@ -1977,11 +1946,6 @@ window.ota_widget.i18n.locales = {
     over_time: {
       title: 'Over Time',
       description: 'Tracking your review volume over time and comparing how you performed the previous year. This data allows you to track your recovery based on review volume.',
-    },
-
-    trends: {
-      title: 'Trends',
-      description: 'Utilising our worldwide coverage of hotels consisting of almost 1 million properties. We track the review volume per your property, country and continent level. Track how your country is recovering from Covid-19 by monitoring the review volume and compare how your property is doing to the national average. Also, keep a track of confirmed cases of Covid-19 in your country with data directly from WHO on a daily basis.',
     },
 
     shifts: {
@@ -2246,11 +2210,6 @@ window.ota_widget.i18n.locales = {
     over_time: {
       title: 'Over Time',
       description: 'Tracking your review volume over time and comparing how you performed the previous year. This data allows you to track your recovery based on review volume.',
-    },
-
-    trends: {
-      title: 'Trends',
-      description: 'Utilising our worldwide coverage of hotels consisting of almost 1 million properties. We track the review volume per your property, country and continent level. Track how your country is recovering from Covid-19 by monitoring the review volume and compare how your property is doing to the national average. Also, keep a track of confirmed cases of Covid-19 in your country with data directly from WHO on a daily basis.',
     },
 
     shifts: {
