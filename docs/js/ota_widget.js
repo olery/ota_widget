@@ -12,19 +12,21 @@ window.ota_widget = {
 
   initted: false,
 
-  init: function init(token) {
+  init: function init(token, ep, code) {
     if (this.initted) return;
     if (window.google) google.charts.load('current', { 'packages': ['corechart'] });
     if (token) this.api.token = token;
+    if (ep) this.api.ep = ep;
+    if (code) this.api.code = code;
     this.i18n.load();
     this.initted = true;
   },
 
   // initialization function: loads locale and loads Riot component
-  load: function load(token) {
+  load: function load(token, ep, code) {
     var _this = this;
 
-    this.init(token);
+    this.init(token, ep, code);
 
     riot.compile(function () {
       if (!_this.tag) _this.tag = _this.loadTag('ota-widget', _this.ui.tagClass);

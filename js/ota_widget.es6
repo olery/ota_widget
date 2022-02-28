@@ -13,17 +13,19 @@ window.ota_widget = {
 
   initted: false,
 
-  init(token) {
+  init(token, ep, code) {
     if (this.initted) return
     if (window.google) google.charts.load('current', {'packages': ['corechart']})
     if (token) this.api.token = token
+    if (ep)    this.api.ep    = ep
+    if (code)  this.api.code  = code
     this.i18n.load()
     this.initted = true
   },
 
   // initialization function: loads locale and loads Riot component
-  load(token) {
-    this.init(token)
+  load(token, ep, code) {
+    this.init(token, ep, code)
 
     riot.compile(() => {
       if (!this.tag) this.tag = this.loadTag('ota-widget', this.ui.tagClass)
