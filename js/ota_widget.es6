@@ -264,6 +264,7 @@ window.ota_widget.api = {
   company_id: ota_widget.url.params.company_id || '',
   token:      ota_widget.url.params.token,
   ep:         ota_widget.url.params.ep,
+  code:       ota_widget.url.params.code,
   update:     ota_widget.url.params.update,
 
   review_widget({params = {}}) {
@@ -276,6 +277,7 @@ window.ota_widget.api = {
   req({path, baseUrl = this.baseUrl, version = this.version, params = {}}) {
     if (this.token) params.auth_token = this.token
     if (this.ep)    params.ep         = this.ep
+    if (this.code)  params.code       = this.code
     params.update = ota_widget.api.update
     params = ota_widget.url.objectToQuery(params)
 
