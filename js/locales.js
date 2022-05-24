@@ -2269,16 +2269,16 @@ window.ota_widget.i18n.locales = {
       mold_in_some_bathrooms: "mögel i några badrum"
     },
     recent_reviews: {
-      title: "Senaste recensioner",
-      subtitle: "från webbplatser över hela internet",
+      title: "Senaste recensionerna",
+      subtitle: "samlade från flertalet källor runt om internet",
       guest_liked: "Gäster gillade ",
-      separator: " och de ",
+      separator: " och ",
       negative_comms: "Negativa kommentarer om ",
-      reviewed_at: "Recenserad för %{days} sen",
+      reviewed_at: "Recenserad för %{days} dagar sen",
       reviewed_a_while_ago: "Recenserad för ett tag sen"
     },
     nearby: {
-      attractions: "Närliggande intressepunkter",
+      attractions: "Närliggande sevärdheter",
       restaurants: "Närliggande ställen att äta",
       very_popular: "väldigt populär",
       highly_rated: "högt rekommenderad"
@@ -2364,7 +2364,7 @@ window.ota_widget.i18n.locales = {
         room: "Rum",
         spa: "Spa",
         bathroom: "Badrum",
-        sports_facilties: "Idrotssfaciliteter",
+        sports_facilties: "Idrottssfaciliteter",
         gym: "Gym",
         airconditioning: "Luftkonditionering",
         reception: "Reception",
