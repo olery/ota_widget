@@ -90,7 +90,7 @@ ota-widget, .ota-widget {
 
   .ratings {
     .title {
-      min-width: 110px;
+      min-width: 132px;
       line-height: 20px;
     }
     .title, .rating-bar, .rating-value {
@@ -98,7 +98,7 @@ ota-widget, .ota-widget {
       vertical-align: middle;
     }
     .rating-bar {
-      width: calc(100% - 150px);
+      width: calc(100% - 162px);
       height: 20px;
       padding: 0;
       position: relative;

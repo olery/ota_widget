@@ -1058,13 +1058,13 @@ ota-widget, .ota-widget {
         color: white;
         margin-right: 10px; }
   ota-widget .ratings .title, .ota-widget .ratings .title {
-    min-width: 110px;
+    min-width: 132px;
     line-height: 20px; }
   ota-widget .ratings .title, ota-widget .ratings .rating-bar, ota-widget .ratings .rating-value, .ota-widget .ratings .title, .ota-widget .ratings .rating-bar, .ota-widget .ratings .rating-value {
     display: inline-block;
     vertical-align: middle; }
   ota-widget .ratings .rating-bar, .ota-widget .ratings .rating-bar {
-    width: calc(100% - 150px);
+    width: calc(100% - 162px);
     height: 20px;
     padding: 0;
     position: relative;
