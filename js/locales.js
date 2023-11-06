@@ -3030,7 +3030,7 @@ fr: {
     },
   },
 
- fi: {
+  fi: {
     review_date: 'tiedot päivältä %{date}',
     overall: {
       reviews: 'arvostelut',
