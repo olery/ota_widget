@@ -2778,7 +2778,7 @@ fr: {
       good_service: 'bon service',
       average_service: 'service moyen',
       miserable_service: 'service misérable',
-      location_is_just_perfect: 'l'emplacement est tout simplement parfait',
+      location_is_just_perfect: "l'emplacement est tout simplement parfait",
       convenient_location: 'emplacement pratique',
       the_location_is_not_great: "l'emplacement n'est pas génial",
       be_aware_bad_location: 'attention, mauvais emplacement',
@@ -3063,13 +3063,13 @@ fr: {
 
     guests: {
       title: 'Asiakastyyppi',
-      countries: {maat
+      countries: {
       },
-      compositions: {seuruetyyppi
+      compositions: {
       },
     },
 
-    summaries: {yhteenveto
+    summaries: {
       title: 'Yhteenveto',
       amazing_hotel: 'mahtava hotelli',
       very_good_hotel: 'oikein hyvä hotelli',
@@ -3078,7 +3078,7 @@ fr: {
       very_clean_and_tidy: 'erittäin siisti',
       cleanliness_is_top_notch: 'huippusiisti',
       cleanliness_is_lacking: 'epäsiisti',
-      not_cleaned_thoroughly: 'huonosti siivottu,
+      not_cleaned_thoroughly: 'huonosti siivottu',
       wonderful_rooms: 'upeat huoneet',
       pretty_good_rooms: 'hyvät huoneet',
       rooms_are_okay: 'huoneet ovat ok',
@@ -3191,7 +3191,7 @@ fr: {
 
     charts: {
       date: 'Päivämäärä',
-      current: 'Tänä vuonna,
+      current: 'Tänä vuonna',
       previous: 'Viime vuonna',
       quarter: 'Neljännesvuosi',
       year: 'Vuosi',
@@ -3217,8 +3217,7 @@ fr: {
 
     shifts: {
       title: 'Muutokset',
-      description: 'Seuraa kohteen asiakastyyppien muutoksia. Näillä tiedoilla näet muutokset siinä, mistä asiakkaasi tulevat ja minkä tyyppisiä asiakkaita yrityksesi houkuttelee.
-Onko suurin osa yhä Ruotsista vai ovatko englantilaiset nyt löytäneet kohteesi? ',
+      description: 'Seuraa kohteen asiakastyyppien muutoksia. Näillä tiedoilla näet muutokset siinä, mistä asiakkaasi tulevat ja minkä tyyppisiä asiakkaita yrityksesi houkuttelee. Onko suurin osa yhä Ruotsista vai ovatko englantilaiset nyt löytäneet kohteesi? ',
     },
 
     covid_events: {
@@ -3295,7 +3294,7 @@ Onko suurin osa yhä Ruotsista vai ovatko englantilaiset nyt löytäneet kohtees
         seat_comfort: 'Istuinmukavuus',
         sign: 'Kyltti',
         cabin_crew: 'Matkustamohenkilökunta',
-        boarding_staff: 'Vastaanotto henkilökunta,
+        boarding_staff: 'Vastaanotto henkilökunta',
         pilot: 'Lentäjä',
         support: 'Tuki',
         food_beverages: 'Ruoka ja juomat',
@@ -3332,7 +3331,7 @@ Onko suurin osa yhä Ruotsista vai ovatko englantilaiset nyt löytäneet kohtees
         decor: 'Sisustus',
         covid: 'Covid',
         health_precautions: 'Pandemia varotoimet',
-        sanitary_safety: 'Terveysturvallisuus,
+        sanitary_safety: 'Terveysturvallisuus',
       },
     },
   },
