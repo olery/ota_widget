@@ -1639,7 +1639,7 @@ sp: {
       "compositions": {}
     },
     "summaries": {
-      "title": "Сводка"
+      title: "Сводка",
       amazing_hotel: 'Замечательная гостиница.',
       very_good_hotel: 'Очень хорошая гостиница.',
       mediocre_hotel: 'Средняя гостиница.',
@@ -1857,7 +1857,7 @@ sp: {
         "swimming_pool": "Бассейн"
       }
     }
-  }
+  },
 
   po: {
     review_date: 'data z %{date}',
