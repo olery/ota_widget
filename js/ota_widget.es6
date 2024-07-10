@@ -173,9 +173,10 @@ window.ota_widget.sentiment = {
     _.each(['positive', 'negative'], (polarity) => {
       var ops     = _.filter(review.opinions, (op) => op.polarity == polarity)
       var topics  = _.uniqBy(_.flatMap(ops, (o) => _.flatMap(o.ratings, (r) => r.topics)), 'key')
+      var filterTopic = _.filter(topics, (t) => t != 'covid' )
 
       var key     = polarity + '_topics'
-      review[key] = _.join(_.map(topics, (topic) => ota_widget.sentiment.translateTopic(topic)), sep)
+      review[key] = _.join(_.map(filterTopic, (topic) => ota_widget.sentiment.translateTopic(topic)), sep)
     })
   },
 }

@@ -179,7 +179,6 @@ window.ota_widget.i18n.locales = {
       city: 'City',
       country: 'Country',
       continent: 'Continent',
-      covid_cases: 'Covid-19 cases in Country',
       seasons: 'Seasons',
       asia:      'Asia',
       africa:    'Africa',
@@ -198,11 +197,6 @@ window.ota_widget.i18n.locales = {
     shifts: {
       title: 'Shifts',
       description: 'Track the shifts in the types of customers who are coming to your establishment. With this data you can see the changes in where your customers are coming from and what type of customers your establishment attracts. Do you still get 40 percent portuguese customers? or is it the Spanish who come to your establishment now? ',
-    },
-
-    covid_events: {
-      title: 'COVID-19',
-      description: 'This information provides you with an update on the total number of weekly confirmed cases on a continental level. The information is taken directly from the WHO API and is updated daily. Keep track of the regional Covid-19 infections to better understand when regions will re-open up for travel. This data is based on weekly confirmed cases.'
     },
 
     opinions: {
@@ -309,8 +303,6 @@ window.ota_widget.i18n.locales = {
         light: 'Light',
         sound: 'Sound',
         decor: 'Decor',
-        covid: 'Covid',
-        health_precautions: 'Pandemic Precautions',
         sanitary_safety: 'Sanitary Safety',
       },
     },
@@ -477,7 +469,6 @@ window.ota_widget.i18n.locales = {
       city: "Stadt",
       country: "Land",
       continent: "Kontinent",
-      covid_cases: "Covid-19-Fälle im Land",
       seasons: "Jahreszeiten",
       asia: "Asien",
       africa: "Afrika",
@@ -496,15 +487,9 @@ window.ota_widget.i18n.locales = {
       title: "Verschiebungen",
       description: "Verfolgen Sie die Veränderungen bei den Kundentypen, die zu Ihrem Unternehmen kommen. Anhand dieser Daten können Sie sehen, woher Ihre Kunden kommen und welche Art von Kunden Ihr Unternehmen anzieht. Bekommen Sie immer noch 40 Prozent portugiesische Kunden? oder kommen jetzt die Spanier zu Ihnen?",
     },
-    covid_events: {
-      title: "COVID-19",
-      description: "Diese Informationen bieten Ihnen ein Update zur Gesamtzahl der wöchentlich bestätigten Fälle auf kontinentaler Ebene. Die Informationen stammen direkt aus der WHO-API und werden täglich aktualisiert. Verfolgen Sie die regionalen Covid-19-Infektionen, um besser zu verstehen, wann Regionen wieder für Reisen geöffnet werden. Diese Daten basieren auf wöchentlich bestätigten Fällen.",
-    },
     opinions: {
       topics: {
         sanitary_safety: "Sanitäre Sicherheit",
-        health_precautions: "Pandemic Precautions",
-        covid: "Covid",
         breakfast_area: "Frühstück",
         chemicals: "chemischer Geruch",
         defects: "Defekte im Zimmer",
@@ -727,7 +712,6 @@ window.ota_widget.i18n.locales = {
       city: "Stad",
       country: "Land",
       continent: "Continent",
-      covid_cases: "Covid-19 geval per land",
       seasons: "Seizoen",
       asia: "Azië",
       africa: "Afrika",
@@ -746,15 +730,9 @@ window.ota_widget.i18n.locales = {
       title: "Veranderingen",
       description: "Volg de verschuivingen in de soorten klanten die naar uw accomodatie komen. Met deze gegevens kunt u de veranderingen zien in waar uw klanten vandaan komen en wat voor soort klanten uw accomodatie bezoeken. Krijgt u nog steeds 40 procent Portugese klanten? of zijn het de Spanjaarden die nu naar uw accomodatie komen? ",
     },
-    covid_events: {
-      title: "COVID-19",
-      description: "Deze informatie geeft u een update van het totale aantal wekelijks bevestigde gevallen op continentaal niveau. De informatie komt rechtstreeks uit de WHO API en wordt dagelijks bijgewerkt. Houd de regionale Covid-19-infecties bij om beter te begrijpen wanneer regio's weer open gaan voor reizen. Deze gegevens zijn gebaseerd op wekelijks bevestigde gevallen.",
-    },
     opinions: {
       topics: {
         sanitary_safety: "Sanitary Safety",
-        health_precautions: "Pandemic Precautions",
-        covid: "Covid",
         breakfast_area: "ontbijt zaal",
         chemicals: "Chemische geur",
         defects: "Defecten in de kamer",
@@ -986,7 +964,6 @@ window.ota_widget.i18n.locales = {
     city: 'Cidade',
     country: 'País',
     continent: 'Continente',
-    covid_cases: 'Casos de Covid-19 no País',
     seasons: 'Estações',
     asia:      'Ásia',
     africa:    'África',
@@ -1007,16 +984,9 @@ window.ota_widget.i18n.locales = {
     description: 'Acompanhe as mudanças nos tipos de clientes que estão vindo ao seu estabelecimento. Com esses dados, você pode ver as mudanças de onde seus clientes vêm e que tipo de clientes seu estabelecimento atrai. Você ainda recebe 40 por cento de clientes portugueses? Ou são os espanhóis que vêm ao seu estabelecimento agora?',
   },
   
-  covid_events: {
-    title: 'COVID-19',
-    description: 'Esta informação fornece uma atualização sobre o número total de casos confirmados semanais em nível continental. A informação é retirada diretamente da API da OMS e é atualizada diariamente. Acompanhe as infecções regionais de Covid-19 para entender melhor quando as regiões reabrirão para viagens. Estes dados são baseados em casos confirmados semanais.'
-  },
-  
   opinions: {
     topics: {
       sanitary_safety:    'Segurança Sanitária',
-      health_precautions: 'Precauções Pandêmicas',
-      covid:              'Covid',
       breakfast_area:     'Área do Café da Manhã',
       chemicals:          'Cheiro de Produtos Químicos',
       defects:            'Defeitos no Quarto',
@@ -1249,7 +1219,6 @@ window.ota_widget.i18n.locales = {
     city: 'Város',
     country: 'Ország',
     continent: 'Kontinens',
-    covid_cases: 'Covid-19 esetek az országban',
     seasons: 'Évszakok',
     asia: 'Ázsia',
     africa: 'Afrika',
@@ -1270,16 +1239,9 @@ window.ota_widget.i18n.locales = {
     description: 'Kövesse nyomon a vendégek típusának változását, akik az Ön intézményébe látogatnak. Ezekkel az adatokkal láthatja, hogy honnan érkeznek vendégei, és milyen típusú vendégeket vonz az Ön intézménye. Még mindig 40 százalék portugál vendég jön? Vagy most a spanyolok látogatják az Ön intézményét?'
   },
   
-  covid_events: {
-    title: 'COVID-19',
-    description: 'Ez az információ frissítést nyújt az egyes kontinenseken hetente megerősített esetek teljes számáról. Az információk közvetlenül a WHO API-jából származnak és naponta frissülnek. Kövesse nyomon a regionális Covid-19 fertőzéseket, hogy jobban megértse, mikor nyílnak újra a régiók az utazások számára. Ezek az adatok a hetente megerősített eseteken alapulnak.'
-  },
-  
   opinions: {
     topics: {
       sanitary_safety: 'Egészségügyi Biztonság',
-      health_precautions: 'Járványügyi Óvintézkedések',
-      covid: 'Covid',
       breakfast_area: 'Reggelizőhely',
       chemicals: 'Kémiai Szag',
       defects: 'Hibák a Szobában',
@@ -1512,7 +1474,6 @@ sp: {
       city: 'Ciudad',
       country: 'País',
       continent: 'Continente',
-      covid_cases: 'Casos de Covid-19 en el País',
       seasons: 'Estaciones',
       asia:      'Asia',
       africa:    'África',
@@ -1533,16 +1494,9 @@ sp: {
       description: 'Siga los cambios en los tipos de clientes que vienen a su establecimiento. Con estos datos, puede ver los cambios en el origen de sus clientes y qué tipo de clientes atrae su establecimiento. ¿Sigue recibiendo un 40 por ciento de clientes portugueses? ¿o ahora son los españoles quienes vienen a su establecimiento?',
     },
 
-    covid_events: {
-      title: 'COVID-19',
-      description: 'Esta información le proporciona una actualización sobre el número total de casos confirmados semanales a nivel continental. La información se toma directamente de la API de la OMS y se actualiza diariamente. Manténgase al tanto de las infecciones regionales de Covid-19 para comprender mejor cuándo las regiones volverán a abrirse para viajar. Estos datos se basan en casos confirmados semanalmente.'
-    },
-
     opinions: {
       topics: {
         sanitary_safety:    'Seguridad Sanitaria',
-        health_precautions: 'Precauciones Pandémicas',
-        covid:              'Covid',
         breakfast_area:     'Área de Desayuno',
         chemicals:          'Olor a Químicos',
         defects:            'Defectos en la Habitación',
@@ -1768,7 +1722,6 @@ sp: {
       "city": "Город",
       "country": "Страна",
       "continent": "Континент",
-      "covid_cases": "Случаи Covid-19 в стране",
       "seasons": "Сезоны",
       "asia": "Азия",
       "africa": "Африка",
@@ -1789,15 +1742,9 @@ sp: {
       "description": "Отслеживание изменений в типах клиентов, посещающих ваше заведение. С этими данными вы можете видеть изменения в местах, откуда приходят ваши клиенты, и какой тип клиентов привлекает ваше заведение. Вы все еще получаете 40 процентов клиентов из Португалии? Или теперь к вам приходят испанцы?"
     },
 
-    "covid_events": {
-      "title": "COVID-19",
-      "description": "Эта информация предоставляет вам обновление о общем количестве подтвержденных случаев за неделю на континентальном уровне. Информация взята напрямую из API ВОЗ и обновляется ежедневно. Следите за региональными инфекциями Covid-19, чтобы лучше понять, когда регионы снова откроются для путешествий. Эти данные основаны на еженедельно подтвержденных случаях."
-    },
     "opinions": {
       "topics": {
         "sanitary_safety": "Санитарная безопасность",
-        "health_precautions": "Меры предосторожности во время пандемии",
-        "covid": "Covid",
         "breakfast_area": "Зона для завтрака",
         "chemicals": "Химический запах",
         "defects": "Дефекты в номере",
@@ -2030,7 +1977,6 @@ sp: {
     city: 'Miasto',
     country: 'Kraj',
     continent: 'Kontynent',
-    covid_cases: 'Przypadki Covid-19 w Kraju',
     seasons: 'Pory Roku',
     asia: 'Azja',
     africa: 'Afryka',
@@ -2051,16 +1997,9 @@ sp: {
     description: 'Śledź zmiany w typach klientów odwiedzających Twoje miejsce. Dzięki tym danym możesz zobaczyć zmiany w miejscu pochodzenia Twoich klientów i jakiego typu klienci przyciąga Twoje miejsce. Czy nadal otrzymujesz 40 procent klientów portugalskich? Czy teraz to Hiszpanie odwiedzają Twoje miejsce?',
   },
   
-  covid_events: {
-    title: 'COVID-19',
-    description: 'Te informacje dostarczają Ci aktualizacji o łącznej liczbie tygodniowych potwierdzonych przypadków na poziomie kontynentalnym. Informacje są pobierane bezpośrednio z API WHO i aktualizowane codziennie. Śledź regionalne infekcje Covid-19, aby lepiej zrozumieć, kiedy regiony otworzą się na podróże. Dane te są oparte na tygodniowych potwierdzonych przypadkach.'
-  },
-  
   opinions: {
     topics: {
       sanitary_safety: 'Bezpieczeństwo Sanitarne',
-      health_precautions: 'Środki Ostrożności Pandemiczne',
-      covid: 'Covid',
       breakfast_area: 'Strefa Śniadaniowa',
       chemicals: 'Zapach Chemikaliów',
       defects: 'Wady w Pokoju',
@@ -2284,7 +2223,6 @@ sp: {
       city: "Stad",
       country: "Land",
       continent: "Kontinent",
-      covid_cases: "Covid-19 fall i landet",
       seasons: "Säsonger",
       asia: "Asien",
       africa: "Afrika",
@@ -2301,10 +2239,6 @@ sp: {
     shifts: {
       title: "Skillnader",
       description: "Följ skillnaderna hos the typer av kunder som kommer till er verksamhet. Med denna data kan ni se skillnaderna i var era kunder kommer ifrån och vilka typer av kunder som är intresserade av er verksamhet. Har ni fortfarande 40 procent portugisiska kunder? Eller är det spanjorer som besöker er nu?"
-    },
-    covid_events: {
-      title: "COVID-19",
-      description: "Den här informationen ger er en uppdatering på den totala siffran av veckovis bekräftade fall per kontinent. Informationen kommer ifrån WHO API och är uppdaterad dagligen. Följ de lokala Covid-19 infektionerna för att bättre ha koll på när regioner kommer att återöppna för resande."
     },
     opinions: {
       topics: {
@@ -2410,8 +2344,6 @@ sp: {
         light: "Ljus",
         sound: "Ljud",
         decor: "Inredning",
-        covid: "Covid",
-        health_precautions: "Pandemi åtgärder",
         sanitary_safety: "Hälsosäkerhet"
       },
     },
@@ -2579,7 +2511,6 @@ sp: {
       city: "By",
       country: "Land",
       continent: "Kontinent",
-      covid_cases: "Covid-19 tilfeller i landet",
       seasons: "Sesonger",
       asia: "Asia",
       africa: "Afrika",
@@ -2596,10 +2527,6 @@ sp: {
     shifts: {
       title: "Forskjeller",
       description: "Følg forskjellene i hvilke typer kunder som kommer til virksomheten din. Med disse dataene kan du se forskjellene i hvor kundene dine kommer fra og hvilke typer kunder som er interessert i virksomheten din. Har du fortsatt 40 prosent Portugisiske kunder? Eller besøker spanjolene deg nå?"
-    },
-    covid_events: {
-      title: "COVID-19",
-      description: "Denne informasjonen gir deg en oppdatering på det totale antallet ukentlige bekreftede tilfeller per kontinent. Informasjonen kommer fra WHO API og oppdateres daglig. Følg de lokale Covid-19-infeksjonene for å bedre holde styr på når regioner gjenåpnes for reisende."
     },
     opinions: {
       topics: {
@@ -2705,8 +2632,6 @@ sp: {
         light: "Lys",
         sound: "Lyd",
         decor: "Dekor",
-        covid: "Covid",
-        health_precautions: "Pandemihandling",
         sanitary_safety: "Helsesikkerhet"
       },
     },
@@ -2884,7 +2809,6 @@ fr: {
       city: 'Ville',
       country: 'Pays',
       continent: 'Continent',
-      covid_cases: 'Cas de Covid-19 dans le pays',
       seasons: 'Saisons',
       asia:      'Asie',
       africa:    'Afrique',
@@ -2903,11 +2827,6 @@ fr: {
     shifts: {
       title: 'Changements',
       description: 'Suivez les changements dans les types de clients qui viennent à votre établissement. Avec ces données, vous pouvez voir les changements d’où viennent vos clients et quel type de clients votre établissement attire. Recevez-vous toujours 40 pour cent de clients portugais ? ou est-ce maintenant les Espagnols qui viennent à votre établissement ?',
-    },
-
-    covid_events: {
-      title: 'COVID-19',
-      description: 'Ces informations vous fournissent une mise à jour sur le nombre total de cas confirmés chaque semaine à l’échelle continentale. Les informations sont prises directement de l’API de l’OMS et sont mises à jour quotidiennement. Suivez les infections régionales de la Covid-19 pour mieux comprendre quand les régions vont rouvrir aux voyages. Ces données sont basées sur les cas confirmés hebdomadairement.'
     },
 
     opinions: {
@@ -3014,8 +2933,6 @@ fr: {
         light: 'Lumière',
         sound: 'Son',
         decor: 'Décor',
-        covid: 'Covid',
-        health_precautions: 'Précautions sanitaires',
         sanitary_safety: 'Sécurité sanitaire',
       },
     },
@@ -3193,7 +3110,6 @@ fr: {
       city: 'Kaupunki',
       country: 'Maa',
       continent: 'Maanosa',
-      covid_cases: 'Covid-19 tapaukset maassa',
       seasons: 'Vuodenaika',
       asia:      'Aasia',
       africa:    'Afrikka',
@@ -3212,11 +3128,6 @@ fr: {
     shifts: {
       title: 'Muutokset',
       description: 'Seuraa kohteen asiakastyyppien muutoksia. Näillä tiedoilla näet muutokset siinä, mistä asiakkaasi tulevat ja minkä tyyppisiä asiakkaita yrityksesi houkuttelee. Onko suurin osa yhä Ruotsista vai ovatko englantilaiset nyt löytäneet kohteesi? ',
-    },
-
-    covid_events: {
-      title: 'COVID-19',
-      description: 'Nämä tiedot tarjoavat sinulle päivityksen viikoittaisten vahvistettujen tapausten kokonaismäärästä mantereen tasolla. Tiedot otetaan suoraan WHO API:sta ja niitä päivitetään päivittäin.Seuraa alueellisia Covid-19-tartuntoja ymmärtääksesi paremmin, milloin alueet avautuvat uudelleen matkustamiseen. Nämä tiedot perustuvat viikoittain vahvistettuihin tapauksiin.'
     },
 
     opinions: {
@@ -3323,8 +3234,6 @@ fr: {
         light: 'Valo',
         sound: 'Ääni',
         decor: 'Sisustus',
-        covid: 'Covid',
-        health_precautions: 'Pandemia varotoimet',
         sanitary_safety: 'Terveysturvallisuus',
       },
     },
