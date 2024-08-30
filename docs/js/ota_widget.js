@@ -189,9 +189,12 @@ window.ota_widget.sentiment = {
           return r.topics;
         });
       }), 'key');
+      var filterTopic = _.filter(topics, function (t) {
+        return t != 'covid';
+      });
 
       var key = polarity + '_topics';
-      review[key] = _.join(_.map(topics, function (topic) {
+      review[key] = _.join(_.map(filterTopic, function (topic) {
         return ota_widget.sentiment.translateTopic(topic);
       }), sep);
     });
